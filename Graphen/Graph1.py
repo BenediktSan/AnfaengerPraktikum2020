@@ -18,7 +18,7 @@ plt.plot(x,m,'.',label=r'Messwerte')
 
 fitted ,a= curve_fit(func, x, m)
 
-datei = open('text1.txt','w')
+datei = open('build/text1.txt','w')
 datei.write(f'Die Kurve ist {fitted[0]:.4f}*m+({fitted[1]:.4f}). Damit ist k={9.81/fitted[0]:.4f}')
 #print(f'Die Kurve ist {fitted[0]:.4f}*m+({fitted[1]:.4f}). Damit ist k={9.81/fitted[0]:.4f}')
 
@@ -33,7 +33,7 @@ with plt.xkcd():
    plt.xlabel('x/cm')
    plt.ylabel('m/g')
 
-plt.savefig('Graph1.pdf')
+plt.savefig('build/Graph1.pdf')
 
 #ax2.plot(x,y,'g.')
 #ax2.set_yscale('log')

@@ -81,5 +81,5 @@ plt.plot(x,f(x, *parameter1),label="Fit zu T1")
 plt.plot(x,g(x, *parameter2),label="Fit zu T2")     
 
 plt.legend()
-plt.savefig("plot.pdf")
+plt.savefig("build/plot.pdf")
 #plt.show()

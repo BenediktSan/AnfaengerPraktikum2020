@@ -1,0 +1,78 @@
+\input{../Vorlagen//header.tex}
+\begin{document}
+    \section{Aufgabe }
+        \subsection{}
+        Der Mitelwert ist eine Art "Durchschnittswert" von Messwerten.
+
+        \subsection{}
+        Die Standardabweichung ist ein Maß für die Abweichung
+
+        \subsection{}
+
+
+    \section{Aufgabe}
+        \begin{equation}
+            \sigma = \sqrt{ \frac{1}{(n-1)} \sum_{k=1}^n (x_k -\overline{x})^2 }
+        \end{equation}
+        
+    Um den Fehler zu Berechnen wird $\symup{C}$ so beliebig gewählt, so dass man für den Fehler 10 $\symup{n_0}$ als 2 (kleinstmögliches $n$) setzen kann. 
+    Dies ist $\symup{C}=100$. Am Ende werden dann $\symup{n_0}-n$ zusätliche Schritte benötigt.
+        \begin{equation}
+           \symup{C}=\sum_{k=1}^n (x_k -\overline{x})^2 \\
+        \end{equation}
+
+        \begin{align}  
+            \symup{C}&=100\si{\metre} & \sigma_u &= 10 \si{\metre\per\second}\\
+            \implies \sigma_u &= \sqrt{ \frac{1}{(\symup{n_0}-1)} \cdot \symup{C}}\\
+            \iff n_0 &= \frac{\symup{C}}{( \sigma_u)^2}+1\\
+            \implies n_0 &= 2
+        \end{align}
+        \\
+        \\  
+        Für $ \sigma =\SI{3}{\metre\per\second} $
+        \begin{align}
+            \sigma &= \SI{3}{\metre\per\second}\\
+            \implies  n &= 12.11111111 
+        \end{align}
+        Es werden für eine Unsicherheit von  $\pm 3 \si{\metre\per\second}$ also $\symup{n_0}-n $ und damit $\approx 11$ weitere Messungen benötigt.
+         \\
+         \\
+        Für  $\sigma = \SI{0.5}{\metre\per\second}$ 
+        \begin{align}
+            \sigma &= \SI{0.5}{\metre\per\second}\\
+            \implies n &= 401 \quad \quad \; \; \; \;
+        \end{align}
+        Es werden für eine Unsicherheit von $\pm 0.5\si{\metre\per\second}$ also $\symup{n_0}-n$ und damit $\approx 309$ weitere Messungen benötigt.
+
+        \section{Aufgabe}
+
+        \begin{align}
+            R_\text{außen}&= \SI{15(1)}{\centi\metre} & R_\text{innen}&=\SI{10(1)}{\centi\metre} & h&=\SI{20(1)}{\centi\metre} 
+        \end{align}
+
+        \begin{align}
+            V &=\pi \cdot ((R_\text{außen})^2 - (R_\text{innen})^2) \cdot h \\
+            \implies V &= \SI{7853.98163397448}{\cubic\centi\metre}
+        \end{align}
+        \\
+        Fehlerformel und Fehlerwert:
+        \begin{align}
+            \increment V &= \sqrt{
+                \left(\frac{\partial V}{\partial R_\text{außen} }\right)^2 \cdot \left(\increment R_\text{außen} \right)^2 +
+                \left(\frac{\partial V}{\partial R_\text{innen} }\right)^2 \cdot \left(\increment R_\text{innen} \right)^2 +
+                \left(\frac{\partial V}{\partial h }\right)^2 \cdot \left(\increment h \right)^2
+                }\\
+        \increment V&=
+        \sqrt{
+        \begin{aligned}
+                & \left(
+                2 \pi \cdot R_\text{außen} \cdot h \right) ^2 \cdot (\increment R_\text{außen} )^2
+                + \left( -2 \pi \cdot R_\text{innen} \cdot h \right) ^2 \cdot (\increment R_\text{innen} )^2 \\
+                &+ \left( \pi \cdot ((R_\text{außen})^2 - (R_\text{innen})^2) \right) ^2 \cdot (\increment h )^2
+        \end{aligned}
+        }\\
+        \implies \increment V &= \SI{229.921874934367}{\cubic\centi\metre}
+    \end{align}
+            
+Das Volumen des Hohlzylinders beträgt also $\approx7853.9816\pm 229.9219\; \si{\cubic\centi\metre}$.
+\end{document}

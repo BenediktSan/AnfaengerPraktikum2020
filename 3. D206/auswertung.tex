@@ -1,8 +1,9 @@
 \newpage
+\section{Die Messwerte}
 \begin{table}[H]
     \centering
-    \caption{Die Messwerte}
-    \label{tab:data}
+    %\caption{Die Messwerte}
+    \label{tab:messung}
     \begin{tabular}{ S [table-format=2.0] S [table-format=2.1] S[table-format=2.2] S S[table-format=2.1] S [table-format=3.0] }
         \toprule
         {$t \mathbin{/} \si{\minute}$} & {$T_1 \mathbin{/} \si{\celsius}$} & {${p^{*}}_1 \mathbin{/} \si{\bar}$} & 
@@ -45,9 +46,13 @@
         34&	 49.9&	11.0&	3.0	&    2.2	&    122\\
         35&	 50.3&	11.0&	2.9	&    2.2	 &   122\\
         \bottomrule
+        %\multicolumn{6}{c}{$\text{Eine Tabelle der Messwerte,}$}
+        %\multicolumn{6}{c}{$\text{wobei die Temperaturen mit einem Fehler von  $\increment T = \SI{0.1}{\celsius}$ behaftet sind.}$}
     \end{tabular}
+\caption{Eine Tabelle der Messwerte, wobei die Temperaturen mit einem Fehler von  $\increment T = \SI{0.1}{\celsius}$ behaftet sind.}
 \end{table}
-\newpage
+
+
 
 %5a)
 \begin{figure}
@@ -84,14 +89,55 @@ Als Punkte wurden hierbei 7er Schritte gewählt, da man daurch regelmäßige Abs
     \frac{\partial F(21)}{\partial t} &=0.0201446000000000   &     \frac{\partial G(21)}{\partial t} &= -0.000795117897688127  \\
     \frac{\partial F(28)}{\partial t} &= 0.0200995200000000  &     \frac{\partial G(28)}{\partial t} &= -0.00105276374853994 
 \end{align}
-
+\\
+\\
 %5d)
-
-Anschließend werden die idealen und realen Güteziffern der Wärmepumpe aus den zuvor berechneten Werten bestimmt.
+Anschließend werden die idealen und realen Güteziffern der Wärmepumpe aus den zuvor berechneten Werten und den Formeln \eqref{eqn:videal} und \eqref{eqn:vreal}  bestimmt.
 
 \begin{equation}
     v_\text{ideal}= \frac{Q_1}{A} = \frac{T_1}{T_1-T_2}
+    \label{eqn:videal}
 \end{equation}
+\begin{equation}
+    v_\text{real}= \frac{\increment{Q_1}}{\increment t \symup{N} }
+    \label{eqn:vreal}
+\end{equation}\\
+Für die reale Wärmepumpe gilt $v_\text{real} < v_\text{ideal}$.
+Es ergibt sich dann also aus den zuvor bestimmten Werten;
+
+\begin{table}[H]
+    \centering
+    \label{tab:vreal}
+    \begin{tabular}{ S [table-format=2.0] S [table-format=1.5] S [table-format=1.5] }
+        \toprule
+        {$t \mathbin{/} \si{\minute}$} & { $v_\text{ideal}$} & {$v_\text{real} $} \\
+        \midrule
+        7	&3 &0.12929\\
+        14	&1.66047 &0.12900\\
+        21	&1.33548 &0.12871\\
+        28	&1.20052 &0.12632\\
+        \bottomrule
+        
+    \end{tabular}
+\caption {Berechnete Werte für $v_\text{ideal}$ und $v_\text{real} $ gerundet auf die fünfte Nachkommastelle.}
+\end{table}
+
+
+
+
+
+
+
+
+
+
+
+
+%\begin{align*}
+%\intertext{Es ergibt sich dann also;}
+%\end{align*}
+
+
 
 
 

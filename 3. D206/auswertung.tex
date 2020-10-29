@@ -134,8 +134,9 @@ Der Wert für die reale Wärmepumpe lässt sich dann bestimmen,
 in dem man für die Wärmekapazität der Kupferschlange $m_k c_k =\SI{750}{\joule\per\kelvin}$,
 für die Masse des Wassers $m_1=\SI{4}{\kilo\gram}$ und für die spezifische Wärmekapazität 
 des Wassers $c_w=\SI{4.183}{\kilo\joule\per\kilo\gram\per\kelvin}$ nimmt.
-Anshließend setzt man dann \eqref{eqn:delQ} in \eqref{eqn:vreal} ein. 
-Es ergibt sich dann also aus den zuvor bestimmten Werten;
+Anschließend setzt man dann \eqref{eqn:delQ} in \eqref{eqn:vreal} ein.\\
+Es ergibt sich dann also aus den genannten Werten und den Werten aus \ref{tab:Diff};
+%Quelle. https://www.chemie.de/lexikon/Spezifische_W%C3%A4rmekapazit%C3%A4t.html
 
 \begin{table}[H]
     \centering
@@ -144,15 +145,23 @@ Es ergibt sich dann also aus den zuvor bestimmten Werten;
         \toprule
         {$t \mathbin{/} \si{\minute}$} & { $v_\text{ideal}$} & {$v_\text{real} $} \\
         \midrule
-        7	&3 &0.12929\\
-        14	&1.66047 &0.12900\\
-        21	&1.33548 &0.12871\\
-        28	&1.20052 &0.12632\\
+        7	&31.4375 &0.12929\\
+        14	&14.35814 &0.12900\\
+        21	&10.14194 &0.12871\\
+        28	&8.3099&0.12632\\
         \bottomrule
         \\
     \end{tabular}
 \caption {Berechnete Werte für $v_\text{ideal}$ und $v_\text{real} $ gerundet auf die fünfte Nachkommastelle.}
 \end{table}
+Wie man sieht sind die realen Güteziffer sogar teilweise um einen Faktor $10^3$ kleiner als die der idealen Güteziffer.
+Dafür unterliegen sie wesentlich weniger Fluktuationen.dort zeigt sich, dass sie ungefähr einen Wert von $\approx 0.129$haben, 
+wobei die Werte von $v_\text{ideal}$ so sehr schwanken, dass sich keine vernünftige Abschätzung machen lässt.
+
+%5e)
+\section{Massedurchsatz}
+
+
 
 
 

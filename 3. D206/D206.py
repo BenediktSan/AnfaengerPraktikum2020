@@ -25,6 +25,7 @@ p2+=1
 N=Data[180:216]
 #print(N)
 
+dT=0.1
 mkck=750
 m1=4
 c1=4.183
@@ -39,6 +40,7 @@ def g(x,A,B,C):
 
 parameter1, _ =curve_fit(f,t,T1)
 parameter2, _ =curve_fit(g,t,T2,p0=(240,0.00006,1.2))
+
 for names ,value in zip("ABC", parameter1):
     print(f"{names}={value:.8f}")
 for names , value in zip("DEF", parameter2):

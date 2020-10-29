@@ -27,7 +27,7 @@ N=Data[180:216]
 
 mkck=750
 m1=4
-c1=4.184
+c1=4.183
 m1c1=m1*c1
 #print(m1c1)
 
@@ -67,14 +67,12 @@ def Gdt(t):
     return G1.evalf(subs={t_v:t}) 
 
 for i in range(1,5):
-    print(f"Fdt({7*i})=",Fdt(7*i))
-    print(f"Gdt({7*i})=",Gdt(7*i))
+    print(f"Fdt({7*i})={Fdt(7*i):.4f}", f"  Gdt({7*i})={Gdt(7*i):.4f}")
 
 
         #Güteziffer
 for i in range(1,5):
-    print("vreal(",7*i,")=",((mkck+m1c1)*Fdt(7*i))/(N[(7*i)-1]),
-     "videal(",7*i,")=",T1[(7*i)-1]/(T1[(7*i)-1]-T2[(7*i)-1]))
+    print(f"v_real({7*i})={((mkck+m1c1)*Fdt(7*i))/(N[(7*i)-1]):.4f} v_ideal({7*i})={T1[(7*i)-1]/(T1[(7*i)-1]-T2[(7*i)-1]):.4f}")
 
         #Verdampfungswärme
 
@@ -82,26 +80,26 @@ P1=np.log(p1)
 parameter3, _ = np.polyfit(1/T1,P1, deg=1, cov=True)
 L1=-1*parameter3[0]*8.314
 print("Parameter3=",parameter3)
-print("L1=",L1)
+print(f"L1={L1:.4f}")
 
 P2=np.log(p2)
 parameter4, _ = np.polyfit(1/T2,P2, deg=1, cov=True)
 L2=-1*parameter4[0]*8.314
-print("L2=",L2)
+print(f"L2={L2:.4f}")
 
         #Massendurchsatz
 def mdt(i):
     return ((mkck+m1c1)*Gdt(7*i))/L2
 
 for i in range(1,5):
-    print("Massendurchsatz in minute(",7*i,")= ",mdt(i))
+    print(f"Massendurchsatz in minute({7*i})={mdt(i):.4f}")
 
         #mechanische Leistung
 def N_mech(k,pa,pb,roh,mdt):
     return (1/(k-1))*(pb*np.sqrt(pa/pb)-pa)*(1/roh)*mdt
 
 for i in range(1,5):
-    print(f"Die mechanische Leistung in Minute {7*i} beträgt:{N_mech(1.14, p2[7*i -1], p1[7*i -1], 5.51, mdt(i))}")
+    print(f"Die mechanische Leistung in Minute {7*i} beträgt:{N_mech(1.14, p2[7*i -1], p1[7*i -1], 5.51, mdt(i)):.4f}")
 
         #Gründe für schlechte Güteziffer
 print("In der Realität ist es leider nicht möglich die ideale Güteziffer für eine Wärmepumpe zu erreichen, da es bei dem gesamtem Prozess viele Wege gibt um Energie zu \"verlieren\"."

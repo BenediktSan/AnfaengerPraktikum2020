@@ -98,7 +98,8 @@ Als Punkte wurden hierbei 7er Schritte gewählt, da man daurch regelmäßige Abs
 %5d)
 \section{Güteziffern}
 Anschließend werden die idealen und realen Güteziffern der Wärmepumpe aus den zuvor berechneten Werten und 
-den Formeln \eqref{eqn:videal} und \eqref{eqn:vreal}  bestimmt.
+den Formeln \eqref{eqn:videal} und \eqref{eqn:vreal}  bestimmt. 
+Dabei werden für die Temperaturwerte immer für verschiedene Zeiten die korrespondierenden Messwerte genutzt.
 
 \begin{equation}
     v_\text{ideal}= \frac{Q_1}{A} = \frac{T_1}{T_1-T_2}
@@ -117,7 +118,11 @@ den Formeln \eqref{eqn:videal} und \eqref{eqn:vreal}  bestimmt.
 
 Für die reale Wärmepumpe gilt $v_\text{real} < v_\text{ideal}$.\\
 
-Der Wert für die reale Wärmepumpe lässt sich dann bestimmen, in dem man für  \eqref{eqn:delQ} in \eqref{eqn:vreal} einsetzt. 
+Der Wert für die reale Wärmepumpe lässt sich dann bestimmen, 
+in dem man für die Wärmekapazität der Kupferschlange $m_k c_k =\SI{750}{\joule\per\kelvin}$,
+für die Masse des Wassers $m_1=\SI{4}{\kilo\gram}$ und für die spezifische Wärmekapazität 
+des Wassers $c_w=\SI{4.183}{\kilo\joule\per\kilo\gram\per\kelvin}$ nimmt.
+Anshließend setzt man dann \eqref{eqn:delQ} in \eqref{eqn:vreal} ein. 
 Es ergibt sich dann also aus den zuvor bestimmten Werten;
 
 \begin{table}[H]

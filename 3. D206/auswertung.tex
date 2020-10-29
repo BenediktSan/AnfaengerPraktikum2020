@@ -1,4 +1,5 @@
-\begin{table}
+\newpage
+\begin{table}[H]
     \centering
     \caption{Die Messwerte}
     \label{tab:data}
@@ -47,13 +48,51 @@
     \end{tabular}
 \end{table}
 \newpage
-%5a)
 
+%5a)
 \begin{figure}
     \centering
     \includegraphics[width=\textwidth]{build/plot.pdf}
     \caption{Ein Plot der Messwerte inklusive der gefiteten Funktionen.}
 \end{figure}
+
+
+%5b)
+Dies sind die Fit-Funktionen auf die Messwerte. Dabei ist der Fit auf $T_1$ die Funktion $F(t)$ und der auf $T_2$ ist die Funktion $G(t)$.
+\begin{align}
+    F(t) &=A \cdot t^2+B \cdot t+ C \\
+    G(t) &= \frac{D}{1+E \cdot t^{F}}\\
+    &\begin{aligned}
+        A &=0.00000322 & B&=0.02027984 & C&=21.82008061 \\
+        D &=21.58061064 & E&= 0.00000095& F&=1.97775836 
+    \end{aligned}\\
+    F(t) &=0.00000322t^2+0.02027984t+21.82008061 \\
+    G(t) &= \frac{21.58061064}{1+0.00000095t^{1.97775836}}
+\end{align}
+\\
+
+%5c)
+Im folgenden werden die Differentialquotienten der Temperaturen in verschiedenen Stellen berechnet.
+Da die Fit Funktionen eine angemessene Abbildung der Messwerte darstellen berechnen wir die Quotienten über das bilden der Ableitung der Fits $F(t)$ und $G(t)$ 
+und ihrer anschließenden Punktweisen Auswertung.
+Als Punkte wurden hierbei 7er Schritte gewählt, da man daurch regelmäßige Abstände über den Definitonsbereich hat und einen breiten Bereich des selben abdeckt.
+
+\begin{align}
+    \frac{\partial F(t)}{\partial t} &=2At*B & \frac{\partial G(t)}{\partial t} &= \frac{-D \cdot F\cdot E \cdot t^{F-1}}{(1+E\cdot t^{F})^{2}}\\
+    \frac{\partial F(7)}{\partial t} &=0.0202347600000000   &     \frac{\partial G(7)}{\partial t} &= -0.000271783769486808  \\
+    \frac{\partial F(14)}{\partial t} &=0.0201896800000000   &     \frac{\partial G(14)}{\partial t} &=  -0.000535111561070977 \\
+    \frac{\partial F(21)}{\partial t} &=0.0201446000000000   &     \frac{\partial G(21)}{\partial t} &= -0.000795117897688127  \\
+    \frac{\partial F(28)}{\partial t} &= 0.0200995200000000  &     \frac{\partial G(28)}{\partial t} &= -0.00105276374853994 
+\end{align}
+
+%5d)
+
+Anschließend werden die idealen und realen Güteziffern der Wärmepumpe aus den zuvor berechneten Werten bestimmt.
+
+\begin{equation}
+    v_\text{ideal}= \frac{Q_1}{A} = \frac{T_1}{T_1-T_2}
+\end{equation}
+
 
 
 

@@ -102,6 +102,13 @@ def N_mech(k,pa,pb,roh,mdt):
 
 for i in range(1,5):
     print(f"Die mechanische Leistung in Minute {7*i} beträgt:{N_mech(1.14, p2[7*i -1], p1[7*i -1], 5.51, mdt(i))}")
+
+        #Gründe für schlechte Güteziffer
+print("In der Realität ist es leider nicht möglich die ideale Güteziffer für eine Wärmepumpe zu erreichen, da es bei dem gesamtem Prozess viele Wege gibt um Energie zu \"verlieren\"."
+"Zum einen entstehen bei den ganzen mechanischen Bauteilen der Pumpe durch Reibung Energieverluste und gerade beim Transport der Kühlflüssigkeit wird auch eine Menge Energie an die Umwelt abgegeben."
+"Das sind beides Energieverluste die man auch mit großen Aufwand, realistisch nicht entfernen kann.")
+  
+
         #Plotten
 x= np.linspace(0,2100,50)
 x2=np.linspace(0.0031,0.0034,50)

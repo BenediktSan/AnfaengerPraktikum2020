@@ -3,3 +3,11 @@ Fehler einfügen
 vernünftige Referenzierungen
 
 Werte überprfen (wärmekapazität anpassen (4.183)KJ)
+
+Legende Plot 2
+
+ref auf tab:diff funkt. nicht
+
+evtl. Text und formatierung von "gefittete Messwerte"
+
+lineare regression als formel aufschreiben oder als gegeben ansehen?

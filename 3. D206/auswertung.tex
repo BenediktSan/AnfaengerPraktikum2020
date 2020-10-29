@@ -86,15 +86,27 @@ Da die Fit Funktionen eine angemessene Abbildung der Messwerte darstellen berech
 und ihrer anschließenden Punktweisen Auswertung.
 Als Punkte wurden hierbei 7er Schritte gewählt, da man daurch regelmäßige Abstände über den Definitonsbereich hat und einen breiten Bereich des selben abdeckt.
 
+
 \begin{align}
-    \frac{\partial F(t)}{\partial t} &=2At*B & \frac{\partial G(t)}{\partial t} &= \frac{-D \cdot F\cdot E \cdot t^{F-1}}{(1+E\cdot t^{F})^{2}}\\
-    \frac{\partial F(7)}{\partial t} &=0.0202347600000000   &     \frac{\partial G(7)}{\partial t} &= -0.000271783769486808  \\
-    \frac{\partial F(14)}{\partial t} &=0.0201896800000000   &     \frac{\partial G(14)}{\partial t} &=  -0.000535111561070977 \\
-    \frac{\partial F(21)}{\partial t} &=0.0201446000000000   &     \frac{\partial G(21)}{\partial t} &= -0.000795117897688127  \\
-    \frac{\partial F(28)}{\partial t} &= 0.0200995200000000  &     \frac{\partial G(28)}{\partial t} &= -0.00105276374853994 
+    \frac{\partial F(t)}{\partial t} &=2At*B & \frac{\partial G(t)}{\partial t} &= \frac{-D \cdot F\cdot E \cdot t^{F-1}}{(1+E\cdot t^{F})^{2}}\\ 
 \end{align}
-\\
-\\
+
+\begin{table}[H]
+    \centering
+    \label{tab:Diff}
+    \begin{tabular}{S S [table-format=1.4] S [table-format=2.4]}
+        \toprule
+        {Zeit [min]} & { $\frac{\partial F(t)}{\partial t}$ } & { $\frac{\partial G(t)}{\partial t}$ }  \\
+        \midrule
+        7	&0.0202 &-0.0147\\
+        14	&0.0202 &-0.0139\\
+        21	&0.0201 &-0.0134\\
+        28	&0.0201 &-0.0131\\
+        \bottomrule      
+    \end{tabular}
+\caption {Berechnete Werte für $v_\text{ideal}$ und $v_\text{real} $ gerundet auf die fünfte Nachkommastelle.}
+\end{table}
+
 %5d)
 \section{Güteziffern}
 Anschließend werden die idealen und realen Güteziffern der Wärmepumpe aus den zuvor berechneten Werten und 
@@ -132,7 +144,7 @@ Es ergibt sich dann also aus den zuvor bestimmten Werten;
         21	&1.33548 &0.12871\\
         28	&1.20052 &0.12632\\
         \bottomrule
-        
+        \\
     \end{tabular}
 \caption {Berechnete Werte für $v_\text{ideal}$ und $v_\text{real} $ gerundet auf die fünfte Nachkommastelle.}
 \end{table}

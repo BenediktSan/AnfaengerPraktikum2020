@@ -97,24 +97,27 @@ Als Punkte wurden hierbei 7er Schritte gewählt, da man daurch regelmäßige Abs
 \\
 %5d)
 \section{Güteziffern}
-Anschließend werden die idealen und realen Güteziffern der Wärmepumpe aus den zuvor berechneten Werten und den Formeln \eqref{eqn:videal} und \eqref{eqn:vreal}  bestimmt.
+Anschließend werden die idealen und realen Güteziffern der Wärmepumpe aus den zuvor berechneten Werten und 
+den Formeln \eqref{eqn:videal} und \eqref{eqn:vreal}  bestimmt.
 
 \begin{equation}
     v_\text{ideal}= \frac{Q_1}{A} = \frac{T_1}{T_1-T_2}
     \label{eqn:videal}
 \end{equation}
+
 \begin{equation}
     v_\text{real}= \frac{\increment{Q_1}}{\increment t \cdot \symup{N} }
     \label{eqn:vreal}
 \end{equation}
+
 \begin{equation}
     \frac{\increment Q_1}{\increment t} = \left(m_1 c_w + m_k c_k \right)\frac{\increment T_1}{\increment t}
     \label{eqn:delQ}
 \end{equation}\\
 
-Für die reale Wärmepumpe gilt $v_\text{real} < v_\text{ideal}$.
+Für die reale Wärmepumpe gilt $v_\text{real} < v_\text{ideal}$.\\
 
-Der Wert für die reale Wärmepumpe lässt sich dann bestimmen, in dem man für  \eqref{delQ} in \eqref{eqn:vreal} einsetzt. 
+Der Wert für die reale Wärmepumpe lässt sich dann bestimmen, in dem man für  \eqref{eqn:delQ} in \eqref{eqn:vreal} einsetzt. 
 Es ergibt sich dann also aus den zuvor bestimmten Werten;
 
 \begin{table}[H]

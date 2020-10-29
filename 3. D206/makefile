@@ -17,6 +17,9 @@ build:
 clean:
 	rm -rf build
 
+aux:
+	rm -rf Protokoll_D206.aux Protokoll_D206.bcf Protokoll_D206.log Protokoll_D206.pdf Protokoll_D206.run.xml Protokoll_D206.toc
+
 FORCE:
 
 .PHONY: all clean

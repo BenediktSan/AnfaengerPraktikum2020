@@ -87,6 +87,7 @@ print(f"L1={L1:.4f}")
 P2=np.log(p2)
 parameter4, _ = np.polyfit(1/T2,P2, deg=1, cov=True)
 L2=-1*parameter4[0]*8.314
+print("Parameter4=",parameter4)
 print(f"L2={L2:.4f}")
 
         #Massendurchsatz

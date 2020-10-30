@@ -78,11 +78,10 @@ Dies sind die Fit-Funktionen auf die Messwerte. Dabei ist der Fit auf $T_1$ die 
     \end{aligned}\\
     \nonumber
     \\
-    &F(t) =0.00000322t^2+0.02027984t+21.82008061 \\
-    &G(t) = \frac{21.58061064}{1+0.00000095t^{1.97775836}}
+    \implies &F(t) =0.00000322t^2+0.02027984t+21.82008061 \\
+    \implies &G(t) = \frac{21.58061064}{1+0.00000095t^{1.97775836}}
 \end{align}
 \\
-
 %5c)
 \section{Differentialquotienten der Temperaturen}
 Im folgenden werden die Differentialquotienten der Temperaturen in verschiedenen Stellen berechnet.
@@ -97,8 +96,7 @@ Als Punkte wurden hierbei 7er Schritte gewählt, da man daurch regelmäßige Abs
 
 \begin{table}[H]
     \centering
-    \label{tab:Diff}
-    \begin{tabular}{S S [table-format=1.4] S [table-format=2.4]}
+    \begin{tabular}{S[table-format=2.0] S [table-format=3.5] S [table-format=3.5]}
         \toprule
         {Zeit [min]} & { $\frac{\partial F(t)}{\partial t}$ } & { $\frac{\partial G(t)}{\partial t}$ }  \\
         \midrule
@@ -108,7 +106,8 @@ Als Punkte wurden hierbei 7er Schritte gewählt, da man daurch regelmäßige Abs
         28	&0.0201 &-0.0131\\
         \bottomrule      
     \end{tabular}
-\caption {Werte der Zeittlichen Ableitungen der Temperaturen}
+\caption {Werte der Zeittlichen Ableitungen der Temperaturen.}
+\label{tab:Diff}
 \end{table}
 
 %5d)
@@ -130,21 +129,21 @@ Dabei werden für die Temperaturwerte immer für verschiedene Zeiten die korresp
 \begin{equation}
     \frac{\increment Q_1}{\increment t} = \left(m_1 c_w + m_k c_k \right)\frac{\increment T_1}{\increment t}
     \label{eqn:delQ}
-\end{equation}\\
-
+\end{equation}
+\\
 Für die reale Wärmepumpe gilt $v_\text{real} < v_\text{ideal}$.\\
-
+\\
 Der Wert für die reale Wärmepumpe lässt sich dann bestimmen, 
 in dem man für die Wärmekapazität der Kupferschlange $m_k c_k =\SI{750}{\joule\per\kelvin}$,
 für die Masse des Wassers $m_1=\SI{4}{\kilo\gram}$ und für die spezifische Wärmekapazität 
-des Wassers $c_w=\SI{4.183}{\kilo\joule\per\kilo\gram\per\kelvin}$ \footnote{Quelle: \url{https://www.chemie.de/lexikon/Spezifische_W\%C3\%A4rmekapazit\%C3\%A4t.html}} nimmt.
+des Wassers $c_w=\SI{4.183}{\kilo\joule\per\kilo\gram\per\kelvin}$ \footnote{Quelle: \url{https://www.chemie.de/lexikon/Spezifische_W\%C3\%A4rmekapazit\%C3\%A4t.html}
+(Besucht am 30.12.2020)} nimmt.
 Anschließend setzt man dann \eqref{eqn:delQ} in \eqref{eqn:vreal} ein.\\
 Es ergibt sich dann also aus den genannten Werten und den Werten aus \ref{tab:Diff} ;
-%Quelle. https://www.chemie.de/lexikon/Spezifische_W%C3%A4rmekapazit%C3%A4t.html
 
 \begin{table}[H]
     \centering
-    \label{tab:vreal}
+    
     \begin{tabular}{ S [table-format=2.0] S [table-format=2.5] S [table-format=1.5] }
         \toprule
         {$t \mathbin{/} \si{\minute}$} & { $v_\text{ideal}$} & {$v_\text{real} $} \\
@@ -157,7 +156,10 @@ Es ergibt sich dann also aus den genannten Werten und den Werten aus \ref{tab:Di
         \\
     \end{tabular}
 \caption {Berechnete Werte für $v_\text{ideal}$ und $v_\text{real} $ gerundet auf die fünfte Nachkommastelle.}
+\label{tab:vreal}
 \end{table}
+
+
 Wie man sieht sind die realen Güteziffer sogar teilweise um einen Faktor $10^3$ kleiner als die der idealen Güteziffer.
 Dafür unterliegen sie wesentlich weniger Fluktuationen.dort zeigt sich, dass sie ungefähr einen Wert von $\approx 0.129$haben, 
 wobei die Werte von $v_\text{ideal}$ so sehr schwanken, dass sich keine vernünftige Abschätzung machen lässt.
@@ -172,14 +174,15 @@ wobei die Werte von $v_\text{ideal}$ so sehr schwanken, dass sich keine vernünf
     \caption{Druck-Temperatur Abbildung mit Ausgleichsgerade zur Bestimmung der Verdampfungswärme $L$.}
 \end{figure}
 
-Mithilfe einer linearen Regression lässt sich nun aus den geploteten Werten für beide Datensätze die Verdampfungswärme $L$ bestimmen.
+Mithilfe einer linearen Regression lässt sich nun aus den geploteten Werten für beide Datensätze 
+die Verdampfungswärme $L$ von Dichloridfluormethan $\ce{Cl2F2C}$ bestimmen.
 
 \begin{align*}
 \intertext{$L_1$ bestimmt sich dann aus der Regressionsgeraden des Datensatzes $T_1$ mit Hilfe der Gaskonstante $\symup{R}$.}
 y&=mx+n  \\
 \implies y&=-2460.10200676x+10.13156316\\
 \\
-\implies L_1&=-1 \cdot m \cdot \symup{R} \approx 20453.2881\\
+\implies L_1&=(-1) \cdot m \cdot \symup{R} \approx 20453.2881\\
 \intertext{Für $L_2$ gilt dann dasselbe mit den korrespondierenden Werten.}
 \implies y&=-1718.02083898x+7.3235009\\
 \\
@@ -189,10 +192,44 @@ L_2&\approx14283.6253 EINHEITFEHLT!!
 
 
 \subsection{Berechnung Massendurchsatz}
-Dichloridfluormethan $\ce{Cl2F2C}$
+
+Nun lässt sich Mithilfe der Verdampfungswärme von Dichloridfluormethan der Formel \refeq{eqn:mass} und \refeq{eqn:delQ} der Massendurchsatz bestimmen.
+\begin{equation}
+    \frac{\increment Q_2}{\increment t} = L\cdot \frac{\increment m}{\increment t}
+    \label{eqn:mass}
+\end{equation}
+
+Einsetzen in diese Formel führt zu:
+\begin{table}[H]
+    \centering
+    
+    \begin{tabular}{ S [table-format=2.0] S [table-format=3.5] }
+        \toprule
+        {$t \mathbin{/} \si{\minute}$} & { $m \mathbin{/} \si{\kilo\gram}$} \\
+        \midrule
+        7	&-0.00079\\
+        14	&-0.00074\\
+        21	&-0.00072\\
+        28	&-0.00070\\
+        \bottomrule
+        \\
+    \end{tabular}
+\caption {Berechnete Werte für den Massendurchsatz $m$ von $\ce{Cl2F2C}$ gerundet auf die fünfte Nachkommastelle.}
+\label{tab:mass}
+\end{table}
 
 
+\section{Kompressorleistung}
 
+Für die Berechnung der Kompressorleistung  $N_\text{mech}$ darf eine adiabatische Kompression angenommen wertden.
+\begin{align*}
+    \intertext{Die Kompressorleistung ergibt sich als die Kompressionsarbeit pro Zeit, also als:}
+    N_\text{mech}&=\frac{\increment A_m}{\increment t}
+    \intertext{Desweiteren ist die Kompressionsarbeit die Arbeit, welche verrichtet wird, wenn ein Volumen zu einem anderen komprimiert wird.}
+    A_m&= - \int_{V_a}^{V_b} p\, \symup{d}V
+\end{align*}
+
+%Dichloridfluormethan $\ce{Cl2F2C}$
 %\begin{align*}
 %\intertext{Es ergibt sich dann also;}
 %\end{align*}

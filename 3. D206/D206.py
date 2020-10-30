@@ -95,7 +95,7 @@ def mdt(i):
     return ((mkck+m1c1)*Gdt(7*i))/L2
 
 for i in range(1,5):
-    print(f"Massendurchsatz in minute({7*i})={mdt(i):.4f}")
+    print(f"Massendurchsatz in minute({7*i})={mdt(i):.5f}")
 
         #mechanische Leistung
 def N_mech(k,pa,pb,roh,mdt):

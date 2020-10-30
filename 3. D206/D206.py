@@ -2,6 +2,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 import uncertainties as unc
 import uncertainties.unumpy as unp
+from uncertainties import ufloat
 from scipy.optimize import curve_fit
 import sympy
 
@@ -11,13 +12,13 @@ t=Data[0:36]
 t= t*60
 #print(t)
 T1=Data[36:72]
-T1+=273
+T1+=273.15
 #print(T1)
 p1=Data[72:108]
 p1+=1
 #print(p1)
 T2=Data[108:144]
-T2+=273
+T2+=273.15
 #print(T2)
 p2=Data[144:180]
 p2+=1
@@ -25,7 +26,7 @@ p2+=1
 N=Data[180:216]
 #print(N)
 
-dT=0.1
+dT=0.1*np.ones(36)
 mkck=750
 m1=4
 c1=4.183
@@ -38,21 +39,32 @@ def f(x,A,B,C):
 def g(x,A,B,C):
     return A/(1+ B*(x**C))
 
-parameter1 , _ =curve_fit(f,t,T1)
-parameter2, _ =curve_fit(g,t,T2,p0=(240,0.00006,1.2))
+parameter1 , _1 =curve_fit(f,t,T1)
+parameter2, _2 =curve_fit(g,t,T2,p0=(240,0.00006,1.2))
 
-for names ,value in zip("ABC", parameter1):
-    print(f"{names}={value:.8f}")
-for names , value in zip("DEF", parameter2):
-    print(f"{names}={value:.8f}")
+uncertainties1 = np.sqrt(np.diag(_1))
+uncertainties2 = np.sqrt(np.diag(_2))
+
+for names ,value, unsicherheit in zip("ABC", parameter1,uncertainties1):
+    print(f"{names}={value:.8f} +- {unsicherheit:.8f}")
+for names ,value, unsicherheit in zip("DEF", parameter2,uncertainties2):
+    print(f"{names}={value:.8f} +- {unsicherheit:.8f}")
 
 
-A=-0.00000322
-B=0.02027984
-C=294.82008068
-D=295.83501195
-E=0.00006348
-F=0.91799311
+A=-0.00000322 
+B=0.02027984 
+C=294.97008058 
+D=295.98505139 
+E=0.00006346 
+F=0.91797063
+
+for names ,value, unsicherheit in zip("HIJ", parameter1,uncertainties1):
+    names= ufloat(value,unsicherheit)
+    print(f"HIJ={names}")
+for names ,value, unsicherheit in zip("KLM", parameter2,uncertainties2):
+    names= ufloat(value,unsicherheit)
+    print(f"KLM={names} ")
+
 
         #differenzieren
 t_v=sympy.var("t_v")
@@ -62,6 +74,7 @@ G=D/(1+E*(t_v**F))
 
 #print("F/dt= ",F.diff(t_v))
 #print("G/dt= ",G.diff(t_v))
+
 def Fdt(t):
     F1=F2.diff(t_v)
     return F1.evalf(subs={t_v:t}) 
@@ -120,7 +133,7 @@ x3=np.linspace(0.00339,0.00363,50)
 plt.figure()
 plt.plot(t,T1,"k.",label="T1")
 plt.plot(t,T2,".",label="T2") 
-plt.plot(x,f(x, *parameter1),label="Fit zu T1")
+plt.errorbar(x,f(x, *parameter1),yerr=0.1,label="Fit zu T1")
 plt.plot(x,g(x, *parameter2),label="Fit zu T2")     
 plt.xlabel("Zeit [s]")
 plt.ylabel("Temperatur [K]")
@@ -130,9 +143,9 @@ plt.savefig("build/plot1.pdf")
 
 
 plt.figure()
-plt.plot(1/T1,P1,".",label="T1")
+plt.plot(1/T1,P1,".",label="Werte von T1")
 plt.plot(x2, parameter3[0]*x2 + parameter3[1], label="Regression zu 1")
-plt.plot(1/T2,P2,".",label="T2")
+plt.plot(1/T2,P2,".",label="Werte von T2")
 plt.plot(x3, parameter4[0]*x3 + parameter4[1], label="Regression zu 2")
 plt.xlabel("1/T [1/K]")
 plt.ylabel("log(p/p0)")

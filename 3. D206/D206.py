@@ -38,7 +38,7 @@ def f(x,A,B,C):
 def g(x,A,B,C):
     return A/(1+ B*(x**C))
 
-parameter1, _ =curve_fit(f,t,T1)
+parameter1 , _ =curve_fit(f,t,T1)
 parameter2, _ =curve_fit(g,t,T2,p0=(240,0.00006,1.2))
 
 for names ,value in zip("ABC", parameter1):
@@ -46,12 +46,14 @@ for names ,value in zip("ABC", parameter1):
 for names , value in zip("DEF", parameter2):
     print(f"{names}={value:.8f}")
 
+
 A=-0.00000322
 B=0.02027984
 C=294.82008068
 D=295.83501195
 E=0.00006348
 F=0.91799311
+
         #differenzieren
 t_v=sympy.var("t_v")
 
@@ -111,7 +113,7 @@ print("In der Realität ist es leider nicht möglich die ideale Güteziffer für
   
 
         #Plotten
-x= np.linspace(0,2100,50)
+x = np.linspace(0,2100,50)
 x2=np.linspace(0.0031,0.0034,50)
 x3=np.linspace(0.00339,0.00363,50)
 

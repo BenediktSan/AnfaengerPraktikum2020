@@ -8,6 +8,6 @@ Legende Plot 2
 
 ref auf tab:diff funkt. nicht [gelöst. label muss nach der caption kommen]
 
-evtl. Text und formatierung von "gefittete Messwerte"
+evtl. Text und formatierung von "gefittete Messwerte" ---> Zeiteinheit passen nicht zusammen(Messwerte in min, fit in s)
 
 lineare regression als formel aufschreiben oder als gegeben ansehen?

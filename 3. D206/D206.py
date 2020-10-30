@@ -46,12 +46,14 @@ for names ,value in zip("ABC", parameter1):
 for names , value in zip("DEF", parameter2):
     print(f"{names}={value:.8f}")
 
+
 A=-0.00000322
 B=0.02027984
 C=294.82008068
 D=295.83501195
 E=0.00006348
 F=0.91799311
+
         #differenzieren
 t_v=sympy.var("t_v")
 

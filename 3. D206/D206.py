@@ -29,7 +29,7 @@ N=Data[180:216]
 dT=0.1*np.ones(36)
 mkck=750
 m1=4
-c1=4.183
+c1=4183
 m1c1=m1*c1
 #print(m1c1)
 
@@ -39,7 +39,7 @@ def f(x,A,B,C):
 def g(x,A,B,C):
     return A/(1+ B*(x**C))
 
-parameter1 , _1 =curve_fit(f,t,T1)
+parameter1 , _1 = curve_fit(f,t,T1)
 parameter2, _2 =curve_fit(g,t,T2,p0=(240,0.00006,1.2))
 
 uncertainties1 = np.sqrt(np.diag(_1))
@@ -58,21 +58,22 @@ D=295.98505139
 E=0.00006346 
 F=0.91797063
 
-for names ,value, unsicherheit in zip("HIJ", parameter1,uncertainties1):
-    names= ufloat(value,unsicherheit)
-    print(f"HIJ={names}")
-for names ,value, unsicherheit in zip("KLM", parameter2,uncertainties2):
-    names= ufloat(value,unsicherheit)
-    print(f"KLM={names} ")
+#for names ,value, unsicherheit in zip("HIJ", parameter1,uncertainties1):
+#    names= ufloat(value,unsicherheit)
+#    print(f"HIJ={names}")
+#for names ,value, unsicherheit in zip("KLM", parameter2,uncertainties2):
+#    names= ufloat(value,unsicherheit)
+#    print(f"KLM={names} ")
 
 
         #differenzieren
 t_v=sympy.var("t_v")
 
-F2=A*t_v**2+B*t_v+C
-G=D/(1+E*(t_v**F))
+F2 = A*t_v**2 + B*t_v + C
 
-#print("F/dt= ",F.diff(t_v))
+G = D / (1 + E * (t_v**F))
+
+#print("F/dt= ",F2.diff(t_v))
 #print("G/dt= ",G.diff(t_v))
 
 def Fdt(t):
@@ -84,44 +85,50 @@ def Gdt(t):
     return G1.evalf(subs={t_v:t}) 
 
 for i in range(1,5):
-    print(f"Fdt({7*i})={Fdt(7*i):.4f}", f"  Gdt({7*i})={Gdt(7*i):.4f}")
+    print(f"Fdt({7*i})={Fdt(t[7*i+1]):.4f}", f"  Gdt({7*i})={Gdt(t[7*i+1]):.4f}")
 
 
         #Güteziffer
 for i in range(1,5):
-    print(f"v_real({7*i})={((mkck+m1c1)*Fdt(7*i))/(N[(7*i)-1]):.4f} v_ideal({7*i})={T1[(7*i)-1]/(T1[(7*i)-1]-T2[(7*i)-1]):.4f}")
+    print(f"v_real({7*i})={((mkck+m1c1)*Fdt(7*i))/(N[(7*i)+1]):.4f} v_ideal({7*i})={T1[(7*i)+1]/(T1[(7*i)+1]-T2[(7*i)+1]):.4f}")
 
         #Verdampfungswärme
 
 P1=np.log(p1)
-parameter3, _ = np.polyfit(1/T1,P1, deg=1, cov=True)
-L1=-1*parameter3[0]*8.314
-print("Parameter3=",parameter3)
-print(f"L1={L1:.4f}")
+parameter3, _3 = np.polyfit(1/T1,P1, deg=1, cov=True)
+#L1=-1*parameter3[0]*8.314
+#print("Parameter3=",parameter3)
+#print(f"L1={L1:.4f}")
 
 P2=np.log(p2)
-parameter4, _ = np.polyfit(1/T2,P2, deg=1, cov=True)
+parameter4, _4 = np.polyfit(1/T2,P2, deg=1, cov=True)
 L2=-1*parameter4[0]*8.314
-print("Parameter4=",parameter4)
-print(f"L2={L2:.4f}")
+#print("Parameter4=",parameter4)
+#print(f"L2={L2:.4f}")
+
+#uncertainties3 = np.sqrt(np.diag(_3))
+
+#uncertainties4 = np.sqrt(np.diag(_4))
+#L2_f= ufloat(-1*parameter4[0]*8.314,1*uncertainties4[0]*8.314 )
+
 
         #Massendurchsatz
 def mdt(i):
-    return ((mkck+m1c1)*Gdt(7*i))/L2
+    return ((mkck+m1c1)*Gdt(t[7*i+1]))/L2
 
 for i in range(1,5):
     print(f"Massendurchsatz in minute({7*i})={mdt(i):.5f}")
 
         #mechanische Leistung
 def N_mech(k,pa,pb,roh,mdt):
-    return (1/(k-1))*(pb*np.sqrt(pa/pb)-pa)*(1/roh)*mdt
+    return (1/(k-1))*(pb*((pa/pb)**(1/k))-pa)*(1/roh)*mdt
 
 for i in range(1,5):
-    print(f"Die mechanische Leistung in Minute {7*i} beträgt:{N_mech(1.14, p2[7*i -1], p1[7*i -1], 5.51, mdt(i)):.4f}")
+    print(f"Die mechanische Leistung in Minute {7*i} beträgt:{N_mech(1.14, p2[7*i +1], p1[7*i +1], 5.51, mdt(i)):.4f}")
 
         #Gründe für schlechte Güteziffer
 print("In der Realität ist es leider nicht möglich die ideale Güteziffer für eine Wärmepumpe zu erreichen, da es bei dem gesamtem Prozess viele Wege gibt um Energie zu \"verlieren\"."
-"Zum einen entstehen bei den ganzen mechanischen Bauteilen der Pumpe durch Reibung Energieverluste und gerade beim Transport der Kühlflüssigkeit wird auch eine Menge Energie an die Umwelt abgegeben."
+"Zum einen entstehen bei den ganzen mechanischen Bauteilen der Pumpe durch Reibung Energieverluste und gerade beim Transport der Kühlflüssigkeit wird auch eine Menge Energie an die Umwelt abgegeben. "
 "Das sind beides Energieverluste die man auch mit großen Aufwand, realistisch nicht entfernen kann.")
   
 

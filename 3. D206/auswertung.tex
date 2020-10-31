@@ -178,7 +178,8 @@ Mithilfe einer linearen Regression lässt sich nun aus den geploteten Werten fü
 die Verdampfungswärme $L$ von Dichloridfluormethan $\ce{Cl2F2C}$ bestimmen.
 
 \begin{align*}
-\intertext{$L_1$ bestimmt sich dann aus der Regressionsgeraden des Datensatzes $T_1$ mit Hilfe der Gaskonstante $\symup{R}$.}
+\intertext{$L_1$ bestimmt sich dann aus der Regressionsgeraden des Datensatzes $T_1$
+ mit Hilfe der Gaskonstante $\symup{R}$ \footnote{Quelle: \url{https://www.chemie.de/lexikon/Universelle_Gaskonstante.html}(Besucht am 30.12.2020)}.}
 y&=mx+n  \\
 \implies y&=-2460.10200676x+10.13156316\\
 \\
@@ -202,7 +203,6 @@ Nun lässt sich Mithilfe der Verdampfungswärme von Dichloridfluormethan der For
 Einsetzen in diese Formel führt zu:
 \begin{table}[H]
     \centering
-    
     \begin{tabular}{ S [table-format=2.0] S [table-format=3.5] }
         \toprule
         {$t \mathbin{/} \si{\minute}$} & { $m \mathbin{/} \si{\kilo\gram}$} \\
@@ -230,8 +230,37 @@ Einsetzen in diese Formel führt zu:
     weswegen die Poissonsche Gelichung genutzt werden kann.}
     p_a V_a^{\kappa} &= p_a V_a^{\kappa} =p V^{\kappa}
     \intertext{Wobei $\kappa$ das Verhältinis der molwärmen der beiden [Dunno] ist und als $\kappa =1.14 $ gegeben ist.
-    Desweiteren ist $p=\SI{1}{\bar}$,$T=\SI{0}{\celsius}$ und $\rho_0=\SI{5.51}{\gram\per\litre}$ gegeben.}
+    Desweiteren ist $p=\SI{1}{\bar}$, $T=\SI{0}{\celsius}$ und $\rho_0=\SI{5.51}{\gram\per\litre}$ gegeben.}
+    \intertext{So ergibt sich dann zur Berechnung der Leistung die Formel:}
+    N_\text{mech} &= \frac{q}{\kappa-1}\left( p_b \sqrt{\kappa}{\frac{p_a}{p_b}}-p_a \right) \frac{1}{\rho} \frac{\increment m}{\increment t}
 \end{align*}
+Wieder mit den Werten aus \ref{tab:Diff} lässt sich so die Leistung bestimmen.
+\begin{table}[H]
+    \centering
+    \begin{tabular}{ S [table-format=2.0] S [table-format=3.5] }
+        \toprule
+        {$t \mathbin{/} \si{\minute}$} & { $m \mathbin{/} \si{\kilo\gram}$} \\
+        \midrule
+        7	&-0.0055\\
+        14	&-0.0063\\
+        21	&-0.0070\\
+        28	&-0.0072\\
+        \bottomrule
+        \\
+    \end{tabular}
+    \caption{Die berechneten Werte von $N_\text{mech}$ in $\si{\watt}$ gerundet auf die vierte Nachkommastelle. }
+    \label{tab:leistung}
+\end{table}
+
+%5g)
+\section{Fazit zur Güteziffer}
+
+Die große Diskrepanz zwischen idealer und realer Güteziffer, die man in \ref{tab:vreal} und \ref{eqn:videal} sieht,
+läasst sich vermutlich dadurch erklären, dass in dem Vorgang sehr viel Energie in bei der Umwandlung
+"verloren" geht.
+Zu diesen Prozessen gehören zum Beispiel die Pumpen, bei denen in durch Reibung viel Energieverluste entstehen
+oder durch den mechanischen Transport der Kühlflüssigkeit, die viel Energie benötigt.
+Diese Energieverluste lassen sich auch mit großem Aufwand schlecht minimieren, weswegen dort eine große Diskrepanz entsteht.
 
 %Dichloridfluormethan $\ce{Cl2F2C}$
 %\begin{align*}

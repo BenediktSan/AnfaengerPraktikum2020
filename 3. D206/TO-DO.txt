@@ -4,7 +4,7 @@ vernünftige Referenzierungen
 
 Werte überprfen (wärmekapazität anpassen (4.183)KJ)
 
-Legende Plot 2
+Legende Plot 2 [done]
 
 ref auf tab:diff funkt. nicht [gelöst. label muss nach der caption kommen]
 

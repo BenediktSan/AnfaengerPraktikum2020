@@ -10,21 +10,27 @@ import sympy
 Data=np.genfromtxt("Daten.txt")
 t=Data[0:36]
 t= t*60
+#t in sekunde
 #print(t)
 T1=Data[36:72]
 T1+=273.15
 #print(T1)
+#Temperatur in K
 p1=Data[72:108]
 p1+=1
 #print(p1)
+#Druck in bar
 T2=Data[108:144]
 T2+=273.15
 #print(T2)
+#Temperatur in K
 p2=Data[144:180]
 p2+=1
 #print(p2)
+#Druck in bar
 N=Data[180:216]
 #print(N)
+#Leistung in Watt
 
 dT=0.1*np.ones(36)
 mkck=750
@@ -58,21 +64,35 @@ D=295.98505139
 E=0.00006346 
 F=0.91797063
 
-#for names ,value, unsicherheit in zip("HIJ", parameter1,uncertainties1):
-#    names= ufloat(value,unsicherheit)
-#    print(f"HIJ={names}")
-#for names ,value, unsicherheit in zip("KLM", parameter2,uncertainties2):
-#    names= ufloat(value,unsicherheit)
-#    print(f"KLM={names} ")
+for names ,value, unsicherheit in zip("HIJ", parameter1,uncertainties1):
+    names= ufloat(value,unsicherheit)
+    #print(f"HIJ={names:.9f}")
+for names ,value, unsicherheit in zip("KLM", parameter2,uncertainties2):
+    names= ufloat(value,unsicherheit)
+    #print(f"KLM={names:.9f} ")
 
+
+H= ufloat(-0.00000322 , 0.00000004)
+I= ufloat(0.02027984 , 0.00009110)
+J= ufloat(294.97008058 , 0.04134538)
+K= ufloat(295.98505139 , 0.37244804)
+L= ufloat(0.00006346 ,0.00002117)
+M= ufloat(0.91797063 ,0.04248507)
+
+print("H = ", H)
+print("I = ", I)
+print("J = ", J)
+print("K = ", K)
+print("L = ", L)
+print("M = ", M)
 
         #differenzieren
 t_v=sympy.var("t_v")
 
 F2 = A*t_v**2 + B*t_v + C
-
+#F2 = H * t_v**2 + I * t_v + J
 G = D / (1 + E * (t_v**F))
-
+#G = K / (1 + L * (t_v**M))
 #print("F/dt= ",F2.diff(t_v))
 #print("G/dt= ",G.diff(t_v))
 
@@ -92,7 +112,7 @@ for i in range(1,5):
 for i in range(1,5):
     print(f"v_real({7*i})={((mkck+m1c1)*Fdt(7*i))/(N[(7*i)+1]):.4f} v_ideal({7*i})={T1[(7*i)+1]/(T1[(7*i)+1]-T2[(7*i)+1]):.4f}")
 
-        #Verdampfungswärme
+        #Verdampfungswärme L[Joule/mol] R[Joule/mol*K]
 
 P1=np.log(p1)
 parameter3, _3 = np.polyfit(1/T1,P1, deg=1, cov=True)
@@ -102,19 +122,25 @@ parameter3, _3 = np.polyfit(1/T1,P1, deg=1, cov=True)
 
 P2=np.log(p2)
 parameter4, _4 = np.polyfit(1/T2,P2, deg=1, cov=True)
-L2=-1*parameter4[0]*8.314
+L2_v=-1*parameter4[0]*8.314
+
 #print("Parameter4=",parameter4)
-#print(f"L2={L2:.4f}")
 
-#uncertainties3 = np.sqrt(np.diag(_3))
 
-#uncertainties4 = np.sqrt(np.diag(_4))
+uncertainties4 = np.sqrt(np.diag(_4))
+L2_e=-1*uncertainties4[0]*8.314
+L2 = ufloat(L2_v, -1*L2_e)
+print(f"L2={L2:.4f}")
+
+print("Fehler a =", uncertainties4)
 #L2_f= ufloat(-1*parameter4[0]*8.314,1*uncertainties4[0]*8.314 )
 
 
         #Massendurchsatz
 def mdt(i):
-    return ((mkck+m1c1)*Gdt(t[7*i+1]))/L2
+    mdtn=((mkck+m1c1)*Gdt(t[7*i+1]))/L2.n
+    mdts=(((mkck+m1c1)*Gdt(t[7*i+1]))/(L2.n-L2.s))-(((mkck+m1c1)*Gdt(t[7*i+1]))/L2.n)
+    return ufloat(mdtn,-1*mdts)
 
 for i in range(1,5):
     print(f"Massendurchsatz in minute({7*i})={mdt(i):.5f}")
@@ -140,7 +166,7 @@ x3=np.linspace(0.00339,0.00363,50)
 plt.figure()
 plt.plot(t,T1,"k.",label="T1")
 plt.plot(t,T2,".",label="T2") 
-plt.errorbar(x,f(x, *parameter1),yerr=0.1,label="Fit zu T1")
+plt.plot(x,f(x, *parameter1),label="Fit zu T1")
 plt.plot(x,g(x, *parameter2),label="Fit zu T2")     
 plt.xlabel("Zeit [s]")
 plt.ylabel("Temperatur [K]")

@@ -227,19 +227,19 @@ Einsetzen in diese Formel führt zu:
 
 
 \subsection{Kompressorleistung}
-
 \begin{align*}
-    \intertext{Die Kompressorleistung ergibt sich als die Kompressionsarbeit pro Zeit, also als:}
-    N_\text{mech}&=\frac{\increment A_m}{\increment t}
-    \intertext{Desweiteren ist die Kompressionsarbeit die Arbeit, welche verrichtet wird, wenn ein Stoff eines Volumens zu einem anderen Volumen komprimiert wird.}
-    A_m&= - \int_{V_a}^{V_b} p \, \symup{d}V
-    \intertext{Für die Berechnung der Kompressorleistung  $N_\text{mech}$ darf eine adiabatische Kompression angenommen wertden, 
-    weswegen die Poissonsche Gelichung genutzt werden kann.}
-    p_a V_a^{\kappa} &= p_a V_a^{\kappa} =p V^{\kappa}
-    \intertext{Wobei $\kappa$ das Verhältinis der molwärmen der beiden [Dunno] ist und als $\kappa =1.14 $ gegeben ist.
-    Desweiteren ist $p=\SI{1}{\bar}$, $T=\SI{0}{\celsius}$ und $\rho_0=\SI{5.51}{\gram\per\litre}$ gegeben.}
-    \intertext{So ergibt sich dann zur Berechnung der Leistung die Formel:}
-    N_\text{mech} &= \frac{q}{\kappa-1}\left( p_b \sqrt{\kappa}{\frac{p_a}{p_b}}-p_a \right) \frac{1}{\rho} \frac{\increment m}{\increment t}
+ %   \intertext{Die Kompressorleistung ergibt sich als die Kompressionsarbeit pro Zeit, also als:}
+%    N_\text{mech}&=\frac{\increment A_m}{\increment t}
+ %   \intertext{Desweiteren ist die Kompressionsarbeit die Arbeit, welche verrichtet wird, wenn ein Stoff eines Volumens zu einem anderen Volumen komprimiert wird.}
+%    A_m&= - \int_{V_a}^{V_b} p \, \symup{d}V
+%    \intertext{Für die Berechnung der Kompressorleistung  $N_\text{mech}$ darf eine adiabatische Kompression angenommen wertden, 
+%    weswegen die Poissonsche Gelichung genutzt werden kann.}
+%    p_a V_a^{\kappa} &= p_a V_a^{\kappa} =p V^{\kappa}
+ %   \intertext{Wobei $\kappa$ das Verhältinis der molwärmen der beiden [Dunno] ist und als $\kappa =1.14 $ gegeben ist.
+    \intertext{Mit Hilfe der in \ref{kompressor} hergeleiteten Formeln lässt sich nun die Kompressorleistung bestimmen.}
+   \intertext{Dabei sind $\kappa =1.14 $, $p=\SI{1}{\bar}$, $T=\SI{0}{\celsius}$ und $\rho_0=\SI{5.51}{\gram\per\litre}$ als die Werte gegeben.}
+   \intertext{Und die Formel die sich zur Bestimmung ergeben hat:}
+   N_\text{mech} &= \frac{q}{\kappa-1}\left( p_b \sqrt{\kappa}{\frac{p_a}{p_b}}-p_a \right) \frac{1}{\rho} \frac{\increment m}{\increment t}
 \end{align*}
 Wieder mit den Werten aus \ref{tab:Diff} lässt sich so die Leistung bestimmen.
 \begin{table}[H]

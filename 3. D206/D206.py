@@ -132,8 +132,8 @@ for i in range(1,5):
 def v_ideal_error(T1,T2,dT1,dT2):
     return np.sqrt(((-T2/((T1-T2)**2))*dT1)**2+(T1/(((T1-T2)**2))*dT2)**2)       
 for i in range(1,5):
-    print(f"v_real({7*i})={((mkck+m1c1)*Fdt(7*i))/(N[(7*i)+1]):.4f} 
-    v_ideal({7*i})={ufloat(T1[(7*i)+1]/(T1[(7*i)+1]-T2[(7*i)+1]),v_ideal_error(T1[7*i+1],T2[7*i+1],0.1,0.1))}")
+    print(f"v_real({7*i})={((mkck+m1c1)*Fdt(7*i))/(N[(7*i)+1]):.4f} v_ideal({7*i})={ufloat(T1[(7*i)+1]/(T1[(7*i)+1]-T2[(7*i)+1]),v_ideal_error(T1[7*i+1],T2[7*i+1],0.1,0.1))}")
+    
 
   #Verdampfungswärme L[Joule/mol] R[Joule/mol*K]
 

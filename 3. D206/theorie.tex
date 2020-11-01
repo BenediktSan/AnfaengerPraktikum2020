@@ -1,11 +1,12 @@
 \section{Theoretische Grundlagen}
 
-Eine Wärmepumpe ist eine Vorrichtung, die in der Lage ist Wärmefluss von einem kälteren in ein
-wärmeres Thermisches-Reservoir herzustellen. Dies geschieht entgegen dem standardmäßigen Prozess,
-das der Wärmeflussvon einem wärmeren in ein 
-kälteres Reservoir vorliegt. Damit die Wärmepumpe diese Richtung umkehrt muss also in ihr,
-nach dem zweiten Hauptsatz der Thermodynamik noch zusätzliche
-mechanische Arbeit verrichtet werden.
+Eine Wärmepumpe ist eine Vorrichtung, die in der Lage ist einen Wärmefluss von einem kälteren in ein
+wärmeres thermisches Reservoir herzustellen. Dies geschieht entgegen dem normalerweise vorliegendem Prozess,
+das die Wärme von einem wärmeren in ein 
+kälteres Reservoir fließt.\\
+Damit die Wärmepumpe diese Richtung umkehrt muss in ihr,
+nach dem zweiten Hauptsatz der Thermodynamik, noch zusätzliche
+mechanische Arbeit verrichtet werden.\\
 Die vom wärmeren Reservoir aufgenommene Wärmemenge $Q_1$ ist also gleich der
 Summe des aus dem vom kälteren Reservoir entnommenen Wärmemenge $Q_2$ und der verrichteten Arbeit $A$:
 \begin{equation}
@@ -16,10 +17,10 @@ Summe des aus dem vom kälteren Reservoir entnommenen Wärmemenge $Q_2$ und der 
 \subsection{Güteziffer}
 
 Das Verhältnis zwischen der transportierten Wärmemenge und der 
-aufgewendeten Arbeit $v=\frac{Q_1}{A}$ nennt man Güteziffer.
-Die Güteziffer ist ein Maß für die Effektivität der Wärmepumpe.
-Aus dem zweiten Hauptsatz der Thermodynamik lässt sich zudätzlich noch herleiten,
-dass die Summe der reduzierten Wärmemenge 
+aufgewendeten Arbeit $v=\frac{Q_1}{A}$ nennt man Güteziffer.\\
+Die Güteziffer ist ein Maß für die Effektivität einer Wärmepumpe.\\
+Aus dem zweiten Hauptsatz der Thermodynamik lässt sich zusätzlich auch noch herleiten,
+dass die Summe der reduzierten Wärmemenge null sein muss.
 \begin{equation}
     \frac{Q_1}{t_1}-\frac{Q_2}{T_2}=0
 \end{equation}
@@ -30,7 +31,7 @@ ergibt sich eine Aussage für die ideale und damit maximal mögliche Güteziffer
     \label{eqn:videal}
 \end{equation}
 Hier zeigt sich, dass die Effektivität einer Wärmepumpe
-umso größer ist, desto kleiner die Temperatur der Reservoire ist. \\
+umso größer ist, desto kleiner die Temperaturdifferenz der Reservoire ist. \\
 Die reale Güteziffer $v_\text{real}$ muss offensichtlicherwiese
 kleiner als $v_\text{ideal}$ sein, da nicht alle Arbeit direkt für den zuvor 
 beschriebenen Prozess genutzt wird, wodurch insgesamt mehr Arbeit nötig wird.\\
@@ -46,7 +47,7 @@ lässt sich dann $v_\text{real}$ bestimmen.
     v_\text{real}= \frac{\increment{Q_1}}{\increment t \cdot \symup{N} }
     \label{eqn:vreal1}
 \end{equation}\\
-Für unsere Rechnungen verwenden wir aber keinen Differenzenquotienten sonderen rechnen mit einem Differential,
+Für unsere Rechnungen verwenden wir aber keinen Differenzenquotienten sonderen rechnen mit dem Differential
 einer auf die Messwerte gefiteten Funktion.
 
 \subsection{Massendurchsatz}
@@ -67,12 +68,12 @@ Werten für $T_2$.
 \begin{align*}
     \intertext{Die Kompressorleistung ergibt sich als die Kompressionsarbeit pro Zeit, also als:}
     N_\text{mech}&=\frac{\increment A_m}{\increment t}
-    \intertext{Desweiteren ist die Kompressionsarbeit die Arbeit, welche verrichtet wird, wenn ein Stoff eines Volumens zu einem anderen Volumen komprimiert wird.}
+    \intertext{Des Weiteren ist die Kompressionsarbeit die Arbeit, welche verrichtet wird, wenn ein Stoff eines Volumens zu einem anderen Volumen komprimiert wird.}
     A_m&= - \int_{V_a}^{V_b} p \, \symup{d}V
     \intertext{Für die Berechnung der Kompressorleistung  $N_\text{mech}$ darf eine adiabatische Kompression angenommen werden, 
     weswegen die Poissonsche Gelichung genutzt werden kann.}
     p_a V_a^{\kappa} &= p_a V_a^{\kappa} =p V^{\kappa}
-    \intertext{Wobei $\kappa$ das Verhältinis der molwärmen der beiden [Dunno] ist.}
+    \intertext{Wobei $\kappa$ das Verhältinis der Molwärmen $C_p$ und $C_v$ ist.}
     \intertext{So ergibt sich dann zur Berechnung der Leistung die Formel:}
     N_\text{mech} &= \frac{q}{\kappa-1}\left( p_b \sqrt{\kappa}{\frac{p_a}{p_b}}-p_a \right) \frac{1}{\rho} \frac{\increment m}{\increment t}
 \end{align*}
@@ -91,22 +92,23 @@ Werten für $T_2$.
 \end{figure}
 
 Eine Wärmepumpe ist, wie schon erwähnt, eine Vorrichtung um Wärmeenergie aus einem kalten 
-Reserovoir, unter zuführung mechanischer Arbeit, in ein wärmerses Reservoir zu überführen.\\
+Reserovoir, unter Zuführung mechanischer Arbeit, in ein wärmerses Reservoir zu überführen.\\
 In \ref{img:pump1} sieht man den schematischen Aufbau einer solchen Pumpe.
-Das ganze System ist mit einem Gas gefüllt, das bei niedrigem Druck unter Wärmezufuhr verdampft
+Das ganze System ist mit einem Gas gefüllt, welches bei niedrigem Druck unter Wärmezufuhr verdampft
 und bei höherem Druck unter Wärmeabgabe kondensiert.
 Wenn man ein Gas wählt, das bei $p_b$ und $T_1$ kondensiert und bei $p_a$ und $T_2$ verdampft,
-lässt es sich für eine Wärmepumpe nutzen.\\
+lässt es sich für eine dazu passende Wärmepumpe nutzen.\\
 Das Gas wird im Kompressor K adiabatisch verdichtet, also ohne Wärmeverluste an die Umgebung. 
-Dabei erhitzt es sich, bleibt aber weiterhin Gasförmig. 
+Dabei erhitzt es sich, bleibt aber weiterhin gasförmig. 
 Anschließend, beim durchströmen des Reservoirs 1, kann es seine leicht erhöhte thermische Energie
 im Reservoir abgeben, wodurch es wieder kondensiert.
 In disem vorgang steigen $p_b$ und $T_1$.\\
-Als nächstes durchströmt das Transportmedium den Reiniger R, wo es von Gasresten bereinigt wird.
-Nun gelangt es an die Drossel D, wo sich das Medium, beim Eintritt ind $p_a$ entspannt, wobei es 
-wieder gasförmig wird und sich dabei sehr stark abkühlt.\\
-Beim durchlaufen des zweiten Reservoirs, welches wärmer als das Gas ist, entzieht das Gas 
-dem Reservoir thermische Energie, wodurch sich das Reservoir abkühlt.\\
+Als nächstes durchströmt das Transportmedium den Reiniger R, wo es von Gasresten bereinigt wird, 
+welche die Vörgange in der Pumpe behindern würden.\\
+Nun gelangt das Medium an das Drosselventil D, wo es sich beim Eintritt in $p_a$ entspannt und 
+wieder gasförmig wird. Dabei kühlt es sich sehr stark ab.\\
+Beim durchlaufen des zweiten Reservoirs, welches wärmer als das Gas ist, gleichen sich Gas- und Reservoir-temperatur aneinander an.\\
+Dabei entzieht das Gas dem Reservoir thermische Energie, wodurch sich das Reservoir abkühlt.\\
 Schlußendlich durchströmt das Gas wieder den Kompressor und der Kreislauf beginnt von vorne.\\
 Die Wärmepumpe entzieht also mit Hilfe des Phasenübergangs des Gases dem zweiten Reservoir Energie, welche dann 
 genutzt wird um das erste zu erwärmen.

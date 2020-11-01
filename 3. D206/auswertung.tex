@@ -1,5 +1,9 @@
-\newpage
-\section{Die Messwerte}
+
+
+\section{Auswertung}
+
+
+\subsection{Die Messwerte}
 \begin{table}[H]
     \centering
     %\caption{Die Messwerte}
@@ -55,8 +59,8 @@
 
 
 %5a)
-\section{Gefitete Messwerte}
-\subsection{Plot der Messwerte und Funktionen}
+\subsection{Gefitete Messwerte}
+\subsubsection{Plot der Messwerte und Funktionen}
 \begin{figure}
     \centering
     \includegraphics[width=\textwidth]{build/plot1.pdf}
@@ -65,7 +69,7 @@
 
 
 %5b)
-\subsection{Fit-Funktionen}
+\subsubsection{Fit-Funktionen}
 Dies sind die Fit-Funktionen auf die Messwerte. Dabei ist der Fit auf $T_1$ die Funktion $F(t)$ und der auf $T_2$ ist die Funktion $G(t)$.
 \begin{align}
     &F(t) =A \cdot t^2+B \cdot t+ C \\
@@ -83,7 +87,7 @@ Dies sind die Fit-Funktionen auf die Messwerte. Dabei ist der Fit auf $T_1$ die 
 \end{align}
 \\
 %5c)
-\section{Differentialquotienten der Temperaturen}
+\subsection{Differentialquotienten der Temperaturen}
 Im folgenden werden die Differentialquotienten der Temperaturen in verschiedenen Stellen berechnet.
 Da die Fit Funktionen eine angemessene Abbildung der Messwerte darstellen berechnen wir die Quotienten über das bilden der Ableitung der Fits $F(t)$ und $G(t)$ 
 und ihrer anschließenden Punktweisen Auswertung.
@@ -111,7 +115,7 @@ Als Punkte wurden hierbei 7er Schritte gewählt, da man daurch regelmäßige Abs
 \end{table}
 
 %5d)
-\section{Güteziffern}
+\subsection{Güteziffern}
 Anschließend werden die idealen und realen Güteziffern der Wärmepumpe aus den zuvor berechneten Werten und 
 den Formeln \eqref{eqn:videal} und \eqref{eqn:vreal}  bestimmt. 
 Dabei werden für die Temperaturwerte immer für verschiedene Zeiten die korrespondierenden Messwerte genutzt.
@@ -165,8 +169,8 @@ Dafür unterliegen sie wesentlich weniger Fluktuationen. Man sieht, dass sie ung
 wobei die Werte von $v_\text{ideal}$ so sehr schwanken, dass sich keine vernünftige Abschätzung machen lässt.
 \newpage
 %5e)
-\section{Massendurchsatz}
-\subsection{Plot und Verdampfungswärme}
+\subsection{Massendurchsatz}
+\subsubsection{Plot und Verdampfungswärme}
 
 \begin{figure}
     \centering
@@ -194,7 +198,7 @@ L_2&\approx14283.6253 EINHEITFEHLT!!
 
 
 
-\subsection{Berechnung Massendurchsatz}
+\subsubsection{Berechnung Massendurchsatz}
 
 Nun lässt sich Mithilfe der Verdampfungswärme von Dichloridfluormethan der Formel \refeq{eqn:mass} und \refeq{eqn:delQ} der Massendurchsatz bestimmen.
 \begin{equation}
@@ -221,7 +225,7 @@ Einsetzen in diese Formel führt zu:
 \end{table}
 
 
-\section{Kompressorleistung}
+\subsection{Kompressorleistung}
 
 \begin{align*}
     \intertext{Die Kompressorleistung ergibt sich als die Kompressionsarbeit pro Zeit, also als:}
@@ -255,7 +259,7 @@ Wieder mit den Werten aus \ref{tab:Diff} lässt sich so die Leistung bestimmen.
 \end{table}
 
 %5g)
-\section{Fazit zur Güteziffer}
+\subsection{Fazit zur Güteziffer}
 
 Die große Diskrepanz zwischen idealer und realer Güteziffer, die man in \ref{tab:vreal} und \ref{eqn:videal} sieht,
 läasst sich vermutlich dadurch erklären, dass in dem Vorgang sehr viel Energie in bei der Umwandlung

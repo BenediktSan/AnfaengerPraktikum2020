@@ -96,23 +96,54 @@ G = D / (1 + E * (t_v**F))
 #print("F/dt= ",F2.diff(t_v))
 #print("G/dt= ",G.diff(t_v))
 
+
+        #Test
+a_v, b_v , c_v, d_v , e_v , f_v =sympy.var("a_v b_v c_v d_v e_v f_v")
+
+T1test= a_v *t_v**2 + b_v *t_v + c_v
+
+T2test= d_v / (1 + e_v * (t_v**f_v))
+
+#print(T1test.diff(t_v))
+#print(T2test.diff(t_v))
+
+
 def Fdt(t):
-    F1=F2.diff(t_v)
-    return F1.evalf(subs={t_v:t}) 
+    F1=T1test.diff(t_v)
+    Fdt_value = F1.evalf(subs={t_v:t,a_v:H.n, b_v:I.n , c_v:J.n })
+    Fdt_error = F1.evalf(subs={t_v:t,a_v:H.n, b_v:I.n , c_v:J.n })-F1.evalf(subs={t_v:t,a_v:H.n+H.s, b_v:I.n+I.s , c_v:J.n+J.s})
+    
+    return ufloat(Fdt_value, -Fdt_error)
 
 def Gdt(t):
-    G1=G.diff(t_v)
-    return G1.evalf(subs={t_v:t}) 
+    G1=T2test.diff(t_v)
+    Gdt_value = G1.evalf(subs={t_v:t,d_v:K.n, e_v:L.n , f_v:M.n })
+    Gdt_error = G1.evalf(subs={t_v:t,d_v:K.n, e_v:L.n , f_v:M.n })-G1.evalf(subs={t_v:t,d_v:K.n+K.s, e_v:L.n+L.s , f_v:M.n+M.s})
+
+    return ufloat(Gdt_value, Gdt_error)
 
 for i in range(1,5):
     print(f"Fdt({7*i})={Fdt(t[7*i+1]):.4f}", f"  Gdt({7*i})={Gdt(t[7*i+1]):.4f}")
 
 
         #Güteziffer
+
+
+def v_ideal_error(T1,T2,dT1,dT2):
+    return np.sqrt(((-T2/((T1-T2)**2))*dT1)**2+(T1/(((T1-T2)**2))*dT2)**2)       
 for i in range(1,5):
-    print(f"v_real({7*i})={((mkck+m1c1)*Fdt(7*i))/(N[(7*i)+1]):.4f} v_ideal({7*i})={T1[(7*i)+1]/(T1[(7*i)+1]-T2[(7*i)+1]):.4f}")
+    print(f"v_real({7*i})={((mkck+m1c1)*Fdt(7*i))/(N[(7*i)+1]):.4f} v_ideal({7*i})={ufloat(T1[(7*i)+1]/(T1[(7*i)+1]-T2[(7*i)+1]),v_ideal_error(T1[7*i+1],T2[7*i+1],0.1,0.1))}")
+ 
+        
+
+
+
+for i in range(1,5):
+    print(f"v_ideal_error in Minute {7*i} ist: {v_ideal_error(T1[7*i+1],T2[7*i+1],0.1,0.1):.5f}")
+
 
         #Verdampfungswärme L[Joule/mol] R[Joule/mol*K]
+
 
 P1=np.log(p1)
 parameter3, _3 = np.polyfit(1/T1,P1, deg=1, cov=True)
@@ -138,8 +169,8 @@ print("Fehler a =", uncertainties4)
 
         #Massendurchsatz
 def mdt(i):
-    mdtn=((mkck+m1c1)*Gdt(t[7*i+1]))/L2.n
-    mdts=(((mkck+m1c1)*Gdt(t[7*i+1]))/(L2.n-L2.s))-(((mkck+m1c1)*Gdt(t[7*i+1]))/L2.n)
+    mdtn=((mkck+m1c1)*Gdt(t[7*i+1]).n)/L2.n
+    mdts=(((mkck+m1c1)*Gdt(t[7*i+1]).n)/(L2.n-L2.s))-(((mkck+m1c1)*Gdt(t[7*i+1]).n)/L2.n)
     return ufloat(mdtn,-1*mdts)
 
 for i in range(1,5):

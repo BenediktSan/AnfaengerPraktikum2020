@@ -177,21 +177,18 @@ wobei die Werte von $v_\text{ideal}$ so sehr schwanken, dass sich keine vernünf
     \caption{Druck-Temperatur Abbildung mit Ausgleichsgerade zur Bestimmung der Verdampfungswärme $L$.}
 \end{figure}
 
-Mithilfe einer linearen Regression lässt sich nun aus den geploteten Werten für beide Datensätze 
+Mithilfe einer linearen Regression lässt sich nun aus den geploteten Werten 
 die Verdampfungswärme $L$ von Dichloridfluormethan $\ce{Cl2F2C}$ bestimmen.
 \footnotetext[2]{Quelle: \url{https://www.chemie.de/lexikon/Universelle_Gaskonstante.html}(Besucht am 30.12.2020)}
 
 \begin{align*}
-\intertext{$L_1$ bestimmt sich dann aus der Regressionsgeraden des Datensatzes $T_1$
+\intertext{$L$ bestimmt sich dann aus der Regressionsgeraden des Datensatzes $T_2$
  mit Hilfe der Gaskonstante $\symup{R}$ \footnotemark[2].}
-y&=mx+n  \\
-\implies y&=-2460.10200676x+10.13156316\\
 \\
-\implies L_1&=(-1) \cdot m \cdot \symup{R} \approx 20453.2881\\
-\intertext{Für $L_2$ gilt dann dasselbe mit den korrespondierenden Werten.}
-\implies y&=-1718.02083898x+7.3235009\\
+\implies L_2&=(-1) \cdot m \cdot \symup{R}\\
+y&=-1718.02083898x+7.3235009\\
 \\
-L_2&\approx14283.6253 EINHEITFEHLT!!
+\implies L_2&\approx\SI{14298.66+-734.7}{\joule\per\mol}
 \end{align*}
 %\footnotetext[2]{Quelle: \url{https://www.chemie.de/lexikon/Universelle_Gaskonstante.html}(Besucht am 30.12.2020)}
 
@@ -215,7 +212,7 @@ Einsetzen in diese Formel führt zu:
     \centering
     \begin{tabular}{ S [table-format=2.0] S [table-format=3.5] }
         \toprule
-        {$t \mathbin{/} \si{\minute}$} & { $m \mathbin{/} \si{\kilo\gram}$} \\
+        {$t \mathbin{/} \si{\minute}$} & { $\frac{\Delta m}{\Delta t} \mathbin{/} \si{\kilo\gram\per\second}$} \\
         \midrule
         7	&-0.00079\\
         14	&-0.00074\\

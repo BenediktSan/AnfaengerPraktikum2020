@@ -137,7 +137,6 @@ for i in range(1,5):
 
   #Verdampfungswärme L[Joule/mol] R[Joule/mol*K]
 
-
 P1=np.log(p1)
 parameter3, _3 = np.polyfit(1/T1,P1, deg=1, cov=True)
 #L1=-1*parameter3[0]*8.314
@@ -149,7 +148,6 @@ parameter4, _4 = np.polyfit(1/T2,P2, deg=1, cov=True)
 L2_v=-1*parameter4[0]*8.314
 
 #print("Parameter4=",parameter4)
-
 
 uncertainties4 = np.sqrt(np.diag(_4))
 L2_e=-1*uncertainties4[0]*8.314
@@ -177,9 +175,9 @@ for i in range(1,5):
     print(f"Die mechanische Leistung in Minute {7*i} beträgt:{N_mech(1.14, p2[7*i +1], p1[7*i +1], 5.51, mdt(i)):.4f}")
 
         #Gründe für schlechte Güteziffer
-print("In der Realität ist es leider nicht möglich die ideale Güteziffer für eine Wärmepumpe zu erreichen, da es bei dem gesamtem Prozess viele Wege gibt um Energie zu \"verlieren\"."
-"Zum einen entstehen bei den ganzen mechanischen Bauteilen der Pumpe durch Reibung Energieverluste und gerade beim Transport der Kühlflüssigkeit wird auch eine Menge Energie an die Umwelt abgegeben. "
-"Das sind beides Energieverluste die man auch mit großen Aufwand, realistisch nicht entfernen kann.")
+#print("In der Realität ist es leider nicht möglich die ideale Güteziffer für eine Wärmepumpe zu erreichen, da es bei dem gesamtem Prozess viele Wege gibt um Energie zu \"verlieren\"."
+#"Zum einen entstehen bei den ganzen mechanischen Bauteilen der Pumpe durch Reibung Energieverluste und gerade beim Transport der Kühlflüssigkeit wird auch eine Menge Energie an die Umwelt abgegeben. "
+#python"Das sind beides Energieverluste die man auch mit großen Aufwand, realistisch nicht entfernen kann.")
   
 
         #Plotten

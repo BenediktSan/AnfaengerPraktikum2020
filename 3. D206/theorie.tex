@@ -63,8 +63,19 @@ Werten für $T_2$.
     = \left(m_2 c_w + m_k c_k \right)\frac{\increment T_2}{\increment t}
 \end{equation}
 
-\subsection{Die mechanische Kompressorleistung}
-
+\subsection{Die mechanische Kompressorleistung} \label{kompressor}
+\begin{align*}
+    \intertext{Die Kompressorleistung ergibt sich als die Kompressionsarbeit pro Zeit, also als:}
+    N_\text{mech}&=\frac{\increment A_m}{\increment t}
+    \intertext{Desweiteren ist die Kompressionsarbeit die Arbeit, welche verrichtet wird, wenn ein Stoff eines Volumens zu einem anderen Volumen komprimiert wird.}
+    A_m&= - \int_{V_a}^{V_b} p \, \symup{d}V
+    \intertext{Für die Berechnung der Kompressorleistung  $N_\text{mech}$ darf eine adiabatische Kompression angenommen werden, 
+    weswegen die Poissonsche Gelichung genutzt werden kann.}
+    p_a V_a^{\kappa} &= p_a V_a^{\kappa} =p V^{\kappa}
+    \intertext{Wobei $\kappa$ das Verhältinis der molwärmen der beiden [Dunno] ist.}
+    \intertext{So ergibt sich dann zur Berechnung der Leistung die Formel:}
+    N_\text{mech} &= \frac{q}{\kappa-1}\left( p_b \sqrt{\kappa}{\frac{p_a}{p_b}}-p_a \right) \frac{1}{\rho} \frac{\increment m}{\increment t}
+\end{align*}
 
 
 

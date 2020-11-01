@@ -1,13 +1,13 @@
 Fehler einfügen
 
-vernünftige Referenzierungen
+was ist kappa???
 
-Werte überprfen (wärmekapazität anpassen (4.183)KJ)
+einheiten bei diversen sachen
 
-Legende Plot 2 [done]
+durchführung
 
-ref auf tab:diff funkt. nicht [gelöst. label muss nach der caption kommen]
+diskussion
+
+bibliothek
 
 evtl. Text und formatierung von "gefittete Messwerte" ---> Zeiteinheit passen nicht zusammen(Messwerte in min, fit in s)
-
-lineare regression als formel aufschreiben oder als gegeben ansehen?

@@ -132,7 +132,7 @@ Dabei werden für die Temperaturwerte immer für verschiedene Zeiten die korresp
 
 \begin{equation}
     \frac{\increment Q_1}{\increment t} = \left(m_1 c_w + m_k c_k \right)\frac{\increment T_1}{\increment t}
-    \label{eqn:delQ}
+    \label{eqn:delQ1}
 \end{equation}
 \\
 Für die reale Wärmepumpe gilt $v_\text{real} < v_\text{ideal}$.\\
@@ -142,9 +142,8 @@ in dem man für die Wärmekapazität der Kupferschlange $m_k c_k =\SI{750}{\joul
 für die Masse des Wassers $m_1=\SI{4}{\kilo\gram}$ und für die spezifische Wärmekapazität 
 des Wassers $c_w=\SI{4.183}{\kilo\joule\per\kilo\gram\per\kelvin}$ \footnote{Quelle: \url{https://www.chemie.de/lexikon/Spezifische_W\%C3\%A4rmekapazit\%C3\%A4t.html}
 (Besucht am 30.12.2020)} nimmt.
-Anschließend setzt man dann \eqref{eqn:delQ} in \eqref{eqn:vreal} ein.\\
+Anschließend setzt man dann \eqref{eqn:delQ1} in \eqref{eqn:vreal} ein.\\
 Es ergibt sich dann also aus den genannten Werten und den Werten aus \ref{tab:Diff} ;
-
 \begin{table}[H]
     \centering
     
@@ -200,7 +199,12 @@ L_2&\approx14283.6253 EINHEITFEHLT!!
 
 \subsubsection{Berechnung Massendurchsatz}
 
-Nun lässt sich Mithilfe der Verdampfungswärme von Dichloridfluormethan der Formel \refeq{eqn:mass} und \refeq{eqn:delQ} der Massendurchsatz bestimmen.
+Nun lässt sich Mithilfe der Verdampfungswärme von Dichloridfluormethan und der Formel \refeq{eqn:mass} und \refeq{eqn:delQ2} der Massendurchsatz bestimmen.
+Dafür werden wieder die Werte, die für \refeq{eqn:delQ1} genutzt wurden, mit $m_2= m_1= \SI{4}{\kilo\gram}$, genutzt.
+\begin{equation}
+    \frac{\increment Q_2}{\increment t} = \left(m_2 c_w + m_k c_k \right)\frac{\increment T_2}{\increment t}
+    \label{eqn:delQ2}
+\end{equation}
 \begin{equation}
     \frac{\increment Q_2}{\increment t} = L\cdot \frac{\increment m}{\increment t}
     \label{eqn:mass}

@@ -10,6 +10,7 @@ build/plot2.pdf: D206.py | build
 # hier weitere Abhängigkeiten für build/main.pdf deklarieren:
 build/Protokoll_D206.pdf: build/plot1.pdf build/plot2.pdf auswertung.tex theorie.tex durchfuehrung.tex images/Wärmepumpe.png images/Versuchsaufbau.png | build
 	lualatex --output-directory=build --interaction=batchmode --halt-on-error Protokoll_D206.tex
+	biber build/Protokoll_D206.bcf
 	lualatex --output-directory=build --interaction=batchmode --halt-on-error Protokoll_D206.tex
 build:
 	mkdir -p build

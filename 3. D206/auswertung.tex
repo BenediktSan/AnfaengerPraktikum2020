@@ -78,13 +78,13 @@ Dies sind die Fit-Funktionen auf die Messwerte. Dabei ist der Fit auf $T_1$ die 
     \nonumber
     \\
     &\begin{aligned}
-        A &=0.00000322 & B&=0.02027984 & C&=21.82008061 \\
-        D &=21.58061064 & E&= 0.00000095& F&=1.97775836 
+        A &=(-3.22\pm 0.04)\cdot 10^{-6} & B&=0.02028\pm 0.00009 & C&=294.97\pm 0.04 \\
+        D &=296.0\pm 0.4 & E&= (6.3\pm 2.1)\cdot 10^{-5}& F&=0.92\pm 0.04
     \end{aligned}\\
     \nonumber
     \\
-    \implies &F(t) =0.00000322t^2+0.02027984t+21.82008061 \\
-    \implies &G(t) = \frac{21.58061064}{1+0.00000095t^{1.97775836}}
+    \implies &F(t) =(-3.22\pm 0.04)\cdot 10^{-6}\cdot t^2+(0.02028\pm 0.00009)t+294.97\pm 0.04 \\
+    \implies &G(t) = \frac{296.0\pm 0.4}{1+(6.3\pm 2.1)\cdot 10^{-5}\cdot t^{0.92\pm 0.04}}
 \end{align}
 \\
 %5c)
@@ -101,14 +101,14 @@ Als Punkte wurden hierbei 7er Schritte gewählt, da man daurch regelmäßige Abs
 
 \begin{table}[H]
     \centering
-    \begin{tabular}{S[table-format=2.0] S [table-format=3.5] S [table-format=3.5]}
+    \begin{tabular}{S[table-format=2.0] S [table-format=3.5] @{$\pm{}$} S  S [table-format=3.5] @{$\pm{}$} S}
         \toprule
-        {Zeit [min]} & { $\frac{\partial F(t)}{\partial t}$ } & { $\frac{\partial G(t)}{\partial t}$ }  \\
+        {Zeit [min]} & \multicolumn{2}{c}{ $\frac{\partial F(t)}{\partial t} \mathbin{\scalebox{1.5}{/} \si{\kelvin\per\second}$ } & \multicolumn{2}{c}{ $\frac{\partial G(t)}{\partial t} \mathbin{\scalebox{1.5}{/}} \si{\kelvin\per\second}$ }  \\
         \midrule
-        7	&0.0202 &-0.0147\\
-        14	&0.0202 &-0.0139\\
-        21	&0.0201 &-0.0134\\
-        28	&0.0201 &-0.0131\\
+        7  & -0.0172 & 0.0001 &  0.0100& 0.0077\\
+        14 & -0.0145 & 0.0002 &  0.0093& 0.0072\\
+        21 & -0.0118 & 0.0002 &  0.0087& 0.0067\\
+        28 & -0.0091 & 0.0002 &  0.0083& 0.0062\\ 
         \bottomrule      
     \end{tabular}
 \caption {Werte der Zeittlichen Ableitungen der Temperaturen.}
@@ -211,14 +211,14 @@ Dafür werden wieder die Werte, die für \refeq{eqn:delQ1} genutzt wurden, mit $
 Einsetzen in diese Formel führt zu:
 \begin{table}[H]
     \centering
-    \begin{tabular}{ S [table-format=2.0] S [table-format=3.5] S}
+    \begin{tabular}{ S [table-format=2.0] S [table-format=3.5] @{$\pm{}$} S}
         \toprule
-        {$t \mathbin{/} \si{\minute}$} & { $\frac{\Delta m}{\Delta t} \mathbin{\scalebox{1.5}{/}} \si{\kilo\gram\per\second}$}\\
+        {$t \mathbin{/} \si{\minute}$} & \multicolumn{2}{c}{ $\frac{\Delta m}{\Delta t} \mathbin{\scalebox{1.5}{/}} \si{\kilo\gram\per\second}$}\\
         \midrule
-        7	&-0.00079  & 0.00066\\
-        14	&-0.00074  & 0.00061\\
-        21	&-0.00072  & 0.00058\\
-        28	&-0.00070  & 0.00055\\
+        7	&-0.01225  & 0.00066\\
+        14	&-0.01131  & 0.00061\\
+        21	&-0.01068  & 0.00058\\
+        28	&-0.01018  & 0.00055\\
         \bottomrule
         \\
     \end{tabular}
@@ -240,19 +240,19 @@ Einsetzen in diese Formel führt zu:
     \intertext{Mit Hilfe der in \ref{kompressor} hergeleiteten Formel lässt sich nun die Kompressorleistung bestimmen.}
    \intertext{Dabei sind $\kappa =1.14 $, $p=\SI{1}{\bar}$, $T=\SI{0}{\celsius}$ und $\rho_0=\SI{5.51}{\gram\per\litre}$ als die Werte gegeben.}
    \intertext{Und die Formel die sich zur Bestimmung ergeben hat:}
-   N_\text{mech} &= \frac{q}{\kappa-1}\left( p_b \sqrt{\kappa}{\frac{p_a}{p_b}}-p_a \right) \frac{1}{\rho} \frac{\increment m}{\increment t}
+   N_\text{mech} &= \frac{1}{\kappa-1}\left( p_b \sqrt{\kappa}{\frac{p_a}{p_b}}-p_a \right) \frac{1}{\rho} \frac{\increment m}{\increment t}
 \end{align*}
 Wieder mit den Werten aus \ref{tab:Diff} lässt sich so die Leistung bestimmen.
 \begin{table}[H]
     \centering
-    \begin{tabular}{ S [table-format=2.0] S [table-format=3.5] }
+    \begin{tabular}{ S [table-format=2.0] S [table-format=3.5] @{$\pm{}$} S}
         \toprule
-        {$t \mathbin{/} \si{\minute}$} & { $m \mathbin{/} \si{\kilo\gram}$} \\
+        {$t \mathbin{/} \si{\minute}$} & \multicolumn{2}{c}{ $P \mathbin{/} \si{\watt}$} \\
         \midrule
-        7	&-0.0055\\
-        14	&-0.0063\\
-        21	&-0.0070\\
-        28	&-0.0072\\
+        7	&-0.0055& 0.0003\\
+        14	&-0.0063& 0.0003\\
+        21	&-0.0070& 0.0004\\
+        28	&-0.0072& 0.0004\\
         \bottomrule
         \\
     \end{tabular}

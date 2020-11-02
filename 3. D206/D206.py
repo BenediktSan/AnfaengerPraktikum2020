@@ -152,7 +152,10 @@ L2_v=-1*parameter4[0]*8.314
 uncertainties4 = np.sqrt(np.diag(_4))
 L2_e=-1*uncertainties4[0]*8.314
 L2 = ufloat(L2_v, -1*L2_e)
-print(f"L2={L2:.4f}")
+
+print(f"L2={L2:.4f}in Joule pro mol")
+L2 /=0.120910
+print(f"L2={L2:.4f}in Joule pro kilogramm")
 
 print("Fehler a =", uncertainties4)
 #L2_f= ufloat(-1*parameter4[0]*8.314,1*uncertainties4[0]*8.314 )
@@ -165,14 +168,14 @@ def mdt(i):
     return ufloat(mdtn,-1*mdts)
 
 for i in range(1,5):
-    print(f"Massendurchsatz in minute({7*i})={mdt(i):.5f}")
-
+    print(f"Massendurchsatz in minute({7*i})={mdt(i):.5f} in Kilogramm pro Sekunde")
+    print(f"Massendurchsatz in minute({7*i})={1000*mdt(i):.5f} in gramm pro Sekunde")
         #mechanische Leistung
 def N_mech(k,pa,pb,roh,mdt):
     return (1/(k-1))*(pb*((pa/pb)**(1/k))-pa)*(1/roh)*mdt
 
 for i in range(1,5):
-    print(f"Die mechanische Leistung in Minute {7*i} beträgt:{N_mech(1.14, p2[7*i +1], p1[7*i +1], 5.51, mdt(i)):.4f}")
+    print(f"Die mechanische Leistung in Minute {7*i} beträgt:{N_mech(1.14, p2[7*i +1], p1[7*i +1], 5.51, mdt(i)):.6f}")
 
         #Gründe für schlechte Güteziffer
 #print("In der Realität ist es leider nicht möglich die ideale Güteziffer für eine Wärmepumpe zu erreichen, da es bei dem gesamtem Prozess viele Wege gibt um Energie zu \"verlieren\"."

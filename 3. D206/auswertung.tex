@@ -147,14 +147,14 @@ Es ergibt sich dann also aus den genannten Werten und den Werten aus \ref{tab:Di
 \begin{table}[H]
     \centering
     
-    \begin{tabular}{ S [table-format=2.0] S [table-format=1.5] S [table-format=1.5] }
+    \begin{tabular}{ S [table-format=2.0] S [table-format=1.4]@{$\pm{}$} S [table-format=1.4] S [table-format=2.5] @{$\pm{}$} S [table-format=1.3]}
         \toprule
-        {$t \mathbin{/} \si{\minute}$} & { $v_\text{ideal}$} & {$v_\text{real} $} \\
+        {$t \mathbin{/} \si{\minute}$} & \multicolumn{2}{c}{ $v_\text{real}$} & \multicolumn{2}{c}{$v_\text{ideal} $} \\
         \midrule
-        7	& 31.4375  & 0.12929\\
-        14	& 14.35814 & 0.12900\\
-        21	& 10.14194 & 0.12871\\
-        28	& 8.3099   & 0.12632\\
+        7	& 2.9479 & 0.0134 &23.03 &0.24  \\
+        14	& 2.9413 & 0.0134 &12.63 &0.07  \\
+        21	& 2.9347 & 0.0135 &9.46  &0.04  \\
+        28	& 2.8802 & 0.0134 &7.97 &0.026 \\
         \bottomrule
         \\
     \end{tabular}
@@ -191,7 +191,7 @@ y&=-1718.02083898x+7.3235009\\
 \\
 \implies L&\approx\SI{14298.66+-734.7}{\joule\per\mol}
 \intertext{Die Verdampfungswärme läst sich nun mithilfe der Molaren Masse von $\si{Joule\per\mol}$ zu $\si{\joule\per\kilo\gram}$ umrechnen.}
-m_{\text{molar}}&=\SI{120.91 e-3}{\kilo\gram\per\mol} \footnotemark[5]\\
+M_{\text{molar}}&=\SI{120.91 e-3}{\kilo\gram\per\mol} \footnotemark[5]\\
 \implies L &\approx \SI{118258.7336+-6076.4305}{\joule\per\kilo\gram} 
 \end{align*}
 \footnotetext[5]{Quelle: \url{https://www.chemie.de/lexikon/Dichlordifluormethan.html}(Besucht am 30.12.2020)}
@@ -217,12 +217,12 @@ Einsetzen in diese Formel führt zu:
     \centering
     \begin{tabular}{ S [table-format=1.5] S [table-format=1.5] @{$\pm{}$} S}
         \toprule
-        {$t \mathbin{/} \si{\minute}$} & \multicolumn{2}{c}{ $\frac{\Delta m}{\Delta t} \mathbin{\scalebox{1.5}{/}} \si{\kilo\gram\per\second}$}\\
+        {$t \mathbin{/} \si{\minute}$} & \multicolumn{2}{c}{ $\frac{\Delta m}{\Delta t} \mathbin{\scalebox{1.5}{/}} \si{\gram\per\second}$}\\
         \midrule
-        7	&-0.01225  & 0.00066\\
-        14	&-0.01131  & 0.00061\\
-        21	&-0.01068  & 0.00058\\
-        28	&-0.01018  & 0.00055\\
+        7	&-1.48121  & 0.08023\\
+        14	&-1.36799  & 0.07410\\
+        21	&-1.29101  & 0.06993\\
+        28	&-1.23035  & 0.06664\\
         \bottomrule
         \\
     \end{tabular}
@@ -249,14 +249,14 @@ Einsetzen in diese Formel führt zu:
 Wieder mit den Werten aus \ref{tab:Diff} lässt sich so die Leistung bestimmen.
 \begin{table}[H]
     \centering
-    \begin{tabular}{ S [table-format=2.0] S [table-format=1.5] @{$\pm{}$} S[table-format=1.4]}
+    \begin{tabular}{ S [table-format=2.0] S [table-format=1.6] @{$\pm{}$} S[table-format=1.6]}
         \toprule
         {$t \mathbin{/} \si{\minute}$} & \multicolumn{2}{c}{ $P \mathbin{/} \si{\watt}$} \\
         \midrule
-        7	&-0.0055& 0.0003\\
-        14	&-0.0063& 0.0003\\
-        21	&-0.0070& 0.0004\\
-        28	&-0.0072& 0.0004\\
+        7	& 0.000664 & 0.000036\\
+        14	& 0.000760 & 0.000041\\
+        21	& 0.000845 & 0.000046\\
+        28	& 0.000868 & 0.000047\\
         \bottomrule
         \\
     \end{tabular}

@@ -66,10 +66,10 @@ F=0.91797063
 
 for names ,value, unsicherheit in zip("HIJ", parameter1,uncertainties1):
     names= ufloat(value,unsicherheit)
-    #print(f"HIJ={names:.9f}")
+    print(f"HIJ={names:.9f}")
 for names ,value, unsicherheit in zip("KLM", parameter2,uncertainties2):
     names= ufloat(value,unsicherheit)
-    #print(f"KLM={names:.9f} ")
+    print(f"KLM={names:.9f} ")
 
 
 H= ufloat(-0.00000322 , 0.00000004)

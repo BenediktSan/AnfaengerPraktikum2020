@@ -172,10 +172,11 @@ for i in range(1,5):
     print(f"Massendurchsatz in minute({7*i})={1000*mdt(i):.5f} in gramm pro Sekunde")
         #mechanische Leistung
 def N_mech(k,pa,pb,roh,mdt):
-    return (1/(k-1))*(pb*((pa/pb)**(1/k))-pa)*(1/roh)*mdt
+    return (1/(k-1)) * (pb *  (pa/pb)**(1/k) -pa ) * (1/roh) * mdt
 
 for i in range(1,5):
     print(f"Die mechanische Leistung in Minute {7*i} beträgt:{N_mech(1.14, p2[7*i +1], p1[7*i +1], 5.51, mdt(i)):.6f}")
+
 
         #Gründe für schlechte Güteziffer
 #print("In der Realität ist es leider nicht möglich die ideale Güteziffer für eine Wärmepumpe zu erreichen, da es bei dem gesamtem Prozess viele Wege gibt um Energie zu \"verlieren\"."

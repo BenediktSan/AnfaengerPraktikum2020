@@ -3,5 +3,3 @@ Fehler einfügen
 einheiten bei diversen sachen
 
 bibliothek
-
-evtl. Text und formatierung von "gefittete Messwerte" ---> Zeiteinheit passen nicht zusammen(Messwerte in min, fit in s)

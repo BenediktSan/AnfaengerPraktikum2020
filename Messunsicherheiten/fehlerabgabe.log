@@ -1,7 +1,7 @@
-This is LuaHBTeX, Version 1.12.0 (TeX Live 2020)  (format=lualatex 2020.10.8)  28 OCT 2020 13:54
+This is LuaHBTeX, Version 1.12.0 (TeX Live 2020)  (format=lualatex 2020.10.8)  2 NOV 2020 16:55
  restricted system commands enabled.
-**fehlerabgabe.tex
-(./fehlerabgabe.tex
+**Fehlerabgabe.tex
+(./Fehlerabgabe.tex
 LaTeX2e <2020-10-01>
 Lua module: luaotfload-main 2020-09-02 3.15 luaotfload entry point
 Lua module: luaotfload-init 2020-09-02 3.15 luaotfload submodule / initializatio
@@ -1545,8 +1545,8 @@ Package: extdash 2018/06/24 v1.3 Extended Dash Package (NCC)
 ))
 Package csquotes Info: Checking for multilingual support...
 Package csquotes Info: ... found 'babel' package.
-(./fehlerabgabe.aux)
-\openout1 = fehlerabgabe.aux
+(./Fehlerabgabe.aux)
+\openout1 = Fehlerabgabe.aux
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 2.
 LaTeX Font Info:    ... okay on input line 2.
@@ -1675,11 +1675,11 @@ Package biblatex Info: LuaTeX detected.
 Package biblatex Info: Automatic encoding selection.
 (biblatex)             Assuming data encoding 'utf8'.
 
-\openout3 = fehlerabgabe.bcf
+\openout3 = Fehlerabgabe.bcf
 Package biblatex Info: Trying to load bibliographic data...
-Package biblatex Info: ... file 'fehlerabgabe.bbl' not found.
+Package biblatex Info: ... file 'Fehlerabgabe.bbl' not found.
 
-No file fehlerabgabe.bbl.
+No file Fehlerabgabe.bbl.
 Package biblatex Info: Reference section=0 on input line 2.
 Package biblatex Info: Reference segment=0 on input line 2.
 Package hyperref Info: Link coloring OFF on input line 2.
@@ -1734,16 +1734,16 @@ Underfull \hbox (badness 10000) in paragraph at lines 36--41
 [1
 
 {/home/benedikt/.local/texlive/2020/texmf-var/fonts/map/pdftex/updmap/pdftex.map
-}] [2] (./fehlerabgabe.aux)
+}] [2] (./Fehlerabgabe.aux)
 
-Package rerunfilecheck Warning: File `fehlerabgabe.aux' has changed. Rerun.
+Package rerunfilecheck Warning: File `Fehlerabgabe.aux' has changed. Rerun.
 
-Package rerunfilecheck Info: Checksums for `fehlerabgabe.aux':
-(rerunfilecheck)             Before: B202AC141B7366EC21BE22481C8129DE;2150
-(rerunfilecheck)             After:  F68F4C6D1583BD9DE2B98FF547074058;2150.
-Package logreq Info: Writing requests to 'fehlerabgabe.run.xml'.
+Package rerunfilecheck Info: Checksums for `Fehlerabgabe.aux':
+(rerunfilecheck)             Before: F68F4C6D1583BD9DE2B98FF547074058;2150
+(rerunfilecheck)             After:  B202AC141B7366EC21BE22481C8129DE;2150.
+Package logreq Info: Writing requests to 'Fehlerabgabe.run.xml'.
 
-\openout1 = fehlerabgabe.run.xml
+\openout1 = Fehlerabgabe.run.xml
 )
 
 Here is how much of LuaTeX's memory you used:
@@ -1754,7 +1754,7 @@ Here is how much of LuaTeX's memory you used:
 ue_spec, 14 attribute_list, 1 write nodes
    avail lists: 1:1,2:1334,3:191,4:20,5:444,6:27,7:2131,8:72,9:860,10:6,11:111
  53614 multiletter control sequences out of 65536+600000
- 181 fonts using 66966291 bytes
+ 181 fonts using 66966007 bytes
  98i,21n,114p,10638b,2933s stack positions out of 5000i,500n,10000p,200000b,200000s
 </home/benedikt/.local/texlive/2020/texmf-dist/fonts/opentype/public/lm/lmroman8
 -regular.otf></home/benedikt/.local/texlive/2020/texmf-dist/fonts/opentype/publi
@@ -1762,7 +1762,7 @@ c/lm-math/latinmodern-math.otf></home/benedikt/.local/texlive/2020/texmf-dist/fo
 nts/opentype/public/lm-math/latinmodern-math.otf></home/benedikt/.local/texlive/
 2020/texmf-dist/fonts/opentype/public/lm/lmroman10-regular.otf></home/benedikt/.
 local/texlive/2020/texmf-dist/fonts/opentype/public/lm/lmsans10-bold.otf>
-Output written on fehlerabgabe.pdf (2 pages, 26110 bytes).
+Output written on Fehlerabgabe.pdf (2 pages, 26318 bytes).
 
 PDF statistics: 84 PDF objects out of 1000 (max. 8388607)
  64 compressed objects within 1 object stream

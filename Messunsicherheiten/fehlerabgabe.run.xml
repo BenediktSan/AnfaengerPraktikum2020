@@ -44,10 +44,10 @@
   <internal package="biblatex" priority="9" active="0">
     <generic>latex</generic>
     <provides type="dynamic">
-      <file>fehlerabgabe.bcf</file>
+      <file>Fehlerabgabe.bcf</file>
     </provides>
     <requires type="dynamic">
-      <file>fehlerabgabe.bbl</file>
+      <file>Fehlerabgabe.bbl</file>
     </requires>
     <requires type="static">
       <file>blx-dm.def</file>
@@ -67,19 +67,19 @@
     <generic>biber</generic>
     <cmdline>
       <binary>biber</binary>
-      <infile>fehlerabgabe</infile>
+      <infile>Fehlerabgabe</infile>
     </cmdline>
     <input>
-      <file>fehlerabgabe.bcf</file>
+      <file>Fehlerabgabe.bcf</file>
     </input>
     <output>
-      <file>fehlerabgabe.bbl</file>
+      <file>Fehlerabgabe.bbl</file>
     </output>
     <provides type="dynamic">
-      <file>fehlerabgabe.bbl</file>
+      <file>Fehlerabgabe.bbl</file>
     </provides>
     <requires type="dynamic">
-      <file>fehlerabgabe.bcf</file>
+      <file>Fehlerabgabe.bcf</file>
     </requires>
     <requires type="editable">
       <file>lit.bib</file>

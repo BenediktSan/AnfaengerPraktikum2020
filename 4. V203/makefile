@@ -14,7 +14,7 @@ clean:
 	rm -rf build
 
 aux:
-	rm -rf Protokoll_V203.aux Protokoll_V203.bcf Protokoll_V203.log Protokoll_V203.pdf Protokoll_V203.run.xml Protokoll_V203.toc
+	rm -rf latex/Protokoll_V203.aux latex/Protokoll_V203.bcf latex/Protokoll_V203.log latex/Protokoll_V203.pdf latex/Protokoll_V203.run.xml latex/Protokoll_V203.toc
 
 FORCE:
 

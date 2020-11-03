@@ -6,13 +6,18 @@ from uncertainties import ufloat
 from scipy.optimize import curve_fit
 import sympy
 
+#1-15 bar
+p_1=np.linspace(1,15,29)
+np.save('variables/p_1.npy', p_1, allow_pickle=False)
+
+T_1=np.array([1])
+np.save('variables/T_1.npy', T_1, allow_pickle=False)
 
 
 
-np.savetxt(
-    'data.txt',
-    np.column_stack([n, x]),
-    fmt=['%d', '%.6f'],      
-    delimiter=',',
-    header='n,x',
-)
+#bis 1bar
+T_2=np.array([5,5])
+np.save('variables/T_2.npy', T_2, allow_pickle=False)
+
+p_2=np.array([1,63])
+np.save('variables/p_2.npy', p_2, allow_pickle=False)

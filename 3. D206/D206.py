@@ -46,6 +46,7 @@ def g(x,A,B,C):
     return A/(1+ B*(x**C))
 
 parameter1 , _1 = curve_fit(f,t,T1)
+
 parameter2, _2 =curve_fit(g,t,T2,p0=(240,0.00006,1.2))
 
 uncertainties1 = np.sqrt(np.diag(_1))
@@ -123,16 +124,18 @@ def Gdt(t):
     return ufloat(Gdt_value, Gdt_error)
 
 for i in range(1,5):
-    print(f"Fdt({7*i})={Fdt(t[7*i+1]):.4f}", f"  Gdt({7*i})={Gdt(t[7*i+1]):.4f}")
+    print(f"Fdt({7*i})={Fdt(t[7*i]):.4f}", f"  Gdt({7*i})={Gdt(t[7*i]):.4f}")
 
 
         #Güteziffer
 
 
 def v_ideal_error(T1,T2,dT1,dT2):
-    return np.sqrt(((-T2/((T1-T2)**2))*dT1)**2+(T1/(((T1-T2)**2))*dT2)**2)       
+    return np.sqrt(((-T2/((T1-T2)**2))*dT1)**2+(T1/(((T1-T2)**2))*dT2)**2) 
+
 for i in range(1,5):
-    print(f"v_real({7*i})={((mkck+m1c1)*Fdt(7*i))/(N[(7*i)+1]):.4f} v_ideal({7*i})={ufloat(T1[(7*i)+1]/(T1[(7*i)+1]-T2[(7*i)+1]),v_ideal_error(T1[7*i+1],T2[7*i+1],0.1,0.1))}")
+
+    print(f"v_real({7*i})={((mkck+m1c1)*Fdt(7*i))/(N[(7*i)]):.4f} v_ideal({7*i})={ufloat(T2[(7*i)]/(T2[(7*i)]-T1[(7*i)]),v_ideal_error(T2[7*i],T1[7*i],0.1,0.1))}")
     
 
   #Verdampfungswärme L[Joule/mol] R[Joule/mol*K]
@@ -151,7 +154,7 @@ L2_v=-1*parameter4[0]*8.314
 
 uncertainties4 = np.sqrt(np.diag(_4))
 L2_e=-1*uncertainties4[0]*8.314
-L2 = ufloat(L2_v, -1*L2_e)
+L2 = ufloat(L2_v, -L2_e)
 
 print(f"L2={L2:.4f}in Joule pro mol")
 L2 /=0.120910
@@ -163,19 +166,19 @@ print("Fehler a =", uncertainties4)
 
         #Massendurchsatz
 def mdt(i):
-    mdtn=((mkck+m1c1)*Gdt(t[7*i+1]).n)/L2.n
-    mdts=(((mkck+m1c1)*Gdt(t[7*i+1]).n)/(L2.n-L2.s))-(((mkck+m1c1)*Gdt(t[7*i+1]).n)/L2.n)
+    mdtn=((mkck+m1c1)*Gdt(t[7*i ]).n)/L2.n
+    mdts=(((mkck+m1c1)*Gdt(t[7*i ]).n)/(L2.n-L2.s))-(((mkck+m1c1)*Gdt(t[7*i ]).n)/L2.n)
     return ufloat(mdtn,-1*mdts)
 
 for i in range(1,5):
     print(f"Massendurchsatz in minute({7*i})={mdt(i):.5f} in Kilogramm pro Sekunde")
     print(f"Massendurchsatz in minute({7*i})={1000*mdt(i):.5f} in gramm pro Sekunde")
         #mechanische Leistung
-def N_mech(k,pa,pb,roh,mdt):
-    return (1/(k-1)) * (pb *  (pa/pb)**(1/k) -pa ) * (1/roh) * mdt
+def N_mech(k,pa,pb,rho,mdt):
+    return (1/(k-1)) * (pb *  (pa/pb)**(1/k) -pa ) * (1/rho) * mdt
 
 for i in range(1,5):
-    print(f"Die mechanische Leistung in Minute {7*i} beträgt:{N_mech(1.14, p2[7*i +1], p1[7*i +1], 5.51, mdt(i)):.6f}")
+    print(f"Die mechanische Leistung in Minute {7*i} beträgt:{N_mech(1.14, p2[7*i ], p1[7*i], 5.51, mdt(i)):.6f}")
 
 
         #Gründe für schlechte Güteziffer

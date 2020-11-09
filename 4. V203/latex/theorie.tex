@@ -18,10 +18,36 @@ Kurve durch die temperaturabhängige Verdampfungswärme $L$. Innerhalb jedes Sto
 durch die Maxwellsche Geschwindigkeitsverteilung vorgegben. Sobald die Geschwindigkeit eines Teilchen einen gewissen Grenzwert 
 überschreitet, kann es aus der flüssig in die gasförmige Phase übergehen. Bei diesem Übergang muessen molekulare Bindungskaefte ueberwunden
 werden, dies ist die Verdampfungswärme $L$, diese Energie wird beim Umkehrprozess, der Kondensation wieder frei. Zwischen 
-Kondensation und Verdampfung entsteht nach einiger Zeit ein Gleichgewicht mit einem konstantem Saettigungsdruck.
+Kondensation und Verdampfung entsteht nach einiger Zeit ein Gleichgewicht mit einem konstantem Sättigungsdruck.
 $L$ ist eine temperaturabhängige Groeße, jedoch gibt es Temperaturbereiche in denen die Verdampfungswärme naeerungsweise konstant ist, 
 diesen Bereich nutzen wir in diesem Experiment um $L$ zu bestimmen.
 \\$\Rightarrow$ Somit beschreibt die molare Verdampfungswärme $L$ eine stoffspezifische Größe , die angibt, wie viel Energie nötig ist,
 um ein Mol einer Flüssigkeit isotherm und isobar zu verdampfen.\\
+Der Sättigungsdruck lässt sich nicht durch die allgemeine Gasgleichung:
+\begin{equation}
+    pV=RV\text{,mit }R=\text{allgemeine Gaskonstante }= \SI{8.314}{\joule\per\mole\kelvin}\\
+    \label{eqn:Gasgl}
+\end{equation}
+\\
+beschreiben, da der Sättigungsdruck nicht von dem Volumen des Gases, jediglich von der Temperaturen der Flüssigkeit und des Gases abhängen.
 
+\begin{equation}
+    (C_\text{F}-C_\text{D})dT + dL = (V_\text{D}-V_\text{F})dP\\
+    \label{eqn:long}
+\end{equation}
+\\
+\begin{equation}
+    \sum_{i}\frac{Q_\text{i}}{T_\text{i}}=0\\
+    \label{eqn:sum}
+\end{equation}
+\\
+\begin{equation}
+    (V_\text{D}-V_\text{F})dp =\frac{L}{T}dT\\
+    \label{eqn:sum}
+\end{equation}
+\\
+\begin{align}
+p &= \text{exp}(C)\cdot \text{exp}\left(-\frac{L}{RT}\right)\\
+\text{ln}(p)&= -\frac{L}{RT} + C
+\end{align}
 

@@ -28,9 +28,9 @@ p = p*1e5
 
 param, err = np.polyfit(1/T,np.log(p), deg=1, cov=True)
 L1=-1*param[0]*const.molar_gas_constant
-print("'\n'Param=",param)
-print("err=",err)
-print(f"L1={L1:.5f},'\n'")
+print("'\n'Param="param)
+print("err="err)
+print(f"L1={L1:.5f} 5te nachkommastelle\n")
 
 uparam=unp.uarray(param,err)
 uL1=-1*uparam[0]*const.molar_gas_constant

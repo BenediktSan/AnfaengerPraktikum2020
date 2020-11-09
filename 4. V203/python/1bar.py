@@ -66,4 +66,4 @@ plt.savefig("build/plot1.pdf")
 
 
 #Variablen speichern
-np.save('python/variables/L1.npy', L1, allow_pickle=False)
+#np.save('python/variables/L1.npy', L1, allow_pickle=False)

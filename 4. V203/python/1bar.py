@@ -26,16 +26,20 @@ p = p*1e5
 #Ausgleichsrechnung für L
 #Verdampfungswärme L[Joule/mol] R[Joule/mol*K]
 
-param, err = np.polyfit(1/T,np.log(p), deg=1, cov=True)
-L1=-1*param[0]*const.molar_gas_constant
-print("'\n'Param="param)
-print("err="err)
+param, _ = np.polyfit(1/T,np.log(p), deg=1, cov=True)
+L1=-1*param[0]*const.gas_constant
+print("'\n'Param=",param)
+
+err = np.sqrt(np.diag(_))
+
+print("err=",err)
 print(f"L1={L1:.5f} 5te nachkommastelle\n")
 
 uparam=unp.uarray(param,err)
-uL1=-1*uparam[0]*const.molar_gas_constant
 
-La=const.molar_gas_constant * 373
+uL1=-1*uparam[0]*const.gas_constant
+
+La=const.gas_constant * 373
 uLa=unc.ufloat(La,0)
 uLi=uL1-uLa
 uLimolekül=Li/(const.avogadro_constant*atomic_unit_of_charge)

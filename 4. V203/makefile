@@ -16,8 +16,17 @@ python/variables/p_2.npy:
 build/plot1.pdf: python/variables/p_2.npy python/variables/T_2.npy	|build
 	python python/1bar.py
 
+build/plot2.pdf: python/variables/p_1.npy python/variables/T_1.npy	|build
+	python python/15bar.py
+
+build/plot3+.pdf: python/variables/p_1.npy python/variables/T_1.npy	|build
+	python python/15bar.py
+
+build/plot3-.pdf: python/variables/p_1.npy python/variables/T_1.npy	|build
+	python python/15bar.py
+
 # hier weitere Abhängigkeiten für build/main.pdf deklarieren:
-build/Protokoll_V203.pdf:  latex/auswertung.tex latex/theorie.tex latex/durchfuehrung.tex latex/diskussion.tex build/plot1.pdf | build
+build/Protokoll_V203.pdf:  latex/auswertung.tex latex/theorie.tex latex/durchfuehrung.tex latex/diskussion.tex build/plot1.pdf build/plot2.pdf build/plot3+.pdf build/plot3-.pdf    | build
 	lualatex --output-directory=build --interaction=batchmode --halt-on-error Protokoll_V203.tex
 	biber build/Protokoll_D206.bcf
 	lualatex --output-directory=build --interaction=batchmode --halt-on-error Protokoll_V203.tex

@@ -25,9 +25,11 @@ p = p*1e5
 
 #Ausgleichspolynom
 
-param, err = np.polyfit(T,p, deg=3, cov=True)
+param, _1 = np.polyfit(T,p, deg=3, cov=True)
+err = np.sqrt(np.diag(_1))
+
 uparam=unp.uarray(param,err)
-print("Polynomwertein pa/T^3, pa/T^2, pa/T und pa:"uparam)
+print("Polynomwerte in pa/T^3, pa/T^2, pa/T und pa:", uparam)
 
 
 plt.figure()
@@ -37,17 +39,17 @@ plt.xlabel("T [K]")
 plt.ylabel("p [bar]")
 plt.tight_layout()
 plt.legend()
-plt.savefig("build/plot2.pdf")
+#plt.savefig("build/plot2.pdf")
 
 
 
-R=const.molar_gas_constant
+R=const.gas_constant
 C= 0.9
-def L1(x,a,b,c,d)
+def L1(x,a,b,c,d):
     return ((R*x/2)+np.sqrt((R*x/2)**2-C*(a*x**3 + b*x**2+c*x+d))*((3*a*x**2+2*b*x+c)/(a*x**3+b*x**2+c*x+d)))
 
 
-def L2(x,a,b,c,d)
+def L2(x,a,b,c,d):
     return ((R*x/2)-np.sqrt((R*x/2)**2-C*(a*x**3 + b*x**2+c*x+d))*((3*a*x**2+2*b*x+c)/(a*x**3+b*x**2+c*x+d)))
 
 
@@ -63,7 +65,7 @@ plt.xlabel("T [K]")
 plt.ylabel("L [J/mol]")
 plt.tight_layout()
 plt.legend()
-plt.savefig("build/plot3+.pdf")
+#plt.savefig("build/plot3+.pdf")
 
 plt.figure()
 plt.plot(T, L2(T, *param),"x", label="Berechnete L Werte")
@@ -71,4 +73,4 @@ plt.xlabel("T [K]")
 plt.ylabel("L [J/mol]")
 plt.tight_layout()
 plt.legend()
-plt.savefig("build/plot3-.pdf")
+#plt.savefig("build/plot3-.pdf")

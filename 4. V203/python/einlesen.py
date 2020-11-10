@@ -28,7 +28,7 @@ np.save('python/variables/p_2.npy', p_2, allow_pickle=False)
 np.savetxt(
     'Mess1bar.txt',
     np.column_stack([p_2, T_2]),
-    fmt=['%.5f', '%.5f'],       
+    fmt=['%d', '%d'],       
     delimiter=' & ',
     header='p_2,T_2',
 )
@@ -37,7 +37,7 @@ np.savetxt(
 np.savetxt(
     'Mess15bar.txt',
     np.column_stack([p_1, T_1]),
-    fmt=['%.5f', '%.5f'],       
+    fmt=['%d', '%.1f'],       
     delimiter=' & ',
     header='p_1,T_1',
 )

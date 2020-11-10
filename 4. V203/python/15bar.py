@@ -29,7 +29,8 @@ param, _1 = np.polyfit(T,p, deg=3, cov=True)
 err = np.sqrt(np.diag(_1))
 
 uparam=unp.uarray(param,err)
-print("Polynomwerte in pa/T^3, pa/T^2, pa/T und pa:", uparam)
+print('\n\n15 bar')
+print("\nPolynomwerte in pa/T^3, pa/T^2, pa/T und pa:\n", uparam,'\n')
 
 
 plt.figure()
@@ -46,11 +47,11 @@ plt.savefig("build/plot2.pdf")
 R=const.gas_constant
 C= 0.9
 def L1(x,a,b,c,d):
-    return ((R*x/2)+np.sqrt((R*x/2)**2-C*(a*x**3 + b*x**2+c*x+d))*((3*a*x**2+2*b*x+c)/(a*x**3+b*x**2+c*x+d)))
+    return ((R*x/2)+np.sqrt((R*x/2)**2-C*(a*x**3 + b*x**2+c*x+d))*((3*a*x**3+2*b*x**2+c*x)/(a*x**3+b*x**2+c*x+d)))
 
 
 def L2(x,a,b,c,d):
-    return ((R*x/2)-np.sqrt((R*x/2)**2-C*(a*x**3 + b*x**2+c*x+d))*((3*a*x**2+2*b*x+c)/(a*x**3+b*x**2+c*x+d)))
+    return ((R*x/2)-np.sqrt((R*x/2)**2-C*(a*x**3 + b*x**2+c*x+d))*((3*a*x**3+2*b*x**2+c*x)/(a*x**3+b*x**2+c*x+d)))
 
 
 

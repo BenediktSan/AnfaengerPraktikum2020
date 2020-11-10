@@ -26,12 +26,14 @@ p = p*1e5
 #Ausgleichsrechnung für L
 #Verdampfungswärme L[Joule/mol] R[Joule/mol*K]
 
+print('\n\n Werte für 1 bar')
+
 param, _1 = np.polyfit(1/T,np.log(p), deg=1, cov=True)
 L1=-1*param[0]*const.gas_constant
 err = np.sqrt(np.diag(_1))
-print("'\n'Param=",param)
+print("\nParam=",param)
 print("err=", err)
-print(f"L1={L1:.5f} 5te nachkommastelle\n")
+print(f"L1={L1:.8f} 8te nachkommastelle\n")
 uparam=unp.uarray(param,err)
 uL1=-1*uparam[0]*const.gas_constant
 
@@ -40,8 +42,7 @@ uLa=unc.ufloat(La,0)
 uLi=uL1-uLa
 uLimolekül=uLi/(const.Avogadro*const.elementary_charge)
 
-print('\n Werte für 1 bar\n')
-print(f'\n L1= {uL1} J/mol \n La={uLa}J/mol \n Li= {uLi} J/mol\n Li pro Molekül in eV: {uLimolekül} eV')
+print(f'\n \n L1= {uL1} J/mol \n La={uLa} J/mol \n Li= {uLi} J/mol\n Li pro Molekül in eV: {uLimolekül} eV\n')
 
 
 
@@ -50,7 +51,7 @@ print(f'\n L1= {uL1} J/mol \n La={uLa}J/mol \n Li= {uLi} J/mol\n Li pro Molekül
 
 
 #plotting
-x1=np.linspace(0.0025,1/T[0],1000)
+x1=np.linspace(1/T[-1],1/T[0],1000)
 
 
 

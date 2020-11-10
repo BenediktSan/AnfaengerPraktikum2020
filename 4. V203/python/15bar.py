@@ -20,7 +20,7 @@ umr=np.linspace(1,1,T.size)*273.15
 T = T + umr
 
 #Druck in pascal
-p = p*1e5
+#p = p*1e5
 
 
 #Ausgleichspolynom
@@ -39,7 +39,7 @@ plt.xlabel("T [K]")
 plt.ylabel("p [bar]")
 plt.tight_layout()
 plt.legend()
-#plt.savefig("build/plot2.pdf")
+plt.savefig("build/plot2.pdf")
 
 
 
@@ -65,7 +65,7 @@ plt.xlabel("T [K]")
 plt.ylabel("L [J/mol]")
 plt.tight_layout()
 plt.legend()
-#plt.savefig("build/plot3+.pdf")
+plt.savefig("build/plot3+.pdf")
 
 plt.figure()
 plt.plot(T, L2(T, *param),"x", label="Berechnete L Werte")
@@ -73,4 +73,4 @@ plt.xlabel("T [K]")
 plt.ylabel("L [J/mol]")
 plt.tight_layout()
 plt.legend()
-#plt.savefig("build/plot3-.pdf")
+plt.savefig("build/plot3-.pdf")

@@ -50,7 +50,7 @@ print(f'\n L1= {uL1} J/mol \n La={uLa}J/mol \n Li= {uLi} J/mol\n Li pro Molekül
 
 
 #plotting
-x1=np.linspace(0,1/T[0],1000)
+x1=np.linspace(0.0025,1/T[0],1000)
 
 
 

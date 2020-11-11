@@ -2,21 +2,87 @@
 
 \subsection{Messungen bis 1 Bar}
 
+\subsubsection{Plot der Messwerte und Funktionen}
+\begin{figure}[htp]
+    \centering
+    \includegraphics[width=0.7\textwidth]{build/plot1.pdf}
+    \caption{Ein Plot der Messwerte inklusive der gefiteten Funktionen.}
+    \label{img:plot1}
+\end{figure}
+\FloatBarrier
 
+\subsubsection{Berechnung von L}
 
-Die gefittete Funktion auf die Messwerte wurde mithilfe einer linearen Regression berechnet.
+Die gefittete Funktion auf die Messwerte \ref{messung1} wurde mithilfe einer linearen Regression berechnet.
 Die Rechnung führt zu der Formel:
 \begin{align}
     y&=m\cdot x+n\\
-    y&= \cdot x+
+    \leadsto y&=-4372.84836719 \cdot x+29.98959435
 \end{align}
 Mit Hilfe der Gaskonstante $\symup{R}$   \footnote{Quelle: \url{https://www.chemie.de/lexikon/Universelle_Gaskonstante.html}(Besucht am 09.11.2020)}
-und der Steigung der Ausgleichsgerade lässt sich nun eine gute Näherung für $L$, für Werte kleiner als $\SI{1}{\bar}$ berechenen.
+und der Steigung der Ausgleichsgerade lässt sich nun eine gute Näherung für $L$, für Werte kleiner als $\SI{1}{\bar}$ berechnen.
+Die $-1$ rührt dabei daher, dass $L$ aus einer negativen Steigung hergeleitet wird, aber nur der Betrag von $m$ relevant ist.
 \begin{align}
     L&=(-1) \cdot m \cdot \symup{R}\\
-    \implies L&\approx\SI{1(1)}{\joule\per\mol}
+    \implies L&\approx\SI{36.3578843(6667737)e3}{\joule\per\mol}
+\end{align}\\
+Anschließend soll die innere Verdampfungswärme $L_i$, pro Molekül bestimmt werden.
+Dies geschieht über das bestimmen der äußeren Verdampfungswärme $L_a$ um $L_i$ aus der Formel $L=L_i+L_a$ zu bestimmen.\\
+Die äußere Verdampfungswärme ist dabei die Energie, die nötig ist um das Volumen eines Stoffes von $V_F$ auf $V_D$ auszudehnen,
+also due Volumenarbeit $W=pV$.\\
+Wenn man nun als äußere Verdampfungswärme $T=373 \si{\kelvin}$ also $T\approx 100 \si{\celsius}$ annimmt lässt sich über die Allgemeine Gasgleichung $L_i$ bestimmen.
+\begin{equation}
+    L_a=pV=\symup{R} \cdot T = \SI{3101.2946}{\joule\per\mol}
+\end{equation}
+Daraus folgt dann:
+\begin{align}
+    L_i&=L-L_a\\
+    L_i&=\SI{33.2565897(6667737)e3}{\joule\per\mol}
 \end{align}
- 
+Um dies dann pro Molekül zu betrachten wird der Wert durch die Avogadro-Konstante $\symup(N_A)$ geteilt und zusätzlich, für bessere Anschaulichkeit,
+noch in $\si{\electronvolt}$ umgerechnet.
+\begin{equation}
+    L_i=\SI{34.47(69)e-2}{\electronvolt}
+\end{equation}
+
+
+
+\subsection{Die Messwerte bis 1 Bar}
+
+\begin{table}[H]
+    \centering
+    %\caption{Die Messwerte}
+    \begin{tabular}{ S [table-format=3.0] S [table-format=3.0]}
+        \toprule
+        {$P \mathbin{/} \si{\milli\bar}$} & {$T \mathbin{/} \si{\celsius}$}\\
+        \midrule
+        30 & 22 \\
+        50 & 26\\
+        108 & 40\\
+        153 & 51\\
+        200 & 58\\
+        250 & 64\\
+        300 & 69\\
+        350 & 73\\
+        400 & 76\\
+        450 & 79\\
+        500 & 83\\
+        550 & 86\\
+        600 & 88\\
+        650 & 91\\
+        700 & 94\\
+        750 & 97\\
+        800 & 98\\
+        850 & 100\\
+        900 & 102\\
+        950 & 104\\
+        1000 & 108\\
+        \bottomrule
+    \end{tabular}
+\caption{Eine Tabelle der Messwerte bis $\SI{1000}{\milli\bar}$.%wobei die Temperaturen mit einem Fehler von  $\increment T = \SI{0.1}{\celsius}$ behaftet sind.
+}
+\label{tab:messung1}
+\end{table}
 
 
 
@@ -31,6 +97,7 @@ und der Steigung der Ausgleichsgerade lässt sich nun eine gute Näherung für $
 
 %nervige formel
 \subsection{Messung bis 15 Bar}
+\subsubsection{}
 \begin{align*}
    \symup{R}\cdot T &= \left( p + \frac{A}{V_D^2}\right)\cdot V_D  &
     &\text{mit} &
@@ -42,7 +109,7 @@ und der Steigung der Ausgleichsgerade lässt sich nun eine gute Näherung für $
     \intertext{Um $\frac{\symup{d}p}{\symup{d}t}$ zu approximieren bestimmen wir eine Fit-Funktion 3.Grades
     für die Temperatur $T$ und den Druck $p$ und differenzieren sie anschließend.}  
 \end{align*}
-Der Fit auf $p$ und sein Derivat sind: 
+Der Fit auf $p$ und seine Ableitung sind: 
 \begin{align}
     p(T)&=a\cdot T^3+b\cdot T^2 + c\cdot T+d\\
     \frac{\symup{d}p}{\symup{d}t}&=3a\cdot T^2+2b\cdot T + c
@@ -65,3 +132,8 @@ Mit den Werten
 \caption {Berechnete Werte für die Polynome der Fit-Funktion gerundet auf die fünfte Nachkommastelle.}
 \label{tab:params}
 \end{table}
+
+
+
+
+\

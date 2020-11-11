@@ -7,7 +7,6 @@ from scipy.optimize import curve_fit
 import scipy.constants as const
 import sympy
 
-
         #Daten auslesen
 
 p = np.load('python/variables/p_2.npy')
@@ -42,7 +41,7 @@ uLa=unc.ufloat(La,0)
 uLi=uL1-uLa
 uLimolekül=uLi/(const.Avogadro*const.elementary_charge)
 
-print(f'\n \n L1= {uL1} J/mol \n La={uLa} J/mol \n Li= {uLi} J/mol\n Li pro Molekül in eV: {uLimolekül} eV\n')
+print(f'\n \n L1= {uL1:.4f} J/mol \n La={uLa:.4f} J/mol \n Li= {uLi:.4f} J/mol\n Li pro Molekül in eV: {uLimolekül:.4f} eV\n')
 
 
 

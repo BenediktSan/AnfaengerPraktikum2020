@@ -1,14 +1,23 @@
-all: build/Graph1.pdf 
+all: build/Graphen.pdf
 
-build/text1.txt build/Graph1.pdf: Graph1.py |build
+#Python Skripte
+build/Graph1.pdf: Graph1.py | build
 	python Graph1.py
 
-#Uebungsaufgaben.pdf: text1.txt Graph1.pdf
+build/Graph2.pdf: Graph2.py | build
+	python Graph2.py
+
+#finale Pdf
+build/Graphen.pdf: build/Graph1.pdf build/Graph2.pdf Graphen.tex | build
+	lualatex --output-directory=build --interaction=batchmode --halt-on-error Graphen.tex
+	lualatex --output-directory=build --interaction=batchmode --halt-on-error Graphen.tex
+
+#Build Ordner
 build:
 	mkdir -p build
 
+#delete
 clean:
-	#rm -f Graph1.pdf text1.txt
 	rm -rf build
 
 .PHONY: all clean

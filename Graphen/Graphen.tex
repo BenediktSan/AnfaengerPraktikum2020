@@ -13,7 +13,7 @@
 
 \section{Federkonstante}
     Durch mathematisches Fitten der der Werte für die Masse und die korrelierenden Auslenkungen können wir eine Ausgleichsgerade
-    der form 
+    der Form 
     \begin{equation}
         x = \symup{a} \cdot m + \symup{b}
     \end{equation} 
@@ -23,7 +23,7 @@
     \begin{figure}
             \centering
             \includegraphics{build/Graph1.pdf}
-            \caption{G/B Diagramm}
+            \caption{ Diagramm}
             \label{fig:plt1}
         \end{figure}
     
@@ -31,13 +31,55 @@
 \newpage
 
 \section{Brennweite}
+In dieser Aufgabe wird die Brennweite einer Linse ausgerechnet, hier Vergleichen wir das direkte Ausrechnen über eine Formel und
+das approximieren über eine Ausgleichsgerade. Folgende Werte werden zum Berechnen der Werte genutzt:
+\begin{table}
+    \centering
+    \begin{tabular}{S[table-format=3.0] S [table-format=3.0]}
+        \toprule
+        {Gegenstandsweite g [mm]} & {Bildweite b [mm]}  \\
+        \midrule
+        60  & 285\\
+        80 & 142\\
+        100 & 117\\
+        110 & 85\\ 
+        120 & 86\\
+        125 & 82\\
+        \bottomrule      
+    \end{tabular}
+\end{table}
 
-    \subsection{a}
+\subsection{a}
+In Teilaufgabe a) wird die Brennweite direkt f über die Formel 
+\begin{equation}
+\frac{1}{\text{f}} = \frac{1}{\text{b}} \frac{1}{\text{g}}
+\end{equation}
+berechnet. Die berechneten Brennweiten ergeben dann:
+\begin{table}
+    \centering
+    \begin{tabular}{S[table-format=1] S [table-format=2.3]}
+        \toprule
+        {Messpar} & {Brennweite f [mm]}  \\
+        \midrule
+        1 & 49.565\\
+        2 & 51.171\\
+        3 & 53.917\\
+        4 & 47.949\\ 
+        5 & 50.097\\
+        6 & 49.5169\\
+        \bottomrule      
+    \end{tabular}
+\end{table}
 
-    \subsection{b}
-        
+\subsection{b}  
+In Teilaufgabe b) wird durch eine Ausgleichsgerade der Form
+\begin{equation}
+    \frac{1}{\text{g}} = \frac{1}{\text{b}} \cdot m + \symup{a}
+\end{equation} 
 
-    \subsection{c}
+\subsection{c}
+
+
 \newpage
 
 \section{Absorptionsgesetz}

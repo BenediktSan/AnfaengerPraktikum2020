@@ -25,7 +25,7 @@
             \includegraphics{build/Graph1.pdf}
             \caption{ Diagramm}
             \label{fig:plt1}
-        \end{figure}
+    \end{figure}
     
     
 \newpage
@@ -40,7 +40,7 @@ das approximieren über eine Ausgleichsgerade. Folgende Werte werden zum Berechn
         {Gegenstandsweite g [mm]} & {Bildweite b [mm]}  \\
         \midrule
         60  & 285\\
-        80 & 142\\
+        80  & 142\\
         100 & 117\\
         110 & 85\\ 
         120 & 86\\
@@ -54,7 +54,7 @@ In Teilaufgabe a) wird die Brennweite direkt f über die Formel
 \begin{equation}
 \frac{1}{f} = \frac{1}{b} + \frac{1}{g}
 \end{equation}
-berechnet. Die berechneten Brennweiten ergeben dann:
+berechnet. Die berechneten Brennweiten und weitere Statistische Untersuchungen ergeben dann:\\
 \begin{table}
     \centering
     \begin{tabular}{S[table-format=1] S [table-format=2.3]}
@@ -66,21 +66,39 @@ berechnet. Die berechneten Brennweiten ergeben dann:
         3 & 53.917\\
         4 & 47.949\\ 
         5 & 50.097\\
-        6 & 49.5169\\
-        \bottomrule      
-    \end{tabular}
+        6 & 49.516\\
+        \bottomrule  
+    \end{tabular}   
 \end{table}
+\begin{align}
+\text{Mittelwert}&= \num{50.369}\\
+\text{Standardabweichung}&= \num{2.027}\\
+\text{Fehler des Mittelwerts}&= \num{0.827}
+\end{align}
 
 \subsection{b}  
-In Teilaufgabe b) wird durch eine Ausgleichsgerade der Form
+In Teilaufgabe b) wird mittels einer durch Linearen Regression ausgerechten Ausgleichsgerade der Form
 \begin{equation}
-    \frac{1}{g} = \frac{1}{b} \cdot m + \symup{a}
+    \frac{1}{g} = \frac{1}{b} \cdot m + \symup{a},
+   % \eqref{eqn:ausg}
 \end{equation} 
+die Brenweite der Linse ausgerechnet. Es folgt $f=\frac{1}{a}$.
 
+Mit den selben Werten für $b$ und $g$ aus a) erhalten wir folgende Werte für die Ausgleichsgerade:
+\begin{figure}  
+    \centering
+    \includegraphics{build/Graph2.pdf}
+    \caption{ Diagramm}
+    \label{fig:plt2}
+\end{figure}
+Aus a=$\SI{0,0193 +- 0,0011}{\per\milli\meter}$ ergibt sich f= $\SI{51.7+-2.8}{\milli\meter}$
 \subsection{c}
-
-
+Wir erhalten in Teilaufgabe a und b leicht unterschiedliche Werte für die Brennweite f, jedoch würde ich die beiden Auswertungsmethoden
+gleichwertig behandeln, denn die Methode mittels der Linearen Regression behinhaltet bereits die einzelnen Messunsicherheiten, mit der 
+Methode aus Teilaufgabe a) müssen die einzelnen Ergebnisse noch auf Statistische Unsicherheiten untersucht werden.
 \newpage
+
+ 
 
 \section{Absorptionsgesetz}
     

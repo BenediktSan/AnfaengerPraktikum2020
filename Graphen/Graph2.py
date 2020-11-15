@@ -18,8 +18,8 @@ f=1/(B+G)
 n=6
 
 
-for i in range(0,6):
-    print(f"Brennwerte für Messpaar {i+1} ={f[i]:.3f}")
+#for i in range(0,6):
+#    print(f"Brennwerte für Messpaar {i+1} ={f[i]:.3f}")
 
 
 def mittelf(f,n):
@@ -52,10 +52,10 @@ err = np.sqrt( np.diag( _ ) )
 m=params[0]
 a=ufloat(params[1],err[1])
 
-print(" f =",1/a)
+#print(" f =",1/a)
 
 #print(f'\nm:{m}\na:{a}\nabwm^2:{abwm}\nabwm:{np.sqrt(abwm)}\nabwa^2:{abwa}\nabwa:{np.sqrt(abwa)}\n')
-print(f" m={params[0]:.4f},\n a={params[1]:.4f},\n err_m={err[0]:.4f},\n err_a={err[1]:.4f}")
+#print(f" m={params[0]:.4f},\n a={params[1]:.4f},\n err_m={err[0]:.4f},\n err_a={err[1]:.4f}")
 
 #datei = open('text2.txt','w')
 #datei.write(f'')

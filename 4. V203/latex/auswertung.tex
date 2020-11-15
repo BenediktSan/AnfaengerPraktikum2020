@@ -24,7 +24,7 @@ und der Steigung der Ausgleichsgerade lässt sich nun eine gute Näherung für $
 Die $-1$ rührt dabei daher, dass $L$ aus einer negativen Steigung hergeleitet wird, aber nur ihr Betrag relevant ist.
 \begin{align}
     L&=(-1) \cdot m \cdot \symup{R}\\
-    \implies L&\approx\SI{36.3578843(6667737)e3}{\joule\per\mol}
+    \implies L&\approx\SI{36.3578843(6667737)e3}{\joule\per\mol} \nonumber
 \end{align}\\
 Anschließend soll die innere Verdampfungswärme $L_i$, pro Molekül, bestimmt werden.\\
 Dies geschieht über das berechnen der äußeren Verdampfungswärme $L_a$, um $L_i$ aus der Formel $L=L_i+L_a$ zu bestimmen.\\
@@ -32,20 +32,21 @@ Die äußere Verdampfungswärme ist dabei die Energie, die nötig ist um das Vol
 also die Volumenarbeit $W=pV$.\\
 Wenn man nun als äußere Verdampfungswärme $T=373 \si{\kelvin}$ also $T\approx 100 \si{\celsius}$ annimmt lässt sich über die Allgemeine Gasgleichung $L_i$ bestimmen.
 \begin{equation}
-    L_a=pV=\symup{R} \cdot T = \SI{3101.2946}{\joule\per\mol}
+    L_a=pV=\symup{R} \cdot T = \SI{3101.2946}{\joule\per\mol} 
 \end{equation}
 Daraus folgt dann:
 \begin{align}
-    L_i&=L-L_a\\
-    L_i&=\SI{33.2565897(6667737)e3}{\joule\per\mol}
+    L_i&=L-L_a \\
+    L_i&=\SI{33.2565897(6667737)e3}{\joule\per\mol} \nonumber
 \end{align}
 Um dies dann pro Molekül zu betrachten wird der Wert durch die Avogadro-Konstante $\symup{N_A}$\footnote{Quelle: \url{https://www.chemie.de/lexikon/Avogadro-Konstante.html}(Besucht am 15.11.2020)}
 geteilt und zusätzlich, für bessere Anschaulichkeit,
 noch in $\si{\electronvolt}$ umgerechnet.
 \begin{equation}
-    L_i=\SI{34.47(69)e-2}{\electronvolt}
+    L_i=\SI{34.47(69)e-2}{\electronvolt} \nonumber
 \end{equation}
 
+\newpage
 
 
 \subsubsection{Die Messwerte bis 1 Bar}
@@ -113,22 +114,25 @@ Um eine Funktion $L(T)$ zu bestimmen benötigen wir erst einen Fit $p(T)$ auf di
 $p$ und $\frac{\symup{d}p}{\symup{d}t}$, in , approximieren zu können.\\
 Zunächst nehmen wir aber die Clausius-Clapeyronsche Gleichung \refeq{eqn:sum} und stellen sie nach der Verdampfungswärme $L$ um.
 \begin{equation}
-    L= (V_\text{D}-V_\text{F})\cdot t \frac{\symup{d}p}{\symup{d}T}
+    L= T \cdot (V_\text{D}-V_\text{F}) \frac{\symup{d}p}{\symup{d}T}
     \label{eqn:clausL}
 \end{equation}
-
-\begin{align*}
+Da bei disem Experiment ein Sättigunsdampdruck erreicht wird, welcher nicht vom Volumen abhängig ist lässt sich $V_D$ nicht mehr 
+über die Allgemeine Gasgleichung bestimmen. Stattdessen nutzen wir die Näherung :
+\begin{align}
    \symup{R}\cdot T &= \left( p + \frac{A}{V_D^2}\right)\cdot V_D  &
     &\text{mit} &
-    A&=\SI{0.9}{\joule\cubic\metre\per\mol\squared}\\
-    V_D&=\frac{\symup{R}\cdot T}{2p} \pm \sqrt{\frac{\symup{R}^2\cdot T^2}{4p^2}-\frac{A}{p}}
-    \intertext{lalalalalalallalaallalalala}
-    L&=T\left(\frac{\symup{d}p}{\symup{d}t}\frac{\symup{R}\cdot T}{2p} \pm\sqrt{\frac{\symup{R}^2\cdot T^2}{4p^2}-\frac{A}{p}}\right)\frac{\symup{d}p}{\symup{d}t}\\
-    L&=\frac{T}{p}\left( \frac{\symup{R} \cdot T}{2p} \pm\sqrt{\frac{\symup{R}^2\cdot T^2}{4p^2}-\frac{A}{p}} \right)\frac{\symup{d}p}{\symup{d}t}
-    \intertext{Um $\frac{\symup{d}p}{\symup{d}t}$ zu approximieren bestimmen wir eine Fit-Funktion 3.Grades
+    A&=\SI{0.9}{\joule\cubic\metre\per\mol\squared} \nonumber \\
+    \implies V_D&=\frac{\symup{R}\cdot T}{2p} \pm \sqrt{\frac{\symup{R}^2\cdot T^2}{4p^2}-\frac{A}{p}}
+    \intertext{Da man $V_F$ vernachlässigen kann gilt für die Gleichung \refeq{eqn:clausL} $(V_\text{D}-V_\text{F}) \approx V_D$.
+    Einsetzen führt dann zu:}
+    L&=T\left(\frac{\symup{d}p}{\symup{d}t}\frac{\symup{R}\cdot T}{2p} \pm\sqrt{\frac{\symup{R}^2\cdot T^2}{4p^2}-\frac{A}{p}}\right)\frac{\symup{d}p}{\symup{d}t} \nonumber\\
+    L&=\frac{T}{p}\left( \frac{\symup{R} \cdot T}{2p} \pm\sqrt{\frac{\symup{R}^2\cdot T^2}{4p^2}-\frac{A}{p}} \right)\frac{\symup{d}p}{\symup{d}t} \label{eqn:ohnedp}
+    \intertext{Um $\frac{\symup{d}p}{\symup{d}t}$ in \refeq{eqn:ohnedp} zu approximieren bestimmen wir, wie zuvor erläutert, eine Fit-Funktion 3.Grades
     für die Temperatur $T$ und den Druck $p$ und differenzieren sie anschließend.}  
-\end{align*}
-Der Fit auf $p$ und seine Ableitung sind: 
+\end{align}
+\\
+Der Fit auf $p$ und seine dazugehörige Ableitung sind: 
 \begin{align}
     p(T)&=a\cdot T^3+b\cdot T^2 + c\cdot T+d\\
     \frac{\symup{d}p}{\symup{d}t}&=3a\cdot T^2+2b\cdot T + c
@@ -151,6 +155,47 @@ Mit den Werten
 \caption {Berechnete Werte für die Polynome der Fit-Funktion gerundet auf die fünfte Nachkommastelle.}
 \label{tab:params}
 \end{table}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.7\textwidth]{build/plot2.pdf}
+    \caption{Die Messwerte inklusive der Fit-Funktion.}
+    \label{img:plot1}
+\end{figure}
+
+
+Einsetzen der Fit-Funktionen in \refeq{eqn:ohnedp} führt zu:
+\begin{equation}
+    L(T)=\left( \frac{\symup{R} \cdot T}{2p} \pm\sqrt{\frac{\symup{R}^2\cdot T^2}{4p^2}-\frac{A}{p}} \right)\frac{3a\cdot T^3+2b\cdot T^2 + c\cdot T}{a\cdot T^3+b\cdot T^2 + c\cdot T+d}
+    \label{eqn:mitdp}
+\end{equation}
+Durch das $\pm$ erhalte ich zwei Funktionen für die Verdampfungswärme. Durch einsetzen von beliebigen Zahlen sieht man, dass die Funktion
+für das Minus \ref{img:minus} negative Werte liefert, weswegen sie keine sinnvolle Lösung bietet.\\
+Die Funktion \ref{img:plus} für das Plus hingegen, liefert jedoch eine streng mnoton fallende Funktion für $L$.
+Dies ergibt auch Sinn, da die Verdampfungswäme immer weiter abnehmen sollte, je näher man der kritischen Temperatur kommt, bei der $L=0$ gilt.
+
+\subsubsection{Plots der Funktionen der Verdampfungswärme}
+\FloatBarrier
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\textwidth]{build/plot3+.pdf}
+    \caption{Ein Plot der Funktion $L_+(T)$.}
+    \label{img:plus}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\textwidth]{build/plot3-.pdf}
+    \caption{Ein Plot der Funktion $L_-(T)$.}
+    \label{img:minus}
+\end{figure}
+
+\FloatBarrier
+
+
+
+
+
 
 
 \subsubsection{Die Messwerte bis 15 Bar}

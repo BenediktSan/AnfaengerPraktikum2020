@@ -16,14 +16,14 @@
 Die gefittete Funktion auf die Messwerte \ref{tab:messung1} wurde mithilfe einer linearen Regression berechnet.
 Die Rechnung führt zu der Formel:
 \begin{align}
-    y&=m\cdot x+n\\
-    \implies y&=-4372.84836719 \cdot x+29.98959435
+    y&=m\cdot x+n \nonumber\\
+    \implies y&=-4372.84836719 \cdot x+29.98959435 \nonumber
 \end{align}
 Mit Hilfe der Gaskonstante $\symup{R}$   \footnote{Quelle: \url{https://www.chemie.de/lexikon/Universelle_Gaskonstante.html}(Besucht am 09.11.2020)}
 und der Steigung der Ausgleichsgerade lässt sich nun eine gute Näherung für $L$, für Werte kleiner als $\SI{1}{\bar}$ berechnen.
 Die $-1$ rührt dabei daher, dass $L$ aus einer negativen Steigung hergeleitet wird, aber nur ihr Betrag relevant ist.
 \begin{align}
-    L&=(-1) \cdot m \cdot \symup{R}\\
+    L&=(-1) \cdot m \cdot \symup{R} \nonumber\\
     \implies L&\approx\SI{36.3578843(6667737)e3}{\joule\per\mol} \nonumber
 \end{align}\\
 Anschließend soll die innere Verdampfungswärme $L_i$, pro Molekül, bestimmt werden.\\
@@ -32,11 +32,11 @@ Die äußere Verdampfungswärme ist dabei die Energie, die nötig ist um das Vol
 also die Volumenarbeit $W=pV$.\\
 Wenn man nun als äußere Verdampfungswärme $T=373 \si{\kelvin}$ also $T\approx 100 \si{\celsius}$ annimmt lässt sich über die Allgemeine Gasgleichung $L_i$ bestimmen.
 \begin{equation}
-    L_a=pV=\symup{R} \cdot T = \SI{3101.2946}{\joule\per\mol} 
+    L_a=pV=\symup{R} \cdot T = \SI{3101.2946}{\joule\per\mol} \nonumber
 \end{equation}
 Daraus folgt dann:
 \begin{align}
-    L_i&=L-L_a \\
+    L_i&=L-L_a \nonumber\\
     L_i&=\SI{33.2565897(6667737)e3}{\joule\per\mol} \nonumber
 \end{align}
 Um dies dann pro Molekül zu betrachten wird der Wert durch die Avogadro-Konstante $\symup{N_A}$\footnote{Quelle: \url{https://www.chemie.de/lexikon/Avogadro-Konstante.html}(Besucht am 15.11.2020)}
@@ -123,19 +123,18 @@ Da bei disem Experiment ein Sättigunsdampdruck erreicht wird, welcher nicht vom
    \symup{R}\cdot T &= \left( p + \frac{A}{V_D^2}\right)\cdot V_D  &
     &\text{mit} &
     A&=\SI{0.9}{\joule\cubic\metre\per\mol\squared} \nonumber \\
-    \implies V_D&=\frac{\symup{R}\cdot T}{2p} \pm \sqrt{\frac{\symup{R}^2\cdot T^2}{4p^2}-\frac{A}{p}}
+    \implies V_D&=\frac{\symup{R}\cdot T}{2p} \pm \sqrt{\frac{\symup{R}^2\cdot T^2}{4p^2}-\frac{A}{p}} \nonumber
     \intertext{Da man $V_F$ vernachlässigen kann gilt für die Gleichung \refeq{eqn:clausL} $(V_\text{D}-V_\text{F}) \approx V_D$.
     Einsetzen führt dann zu:}
     L&=T\left(\frac{\symup{d}p}{\symup{d}t}\frac{\symup{R}\cdot T}{2p} \pm\sqrt{\frac{\symup{R}^2\cdot T^2}{4p^2}-\frac{A}{p}}\right)\frac{\symup{d}p}{\symup{d}t} \nonumber\\
     L&=\frac{T}{p}\left( \frac{\symup{R} \cdot T}{2p} \pm\sqrt{\frac{\symup{R}^2\cdot T^2}{4p^2}-\frac{A}{p}} \right)\frac{\symup{d}p}{\symup{d}t} \label{eqn:ohnedp}
     \intertext{Um $\frac{\symup{d}p}{\symup{d}t}$ in \refeq{eqn:ohnedp} zu approximieren bestimmen wir, wie zuvor erläutert, eine Fit-Funktion 3.Grades
-    für die Temperatur $T$ und den Druck $p$ und differenzieren sie anschließend.}  
+    für die Temperatur $T$ und den Druck $p$ und differenzieren sie anschließend.}  \nonumber
 \end{align}
-\\
 Der Fit auf $p$ und seine dazugehörige Ableitung sind: 
 \begin{align}
-    p(T)&=a\cdot T^3+b\cdot T^2 + c\cdot T+d\\
-    \frac{\symup{d}p}{\symup{d}t}&=3a\cdot T^2+2b\cdot T + c
+    p(T)&=a\cdot T^3+b\cdot T^2 + c\cdot T+d \nonumber\\
+    \frac{\symup{d}p}{\symup{d}t}&=3a\cdot T^2+2b\cdot T + c \nonumber
 \end{align}
 Mit den Werten 
 \begin{table}[H]

@@ -57,23 +57,23 @@ Diese Wärmemenge berechnet sich mittels der spezifischen Wärmekapazität der F
 $\rightarrow$ Zustand B\\
 Die Flüssigkeit vedampft isobar und isotherm unter Aufnahme der Verdampfungswärme d$L$\\
 \begin{equation}
-L\text{(T + dT)} = L\text{(T) + d}L\nonumber\\
+L\text{(T + dT)} = L\text{(}T\text{) + d}L\nonumber\\
 \end{equation}
 Die in diesem Prozess verichtete Arbeit berechnet sich durch:\\
 \begin{equation}
-   - \text{A}_\text{BC} = \text{(p + dp)(V}_\text{D} - \text{V}_\text{F}\text{)} 
+   - \text{A}_\text{BC} = \text{(}p + \text{d}p\text{)(}V_\text{D} - V_\text{F}\text{)} \nonumber
 \end{equation}
 $\rightarrow$ Zustand C\\
 Durch Wärmeentzug wird der Dampf wieder auf die Temperatur T abgekühlt \\
 Bei diesem Schritt wird wieder eine gewisse Wearmemenge $\text{dQ}_\text{CD}$ frei:
-\begin{equation}
- -\text{dQ}_\text{CD} = \text{C}_\text{D}\cdot \text{dT} \text{C}_\text{D} = \text{Molarwärme des Dampfes}   
-\end{equation}
+\begin{align}
+ -\text{dQ}_\text{CD} &=\text{C}_\text{D}\cdot \text{d}T & \text{C}_\text{D}&=\text{Molarwärme des Dampfes}  \nonumber 
+\end{align}
 $\rightarrow$ Zustand D\\
 Im letzten Schritt Kondensiert man den Dampf unter Zufuhr der Mechanischen Arbeit $\text{A}_\text{Da}$.
 Hierbei wird die Verdampfungswärme L(T) frei\\ 
 \begin{equation}
-    -\text{A}_\text{Da}= \text{p}\cdot\text{(V}_\text{D} - \text{V}_\text{F}\text{)}
+    -\text{A}_\text{DA}= p\cdot\text{(}V_\text{D} - V_\text{F}\text{)}  \nonumber
 \end{equation}
 $\rightarrow$ Zustand A\\
             %weiter Herleitung der Formel
@@ -81,27 +81,26 @@ $\rightarrow$ Zustand A\\
 Nach dem ersten Hauptsatz der Thermodynamik dürfen wir nun die Summer der insgesamt hinzugefügt Wärme mit der insgesamt 
 verrichteten Arbeit gleichstellen. Dies ergibt dann:        
 \begin{equation}
-    (C_\text{F}-C_\text{D})dT + dL = (V_\text{D}-V_\text{F})dP\\
+    (C_\text{F}-C_\text{D}\text{)d}T + \text{d}L = \text{(}V_\text{D}-V_\text{F}\text{)d}P\\
     \label{eqn:wearme=Arbeit}
 \end{equation}
 Nach dem zweiten Hauptsatz ser Thermodynamik ist nun die Summer der reduzierten Wärmemenge gleich 0.
 
 \begin{equation}
     \sum_{i}\frac{Q_\text{i}}{T_\text{i}}=0\nonumber\\
-    \label{eqn:sum1}
 \end{equation}
 
 Weiterhin dürfen wir die Differentialausdrücke 2. Ordnung vernachlässigen und erhalten dann:
 
 \begin{equation}
-    \text{(C}_\text{F} - \text{C}_\text{D}\text{)dT + dL }-\frac{\text{LdT}}{T}= 0
+    \text{(C}_\text{F} - \text{C}_\text{D}\text{)d}T + \text{d}L -\frac{L\text{d}T}{T}= 0
     \label{eqn:Wearme=0}
 \end{equation}
 
 Das Gleichstellen der Formel \eqref{eqn:wearme=Arbeit} mit der Formel \eqref{eqn:Wearme=0} ergibt dann:
 
 \begin{equation}
-    (V_\text{D}-V_\text{F})dp =\frac{L}{T}dT\\
+    (V_\text{D}-V_\text{F})\text{d}p =\frac{L}{T}\text{d}T\\
     \label{eqn:Clausius}
 \end{equation}
 Die erhaltene Formel \eqref{eqn:Clausius} wird in der Literataur als Clausius-Clapeyronische Gleichung bezeichnet. Mit ihrer Hilfe 
@@ -111,21 +110,21 @@ zunächst einige Näherungen gemacht werden. Diese lassen sich machen, wenn man 
         %Loesung der Clausius Gleichung
 \\
 \\
-Für den Temperaturbereich weit unter der kritischen Temperatur $\text{T}_\text{kr}$ (siehe Abbildung \ref{img:Zustand}) dürfen wir einige Näherungen machen.
+Für den Temperaturbereich weit unter der kritischen Temperatur $T_\text{kr}$ (siehe Abbildung \ref{img:Zustand}) dürfen wir einige Näherungen machen.
 \begin{enumerate}
-    \item $\text{V}_\text{F}$ ist im Verhältnis zu $\text{V}_\text{D}$ vernachlässigbar.
-    \item $\text{V}_\text{D}$ lässt sich durch die ideale Gasgleichung beschreiben \eqref{eqn:Gasgl}\\
+    \item $V_F$ ist im Verhältnis zu $V_D$ vernachlässigbar.
+    \item $V_D$ lässt sich durch die ideale Gasgleichung beschreiben \eqref{eqn:Gasgl}\\
             \begin{equation}
-                \Rightarrow \text{V}_\text{D} \text{(p, T)} = \text{R}\frac{\text{T}}{\text{R}}
+                \Rightarrow \text{V}_\text{D} \text{(p, }T\text{)} = \text{R}\cdot \frac{T}{R} \nonumber
             \end{equation}
     \item Die Verdampfungswärme $L$ ist Druck- und temperaturunabhängig.
 \end{enumerate}
 Unter diesen Näherungen können wir die Clausius-Clapeyronsche Gleichung \eqref{eqn:Clausius} deutlich Vereinfachen:
 \begin{equation}
-    \frac{\text{R}}{\text{p}}\text{dp} = \frac{\text{L}}{\text{T}^2}\text{dT}
+    \frac{R}{\text{p}}\text{d}p = \frac{L}{T^2}\text{d}T \nonumber
 \end{equation}
 \begin{align}
-p &= \text{exp}(C)\cdot \text{exp}\left(-\frac{L}{R \cdot T}\right)\\
-\text{ln}(p)&= -\frac{L}{RT} + C
+p &= \text{exp}(C)\cdot \text{exp}\left(-\frac{L}{RT}\right) \nonumber\\
+\text{ln}(p)&= -\frac{L}{RT} + C \nonumber
 \end{align}
 mit $C$ = ln($\text{p}_0$)

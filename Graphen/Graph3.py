@@ -14,6 +14,7 @@ N=np.array([7565,6907,6214,5531,4942,2652,2116,1466,970,333,127,48])
 #datei = open('text3.txt','w')
 #datei.write(f'')
 #print(f'')
+def exp()
 fig, (ax1,ax2)=plt.subplots(2,1)
 
 ax1.set_title(r"Nicht Logarithmisch")
@@ -39,6 +40,6 @@ ax2.set_ylabel('$N/60s^-1$')
 
 
 fig.tight_layout()
-#plt.savefig('Graph3.pdf')
+plt.savefig('build/Graph3.pdf')
 
 plt.show()

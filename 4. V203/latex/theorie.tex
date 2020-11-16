@@ -14,8 +14,8 @@ Die beiden wichtigen Punkte in dem Diagramm sind der Tripelpunkt (TP.), indem di
 3 Aggregatzustände koexistieren und der kritische Punkt (K.P.) in dem der flüssige und gasförmige Zustand in einem 
 thermodynamischem Gleichgewicht stehen.\\
 In diesem Experiment untersuchen wir jedoch nur den Übergang: flüssig $\Leftrightarrow$ gasförmig. 
-Dieser Übergang wird von der Gasdruckkurve beschrieben bzw. von der Siedepunktskurve zwischen dem Triplepunkt und dem kritischem Punkt. Diese Kurve wird charakterisiert 
-durch die temperaturabhängige Verdampfungswärme $L$. \\
+Dieser Übergang wird von der Gasdruckkurve beschrieben bzw. von der Siedepunktskurve zwischen dem Triplepunkt und dem kritischem Punkt.
+Diese Kurve wird charakterisiert durch die temperaturabhängige Verdampfungswärme $L$. \\
 Innerhalb jedes Stoffes werden die Geschwindigkeiten der einzelnen Teilchen
 durch die Maxwellsche Geschwindigkeitsverteilung vorgegeben. Sobald die Geschwindigkeit eines Teilchen einen gewissen Grenzwert 
 überschreitet, kann es aus der flüssig in die gasförmige Phase übergehen. Bei diesem Übergang müssen molekulare Bindungskräfte überwunden
@@ -37,26 +37,71 @@ und des Gases abhängen.
 Dampfdruck Kurve wird durch reversiblen Kreislauf berechnet.\\
 isotherme und isobare vedampfung $\Leftrightarrow$ isotherme und isobare kondensation.\\
 
-Ausgangspunkt A, dp und dT wird hinzugefügt $\rightarrow$ Zustand B\\
-Die Flüssigkeit vedampft isobar und isotherm unter aufnahme der Verdampfungswärme $\rightarrow$ Zustand C\\
-Durch Wärmeentzug wird der Dampf wieder auf die Temperatur T abgekühlt $\rightarrow$ Zustand D\\
+        %Kreislaufdiagramm
 
+Ausgangspunkt A, die Wärmemenge $\text{dQ}_\text{AB} $ wird hinzugefügt, so dass, der Druck und die Temperatur um dp und dT ansteigen.
+Diese Wärmemenge berechnet sich mittels der spezifischen Wearmekapaziteat der Fluessigkeit.
+\begin{equation}
+    \text{dQ}_\text{AB}= \text{C}_F \cdot dT \nonumber\\
+\end{equation}
+$\rightarrow$ Zustand B\\
+Die Flüssigkeit vedampft isobar und isotherm unter Aufnahme der Verdampfungswärme d$L$\\
+\begin{equation}
+L\text{(T + dT)} = L\text{(T) + d}L\nonumber\\
+\end{equation}
+Die in diesem Prozess verichtete Arbeit berechnet sich durch :\\
+\begin{equation}
+   - \text{A}_\text{BC} = \text{(p + dp)(V}_\text{D} - \text{V}_\text{F}\text{)} 
+\end{equation}
+$\rightarrow$ Zustand C\\
+Durch Wärmeentzug wird der Dampf wieder auf die Temperatur T abgekühlt \\
+Bei diesem Schritt wird wieder eine gewisse Wearmemenge $\text{dQ}_\text{CD}$ frei:
+\begin{equation}
+ -\text{dQ}_\text{CD} = \text{C}_\text{D}\cdot \text{dT} \text{C}_\text{D} = \text{Molarwärme des Dampfes}   
+\end{equation}
+$\rightarrow$ Zustand D\\
+Im letzten Schritt Kondensiert man den Dampf unter Zufuhr der Mechanischen Arbeit $\text{A}_\text{Da}$.
+Hierbei wird die Verdampfungswärme L(T) frei\\ 
+\begin{equation}
+    -\text{A}_\text{Da}= \text{p}\cdot\text{(V}_\text{D} - \text{V}_\text{F}\text{)}
+\end{equation}
+$\rightarrow$ Zustand A\\
+            %weiter Herleitung der Formel
 
+Nach dem ersten Hauptsatz der Thermodynamik dürfen wir nun die Summer der insgesamt hinzugefügt Wärme mit der insgesamt 
+verrichteten Arbeit gleichstellen. Dies ergibt dann:        
 \begin{equation}
     (C_\text{F}-C_\text{D})dT + dL = (V_\text{D}-V_\text{F})dP\\
-    \label{eqn:long}
+    \label{eqn:wearme=Arbeit}
 \end{equation}
-\\
+Nach dem zweiten Hauptsatz ser Thermodynamik ist nun die Summer der reduzierten Wärmemenge gleich 0.
+
 \begin{equation}
-    \sum_{i}\frac{Q_\text{i}}{T_\text{i}}=0\\
-    \label{eqn:sum}
+    \sum_{i}\frac{Q_\text{i}}{T_\text{i}}=0\nonumber\\
+    \label{eqn:sum1}
 \end{equation}
-\\
+
+Weiterhin dürfen wir die Differentialausdrücke 2. Ordnung vernachlässigen, und erhalten daraus:
+
+\begin{equation}
+    \text{(C}_\text{F} - \text{C}_\text{D}\text{)dT + dL }-\frac{\text{LdT}}{T}= 0
+    \label{eqn:Wearme=0}
+\end{equation}
+
+Das Gleichstellen der Formel \eqref{eqn:wearme=Arbeit} mit der Formel \eqref{eqn:Wearme=0} ergibt dann:
+
 \begin{equation}
     (V_\text{D}-V_\text{F})dp =\frac{L}{T}dT\\
-    \label{eqn:sum}
+    \label{eqn:Clausius}
 \end{equation}
+Die erhaltene Formel \eqref{eqn:Clausius} wird in der Literataur als Clausius-Clapeyronische Gleichung bezeichnet. Mit ihrer Hilfe 
+lässt sich die Dampfdruckkurve eines Stoffes berechnen. Da insgesamt jedoch die Integration sehr schwierg sein kann,zum Lösen müssen 
+zunächst einige Näherungen gemacht werden. Dies lässt sich machen, wenn man sich nur besondere Temperaturbereiche anschaut.
 \\
+        %Loesung der Clausius Gleichung
+\\
+\\
+
 \begin{align}
 p &= \text{exp}(C)\cdot \text{exp}\left(-\frac{L}{RT}\right)\\
 \text{ln}(p)&= -\frac{L}{RT} + C

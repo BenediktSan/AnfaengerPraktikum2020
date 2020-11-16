@@ -57,11 +57,11 @@ def L2(x,a,b,c,d):
 
 
 
-
+x= np.linspace(T[-1],T[0],1000)
 
 
 plt.figure()
-plt.plot(T, L1(T, *param), label="Berechnete L Werte")
+plt.plot(x, L1(x, *param), label="Berechnete L Werte")
 plt.xlabel("T [K]")
 plt.ylabel("L [J/mol]")
 plt.tight_layout()
@@ -69,7 +69,7 @@ plt.legend()
 plt.savefig("build/plot3+.pdf")
 
 plt.figure()
-plt.plot(T, L2(T, *param), label="Berechnete L Werte")
+plt.plot(x, L2(x, *param), label="Berechnete L Werte")
 plt.xlabel("T [K]")
 plt.ylabel("L [J/mol]")
 plt.tight_layout()

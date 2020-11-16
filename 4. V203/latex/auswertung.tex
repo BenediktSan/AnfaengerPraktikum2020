@@ -127,7 +127,7 @@ Da bei disem Experiment ein Sättigunsdampdruck erreicht wird, welcher nicht vom
     \intertext{Da man $V_F$ vernachlässigen kann gilt für die Gleichung \refeq{eqn:clausL} $(V_\text{D}-V_\text{F}) \approx V_D$.
     Einsetzen führt dann zu:}
     L&=T\left(\frac{\symup{d}p}{\symup{d}t}\frac{\symup{R}\cdot T}{2p} \pm\sqrt{\frac{\symup{R}^2\cdot T^2}{4p^2}-\frac{A}{p}}\right)\frac{\symup{d}p}{\symup{d}t} \nonumber\\
-    L&=\frac{T}{p}\left( \frac{\symup{R} \cdot T}{2p} \pm\sqrt{\frac{\symup{R}^2\cdot T^2}{4p^2}-\frac{A}{p}} \right)\frac{\symup{d}p}{\symup{d}t} \label{eqn:ohnedp}
+    L&=\frac{T}{p}\left( \frac{\symup{R} \cdot T}{2} \pm\sqrt{\frac{\symup{R}^2\cdot T^2}{4}-Ap} \right)\frac{\symup{d}p}{\symup{d}t} \label{eqn:ohnedp}
     \intertext{Um $\frac{\symup{d}p}{\symup{d}t}$ in \refeq{eqn:ohnedp} zu approximieren bestimmen wir, wie zuvor erläutert, eine Fit-Funktion 3.Grades
     für die Temperatur $T$ und den Druck $p$ und differenzieren sie anschließend.}  \nonumber
 \end{align}
@@ -140,14 +140,14 @@ Mit den Werten
 \begin{table}[H]
     \centering
     \sisetup{table-format=1.3}
-    \begin{tabular}{ S S [table-format=3.5] @{$ \pm{}$} S [table-format=3.5] S }
+    \begin{tabular}{ S S [table-format=9.5] @{$ \pm{}$} S [table-format=9.5] S }
         \toprule
         {Parameter} & \multicolumn{3}{c}{ Bestimmte Werte} \\
         \midrule
-        \text{a}	&\num{9.29297e-06}  & \num{1.97123e-06} & \; \si{\pascal\per\cubic\kelvin}\\
-        \text{b}	&\num{-0.01029}  & \num{0.00256} & \; \si{\pascal\per\kelvin\squared}\\
-        \text{c}	&\num{3.84663}  & \num{1.10409} & \; \si{\pascal\per\kelvin}\\
-        \text{d}	&\num{-485.74494}  & \num{158.58876} & \; \si{\pascal}\\
+        \text{a}	&\num{0.9293}  & \num{0.19712} & \; \si{\pascal\per\cubic\kelvin}\\
+        \text{b}	&\num{-1028.73615}  & \num{255.75308} & \; \si{\pascal\per\kelvin\squared}\\
+        \text{c}	&\num{384662.95644}  & \num{110409.31369} & \; \si{\pascal\per\kelvin}\\
+        \text{d}	&\num{-48574494.46944}  & \num{15858875.97327} & \; \si{\pascal}\\
         \bottomrule
         \\
     \end{tabular}
@@ -165,11 +165,11 @@ Mit den Werten
 
 Einsetzen der Fit-Funktionen in \refeq{eqn:ohnedp} führt zu:
 \begin{equation}
-    L(T)=\left( \frac{\symup{R} \cdot T}{2p} \pm\sqrt{\frac{\symup{R}^2\cdot T^2}{4p^2}-\frac{A}{p}} \right)\frac{3a\cdot T^3+2b\cdot T^2 + c\cdot T}{a\cdot T^3+b\cdot T^2 + c\cdot T+d}
+    L(T)=\left( \frac{\symup{R} \cdot T}{2} \pm\sqrt{\frac{\symup{R}^2\cdot T^2}{4}-Ap} \right)\frac{3a\cdot T^3+2b\cdot T^2 + c\cdot T}{a\cdot T^3+b\cdot T^2 + c\cdot T+d}
     \label{eqn:mitdp}
 \end{equation}
 Durch das $\pm$ erhalte ich zwei Funktionen für die Verdampfungswärme. Durch einsetzen von beliebigen Zahlen sieht man, dass die Funktion
-für das Minus \ref{img:minus} negative Werte liefert, weswegen sie keine sinnvolle Lösung bietet.\\
+für das Minus \ref{img:minus} eine positive Steigung liefert und sehr kleine Werte. Deswegen bietet sie keine vernünftige Lösung.\\
 Die Funktion \ref{img:plus} für das Plus hingegen, liefert jedoch eine streng mnoton fallende Funktion für $L$.
 Dies ergibt auch Sinn, da die Verdampfungswäme immer weiter abnehmen sollte, je näher man der kritischen Temperatur kommt, bei der $L=0$ gilt.
 

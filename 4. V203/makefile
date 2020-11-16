@@ -28,7 +28,7 @@ build/plot3-.pdf: python/variables/p_1.npy python/variables/T_1.npy	|build
 # hier weitere Abhängigkeiten für build/main.pdf deklarieren:
 build/Protokoll_V203.pdf:  latex/auswertung.tex latex/theorie.tex latex/durchfuehrung.tex latex/diskussion.tex build/plot1.pdf build/plot2.pdf build/plot3+.pdf build/plot3-.pdf    | build
 	lualatex --output-directory=build --interaction=batchmode --halt-on-error latex/Protokoll_V203.tex
-	biber build/Protokoll_D206.bcf
+	biber build/Protokoll_V203.bcf
 	lualatex --output-directory=build --interaction=batchmode --halt-on-error latex/Protokoll_V203.tex
 build:
 	mkdir -p build

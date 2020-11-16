@@ -56,12 +56,21 @@ def L2(x,a,b,c,d):
 
 
 
+#Theoriewerte
+xtheo=np.array([80,100,120,140,160,180,200])
+ytheo=np.array([41.585,40.657,39.684,38.643,37.518,36.304,34.962])
+
+umr=np.linspace(1,1,xtheo.size)*273.15
+xtheo= xtheo + umr
+ytheo =ytheo *1000
+
 
 x= np.linspace(T[-1],T[0],1000)
 
 
 plt.figure()
 plt.plot(x, L1(x, *param), label="Berechnete L Werte")
+plt.plot(xtheo, ytheo,"x", label="Theoriewerte")
 plt.xlabel("T [K]")
 plt.ylabel("L [J/mol]")
 plt.tight_layout()

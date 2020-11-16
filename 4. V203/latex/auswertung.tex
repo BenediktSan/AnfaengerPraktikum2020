@@ -19,7 +19,7 @@ Die Rechnung führt zu der Formel:
     y&=m\cdot x+n \nonumber\\
     \implies y&=-4372.84836719 \cdot x+29.98959435 \nonumber
 \end{align}
-Mit Hilfe der Gaskonstante $\symup{R}$   \footnote{Quelle: \url{https://www.chemie.de/lexikon/Universelle_Gaskonstante.html}(Besucht am 09.11.2020)}
+Mit Hilfe der Gaskonstante $\symup{R}$ \cite{Chemie.de-Gaskonstante}
 und der Steigung der Ausgleichsgerade lässt sich nun eine gute Näherung für $L$, für Werte kleiner als $\SI{1}{\bar}$ berechnen.
 Die $-1$ rührt dabei daher, dass $L$ aus einer negativen Steigung hergeleitet wird, aber nur ihr Betrag relevant ist.
 \begin{align}
@@ -39,7 +39,7 @@ Daraus folgt dann:
     L_i&=L-L_a \nonumber\\
     L_i&=\SI{33.2565897(6667737)e3}{\joule\per\mol} \nonumber
 \end{align}
-Um dies dann pro Molekül zu betrachten wird der Wert durch die Avogadro-Konstante $\symup{N_A}$\footnote{Quelle: \url{https://www.chemie.de/lexikon/Avogadro-Konstante.html}(Besucht am 15.11.2020)}
+Um dies dann pro Molekül zu betrachten wird der Wert durch die Avogadro-Konstante $\symup{N_A}$ \cite{Chemie.de-Avogadro-Konstante}
 geteilt und zusätzlich, für bessere Anschaulichkeit,
 noch in $\si{\electronvolt}$ umgerechnet.
 \begin{equation}
@@ -173,14 +173,17 @@ für das Minus \ref{img:minus} negative Werte liefert, weswegen sie keine sinnvo
 Die Funktion \ref{img:plus} für das Plus hingegen, liefert jedoch eine streng mnoton fallende Funktion für $L$.
 Dies ergibt auch Sinn, da die Verdampfungswäme immer weiter abnehmen sollte, je näher man der kritischen Temperatur kommt, bei der $L=0$ gilt.
 
+
 \subsubsection{Plots der Funktionen der Verdampfungswärme}
 \FloatBarrier
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.7\textwidth]{build/plot3+.pdf}
-    \caption{Ein Plot der Funktion $L_+(T)$.}
+    \caption{Ein Plot der Funktion $L_+(T)$ und der Theoriewerte \protect \cite{Chemie-Schule.de-Verdampfungswärme}.}
     \label{img:plus}
 \end{figure}
+
+
 
 \begin{figure}[H]
     \centering

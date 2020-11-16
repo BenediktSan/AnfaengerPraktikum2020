@@ -8,8 +8,14 @@ Verdampfungswärme von Wasser bestimmt werden. Dafür wird die Dampfdruckkurve z
 %\subsection{Phasendiagramm}
 
 Die \glqq Phase\grqq{} eines Stoffes beschreibt in diesem Fall den Aggregatzustand. Wir unterscheiden dabei zwischen fest, flüssig und gasförmig.
-Zur Veranschaulichung wird hier ein Phasendiagramm von Wasser geutzt in dem die Temperatur gegen den Druck aufgetragen ist und die 3 \glqq Phasen\grqq{}
+Zur Veranschaulichung wird hier ein Phasendiagramm von Wasser genutzt in dem die Temperatur gegen den Druck aufgetragen ist und die 3 \glqq Phasen\grqq{}
 durch 3 Kurven voneinander abgegrenzt sind.\\
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.55\textwidth]{images/Diagramm.PNG}
+    \caption{Zustandsdiagramm des Wassers (qualitativ) \protect \cite{V203}.}
+    \label{img:Zustand}
+\end{figure}
 Die beiden wichtigen Punkte in dem Diagramm sind der Tripelpunkt (TP.), indem die 
 3 Aggregatzustände koexistieren und der kritische Punkt (K.P.) in dem der flüssige und gasförmige Zustand in einem 
 thermodynamischem Gleichgewicht stehen.\\
@@ -33,11 +39,16 @@ Der Sättigungsdruck lässt sich nicht durch die allgemeine Gasgleichung:
 \\
 beschreiben, da der Sättigungsdruck nicht von dem Volumen des Gases, jediglich von der Temperaturen der Flüssigkeit 
 und des Gases abhängen.
+\\
+Um nun auf eine Dampdruckkurve zu kommen, schauen wir uns reversiblen Kreisprozess an. Hier findet in einem fortlaufendem 
+Kreislauf eine isotherme und isobare Vedampfung gefolgt von einer isothermen und isobaren Kondensation\\
 
-Dampfdruck Kurve wird durch reversiblen Kreislauf berechnet.\\
-isotherme und isobare vedampfung $\Leftrightarrow$ isotherme und isobare kondensation.\\
-
-        %Kreislaufdiagramm
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.55\textwidth]{images/Kreislauf.PNG}
+    \caption{Darstellung eines Kreisprozesses im pV-Diagramm \protect \cite{V203}.}
+    \label{img:Kreislauf}
+\end{figure}
 
 Ausgangspunkt A, die Wärmemenge $\text{dQ}_\text{AB} $ wird hinzugefügt, so dass, der Druck und die Temperatur um dp und dT ansteigen.
 Diese Wärmemenge berechnet sich mittels der spezifischen Wearmekapaziteat der Fluessigkeit.
@@ -101,9 +112,21 @@ zunächst einige Näherungen gemacht werden. Dies lässt sich machen, wenn man s
         %Loesung der Clausius Gleichung
 \\
 \\
-
+Für den Temperaturbereich weit unter der kritischen Temperatur $\text{T}_\text{kr}$ (siehe Abbildung \ref{img:Zustand}) dürfen wir einige Näherungen machen.
+\begin{enumerate}
+    \item $\text{V}_\text{F}$ ist im Verhältnis zu $\text{V}_\text{D}$ vernachlässigbar.
+    \item $\text{V}_\text{D}$ lässt sich durch die ideale Gasgleichung beschreiben \eqref{eqn:Gasgl}\\
+            \begin{equation}
+                \Rightarrow \text{V}_\text{D} \text{(p, T)} = \text{R}\frac{\text{T}}{\text{R}}
+            \end{equation}
+    \item Die Verdampfungswärme $L$ ist Druck- und temperaturunabhängig.
+\end{enumerate}
+Unter diesen Näherungen können wir die Clausius-Clapeyronsche Gleichung \eqref{eqn:Clausius} deutlich Vereinfachen:
+\begin{equation}
+    \frac{\text{R}}{\text{p}}\text{dp} = \frac{\text{L}}{\text{T}^2}\text{dT}
+\end{equation}
 \begin{align}
-p &= \text{exp}(C)\cdot \text{exp}\left(-\frac{L}{RT}\right)\\
+p &= \text{exp}(C)\cdot \text{exp}\left(-\frac{L}{R \cdot T}\right)\\
 \text{ln}(p)&= -\frac{L}{RT} + C
 \end{align}
-
+mit $C$ = ln($\text{p}_0$)

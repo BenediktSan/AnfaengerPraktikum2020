@@ -42,10 +42,18 @@ uLi=uL1-uLa
 uLimolekül=uLi/(const.Avogadro*const.elementary_charge)
 
 print(f'\n \n L1= {uL1:.4f} J/mol \n La={uLa:.4f} J/mol \n Li= {uLi:.4f} J/mol\n Li pro Molekül in eV: {uLimolekül:.4f} eV\n')
-
-
-
-
+#25  43990
+#40  43350
+#60  42483
+#80  41585
+#120 39684  
+z=(43990+43350+42483+41585+39684)/5
+print("Mittelwert(?): ",z)
+print("komischer testmittelwert: ",(43990*3/4+43350+42483+41585+39684)/5)
+uz=unc.ufloat(z,0)
+uz2=unc.ufloat((43990*3/4+43350+42483+41585+39684)/5,0)
+print("Abweichnung vom Mittelwert: ",((uz/uL1)-1)*100)
+print("Testabweichung: ",((uz2/uL1)-1)*100)
 
 
 

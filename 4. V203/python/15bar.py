@@ -88,3 +88,17 @@ plt.ylabel("L [J/mol]")
 plt.tight_layout()
 plt.legend()
 plt.savefig("build/plot3-.pdf")
+
+
+
+
+#L-Werte auslesen
+
+
+np.savetxt(
+    'L-werte.txt',
+    np.column_stack([xtheo, ytheo,L1(xtheo, *param),((L1(xtheo, *param)/ytheo)-1)*100 ]),
+    fmt=['%.1f', '%.3f', '%.3f', '%.1f'],       
+    delimiter=' & ',
+    header='T,L_theo,L_fit,err',
+)

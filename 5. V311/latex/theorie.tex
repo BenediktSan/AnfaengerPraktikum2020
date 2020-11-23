@@ -1,8 +1,8 @@
 \section{Zielsetzung}
-In diesem Versuch sollen die mikroskopischen Parameter untersucht werden, 
+In diesem Versuch sollen die mikroskopischen Parameter untersucht werden
 die die Bewegung von Leitungselektronen in Metallen beschreiben.\\
-Dafür werden der elektrische Widerstand und die Hall-Spannung bei unterschiedlischen Materialien 
-untersucht und dann ein Zusammenhang zwischen diesen Größen und Parametern wie der mittleren Driftgeschwindigkeit in Stromrichtung.
+Dafür werden der elektrische Widerstand und die Hall-Spannung bei unterschiedlichen Materialien 
+untersucht und dann ein Zusammenhang zwischen diesen Größen und Parametern wie der mittleren Driftgeschwindigkeit in Stromrichtung hergestellt.
 
 
 
@@ -15,9 +15,10 @@ ein Modell mit Energiebändern beschreiben.\\
 Die Valenzelektronen des Materials, also die Elektronen der äußersten Schale, 
 bilden in einem kristallinen Festkörper ein zusammenhängendes System. Nach dem Pauli-Prinzip dürfen in einem System nur Elektronen mit entgegengesetztem Spin
 den gleichen Zustand und damit gleiche Energie besitzen.\\
-Die möglichen energetischen Zustände der Elektronen lassen sich dann, wie in Abb.\refeq{img:band} sichtbar,, 
+Die möglichen energetischen Zustände der Elektronen lassen sich dann, wie in Abb.\refeq{img:band} sichtbar,
 durch quasikontinuierliche Energiebänder darstellen.\\
-Die Lücken zwischen ihnen heißen "verbotene Zone" und bilden die nicht möglichen Zustände ab. Sie grenzen also einzelne Energiebänder ab, obwohl es auchmöglich ist, dass sich diese überlappen.\\
+Die Lücken zwischen ihnen heißen \enquote{verbotene Zone} und bilden die nicht möglichen Zustände ab. Sie grenzen also einzelne Energiebänder ab.
+Es ist allerdings auch möglich, dass sich die Bänder überlappen.\\
 Mit diesem Modell der Energiebänder lassen sich nun sehr gut Vorgänge, die die Elektronen des Festkörpers betreffen, beschreiben.\\
 In einem komplett mit Elektronen gefülltem Band, wie es oft bei den Bändern der inneren 
 Schalen der Fall ist, kann, da jeder mögliche Zustand voll besetzt ist,
@@ -26,17 +27,17 @@ Durch einen dieser Prozesse würde das Elektron nämlich einen Zustand einnehmen
 Daraus folgt dann auch dass die Elektronen dieser Bänder nicht, zum Beispiel durch äußere elektrische Felder, beschleunigt werden können 
 und damit nicht zur elektrischen Leitfähigkeit beitragen können.\\
 Die Elektronen die beschleunigt werden können sind die, die in dem äußersten, nicht gefülltem Band sitzen.
-In diesen Bändern gibt es Quantenzustände welche noch unbestzt sind, zum Beispiel die von Elektronen mit umgekehrtem Spin.
-Die Elektronen in diesen Bändern haben also die Möglichkeit beschleunigt zu werden, wodruch sich in dem kristallinen Festkörper
-ein makroskopischer Strom entstehen kann.\\
+In diesen Bändern gibt es Quantenzustände welche noch unbesetzt sind, zum Beispiel die von Elektronen mit umgekehrtem Spin.
+Die Elektronen in diesen Bändern haben also die Möglichkeit beschleunigt zu werden, wodurch sich in dem kristallinen Festkörper
+ein makroskopischer Strom ausbilden kann.\\
 Da dieser Strom durch Elektronen des nur teilweise besetzten Bandes hervorgerufen wird, werden sie auch Leitungselektronen und das Band das Leitfähigkeitsband genannt.\\\\
 
 %HIER ABB MIT DEN VALENZBÄNDERN VON NATRIUM
 
 
 \noindent
-Ein Beispiel dafür wären natürlich in erster Linie Metalle, die mit ihrer hervorragenden Leitfähigkeit, die sich nach diesem Prinzip beschreiben lässt, glänzen.
-Ein anderes Beispiel ist in Abb.\refeq{img:band} in der die Bänder eines Natrium-Atoms aufgeführt sind.\\
+Ein Beispiel dafür wären natürlich in erster Linie Metalle, die mit ihrer hervorragenden Leitfähigkeit, die sich nach diesem Prinzip beschreiben lässt, glänzen.\\
+Ein anderes Beispiel ist in Abb.\refeq{img:band} in der die Bänder eines Natrium-Atoms aufgeführt sind zu sehen.\\
 Die einzelnen sichtbaren Bänder sind dabei die einzelnen Schalen des Atoms.
 Die Lücken zwischen ihnen sind dabei, die zuvor genannten verbotenen Zonen.
 Die 1s-, 2s-, 2p-, Bänder sind komplett gefüllt und tragen nichts zur elektrischen Leitfähigkeit bei.
@@ -86,7 +87,8 @@ Mit dieser Gleichung lässt sich sich dann eine Formel für die Stromdichte $j$ 
 über die Elektronenladung $-\symup{e_0}$, die sich mit dem Betrag der Geschwindigkeit $\overline{v_d}$ bewegen, also:
 
 \begin{equation}
-  j=-n\overline{v_d}\cdot \symup{e_0} \nonumber
+  j=-n\overline{v_d}\cdot \symup{e_0} 
+  \label{eqn:j1}
 \end{equation}
 \noindent
 Oder anders gesagt; Der Strom $I$, der durch die Querschnittsfläche des Drahtes $Q$ fließt, also $\frac{I}{Q}$.
@@ -122,20 +124,48 @@ Dadurch wird $S$ zur spezifischen Leitfähigkeit $\sigma$ und $R$ wieder zu dem 
 \subsection{Hall-Effekt}
 
 Für die weitere Bestimmung von $I$ in \refeq{eqn:ohm1} fehlen noch die Variablen $n$ und $\overline{\tau}$.\\
-Die Anzahl der Teilchen $n$ lässt sich einfach mit Hilfe des Hall-Effektes bestimmen.
-
-
-
-
-
-
-
-
-
-
-
+Die Anzahl der Teilchen $n$ lässt sich einfach mit Hilfe des Hall-Effektes bestimmen.\\
+Beim Hall-Effekt misst man eine Spannung $U_H$, die an einer Metallplatte, in einem Magnetfeld, abfällt.
+Die Platte besitzt dabei die Maße, wie in Abb \refeq{img:hall} sichtbar, Breite $b$ und Dicke $d$.
+Wenn sie nun in senkrecht in ein homogenes Magnetfeld gehalten wird und sie an eine Spannung angeschlossen wird, fließt ein Strom $I_q$ durch sie.
+Wenn dann der Elektronenstrom durch die Platte und damit durch das Magnetfeld fließen werden sie duch die Lorentzkraft $F_L$ abgelenkt.\\
+Sie hat bei orthogonaler Elektronenbewegung zum Magnetfeld mit $B$ als Betragsstärke des Magnetfeldes und  den Betrag:
+\begin{equation}
+  F_L= \symup{e_0} \cdot \overline{v_d}B \nonumber
+\end{equation}
+Diese Kraft treibt die Elektronen dann an den Rand der Platte, wodurch sich dann eine Ladungsdifferenz zwischen den beiden Seiten der Platte ausbildet. 
+Dies ist die bereist genannte Hall-Spannung $U_H$. Sie ist allerdings nicht nur von $F_L$ abhängig, da sich an den Rändern 
+entgegenwirkend zur Lorentz-Kraft ein elektrisches Feld ausbildet bis beide Kräfte im Gleichgewicht sind.
+Deswegen gilt mit $U_H$ als Hall-Spannnung, $b$ als Breite der Platte und $\symup{e_0}$ als Betrag der Elementarladung, 
+da bei der Lorentzkraft auch nur der Betrag betrachtet wurde:
+\begin{equation}
+  \symup{e_0} \cdot \overline{v_d}B =\symup{e_0} \cdot \frac{U_H}{b} \nonumber
+\end{equation}
+Umformen führt dann zu:
+\begin{equation}
+  U_H=b\overline{v_d}B
+\end{equation}
+Mit Hilfe der Gleichung \refeq{eqn:j1} lässt sich dann weiter umformen:
+\begin{align}
+  j&=\frac{I_q}{Q}=\frac{I_q}{bd}=-n \cdot \overline{v_d} \cdot bd\cdot \symup{e_0} \\
+  \implies \overline{v_d} &= - \frac{j}{nbd\cdot \symup{e_0}}
+  \intertext{Erneutes einsetzen:}
+  \implies U_H&=- \frac{jbB}{nbd\cdot \symup{e_0}}\label{eqn:uhall}
+\end{align}
+Die ist nun die Formel mit der sich $n$ berechnen lässt.
 
 \subsection{Berechnung der mikroskopischen Leitfähigkeitsparameter R und $\text{U}_\text{H}$} 
+
+
+
+
+
+
+
+
+
+
+
 
 \subsection{Elektrizitätsleitung mit positiven Ladungsträgern}
 

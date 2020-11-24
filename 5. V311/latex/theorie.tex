@@ -129,7 +129,19 @@ Beim Hall-Effekt misst man eine Spannung $U_H$, die an einer Metallplatte, in ei
 Die Platte besitzt dabei die Maße, wie in Abb \refeq{img:hall} sichtbar, Breite $b$ und Dicke $d$.
 Wenn sie nun in senkrecht in ein homogenes Magnetfeld gehalten wird und sie an eine Spannung angeschlossen wird, fließt ein Strom $I_q$ durch sie.
 Wenn dann der Elektronenstrom durch die Platte und damit durch das Magnetfeld fließen werden sie duch die Lorentzkraft $F_L$ abgelenkt.\\
-Sie hat bei orthogonaler Elektronenbewegung zum Magnetfeld mit $B$ als Betragsstärke des Magnetfeldes und  den Betrag:
+Dieser Aufbau ist schematisch in der unteren Abbildung \refeq{img:hall} dargestellt. Dort sieht man die Platte, die senkrecht im Magnetfeld liegt, 
+an einem Konstantstromgerät angeschlossen ist und das Voltmeter, welches die Hall-Spannung abgreift. 
+
+
+
+
+%hier abbildung aufbau
+
+
+
+
+
+Die Lorentzkraft hat bei orthogonaler Elektronenbewegung zum Magnetfeld mit $B$ als Betragsstärke des Magnetfeldes und  den Betrag:
 \begin{equation}
   F_L= \symup{e_0} \cdot \overline{v_d}B \nonumber
 \end{equation}
@@ -148,16 +160,18 @@ Umformen führt dann zu:
 Mit Hilfe der Gleichung \refeq{eqn:j1} lässt sich dann weiter umformen:
 \begin{align}
   j&=\frac{I_q}{Q}=\frac{I_q}{bd}=-n \cdot \overline{v_d} \cdot bd\cdot \symup{e_0} \\
-  \implies \overline{v_d} &= - \frac{j}{nbd\cdot \symup{e_0}}
+  \implies \overline{v_d} &= - \frac{I_q}{nbd\cdot \symup{e_0}}
   \intertext{Erneutes einsetzen:}
-  \implies U_H&=- \frac{jbB}{nbd\cdot \symup{e_0}}\label{eqn:uhall}
+  \implies U_H&=- \frac{I_q \cdot B}{n\cdot d\cdot \symup{e_0}}\label{eqn:uhall}
 \end{align}
 Die ist nun die Formel mit der sich $n$ berechnen lässt.
 
 \subsection{Berechnung der mikroskopischen Leitfähigkeitsparameter R und $\text{U}_\text{H}$} 
 
-
-
+Für weitere Rechnungen ist die mittlere freie Weglänge $\overline{l}$ von Nöten.
+Diese ist die die Strecke die ein Leitungselektron im Durchschnitt zwischen zwei Zusammenstößen zurücklegt. 
+Sie ist dabei abhängig von der mittleren Flugzeit und der Totalgeschwindigkeit.\\
+Die Totalgeschwindigkeit ist dabei 
 
 
 

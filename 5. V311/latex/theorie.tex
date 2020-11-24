@@ -32,8 +32,12 @@ Die Elektronen in diesen Bändern haben also die Möglichkeit beschleunigt zu we
 ein makroskopischer Strom ausbilden kann.\\
 Da dieser Strom durch Elektronen des nur teilweise besetzten Bandes hervorgerufen wird, werden sie auch Leitungselektronen und das Band das Leitfähigkeitsband genannt.\\\\
 
-%HIER ABB MIT DEN VALENZBÄNDERN VON NATRIUM
-
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.55\textwidth]{images/energiebaender.PNG}
+  \caption{Eine Darstellung der Energiebänder eines Natrium-Atoms \protect \cite{V311}.}
+  \label{img:band}
+\end{figure}
 
 \noindent
 Ein Beispiel dafür wären natürlich in erster Linie Metalle, die mit ihrer hervorragenden Leitfähigkeit, die sich nach diesem Prinzip beschreiben lässt, glänzen.\\
@@ -95,19 +99,19 @@ Oder anders gesagt; Der Strom $I$, der durch die Querschnittsfläche des Drahtes
 Einsetzen von $\overline{v_d}$  führt dann zu:
 
 \begin{equation}
-  j=n\frac{1}{2}\frac{\symup{e_0}^2}{\symup{m_0}}\cdot \vec{E} \cdot \overline{\tau} \nonumber
+  j=\frac{1}{2}n\frac{\symup{e_0}^2}{\symup{m_0}}\cdot \vec{E} \cdot \overline{\tau} \nonumber
 \end{equation}
 \noindent
 Unter der Annahme, dass wir uns in einem homogenen Leiter befinden, lässt sich $j=\frac{I}{Q}$ und für das elektrische Feld $E=\frac{U}{L}$, wie im homogenen Feld eines Plattenkondensators, annehmen.
 Erneutes einsetzen führt dann zu einer dem Ohm'schen Gesetz sehr ähnlichen Gleichung:
 
 \begin{equation}
-  I=n\frac{1}{2}\frac{\symup{e_0}^2}{\symup{m_0}}\cdot \overline{\tau} \frac{Q}{L} \cdot U
+  I=\frac{1}{2}n\frac{\symup{e_0}^2}{\symup{m_0}}\cdot \overline{\tau} \frac{Q}{L} \cdot U
   \label{eqn:ohm1}
 \end{equation}
 Wenn nun \refeq{eqn:ohm1} mit dem Ohm'schen Gesetz $U=R\cdot I$ verglichen wird, wird sichtbar, dass 
 \begin{equation}
-  \frac{1}{R}=n\frac{1}{2}\frac{\symup{e_0}^2}{\symup{m_0}}\cdot \overline{\tau} \frac{Q}{L} = S\nonumber
+  \frac{1}{R}=\frac{1}{2}n\frac{\symup{e_0}^2}{\symup{m_0}}\cdot \overline{\tau} \frac{Q}{L} = S\nonumber
 \end{equation}
 gelten muss.\\
 Dieser Term, das Reziprok des Widerstands, wird als elektrische Leitfähigkeit $S$ bezeichnet. Wie aus \refeq{eqn:ohm1} ersichtlich bildet
@@ -115,7 +119,7 @@ sie einen Proportionalitätsfaktor zwischen Spannung und Strom.\\
 Um allgemeinere Größen zu erhalten werden nun die geometrieabhängigen Größen $Q$ und $L$ weggelassen.\\
 Dadurch wird $S$ zur spezifischen Leitfähigkeit $\sigma$ und $R$ wieder zu dem dazu reziproken spezifischen Widerstand $\rho$.
 \begin{align}
-  \sigma&=n\frac{1}{2}\frac{\symup{e_0}^2}{\symup{m_0}} \cdot \overline{\tau} \label{eqn:sigma}\\
+  \sigma&=\frac{1}{2}n\frac{\symup{e_0}^2}{\symup{m_0}} \cdot \overline{\tau} \label{eqn:sigma}\\
   \rho &=\frac{2}{n}\frac{\symup{m_0}}{\symup{e_0}^2 \cdot \overline{\tau}}  \label{eqn:rho}
 \end{align}
 
@@ -125,22 +129,21 @@ Dadurch wird $S$ zur spezifischen Leitfähigkeit $\sigma$ und $R$ wieder zu dem 
 
 Für die weitere Bestimmung von $I$ in \refeq{eqn:ohm1} fehlen noch die Variablen $n$ und $\overline{\tau}$.\\
 Die Anzahl der Teilchen $n$ lässt sich einfach mit Hilfe des Hall-Effektes bestimmen.\\
-Beim Hall-Effekt misst man eine Spannung $U_H$, die an einer Metallplatte, in einem Magnetfeld, abfällt.
+Beim Hall-Effekt wird eine Spannung $U_H$, die an einer Metallplatte, in einem Magnetfeld, abfällt gemessen.
 Die Platte besitzt dabei die Maße, wie in Abb \refeq{img:hall} sichtbar, Breite $b$ und Dicke $d$.
 Wenn sie nun in senkrecht in ein homogenes Magnetfeld gehalten wird und sie an eine Spannung angeschlossen wird, fließt ein Strom $I_q$ durch sie.
 Wenn dann der Elektronenstrom durch die Platte und damit durch das Magnetfeld fließen werden sie duch die Lorentzkraft $F_L$ abgelenkt.\\
-Dieser Aufbau ist schematisch in der unteren Abbildung \refeq{img:hall} dargestellt. Dort sieht man die Platte, die senkrecht im Magnetfeld liegt, 
-an einem Konstantstromgerät angeschlossen ist und das Voltmeter, welches die Hall-Spannung abgreift. 
+Dieser Aufbau ist schematisch in der unteren Abbildung \refeq{img:hall} dargestellt. Dort ist die Platte, die senkrecht im Magnetfeld liegt, 
+an der ein Konstantstromgerät angeschlossen ist und das Voltmeter, welches die Hall-Spannung abgreift, zu sehen. 
 
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.55\textwidth]{images/hall.PNG}
+  \caption{Die schematische Abbildung eines Aufbaus zur Messung des Hall-Effektes \protect \cite{V311}.}
+  \label{img:hall}
+\end{figure}
 
-
-
-%hier abbildung aufbau
-
-
-
-
-
+\noindent
 Die Lorentzkraft hat bei orthogonaler Elektronenbewegung zum Magnetfeld mit $B$ als Betragsstärke des Magnetfeldes und  den Betrag:
 \begin{equation}
   F_L= \symup{e_0} \cdot \overline{v_d}B \nonumber
@@ -171,9 +174,54 @@ Die ist nun die Formel mit der sich $n$ berechnen lässt.
 Für weitere Rechnungen ist die mittlere freie Weglänge $\overline{l}$ von Nöten.
 Diese ist die die Strecke die ein Leitungselektron im Durchschnitt zwischen zwei Zusammenstößen zurücklegt. 
 Sie ist dabei abhängig von der mittleren Flugzeit und der Totalgeschwindigkeit.\\
-Die Totalgeschwindigkeit ist dabei 
+Die Totalgeschwindigkeit $|v|$ ist dabei die wirkliche Geschwindigkeit und nicht wie zuvor betrachtet  die relativ Geschwindigkeit.
+Sie wird durch die thermische Energie der Teilchen hervorgerufen. Sie ist in der Regel auch deutlich höher als ihre Driftgeschwindigkeit.\\
+Wenn nun für die Elektronen wieder angewendet wird, dass sich die Atome wie die eines idealen Gases verhalten, lässt sich über das Äquipartitionstheorem
+ihre mittlere Energie pro Freiheitsgrad bestimmen. Diese beträgt nämlich $\frac{\symup{k}\cdot T}{2}$ pro Freiheitsgrad mit T als Temperatur und 
+$\symup{k}$ \cite{Boltzmann}. Insgesamt ergibt sich das dann zu:
+\begin{equation}
+  E_\text{kin}=\frac{3}{2}\symup{k}\cdot T \nonumber
+\end{equation}
+Mit der klassischen Formel für die kinetische Energie lässt sich das ganze dann
+durch gleichsetzen und umformen nach der mittleren Totalgeschwindigkeit $|\overline{v}_\text{kl}^2|$ zu
+\begin{align}
+  \overline{E}_\text{kin} &=\frac{\symup{m_0}}{2} \cdot |\overline{v}_\text{kl}|^2  \label{eqn:energ}\\
+  \implies |\overline{v}_\text{kl}| &=\sqrt{\frac{3\symup{k}T}{\symup{m_0}}} \label{eqn:vtot}
+\end{align}
+umformen.\\
+Dabei ist $\symup{m_0}$ wieder die Elektronenmasse.\\
+Allerdings lässt sich die Energie der Elektronen, aus dem zuvor genannten Grund des Pauli-Prinzips,
+die Energieverteilung der Elektronen, nicht wie bei einem idealen Gas typisch, über die Maxwell-Boltzmann-Statistik darstellen.
+Für diesen Fall wird dafür die Fermi-Dirac-Verteilung genutzt.\\
+Sie beschreibt die Wahrscheinlichkeit $f(E)$ um ein Teilchen mit der Energie $E + \symup(d)E$ anzutreffen.
+$E_F$ beschreibt dabei die Fermi-Energie, welche die energiereichsten Elektronen am absoluten Nullpunkt besitzen.
+Sie ist dabei abhängig von der Dichte der Elektronen, dem Planck'schen Wirkungsquantum \cite{Planck} $\symup{h}$ und wieder der Elektronenmasse.\\
+\begin{align}
+  f(E)\symup{d}E &= \frac{1}{\symup{e}^{\frac{E-E_F}{\symup{k} \cdot T}}+1} \symup{d}E \label{eqn:fermidirac}\\
+  E_F &= \frac{\symup{h}^2}{2 \cdot \symup{m_0}}\sqrt{\left(\frac{3}{8\pi}\right)^2} \label{eqn:E_F}
+\end{align} 
+Die beiden Formeln werden auch noch mal in der Grafik \ref{img:fermi} veranschaulicht.
+Dort ist die Wahrscheinlichkeitsverteilung für die Elektronen dargestellt. Dabei ist noch einmal besonders die Energie $E_F$ hervorgehoben.
+Die gestrichelte Linie zeigt die Verteilung bei $T=0$ und die durchgezogene für $T>0$.
 
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.55\textwidth]{images/dirac.PNG}
+  \caption{Ein Diagramm der Fermi-Dirac-Verteilung. Die Abweichung zwischen dem gestrichelten Graphen für $T=0$ 
+  und dem durchgezogenen für $T>0$ sind übertrieben dargestellt.  \protect \cite{V311}.}
+  \label{img:fermi}
+\end{figure}
 
+\noindent
+Die Formel \refeq{eqn:energ} lässt sich nun mit der Formel \refeq{eqn:E_F} annähern.\\
+Denn es gilt  $ E\approx E_F$, da hauptsächlich nur die Elektronen mit diese Energie durch das Feld beschleunigt werden können.
+Der Rest hat kleinere Energien und kann aus zuvor genannten Gründen, wegen des Pauli-Prinzips, nicht beschleunigt werden.
+Der zuvorgewählte Ansatz aus \refeq{eqn:vtot} mit der reinen thermischen Energie für die Totalgeschwindigkeit ist hier also in der Form, für die interessanten Elektronen, nicht anwendbar.
+Die Totalgeschwindigkeit lässt sich also zu 
+\begin{equation}
+  |\overline{v}| \approx \sqrt{\frac{2E_F}{\symup{m_0}}}
+\end{equation}
+approximieren.\\
 
 
 

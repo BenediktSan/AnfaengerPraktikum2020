@@ -1,6 +1,13 @@
 import numpy as np
 import os
-os.mkdir("python/variables")
+
+# Variablen Ordner anlegen
+
+if os.path.exists("python/variables") == False:
+    os.mkdir("python/variables")
+  
+###  Vorgegebene Daten einlesen und einspeichern
+
 I_aufsteigend = np.linspace(0, 5, 11)
 I_abfallend = np.linspace(5, 0, 11)
 B_aufsteigend = np.array([7.7, 142, 272, 420, 556, 700, 840, 975, 1077,
@@ -11,12 +18,14 @@ np.save('python/variables/I_aufsteigend.npy', I_aufsteigend, allow_pickle=False)
 np.save('python/variables/I_abfallend.npy', I_abfallend, allow_pickle=False)
 np.save('python/variables/B_aufsteigend.npy', B_aufsteigend, allow_pickle=False)
 np.save('python/variables/B_abfallend.npy', B_abfallend, allow_pickle=False)
+
 # Abmessungen der Proben [1] = Höhe, [2] = Breite, [3] = Dicke, Angaben in cm
 
 Zink = np.array([2.603, 4.406, 0.043])
 Kupfer = np.array([2.80, 2.53, 0.0018])
 np.save('python/variables/Zink.npy',Zink, allow_pickle=False)
 np.save('python/variables/Kupfer.npy', Kupfer, allow_pickle=False)
+
 # Bestimmung der Widerstände von Zink und Kupfer, I in A, U in mV
 
 I = np.linspace(0, 10, 11)
@@ -26,8 +35,7 @@ U_Kupfer = np.array([0, 7.83, 15.54, 23.3, 30.9, 38.6, 46.3, 53.9, 61.5,
 68.8, 76.5])
 np.save('python/variables/I.npy', I, allow_pickle=False)
 np.save('python/variables/U_Zink.npy',U_Zink, allow_pickle=False)
-np.save('python/variables/U_Kupfer', U_Kupfer, allow_pickle=False)
-
+np.save('python/variables/U_Kupfer.npy', U_Kupfer, allow_pickle=False)
 
 # Messung der Hall-Spannung bei konstantem Probenstrom U_H in mV, 
 #Zink:
@@ -68,7 +76,7 @@ Kupfer_Ip_U_H_1 = - np.array([0.336, 0.338, 0.340, 0.342, 0.343, 0.345,
 np.save('python/variables/I_p_Zink', I_p_Zink, allow_pickle=False)
 np.save('python/variables/I_p_Kupfer',I_p_Kupfer, allow_pickle=False)
 np.save('python/variables/Zink_Ip_U_H_1', Zink_Ip_U_H_1, allow_pickle=False)
-np.save('python/variables/Kupfer_Ip_U_H_1 .npy',Kupfer_Ip_U_H_1, allow_pickle=False)
+np.save('python/variables/Kupfer_Ip_U_H_1.npy',Kupfer_Ip_U_H_1, allow_pickle=False)
 # Umpolen
 Zink_Ip_U_H_2 = np.array([-0.020, 0.047, 0.116, 0.184, 0.250, 0.318,
 0.389, 0.456, 0.527, 0.597, 0.666])

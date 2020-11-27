@@ -23,6 +23,8 @@ build:
 aux2:
 	rm -rf Protokoll_V311.aux Protokoll_V311.bcf Protokoll_V311.log Protokoll_V311.pdf Protokoll_V311.run.xml Protokoll_V311.toc
 
+auxv:
+	rm -rf python/variables
 FORCE:
 
 .PHONY: all clean

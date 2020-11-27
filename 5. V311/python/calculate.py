@@ -12,7 +12,13 @@ I_aufsteigend=np.load('python/variables/I_aufsteigend.npy')
 I_abfallend=np.load('python/variables/I_abfallend.npy' )
 B_aufsteigend=np.load('python/variables/B_aufsteigend.npy')
 B_abfallend=np.load('python/variables/B_abfallend.npy' )
-
+#Abmessung der Proben:
+Zink=np.load('python/variables/Zink.npy')
+Kupfer=np.load('python/variables/Kupfer.npy')
+Zink_Breite=Zink[1]
+Zink_Dicke=Zink[2]
+Kupfer_Breite=Kupfer[1]
+Kupfer_Dicke=Kupfer[2]
 # Widerstandsbestimmung:
 I_Widerstand=np.load('python/variables/I.npy')
 U_Widerstand_Zink=np.load('python/variables/U_Zink.npy')
@@ -34,7 +40,7 @@ I_p_Zink=np.load('python/variables/I_p_Zink.npy')
 I_p_Kupfer=np.load('python/variables/I_p_Kupfer.npy')
 Zink_Ip_U_H_1=np.load('python/variables/Zink_Ip_U_H_1.npy')
 Kupfer_Ip_U_H_1=np.load('python/variables/Kupfer_Ip_U_H_1.npy')
-# nach Umpoulung:
+# nach Umpolung:
 Zink_Ip_U_H_2=np.load('python/variables/Zink_Ip_U_H_2.npy')
 Kupfer_Ip_U_H_2=np.load('python/variables/Kupfer_Ip_U_H_2.npy')
 
@@ -44,20 +50,18 @@ R_Zink_array = U_Widerstand_Zink[1:10] / I_Widerstand[1:10]
 R_Kupfer_array = U_Widerstand_Kupfer[1:10]  / I_Widerstand[1:10] 
 R_Zink=ufloat(np.mean(R_Zink_array),np.std(R_Zink_array))
 R_Kupfer=ufloat(np.mean(R_Kupfer_array),np.std(R_Kupfer_array))
-print(R_Zink)
-print(R_Kupfer)
-
-#Abmessung der Proben:
-Zink=np.load('python/variables/Zink.npy')
-Kupfer=np.load('python/variables/Kupfer.npy')
-Zink_Breite=Zink[1]
-Zink_Dicke=Zink[2]
-Kupfer_Breite=Kupfer[1]
-Kupfer_Dicke=Kupfer[2]
 #       b)
 #Hall-Effekt
-
+U_H_Zink_I_Sv =   0.5*( Zink_Is_U_H_1 +   Zink_Is_U_H_2   )
+U_H_Kupfer_I_Sv = 0.5*( Kupfer_Is_U_H_1 + Kupfer_Is_U_H_2 )
+U_H_Zink_I_Pv =   0.5*( Zink_Ip_U_H_1 +   Zink_Ip_U_H_2   )
+U_H_Kupfer_I_Pv = 0.5*( Kupfer_Ip_U_H_1 + Kupfer_Ip_U_H_2 )
+print(U_H_Zink_I_Sv)
+print(U_H_Kupfer_I_Sv)
+print(U_H_Zink_I_Pv)
+print(U_H_Kupfer_I_Pv)
 #       c)
+##      Naturkonstanten:
 # Elementarladung e0:
 e0=1.602e-19
 # Elektronenmasse m0:
@@ -68,8 +72,6 @@ pi=np.pi
 h=6.626e-34
 #Boltzmannsche Konstante k:
 k=1.3806e-23
-
-
 # zu berechnen:
 
 

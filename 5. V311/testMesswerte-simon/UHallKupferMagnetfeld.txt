@@ -1,6 +1,0 @@
-# I_KupferMagnetfeld     B_KupferMagnetfeld        U_HallKupferMagnetfeld     
-1       -0.276     -0.0033
-1.5     -0.413     -0.0041
-2       -0.547     -0.0049
-2.5     -0.681     -0.0057
-3       -0.813     -0.0065

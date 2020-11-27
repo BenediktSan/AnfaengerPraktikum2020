@@ -6,6 +6,44 @@ from uncertainties import ufloat
 from scipy.optimize import curve_fit
 import scipy.constants as const
 import sympy
+##      Einlesen der Daten:
+#Hallsonde:
+I_aufsteigend=np.load('python/variables/I_aufsteigend.npy')
+I_abfallend=np.load('python/variables/I_abfallend.npy' )
+B_aufsteigend=np.load('python/variables/B_aufsteigend.npy')
+B_abfallend=np.load('python/variables/B_abfallend.npy' )
+#Abmessung der Proben:
+Zink=np.load('python/variables/Zink.npy')
+Kupfer=np.load('python/variables/Kupfer.npy')
+Zink_Breite=Zink[1]
+Zink_Dicke=Zink[2]
+Kupfer_Breite=Kuper[1]
+Kupfer_Dicke=Kupfer[2]
+# Widerstandsbestimmung:
+I_Widerstand=np.load('python/variables/I.npy')
+U_Widerstand_Zink=np.load('python/variables/U_Zink.npy')
+U_Widerstand_Kupfer=np.load('python/variables/U_Kupfer')
+# Messung der Hall-Spannung bei konstantem Probenstrom U_H in mV
+Ik_Platte_Zink=8
+Ik_Platte_Kupfer=10
+I_s_Zink=np.load('python/variables/I_s_Zink.npy')
+I_s_Kupfer=np.load('python/variables/I_s_Kupfer.npy')
+Zink_Is_U_H_1=np.load('python/variables/Zink_Is_U_H_1')
+Kupfer_Is_U_H_1=np.load('python/variables/Kupfer_Is_U_H_1.npy')
+# nach Umpolung:
+Zink_Is_U_H_2=np.load('python/variables/Zink_Is_U_H_1')
+Kupfer_Is_U_H_2=np.load('python/variables/Kupfer_Is_U_H_1.npy')
+# Messung der Hall-Spannung bei konstantem Spulenstrom U_H in mV 
+Ik_Spule_Zink=5
+Ik_Spule_Kupfer=3
+I_p_Zink=np.load('python/variables/I_p_Zink')
+I_p_Kupfer=np.save('python/variables/I_p_Kupfer')
+Zink_Ip_U_H_1=np.save('python/variables/Zink_Ip_U_H_1')
+Kupfer_Ip_U_H_1=np.save('python/variables/Kupfer_Ip_U_H_1.npy')
+# nach Umpoulung:
+Zink_Ip_U_H_2=np.save('python/variables/Zink_Ip_U_H_2')
+Kupfer_Ip_U_H_2=np.save('python/variables/Kupfer_Ip_U_H_2.npy')
+
 
 #       a)
 #elektrischer Widerstand R:

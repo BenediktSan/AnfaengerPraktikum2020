@@ -44,7 +44,6 @@ Kupfer_Is_U_H_1 = - np.array([0.342, 0.340, 0.338, 0.336, 0.334, 0.332,
 np.save('python/variables/I_s_Zink.npy', I_s_Zink, allow_pickle=False)
 np.save('python/variables/I_s_Kupfer.npy',I_s_Kupfer, allow_pickle=False)
 np.save('python/variables/Zink_Is_U_H_1', Zink_Is_U_H_1, allow_pickle=False)
-np.save('python/variables/I.npy', I, allow_pickle=False)
 np.save('python/variables/Kupfer_Is_U_H_1.npy',Kupfer_Is_U_H_1, allow_pickle=False)
 # Umpolen
 
@@ -60,13 +59,13 @@ I_s = 5
 #Kupfer:
 I_s = 3 
 
-I_p = np.linspace(0, 8, 11)
+I_p_Zink = np.linspace(0, 8, 11)
 I_p_Kupfer = np.linspace(0, 10, 11)
 Zink_Ip_U_H_1 = np.array([-0.020, 0.045, 0.109, 0.174, 0.234, 0.304,
 0.365, 0.431, 0.495, 0.560, 0.626])
 Kupfer_Ip_U_H_1 = - np.array([0.336, 0.338, 0.340, 0.342, 0.343, 0.345,
 0.347, 0.348, 0.350, 0.351, 0.352])
-np.save('python/variables/I_p', I_p, allow_pickle=False)
+np.save('python/variables/I_p_Zink', I_p_Zink, allow_pickle=False)
 np.save('python/variables/I_p_Kupfer',I_p_Kupfer, allow_pickle=False)
 np.save('python/variables/Zink_Ip_U_H_1', Zink_Ip_U_H_1, allow_pickle=False)
 np.save('python/variables/Kupfer_Ip_U_H_1 .npy',Kupfer_Ip_U_H_1, allow_pickle=False)

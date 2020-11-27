@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.12.0 (TeX Live 2020)  (format=lualatex 2020.10.8)  2 NOV 2020 16:55
+This is LuaHBTeX, Version 1.12.0 (TeX Live 2020)  (format=lualatex 2020.10.8)  28 NOV 2020 00:11
  restricted system commands enabled.
 **Fehlerabgabe.tex
 (./Fehlerabgabe.tex
@@ -1722,38 +1722,42 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 
-Underfull \hbox (badness 10000) in paragraph at lines 29--33
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 36--41
+Underfull \hbox (badness 10000) in paragraph at lines 37--41
 
  []
 
 [1
 
 {/home/benedikt/.local/texlive/2020/texmf-var/fonts/map/pdftex/updmap/pdftex.map
-}] [2] (./Fehlerabgabe.aux)
+}
+warning  (pdf backend): ignoring duplicate destination with the name 'equation.2
+.1'
+]
+Underfull \hbox (badness 10000) in paragraph at lines 44--49
+
+ []
+
+[2] [3] (./Fehlerabgabe.aux)
 
 Package rerunfilecheck Warning: File `Fehlerabgabe.aux' has changed. Rerun.
 
 Package rerunfilecheck Info: Checksums for `Fehlerabgabe.aux':
-(rerunfilecheck)             Before: F68F4C6D1583BD9DE2B98FF547074058;2150
-(rerunfilecheck)             After:  B202AC141B7366EC21BE22481C8129DE;2150.
+(rerunfilecheck)             Before: 46C7A0A24B7B3492304B98067A10EEBD;1858
+(rerunfilecheck)             After:  0FA7239337C91B54FD40BC34A0642632;6390.
 Package logreq Info: Writing requests to 'Fehlerabgabe.run.xml'.
 
 \openout1 = Fehlerabgabe.run.xml
 )
 
 Here is how much of LuaTeX's memory you used:
- 35289 strings out of 479058
+ 35285 strings out of 479058
  100000,1977958 words of node,token memory allocated
- 687 words of node memory still in use:
-   7 hlist, 2 vlist, 2 rule, 5 dir, 2 glue, 4 kern, 1 glyph, 25 attribute, 75 gl
-ue_spec, 14 attribute_list, 1 write nodes
-   avail lists: 1:1,2:1334,3:191,4:20,5:444,6:27,7:2131,8:72,9:860,10:6,11:111
- 53614 multiletter control sequences out of 65536+600000
+ 698 words of node memory still in use:
+   7 hlist, 2 vlist, 2 rule, 5 dir, 2 glue, 4 kern, 1 glyph, 27 attribute, 76 gl
+ue_spec, 15 attribute_list, 1 write nodes
+   avail lists: 1:1,2:1772,3:168,4:35,5:424,6:26,7:3105,8:67,9:1059,10:11,11:242
+
+ 53621 multiletter control sequences out of 65536+600000
  181 fonts using 66966007 bytes
  98i,21n,114p,10638b,2933s stack positions out of 5000i,500n,10000p,200000b,200000s
 </home/benedikt/.local/texlive/2020/texmf-dist/fonts/opentype/public/lm/lmroman8
@@ -1762,10 +1766,10 @@ c/lm-math/latinmodern-math.otf></home/benedikt/.local/texlive/2020/texmf-dist/fo
 nts/opentype/public/lm-math/latinmodern-math.otf></home/benedikt/.local/texlive/
 2020/texmf-dist/fonts/opentype/public/lm/lmroman10-regular.otf></home/benedikt/.
 local/texlive/2020/texmf-dist/fonts/opentype/public/lm/lmsans10-bold.otf>
-Output written on Fehlerabgabe.pdf (2 pages, 26318 bytes).
+Output written on Fehlerabgabe.pdf (3 pages, 33557 bytes).
 
-PDF statistics: 84 PDF objects out of 1000 (max. 8388607)
- 64 compressed objects within 1 object stream
- 25 named destinations out of 1000 (max. 131072)
- 25 words of extra memory for PDF output out of 10000 (max. 100000000)
+PDF statistics: 94 PDF objects out of 1000 (max. 8388607)
+ 73 compressed objects within 1 object stream
+ 14 named destinations out of 1000 (max. 131072)
+ 73 words of extra memory for PDF output out of 10000 (max. 100000000)
 

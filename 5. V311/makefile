@@ -20,6 +20,9 @@ build/Protokoll_V311.pdf:  latex/auswertung.tex latex/theorie.tex latex/durchf.t
 build:
 	mkdir -p build
 
+clean:
+	rm -rf build
+	
 aux2:
 	rm -rf Protokoll_V311.aux Protokoll_V311.bcf Protokoll_V311.log Protokoll_V311.pdf Protokoll_V311.run.xml Protokoll_V311.toc
 

@@ -28,6 +28,9 @@ aux2:
 
 auxv:
 	rm -rf python/variables
+
+auxt:
+	rm -rf build/Tabellen	
 FORCE:
 
 .PHONY: all clean

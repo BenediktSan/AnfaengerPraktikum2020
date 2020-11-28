@@ -10,10 +10,8 @@ if os.path.exists("python/variables") == False:
 
 I_aufsteigend = np.linspace(0, 5, 11)
 I_abfallend = np.linspace(5, 0, 11)
-B_aufsteigend = np.array([7.7, 142, 272, 420, 556, 700, 840, 975, 1077,
-1158, 1220])
-B_abfallend = np.array([1220, 1169, 1095, 977, 845, 703, 563, 422, 279,
-138, 8.3])
+B_aufsteigend = np.array([7.7, 142, 272, 420, 556, 700, 840, 975, 1077, 1158, 1220])
+B_abfallend = np.array([1220, 1169, 1095, 977, 845, 703, 563, 422, 279, 138, 8.3])
 np.save('python/variables/I_aufsteigend.npy', I_aufsteigend, allow_pickle=False)
 np.save('python/variables/I_abfallend.npy', I_abfallend, allow_pickle=False)
 np.save('python/variables/B_aufsteigend.npy', B_aufsteigend, allow_pickle=False)
@@ -54,7 +52,6 @@ np.save('python/variables/I_s_Kupfer.npy',I_s_Kupfer, allow_pickle=False)
 np.save('python/variables/Zink_Is_U_H_1', Zink_Is_U_H_1, allow_pickle=False)
 np.save('python/variables/Kupfer_Is_U_H_1.npy',Kupfer_Is_U_H_1, allow_pickle=False)
 # Umpolen
-
 Zink_Is_U_H_2 = np.array([0.647, 0.646, 0.645, 0.644, 0.642, 0.641, 0.639,
 0.638, 0.636, 0.635, 0.634])
 Kupfer_Is_U_H_2 = - np.array([0.340, 0.342, 0.343, 0.345, 0.347, 0.349,

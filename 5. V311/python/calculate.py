@@ -135,25 +135,33 @@ def number(U_H,B,I,d):
     return -B*I/(U_H*e0*d)
 n_Zink = number(U_H_Zink_I_Sv,I_s_Zink*Rel[0]+Rel[1],8,Zink_Breite)
 n_Kupfer = number(U_H_Kupfer_I_Sv,I_s_Kupfer*Rel[0]+Rel[1],10,Kupfer_Breite)
-#print(n_Kupfer)
+
 # Zahl der Ladungsträger pro Atom z
 def Zahl(rho,n,m_mol):
     return ( n * m_mol) / ( rho * 6.0221e23 )
+
 Z_Zink = Zahl(7.14,n_Zink,65.38)
 Z_Kupfer = Zahl(8.92,n_Kupfer,63.55 )
 
-
 # mittlere Flugzeit tau:
-def Fermi(U_H,B,I,d):
-    return (h**2/2*m0) * np.cbrt((3*number(U_H,B,I,d))/8*pi)**(2)
 
-def tau(U_H,B,I,d,b):
-    return (-2*m0*b/(e0*U_H)) * np.sqrt((2*Fermi(U_H,B,I,d))/m0)
+def tau(n,spez_R):
+    return (2 * m0 ) / ((e0 ** 2) * n * spez_R)
+
+tau_Zink = tau(n_Zink , spez_R_Zink)
+tau_Kupfer = tau(n_Kupfer , spez_R_Kupfer)
+
+print(tau_Zink)
+print(tau_Kupfer)
+
 
 # mittlere Driftgeschwindigkeit vd
 
-def mitDrift(U_H,B,I,d):
-    return -1/(e0*number(U_H,B,I,d))
+def mitDrift(n):
+    return -1/(e0*n)
+
+vd_Zink = mitDrift(n_Zink)
+vd_Kupfer = mitDrift(n_Kupfer)
 
 #Beweglichkeit mue:
 def Beweg(U_H,B,I,d,b):
@@ -164,6 +172,15 @@ def vTot(T):
     return np.sqrt(3*k*T/m0)
 
 #mittlere freie Weglänge l:
+def Fermi(n):
+    if n[0]>0:
+        return (h**2/2*m0) * ((3*n)/8*pi)**(2/3)
+    else:
+        return (h**2/2*m0) * ((3*-n)/8*pi)**(2/3)
+
+FE_Zink = Fermi(n_Zink)
+FE_Kupfer = Fermi(n_Kupfer)
+
 def mWeg(U_H,B,I,d,b):
     return tau(U_H,B,I,d,b)*np.sqrt(2*Fermi(U_H,B,I,d)/m0)
 

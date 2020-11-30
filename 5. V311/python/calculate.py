@@ -94,7 +94,7 @@ np.save('python/variables/param6.npy', param6, allow_pickle=False)
 #       c)
 ##      Naturkonstanten:
 # Elementarladung e0:
-e0=1.602e-19
+e0=-1.602e-19
 # Elektronenmasse m0:
 m0=9.109e-31 
 #pi:
@@ -133,16 +133,22 @@ np.save('python/variables/param2.npy', param2, allow_pickle=False)
 #Ladungsträger pro Volumen n
 def number(U_H,B,I,d):
     return -B*I/(U_H*e0*d)
-n_Zink = number(U_H_Zink_I_Sv,I_s_Zink*Rel[0]+Rel[1],8,Zink_Breite)
-n_Kupfer = number(U_H_Kupfer_I_Sv,I_s_Kupfer*Rel[0]+Rel[1],10,Kupfer_Breite)
+n_Zink = number(U_H_Zink_I_Sv,I_s_Zink*Rel[0]+Rel[1],8,Zink_Dicke)
+n_Kupfer = number(U_H_Kupfer_I_Sv,I_s_Kupfer*Rel[0]+Rel[1],10,Kupfer_Dicke)
+np.save('python/variables/n_Zink.npy', n_Zink, allow_pickle=True)
+np.save('python/variables/n_Kupfer.npy', n_Kupfer, allow_pickle=True)
 
+# print((-I_s_Kupfer*Rel[0]+Rel[1])*10 / (U_H_Kupfer_I_Sv * e0 * Kupfer_Dicke))
 # Zahl der Ladungsträger pro Atom z
+
 def Zahl(rho,n,m_mol):
-    return ( n * m_mol) / ( rho * 6.0221e23 )
+    return ( n * m_mol) / ( rho * 6.0221e23 * 1e6)
 
 Z_Zink = Zahl(7.14,n_Zink,65.38)
 Z_Kupfer = Zahl(8.92,n_Kupfer,63.55 )
-
+np.save('python/variables/Z_Zink.npy', Z_Zink, allow_pickle=True)
+np.save('python/variables/Z_Kupfer.npy', Z_Kupfer, allow_pickle=True)
+#print(n_Kupfer)
 # mittlere Flugzeit tau:
 
 def tau(n,spez_R):
@@ -151,9 +157,8 @@ def tau(n,spez_R):
 tau_Zink = tau(n_Zink , spez_R_Zink)
 tau_Kupfer = tau(n_Kupfer , spez_R_Kupfer)
 
-print(tau_Zink)
-print(tau_Kupfer)
-
+np.save('python/variables/tau_Zink.npy', tau_Zink, allow_pickle=True)
+np.save('python/variables/tau_Kupfer.npy', tau_Kupfer, allow_pickle=True)
 
 # mittlere Driftgeschwindigkeit vd
 
@@ -163,25 +168,50 @@ def mitDrift(n):
 vd_Zink = mitDrift(n_Zink)
 vd_Kupfer = mitDrift(n_Kupfer)
 
+np.save('python/variables/vd_Zink.npy', vd_Zink, allow_pickle=True)
+np.save('python/variables/vd_Kupfer.npy', vd_Kupfer, allow_pickle=True)
 #Beweglichkeit mue:
-def Beweg(U_H,B,I,d,b):
-    return -e0*tau(U_H,B,I,d,b)/(2*m0)
+
+def Beweg(tau):
+    return -e0*tau/(2*m0)
+
+Beweg_Zink= Beweg(tau_Zink)
+Beweg_Kupfer = Beweg(tau_Zink)
+np.save('python/variables/Beweg_Zink.npy', Beweg_Zink, allow_pickle=True)
+np.save('python/variables/Beweg_Kupfer.npy', Beweg_Kupfer, allow_pickle=True)
 
 #Totalgeschwindigkeit v:
-def vTot(T):
-    return np.sqrt(3*k*T/m0)
-
-#mittlere freie Weglänge l:
 def Fermi(n):
-    if n[0]>0:
-        return (h**2/2*m0) * ((3*n)/8*pi)**(2/3)
-    else:
-        return (h**2/2*m0) * ((3*-n)/8*pi)**(2/3)
+    return ((h**2)*((3*n)/8*np.pi)**(2/3))/2*m0
 
+print(f"h={h},h^2={h**2}")
+print(f"n={n_Kupfer},n^(2/3)={n_Kupfer**(2/3)}")
+print(f"n^(2/3)={n_Kupfer**(2/3)}")
+print(f"m0={m0}")
+print(f"FE={((h**2)*((3*n_Kupfer)/8*np.pi)**(2/3))/2*m0}")
 FE_Zink = Fermi(n_Zink)
 FE_Kupfer = Fermi(n_Kupfer)
+#print(FE_Kupfer)
+np.save('python/variables/FE_Zink.npy', FE_Zink, allow_pickle=True)
+np.save('python/variables/FE_Kupfer.npy', FE_Kupfer, allow_pickle=True)
 
-def mWeg(U_H,B,I,d,b):
-    return tau(U_H,B,I,d,b)*np.sqrt(2*Fermi(U_H,B,I,d)/m0)
+def vTot(Fermi):
+    return (2 * Fermi / m0)**0.5
+
+vT_Zink = vTot(FE_Zink)
+vT_Kupfer = vTot(FE_Kupfer)
+np.save('python/variables/vT_Zink.npy', vT_Zink, allow_pickle=True)
+np.save('python/variables/vT_Kupfer.npy', vT_Kupfer, allow_pickle=True)
+
+#mittlere freie Weglänge l:
 
 
+def mWeg(tau,Fermi):
+    return tau*((2*Fermi/m0)**0.5)
+
+mWeg_Zink = mWeg(tau_Zink, FE_Zink)
+mWeg_Kupfer = mWeg(tau_Kupfer, FE_Kupfer)
+
+np.save('python/variables/mWeg_Zink.npy', mWeg_Zink, allow_pickle=True)
+np.save('python/variables/mWeg_Kupfer.npy', mWeg_Kupfer, allow_pickle=True)
+#print(mWeg_Kupfer)

@@ -7,6 +7,10 @@ from uncertainties import unumpy
 from scipy.optimize import curve_fit
 import scipy.constants as const
 import sympy
+import os
+
+if os.path.exists("build") == False:
+    os.mkdir("build")
 
 ##      Einlesen der Daten:
 #Hallsonde:
@@ -94,3 +98,4 @@ plt.ylabel("Magnetfeld [mT]")
 plt.legend()
 plt.tight_layout()
 plt.savefig("build/Magnetfeld.pdf")
+

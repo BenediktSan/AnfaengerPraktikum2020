@@ -131,14 +131,21 @@ np.save('python/variables/param2.npy', param2, allow_pickle=False)
 
 
 #Ladungsträger pro Volumen n
-def number(U_H,B,I,d):
-    return -B*I/(U_H*e0*d)
-n_Zink = number(U_H_Zink_I_Sv,I_s_Zink*Rel[0]+Rel[1],8,Zink_Dicke)
-n_Kupfer = number(U_H_Kupfer_I_Sv,I_s_Kupfer*Rel[0]+Rel[1],10,Kupfer_Dicke)
+#def number(B,I,U_H,d):
+#return -B*I/(U_H*e0*d)
+#n_Zink = number(I_s_Zink*Rel[0]+Rel[1],8,U_H_Zink_I_Sv,Zink_Dicke)
+#n_Kupfer = number(I_s_Kupfer*Rel[0]+Rel[1],10,U_H_Kupfer_I_Sv,Kupfer_Dicke)
+
+
+
+n_Zink =  -(I_s_Zink*Rel[0]+Rel[1])*8/(U_H_Zink_I_Sv * e0 * Zink_Dicke)
+n_Kupfer= -(I_s_Kupfer*Rel[0]+Rel[1])*10/(U_H_Kupfer_I_Sv * e0 * Kupfer_Dicke)
+n2_Zink = -(5*Rel[0]+Rel[1]) * I_p_Zink / (U_H_Zink_I_Pv* e0 * Zink_Dicke)
+print(n2_Zink)
+#print(n_Kupfer)
+
 np.save('python/variables/n_Zink.npy', n_Zink, allow_pickle=True)
 np.save('python/variables/n_Kupfer.npy', n_Kupfer, allow_pickle=True)
-
-# print((-I_s_Kupfer*Rel[0]+Rel[1])*10 / (U_H_Kupfer_I_Sv * e0 * Kupfer_Dicke))
 # Zahl der Ladungsträger pro Atom z
 
 def Zahl(rho,n,m_mol):
@@ -146,6 +153,7 @@ def Zahl(rho,n,m_mol):
 
 Z_Zink = Zahl(7.14,n_Zink,65.38)
 Z_Kupfer = Zahl(8.92,n_Kupfer,63.55 )
+#print(Z_Zink)
 np.save('python/variables/Z_Zink.npy', Z_Zink, allow_pickle=True)
 np.save('python/variables/Z_Kupfer.npy', Z_Kupfer, allow_pickle=True)
 #print(n_Kupfer)
@@ -182,15 +190,14 @@ np.save('python/variables/Beweg_Kupfer.npy', Beweg_Kupfer, allow_pickle=True)
 
 #Totalgeschwindigkeit v:
 def Fermi(n):
-    return ((h**2)*((3*n)/8*np.pi)**(2/3))/2*m0
+    return ((h**2)*((3*n)/8*np.pi)**(2/3))/(2*m0*-e0)
 
-print(f"h={h},h^2={h**2}")
-print(f"n={n_Kupfer},n^(2/3)={n_Kupfer**(2/3)}")
-print(f"n^(2/3)={n_Kupfer**(2/3)}")
-print(f"m0={m0}")
-print(f"FE={((h**2)*((3*n_Kupfer)/8*np.pi)**(2/3))/2*m0}")
+
+
 FE_Zink = Fermi(n_Zink)
 FE_Kupfer = Fermi(n_Kupfer)
+
+#rint(FE_Kupfer)
 #print(FE_Kupfer)
 np.save('python/variables/FE_Zink.npy', FE_Zink, allow_pickle=True)
 np.save('python/variables/FE_Kupfer.npy', FE_Kupfer, allow_pickle=True)
@@ -200,18 +207,19 @@ def vTot(Fermi):
 
 vT_Zink = vTot(FE_Zink)
 vT_Kupfer = vTot(FE_Kupfer)
+
 np.save('python/variables/vT_Zink.npy', vT_Zink, allow_pickle=True)
 np.save('python/variables/vT_Kupfer.npy', vT_Kupfer, allow_pickle=True)
 
 #mittlere freie Weglänge l:
 
 
-def mWeg(tau,Fermi):
-    return tau*((2*Fermi/m0)**0.5)
+def mWeg(tau,vTot):
+    return tau*vTot
 
-mWeg_Zink = mWeg(tau_Zink, FE_Zink)
-mWeg_Kupfer = mWeg(tau_Kupfer, FE_Kupfer)
+mWeg_Zink = mWeg(tau_Zink, vT_Zink)
+mWeg_Kupfer = mWeg(tau_Kupfer, vT_Kupfer)
 
 np.save('python/variables/mWeg_Zink.npy', mWeg_Zink, allow_pickle=True)
 np.save('python/variables/mWeg_Kupfer.npy', mWeg_Kupfer, allow_pickle=True)
-#print(mWeg_Kupfer)
+

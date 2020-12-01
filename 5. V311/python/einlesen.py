@@ -20,7 +20,7 @@ np.save('python/variables/B_abfallend.npy', B_abfallend, allow_pickle=False)
 # Abmessungen der Proben [1] = Höhe, [2] = Breite, [3] = Dicke, Angaben in cm
 
 Zink = np.array([2.603e-2, 4.406e-2, 0.043e-2])
-Kupfer = np.array([2.80e-2, 2.53e-2, 0.00183e-2])
+Kupfer = np.array([2.80e-2, 2.53e-2, 0.0018e-2])
 np.save('python/variables/Zink.npy',Zink, allow_pickle=False)
 np.save('python/variables/Kupfer.npy', Kupfer, allow_pickle=False)
 

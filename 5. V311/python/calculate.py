@@ -141,7 +141,8 @@ np.save('python/variables/param2.npy', param2, allow_pickle=False)
 n_Zink =  -(I_s_Zink*Rel[0]+Rel[1])*8/(U_H_Zink_I_Sv * e0 * Zink_Dicke)
 n_Kupfer= -(I_s_Kupfer*Rel[0]+Rel[1])*10/(U_H_Kupfer_I_Sv * e0 * Kupfer_Dicke)
 n2_Zink = -(5*Rel[0]+Rel[1]) * I_p_Zink / (U_H_Zink_I_Pv* e0 * Zink_Dicke)
-print(n_Zink)
+print("kupfer",n_Kupfer)
+print("nsync: ",n_Zink)
 #print(n_Kupfer)
 
 np.save('python/variables/n_Zink.npy', n_Zink, allow_pickle=True)
@@ -198,7 +199,7 @@ def Fermi(n):
 FE_Zink = Fermi(n_Zink)
 FE_Kupfer = Fermi(n_Kupfer)
 
-#rint(FE_Kupfer)
+#print(FE_Kupfer)
 #print(FE_Kupfer)
 np.save('python/variables/FE_Zink.npy', FE_Zink, allow_pickle=True)
 np.save('python/variables/FE_Kupfer.npy', FE_Kupfer, allow_pickle=True)

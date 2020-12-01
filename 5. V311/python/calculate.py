@@ -139,14 +139,12 @@ np.save('python/variables/param2.npy', param2, allow_pickle=False)
 
 
 n_sZink =  -(I_s_Zink*Rel[0]+Rel[1])*8/(U_H_Zink_I_Sv * e0 * Zink_Dicke)
-n_sKupfer= -(I_s_Kupfer*Rel[0]+Rel[1])*10/(U_H_Kupfer_I_Sv * e0 * Kupfer_Dicke)
+n_sKupfer= (I_s_Kupfer*Rel[0]+Rel[1])*10/(U_H_Kupfer_I_Sv * e0 * Kupfer_Dicke)
 
 n_pZink = -(5*Rel[0]+Rel[1]) * I_p_Zink / (U_H_Zink_I_Pv* e0 * Zink_Dicke)
-n_pKupfer = -(3*Rel[0]+Rel[1]) * I_p_Kupfer / (U_H_Kupfer_I_Pv* e0 * Kupfer_Dicke)
+n_pKupfer = (3*Rel[0]+Rel[1]) * I_p_Kupfer / (U_H_Kupfer_I_Pv* e0 * Kupfer_Dicke)
 
-print("kupfer",n_sKupfer)
-print("nsync: ",n_sZink)
-#print(n_Kupfer)
+
 
 np.save('python/variables/n_sZink.npy', n_sZink, allow_pickle=True)
 np.save('python/variables/n_sKupfer.npy', n_sKupfer, allow_pickle=True)
@@ -169,7 +167,7 @@ np.save('python/variables/Z_sKupfer.npy', Z_sKupfer, allow_pickle=True)
 
 np.save('python/variables/Z_pZink.npy', Z_pZink, allow_pickle=True)
 np.save('python/variables/Z_pKupfer.npy', Z_pKupfer, allow_pickle=True)
-#print(n_Kupfer)
+
 # mittlere Flugzeit tau:
 
 def tau(n,spez_R):
@@ -208,7 +206,7 @@ def Beweg(tau):
     return -e0*tau/(2*m0)
 
 Beweg_sZink= Beweg(tau_sZink)
-Beweg_sKupfer = Beweg(tau_sZink)
+Beweg_sKupfer = Beweg(tau_sKupfer)
 
 Beweg_pZink= Beweg(tau_pZink)
 Beweg_pKupfer = Beweg(tau_pZink)
@@ -229,8 +227,7 @@ FE_sKupfer = Fermi(n_sKupfer)
 FE_pZink = Fermi(n_pZink)
 FE_pKupfer = Fermi(n_pKupfer)
 
-#print(FE_Kupfer)
-#print(FE_Kupfer)
+
 np.save('python/variables/FE_sZink.npy', FE_sZink, allow_pickle=True)
 np.save('python/variables/FE_sKupfer.npy', FE_sKupfer, allow_pickle=True)
 

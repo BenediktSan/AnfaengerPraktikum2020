@@ -141,7 +141,7 @@ np.save('python/variables/param2.npy', param2, allow_pickle=False)
 n_Zink =  -(I_s_Zink*Rel[0]+Rel[1])*8/(U_H_Zink_I_Sv * e0 * Zink_Dicke)
 n_Kupfer= -(I_s_Kupfer*Rel[0]+Rel[1])*10/(U_H_Kupfer_I_Sv * e0 * Kupfer_Dicke)
 n2_Zink = -(5*Rel[0]+Rel[1]) * I_p_Zink / (U_H_Zink_I_Pv* e0 * Zink_Dicke)
-print(n2_Zink)
+print(n_Zink)
 #print(n_Kupfer)
 
 np.save('python/variables/n_Zink.npy', n_Zink, allow_pickle=True)
@@ -153,6 +153,7 @@ def Zahl(rho,n,m_mol):
 
 Z_Zink = Zahl(7.14,n_Zink,65.38)
 Z_Kupfer = Zahl(8.92,n_Kupfer,63.55 )
+print(Z_Zink)
 #print(Z_Zink)
 np.save('python/variables/Z_Zink.npy', Z_Zink, allow_pickle=True)
 np.save('python/variables/Z_Kupfer.npy', Z_Kupfer, allow_pickle=True)

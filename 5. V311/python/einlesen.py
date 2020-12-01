@@ -42,19 +42,21 @@ I_p = 8
 I_p = 10
 
 I_s_Zink = np.linspace(0, 5, 11)
+I_s_Zink= I_s_Zink[1:11]
 I_s_Kupfer = np.linspace(0, 3.5, 8)
-Zink_Is_U_H_1 =1e-3 * np.array([0.644, 0.648, 0.651, 0.654, 0.657, 0.659, 0.661,0.663, 0.664, 0.665, 0.666])
+I_s_Kupfer = I_s_Kupfer[1:8]
+Zink_Is_U_H_1 =1e-3 * np.array([ 0.648, 0.651, 0.654, 0.657, 0.659, 0.661,0.663, 0.664, 0.665, 0.666])
 
-Kupfer_Is_U_H_1 =-1e-3 * np.array([0.342, 0.340, 0.338, 0.336, 0.334, 0.332,0.330, 0.328])
+Kupfer_Is_U_H_1 =-1e-3 * np.array([ 0.340, 0.338, 0.336, 0.334, 0.332,0.330, 0.328])
 
 np.save('python/variables/I_s_Zink.npy', I_s_Zink, allow_pickle=False)
 np.save('python/variables/I_s_Kupfer.npy',I_s_Kupfer, allow_pickle=False)
 np.save('python/variables/Zink_Is_U_H_1', Zink_Is_U_H_1, allow_pickle=False)
 np.save('python/variables/Kupfer_Is_U_H_1.npy',Kupfer_Is_U_H_1, allow_pickle=False)
 # Umpolen
-Zink_Is_U_H_2 =1e-3 * np.array([0.647, 0.646, 0.645, 0.644, 0.642, 0.641, 0.639,0.638, 0.636, 0.635, 0.634])
+Zink_Is_U_H_2 =1e-3 * np.array([ 0.646, 0.645, 0.644, 0.642, 0.641, 0.639,0.638, 0.636, 0.635, 0.634])
 
-Kupfer_Is_U_H_2 = -1e-3 * np.array([0.340, 0.342, 0.343, 0.345, 0.347, 0.349,0.351, 0.3530])
+Kupfer_Is_U_H_2 = -1e-3 * np.array([ 0.342, 0.343, 0.345, 0.347, 0.349,0.351, 0.3530])
 
 
 np.save('python/variables/Zink_Is_U_H_2', Zink_Is_U_H_2, allow_pickle=False)
@@ -66,19 +68,21 @@ I_s = 5
 I_s = 3 
 
 I_p_Zink = np.linspace(0, 8, 11)
+I_p_Zink= I_p_Zink[1:11]
 I_p_Kupfer = np.linspace(0, 10, 11)
-Zink_Ip_U_H_1 = 1e-3 *np.array([-0.020, 0.045, 0.109, 0.174, 0.234, 0.304,0.365, 0.431, 0.495, 0.560, 0.626])
+I_p_Kupfer= I_p_Kupfer[1:11]
+Zink_Ip_U_H_1 = 1e-3 *np.array([ 0.045, 0.109, 0.174, 0.234, 0.304,0.365, 0.431, 0.495, 0.560, 0.626])
 
-Kupfer_Ip_U_H_1 = -1e-3 * np.array([0.336, 0.338, 0.340, 0.342, 0.343, 0.345,0.347, 0.348, 0.350, 0.351, 0.352])
+Kupfer_Ip_U_H_1 = -1e-3 * np.array([ 0.338, 0.340, 0.342, 0.343, 0.345,0.347, 0.348, 0.350, 0.351, 0.352])
 
 np.save('python/variables/I_p_Zink', I_p_Zink, allow_pickle=False)
 np.save('python/variables/I_p_Kupfer',I_p_Kupfer, allow_pickle=False)
 np.save('python/variables/Zink_Ip_U_H_1', Zink_Ip_U_H_1, allow_pickle=False)
 np.save('python/variables/Kupfer_Ip_U_H_1.npy',Kupfer_Ip_U_H_1, allow_pickle=False)
 # Umpolen
-Zink_Ip_U_H_2 = 1e-3 *np.array([-0.020, 0.047, 0.116, 0.184, 0.250, 0.318,0.389, 0.456, 0.527, 0.597, 0.666])
+Zink_Ip_U_H_2 = 1e-3 *np.array([ 0.047, 0.116, 0.184, 0.250, 0.318,0.389, 0.456, 0.527, 0.597, 0.666])
 
-Kupfer_Ip_U_H_2 = -1e-3 * np.array([0.338, 0.337, 0.336, 0.335, 0.335, 0.334,0.333, 0.332, 0.332, 0.332, 0.330])
+Kupfer_Ip_U_H_2 = -1e-3 * np.array([ 0.337, 0.336, 0.335, 0.335, 0.334,0.333, 0.332, 0.332, 0.332, 0.330])
 
 np.save('python/variables/Zink_Ip_U_H_2', Zink_Ip_U_H_2, allow_pickle=False)
 np.save('python/variables/Kupfer_Ip_U_H_2.npy',Kupfer_Ip_U_H_2, allow_pickle=False)

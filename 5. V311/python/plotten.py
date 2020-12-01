@@ -65,26 +65,35 @@ U_H_Kupfer_I_Pv = np.load('python/variables/U_H_Kupfer_I_Pv.npy')
 
 
 plt.figure()
+plt.subplot(2,2,1)
 plt.plot(I_s_Zink,U_H_Zink_I_Sv,".",label="Spule Zink")
 plt.plot(I_s_Zink,I_s_Zink*param3[0]+param3[1],label="Fit zu Spule")
+plt.xlabel("Stromstärke [A]")
+plt.ylabel("Spannung [mV]")
+plt.legend()
+
+plt.subplot(2,2,2)
 plt.plot(I_p_Zink,U_H_Zink_I_Pv,".",label="Probe Zink")
 plt.plot(I_p_Zink,I_p_Zink*param5[0]+param5[1],label="Fit zu Probe") 
 plt.xlabel("Stromstärke [A]")
 plt.ylabel("Spannung [mV]")
 plt.legend()
-plt.tight_layout()
-plt.savefig("build/Hall_Zink.pdf")
 
-plt.figure()
+plt.subplot(2,2,3)
 plt.plot(I_s_Kupfer ,U_H_Kupfer_I_Sv,".",label="Spule Kupfer")
 plt.plot(I_s_Kupfer,I_s_Kupfer*param4[0]+param4[1],label="Fit zu Spule")
+plt.xlabel("Stromstärke [A]")
+plt.ylabel("Spannung [mV]")
+plt.legend()
+
+plt.subplot(2,2,4)
 plt.plot(I_p_Kupfer ,U_H_Kupfer_I_Pv,".",label="Probe Kupfer")
 plt.plot(I_p_Kupfer,I_p_Kupfer*param6[0]+param6[1],label="Fit zu Probe") 
 plt.xlabel("Stromstärke [A]")
 plt.ylabel("Spannung [mV]")
 plt.legend()
 plt.tight_layout()
-plt.savefig("build/Hall_Kupfer.pdf")
+plt.savefig("build/Hall.pdf")
 
 
 
@@ -99,3 +108,8 @@ plt.legend()
 plt.tight_layout()
 plt.savefig("build/Magnetfeld.pdf")
 
+n_sZink=np.load('python/variables/n_sZink.npy')
+n_sKupfer=np.load('python/variables/n_sKupfer.npy')
+
+n_pZink=np.load('python/variables/n_pZink.npy')
+n_pKupfer=np.load('python/variables/n_pKupfer.npy')

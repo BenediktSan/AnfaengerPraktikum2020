@@ -7,6 +7,7 @@ from uncertainties import unumpy
 from scipy.optimize import curve_fit
 import scipy.constants as const
 import sympy
+
 ##      Einlesen der Daten:
 #Hallsonde:
 I_aufsteigend=np.load('python/variables/I_aufsteigend.npy')
@@ -137,81 +138,116 @@ np.save('python/variables/param2.npy', param2, allow_pickle=False)
 #n_Kupfer = number(I_s_Kupfer*Rel[0]+Rel[1],10,U_H_Kupfer_I_Sv,Kupfer_Dicke)
 
 
+n_sZink =  -(I_s_Zink*Rel[0]+Rel[1])*8/(U_H_Zink_I_Sv * e0 * Zink_Dicke)
+n_sKupfer= (I_s_Kupfer*Rel[0]+Rel[1])*10/(U_H_Kupfer_I_Sv * e0 * Kupfer_Dicke)
 
-n_Zink =  -(I_s_Zink*Rel[0]+Rel[1])*8/(U_H_Zink_I_Sv * e0 * Zink_Dicke)
-n_Kupfer= -(I_s_Kupfer*Rel[0]+Rel[1])*10/(U_H_Kupfer_I_Sv * e0 * Kupfer_Dicke)
-n2_Zink = -(5*Rel[0]+Rel[1]) * I_p_Zink / (U_H_Zink_I_Pv* e0 * Zink_Dicke)
-print("kupfer",n_Kupfer)
-print("nsync: ",n_Zink)
-#print(n_Kupfer)
+n_pZink = -(5*Rel[0]+Rel[1]) * I_p_Zink / (U_H_Zink_I_Pv* e0 * Zink_Dicke)
+n_pKupfer = (3*Rel[0]+Rel[1]) * I_p_Kupfer / (U_H_Kupfer_I_Pv* e0 * Kupfer_Dicke)
 
-np.save('python/variables/n_Zink.npy', n_Zink, allow_pickle=True)
-np.save('python/variables/n_Kupfer.npy', n_Kupfer, allow_pickle=True)
+
+
+np.save('python/variables/n_sZink.npy', n_sZink, allow_pickle=True)
+np.save('python/variables/n_sKupfer.npy', n_sKupfer, allow_pickle=True)
+
+np.save('python/variables/n_pZink.npy', n_pZink, allow_pickle=True)
+np.save('python/variables/n_pKupfer.npy', n_pKupfer, allow_pickle=True)
 # Zahl der Ladungsträger pro Atom z
 
 def Zahl(rho,n,m_mol):
-    return ( n * m_mol) / ( rho * 6.0221e23 * 1e6)
+    return ( n * m_mol) / ( rho * NA * 1e6)
 
-Z_Zink = Zahl(7.14,n_Zink,65.38)
-Z_Kupfer = Zahl(8.92,n_Kupfer,63.55 )
-print(Z_Zink)
-#print(Z_Zink)
-np.save('python/variables/Z_Zink.npy', Z_Zink, allow_pickle=True)
-np.save('python/variables/Z_Kupfer.npy', Z_Kupfer, allow_pickle=True)
-#print(n_Kupfer)
+Z_sZink = Zahl(7.14,n_sZink,65.38)
+Z_sKupfer = Zahl(8.92,n_sKupfer,63.55)
+
+Z_pZink = Zahl(7.14,n_pZink,65.38)
+Z_pKupfer = Zahl(8.92,n_pKupfer,63.55)
+
+np.save('python/variables/Z_sZink.npy', Z_sZink, allow_pickle=True)
+np.save('python/variables/Z_sKupfer.npy', Z_sKupfer, allow_pickle=True)
+
+np.save('python/variables/Z_pZink.npy', Z_pZink, allow_pickle=True)
+np.save('python/variables/Z_pKupfer.npy', Z_pKupfer, allow_pickle=True)
+
 # mittlere Flugzeit tau:
 
 def tau(n,spez_R):
     return (2 * m0 ) / ((e0 ** 2) * n * spez_R)
 
-tau_Zink = tau(n_Zink , spez_R_Zink)
-tau_Kupfer = tau(n_Kupfer , spez_R_Kupfer)
+tau_sZink = tau(n_sZink , spez_R_Zink)
+tau_sKupfer = tau(n_sKupfer , spez_R_Kupfer)
 
-np.save('python/variables/tau_Zink.npy', tau_Zink, allow_pickle=True)
-np.save('python/variables/tau_Kupfer.npy', tau_Kupfer, allow_pickle=True)
+tau_pZink = tau(n_pZink , spez_R_Zink)
+tau_pKupfer = tau(n_pKupfer , spez_R_Kupfer)
+np.save('python/variables/tau_sZink.npy', tau_sZink, allow_pickle=True)
+np.save('python/variables/tau_sKupfer.npy', tau_sKupfer, allow_pickle=True)
+
+np.save('python/variables/tau_pZink.npy', tau_pZink, allow_pickle=True)
+np.save('python/variables/tau_pKupfer.npy', tau_pKupfer, allow_pickle=True)
 
 # mittlere Driftgeschwindigkeit vd
 
 def mitDrift(n):
     return -1/(e0*n)
 
-vd_Zink = mitDrift(n_Zink)
-vd_Kupfer = mitDrift(n_Kupfer)
+vd_sZink = mitDrift(n_sZink)
+vd_sKupfer = mitDrift(n_sKupfer)
 
-np.save('python/variables/vd_Zink.npy', vd_Zink, allow_pickle=True)
-np.save('python/variables/vd_Kupfer.npy', vd_Kupfer, allow_pickle=True)
+vd_pZink = mitDrift(n_pZink)
+vd_pKupfer = mitDrift(n_pKupfer)
+
+np.save('python/variables/vd_sZink.npy', vd_sZink, allow_pickle=True)
+np.save('python/variables/vd_sKupfer.npy', vd_sKupfer, allow_pickle=True)
+
+np.save('python/variables/vd_pZink.npy', vd_pZink, allow_pickle=True)
+np.save('python/variables/vd_pKupfer.npy', vd_pKupfer, allow_pickle=True)
 #Beweglichkeit mue:
 
 def Beweg(tau):
     return -e0*tau/(2*m0)
 
-Beweg_Zink= Beweg(tau_Zink)
-Beweg_Kupfer = Beweg(tau_Zink)
-np.save('python/variables/Beweg_Zink.npy', Beweg_Zink, allow_pickle=True)
-np.save('python/variables/Beweg_Kupfer.npy', Beweg_Kupfer, allow_pickle=True)
+Beweg_sZink= Beweg(tau_sZink)
+Beweg_sKupfer = Beweg(tau_sKupfer)
+
+Beweg_pZink= Beweg(tau_pZink)
+Beweg_pKupfer = Beweg(tau_pZink)
+
+np.save('python/variables/Beweg_sZink.npy', Beweg_sZink, allow_pickle=True)
+np.save('python/variables/Beweg_sKupfer.npy', Beweg_sKupfer, allow_pickle=True)
+
+np.save('python/variables/Beweg_pZink.npy', Beweg_pZink, allow_pickle=True)
+np.save('python/variables/Beweg_pKupfer.npy', Beweg_pKupfer, allow_pickle=True)
 
 #Totalgeschwindigkeit v:
 def Fermi(n):
     return ((h**2)*((3*n)/8*np.pi)**(2/3))/(2*m0*-e0)
 
+FE_sZink = Fermi(n_sZink)
+FE_sKupfer = Fermi(n_sKupfer)
+
+FE_pZink = Fermi(n_pZink)
+FE_pKupfer = Fermi(n_pKupfer)
 
 
-FE_Zink = Fermi(n_Zink)
-FE_Kupfer = Fermi(n_Kupfer)
+np.save('python/variables/FE_sZink.npy', FE_sZink, allow_pickle=True)
+np.save('python/variables/FE_sKupfer.npy', FE_sKupfer, allow_pickle=True)
 
-#print(FE_Kupfer)
-#print(FE_Kupfer)
-np.save('python/variables/FE_Zink.npy', FE_Zink, allow_pickle=True)
-np.save('python/variables/FE_Kupfer.npy', FE_Kupfer, allow_pickle=True)
+np.save('python/variables/FE_pZink.npy', FE_pZink, allow_pickle=True)
+np.save('python/variables/FE_pKupfer.npy', FE_pKupfer, allow_pickle=True)
 
 def vTot(Fermi):
     return (2 * Fermi / m0)**0.5
 
-vT_Zink = vTot(FE_Zink)
-vT_Kupfer = vTot(FE_Kupfer)
+vT_sZink = vTot(FE_sZink)
+vT_sKupfer = vTot(FE_sKupfer)
 
-np.save('python/variables/vT_Zink.npy', vT_Zink, allow_pickle=True)
-np.save('python/variables/vT_Kupfer.npy', vT_Kupfer, allow_pickle=True)
+vT_pZink = vTot(FE_pZink)
+vT_pKupfer = vTot(FE_pKupfer)
+
+np.save('python/variables/vT_sZink.npy', vT_sZink, allow_pickle=True)
+np.save('python/variables/vT_sKupfer.npy', vT_sKupfer, allow_pickle=True)
+
+np.save('python/variables/vT_pZink.npy', vT_pZink, allow_pickle=True)
+np.save('python/variables/vT_pKupfer.npy', vT_pKupfer, allow_pickle=True)
 
 #mittlere freie Weglänge l:
 
@@ -219,9 +255,15 @@ np.save('python/variables/vT_Kupfer.npy', vT_Kupfer, allow_pickle=True)
 def mWeg(tau,vTot):
     return tau*vTot
 
-mWeg_Zink = mWeg(tau_Zink, vT_Zink)
-mWeg_Kupfer = mWeg(tau_Kupfer, vT_Kupfer)
+mWeg_sZink = mWeg(tau_sZink, vT_sZink)
+mWeg_sKupfer = mWeg(tau_sKupfer, vT_sKupfer)
 
-np.save('python/variables/mWeg_Zink.npy', mWeg_Zink, allow_pickle=True)
-np.save('python/variables/mWeg_Kupfer.npy', mWeg_Kupfer, allow_pickle=True)
+mWeg_pZink = mWeg(tau_pZink, vT_pZink)
+mWeg_pKupfer = mWeg(tau_pKupfer, vT_pKupfer)
+
+np.save('python/variables/mWeg_sZink.npy', mWeg_sZink, allow_pickle=True)
+np.save('python/variables/mWeg_sKupfer.npy', mWeg_sKupfer, allow_pickle=True)
+
+np.save('python/variables/mWeg_pZink.npy', mWeg_pZink, allow_pickle=True)
+np.save('python/variables/mWeg_pKupfer.npy', mWeg_pKupfer, allow_pickle=True)
 

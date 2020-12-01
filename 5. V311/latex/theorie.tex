@@ -76,7 +76,8 @@ Diese Beschleunigung lässt bei der Ladunng $\symup{e_0}$ und der Ruhemasse $\sy
 Die Geschwindigkeitsänderung $\increment\vec{\overline{v}}$ während $\overline{\tau}$ in Richtung $\vec{E}$ ergibt sich dann zu:
 
 \begin{equation}
-  \increment\vec{\overline{v}}= -\frac{\symup{e_0}}{\symup{m_0}}\cdot \vec{E} \cdot \overline{\tau} \nonumber
+  \increment\vec{\overline{v}}= -\frac{\symup{e_0}}{\symup{m_0}}\cdot \vec{E} \cdot \overline{\tau} 
+  \label{eqn:v1}
 \end{equation}
 \noindent
 Da die Elektronen, wie zuvor bereits erwähnt, immer zufällig gestreut werden, ändert sich immer ihre Geschwindigkeitskomponenten in Richtung
@@ -86,7 +87,8 @@ Dieser Sachverhalt lässt sich dann beschreiben in dem eine mittlere Driftgeschw
 und 0 ist. Die Formel dafür ergibt sich dann zu:
 
 \begin{equation}
-  \vec{\overline{v_d}}=\frac{1}{2}\increment\vec{\overline{v}} \nonumber
+  \vec{\overline{v_d}}=\frac{1}{2}\increment\vec{\overline{v}} 
+  \label{eqn:v1}
 \end{equation}
 \noindent
 Mit dieser Gleichung lässt sich sich dann eine Formel für die Stromdichte $j$ herleiten. Diese ist nämlich die Anzahl $n$ der Ladungen, hier ausgedrückt
@@ -228,15 +230,19 @@ Der Rest hat kleinere Energien und kann wegen des Pauli-Prinzips nicht beschleun
 Der zuvor gewählte Ansatz aus \refeq{eqn:vtot} mit der reinen thermischen Energie für die Totalgeschwindigkeit ist hier also in der Form, für die interessanten Elektronen, nicht anwendbar.
 Die Totalgeschwindigkeit lässt sich also zu 
 \begin{equation}
-  |\overline{v}| \approx \sqrt{\frac{2E_F}{\symup{m_0}}}
+  |\overline{v}| \approx \sqrt{\frac{2E_F}{\symup{m_0}}} \nonumber
 \end{equation}
 approximieren.\\
 Einsetzen dieser Gleichung in \refeq{eqn:wegl} führt dann zu einer Formel für die mittlere freie Weglänge:
 \begin{equation}
-  \overline{l} \approx \overline{\tau} \sqrt{\frac{2E_F}{\symup{m_0}}}
+  \overline{l} \approx \overline{\tau} \sqrt{\frac{2E_F}{\symup{m_0}}} \nonumber
 \end{equation}
-Das $\tau$ lässt sich über die Gleichung \refeq{eqn:ohm1} bestimmen.\\
-
+Das $\overline{\tau}$ lässt sich über die Gleichung \refeq{eqn:ohm1} bestimmen.\\
+Des Weiteren lässt sich aus $\overline{\tau}$ auch noch die Beweglichkeit $\mu$ berechenen. Dafür wird Formel \refeq{eqn:v1} in \refeq{eqn:v1} eingesetzt.
+\begin{align*}
+  \vec{\overline{v_d}}&=-\frac{1}{2}\frac{\symup{e_0}}{\symup{m_0}}\cdot   \overline{\tau} \cdot \vec{E}\\
+  \vec{\overline{v_d}}&= \mu \cdot \vec{E} & &\text{mit} & \mu&= -\frac{1}{2}\frac{\symup{e_0}}{\symup{m_0}}\cdot   \overline{\tau}\\
+\end{align*}
 
 
 %Braucht man die beweglichkeit $\my}$???????\\

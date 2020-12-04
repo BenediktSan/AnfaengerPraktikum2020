@@ -51,20 +51,20 @@ Kupfer_Ip_U_H_2=np.load('python/variables/Kupfer_Ip_U_H_2.npy')
 np.savetxt(
     'build/Tabellen/Hallsonde.txt',
     np.column_stack([I_aufsteigend, B_aufsteigend, I_abfallend, B_abfallend]),
-    fmt=['%d','%d','%d','%d',],       
+    fmt="%-12s",       
     delimiter=' & ',
     header='I_aufsteigend, B_aufsteigend, I_abfallend, B_abfallend',
 )
 
-Dim=["Höhe","Breite","Dicke"]
-
-np.savetxt(
-    'build/Tabellen/Abmessungen.txt',
-    np.column_stack([Dim, Zink, Kupfer]),
-    fmt="%-12s",       
-    delimiter=' & ',
-    header='Dimensionen, Zink, Kupfer',
-)
+#Dim=["Höhe","Breite","Dicke"]
+#
+#np.savetxt(
+#    'build/Tabellen/Abmessungen.txt',
+#    np.column_stack([Dim, Zink, Kupfer]),
+#    fmt="%-12s",       
+#    delimiter=' & ',
+#    header='Dimensionen, Zink, Kupfer',
+#)
 
 np.savetxt(
     'build/Tabellen/Widerstand.txt',
@@ -104,4 +104,15 @@ np.savetxt(
     fmt="%-4s",       
     delimiter=' & ',
     header='I_s_Kupfer, Kupfer_Is_U_H_1, Kupfer_Is_U_H_2',
+)
+
+R_Zink_array = np.load('python/variables/R_Zink_array.npy', allow_pickle=False)
+R_Kupfer_array = np.load('python/variables/R_Kupfer_array.npy', allow_pickle=False)
+
+np.savetxt(
+    'build/Tabellen/R_Erg.txt',
+    np.column_stack([R_Zink_array, R_Kupfer_array]),
+    fmt="%-4s",       
+    delimiter=' & ',
+    header='R_Zink_array, R_Kupfer_array',
 )

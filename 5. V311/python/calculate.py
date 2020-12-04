@@ -17,10 +17,10 @@ B_abfallend=np.load('python/variables/B_abfallend.npy' )
 #Abmessung der Proben:
 Zink=np.load('python/variables/Zink.npy')
 Kupfer=np.load('python/variables/Kupfer.npy')
-Zink_Breite=Zink[1]
-Zink_Dicke=Zink[2]
-Kupfer_Breite=Kupfer[1]
-Kupfer_Dicke=Kupfer[2]
+Zink_Breite=ufloat(Zink[1],Zink[1]*1e-2)
+Zink_Dicke=ufloat(Zink[2],Zink[2]*1e-2)
+Kupfer_Breite=ufloat(Kupfer[1],Kupfer[1]*1e-2)
+Kupfer_Dicke=ufloat(Kupfer[2],Kupfer[2]*1e-2)
 # Widerstandsbestimmung:
 I_Widerstand=np.load('python/variables/I.npy')
 U_Widerstand_Zink=np.load('python/variables/U_Zink.npy')
@@ -50,16 +50,19 @@ Kupfer_Ip_U_H_2=np.load('python/variables/Kupfer_Ip_U_H_2.npy')
 #elektrischer Widerstand R:
 
 R_Zink_array = U_Widerstand_Zink[1:10] / I_Widerstand[1:10] 
-R_Kupfer_array = U_Widerstand_Kupfer[1:10]  / I_Widerstand[1:10] 
+R_Kupfer_array = U_Widerstand_Kupfer[1:10]  / I_Widerstand[1:10]
+np.save('python/variables/R_Zink_array.npy', R_Zink_array, allow_pickle=False)
+np.save('python/variables/R_Kupfer_array.npy', R_Kupfer_array, allow_pickle=False)
 R_Zink=ufloat(np.mean(R_Zink_array),np.std(R_Zink_array))
 R_Kupfer=ufloat(np.mean(R_Kupfer_array),np.std(R_Kupfer_array))
 
-Durch_Zink=2.63e-4
-Durch_Kupfer=1.052e-4
+Durch_Zink=ufloat(2.63e-4,2.63e-6)
+Durch_Kupfer=ufloat(1.052e-4,1.052e-4)
 L_Zink=1.73
 L_Kupfer=1.73
 spez_R_Zink=np.pi * Durch_Zink**2 * R_Zink / L_Zink
 spez_R_Kupfer=np.pi * Durch_Kupfer**2 * R_Kupfer / L_Kupfer
+
 #       b)
 ###         Hall-Effekt
 U_H_Zink_I_Sv =   0.5*( Zink_Is_U_H_1 +   Zink_Is_U_H_2   )
@@ -127,6 +130,7 @@ err2 = np.sqrt(np.diag(_2))
 Rel_Auf=unumpy.uarray([param1[0],param1[1]],[err1[0],err1[1]])
 Rel_Ab=unumpy.uarray([param2[0],param2[1]],[err2[0],err2[1]])
 Rel=1/2*(Rel_Auf+Rel_Ab)
+print(Rel)
 np.save('python/variables/param1.npy', param1, allow_pickle=False)
 np.save('python/variables/param2.npy', param2, allow_pickle=False)
 
@@ -242,7 +246,7 @@ vT_sKupfer = vTot(FE_sKupfer)
 
 vT_pZink = vTot(FE_pZink)
 vT_pKupfer = vTot(FE_pKupfer)
-print(vT_pKupfer)
+
 np.save('python/variables/vT_sZink.npy', vT_sZink, allow_pickle=True)
 np.save('python/variables/vT_sKupfer.npy', vT_sKupfer, allow_pickle=True)
 

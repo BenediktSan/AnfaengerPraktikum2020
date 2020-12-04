@@ -61,6 +61,7 @@ Kupfer_Is_U_H_2 = -1e-3 * np.array([ 0.342, 0.343, 0.345, 0.347, 0.349,0.351, 0.
 
 np.save('python/variables/Zink_Is_U_H_2', Zink_Is_U_H_2, allow_pickle=False)
 np.save('python/variables/Kupfer_Is_U_H_2.npy',Kupfer_Is_U_H_2, allow_pickle=False)
+
 # Messung der Hall-Spannung bei konstantem Spulenstrom U_H in mV, 
 #Zink:
 I_s = 5

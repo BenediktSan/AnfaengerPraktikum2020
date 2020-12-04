@@ -262,8 +262,7 @@ Beweg_sKupfer = np.load('python/variables/Beweg_sKupfer.npy', allow_pickle=True)
 
 Beweg_pZink = np.load('python/variables/Beweg_pZink.npy', allow_pickle=True)
 Beweg_pKupfer = np.load('python/variables/Beweg_pKupfer.npy', allow_pickle=True)
-print(I_s_Kupfer)
-print(Beweg_sKupfer)
+
 plt.figure()
 plt.subplot(2,2,1)
 plt.plot(I_s_Zink,unumpy.nominal_values(Beweg_sZink),".",label="Beweg_sZink")

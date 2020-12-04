@@ -219,7 +219,7 @@ np.save('python/variables/Beweg_pKupfer.npy', Beweg_pKupfer, allow_pickle=True)
 
 #Totalgeschwindigkeit v:
 def Fermi(n):
-    return ((h**2)*((3*n)/8*np.pi)**(2/3))/(2*m0*-e0)
+    return ((h**2)*((3*n)/8*np.pi)**(2/3))/(2*m0)
 
 FE_sZink = Fermi(n_sZink)
 FE_sKupfer = Fermi(n_sKupfer)
@@ -242,7 +242,7 @@ vT_sKupfer = vTot(FE_sKupfer)
 
 vT_pZink = vTot(FE_pZink)
 vT_pKupfer = vTot(FE_pKupfer)
-
+print(vT_pKupfer)
 np.save('python/variables/vT_sZink.npy', vT_sZink, allow_pickle=True)
 np.save('python/variables/vT_sKupfer.npy', vT_sKupfer, allow_pickle=True)
 

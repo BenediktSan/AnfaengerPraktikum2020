@@ -20,21 +20,28 @@
     beschreiben das jeweilige Kabel zur Berechnung des Widerstandes. Hier gehen wir jeweils von einer Ungenauigkeit von einem Prozent 
     des jeweiligen Messwertes aus.\\
     \noindent Der Widerstand eines Metalls berechnet sich Mittels 
+    
     \begin{equation}
         U = R * I
     \end{equation}
+
     Die Berechnung des Widerstandes gibt eine Reihe an Widerstaenden \ref{tab:ErgWider}, der Mittelwert dieser Reihen ergibt dann einen Widerstand 
     fuer Zink und Kupfer:
+
     \begin{align}
         R_{\text{Zink}} &= \SI{13.68+-0.23}{\milli\ohm}\\
         R_{\text{Kupfer}} &= \SI{7.73+-0.05}{\milli\ohm}
     \end{align}
+
     Der spezifische Widerstand eines Metalls berechnet sich nun mittels der Formel
+
     \begin{equation}
         \rho = \frac{RA}{l}
     \end{equation}
+
     mit $R$ dem Widerstand, $A$ der Querschnittsflaeche und $l$ der Laenge des Kabels.
     Somit ergibt sich mit denn Werten aus \ref{tab:Dimensionen} und den berechneten Widerstaenden der spezifische Widerstand:
+
     \begin{align}
         \rho &= \SI{1.72+-0.05}{\nano\ohm\meter}\\
         \rho &= \SI{0.16+-03.1}{\nano\ohm\meter}
@@ -42,12 +49,14 @@
 
     \subsection{Hall-Effekt}
     Zur Analyse der Hall Spannung wird zunaechst das Magnetfeld der Spule in abhaengigkeit von der Stromstaerke bestimmt.
-    %\begin{figure}[H]
-    %    \centering
-    %    \includegraphics[width=0.7\textwidth]{build/Magnetfeld.pdf}
-    %    \caption{Ein Plot der Magnetfeldstaerke gegen die Stromstaerke.}
-    %    \label{img:Magnetfeld}
-    %\end{figure}
+
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.7\textwidth]{build/Magnetfeld.pdf}
+        \caption{Ein Plot der Magnetfeldstaerke gegen die Stromstaerke.}
+        \label{img:Magnetfeld}
+    \end{figure}
+
     In diesem Plot sind die Magnetfelder bei steigender und abfallender Stromstaerke \ref{tab:messMag} und der jeweilige lineare Fit zu den 
     Messwerten eingezeichnet.
     Die Ausgleichsgerade der Form $\text{a}\cdot x = \text{b}$ hat dann die Werte:
@@ -59,12 +68,12 @@
 
     In den folgenden Plots ist sind die Messergebnisse der Hallspannung aufgetragen mit denen die weiteren Rechnungen ausgeführt werden.
     Die Messergebnisse sind hier zu finden.
-    %\begin{figure}[H]
-    %    \centering
-    %    \includegraphics[width=1.1\textwidth]{build/Hall.pdf}
-    %    \caption{Ein Plot der Hall Spannungen gegen die Stromstaerke.}
-    %    \label{img:messHall}
-    %\end{figure}
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=1.1\textwidth]{build/Hall.pdf}
+        \caption{Ein Plot der Hall Spannungen gegen die Stromstaerke.}
+        \label{img:messHall}
+    \end{figure}
     
     \subsection{Ladungsträger pro Volumen}
 
@@ -167,5 +176,5 @@
     \caption{Messwerte zur Berechnung der Widerstaende}
     \label{tab:messMag}
     \end{table}
-  %%%%%%%%%%%  
+  
             

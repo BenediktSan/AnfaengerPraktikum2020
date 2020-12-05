@@ -1,0 +1,4 @@
+# Dimensionen, Zink, Kupfer
+Höhe         & 0.02603      & 0.028       
+Breite       & 0.04406      & 0.0253      
+Dicke        & 0.00043      & 0.00001.8   

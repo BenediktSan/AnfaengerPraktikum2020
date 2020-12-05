@@ -1,7 +1,7 @@
-This is LuaHBTeX, Version 1.12.0 (TeX Live 2020)  (format=lualatex 2020.10.8)  3 DEC 2020 21:24
+This is LuaHBTeX, Version 1.12.0 (TeX Live 2020)  (format=lualatex 2020.10.8)  5 DEC 2020 15:02
  restricted system commands enabled.
-**Fehlerabgabe.tex
-(./Fehlerabgabe.tex
+**latex/Protokoll_V311.tex
+(./latex/Protokoll_V311.tex
 LaTeX2e <2020-10-01>
 Lua module: luaotfload-main 2020-09-02 3.15 luaotfload entry point
 Lua module: luaotfload-init 2020-09-02 3.15 luaotfload submodule / initializatio
@@ -1514,34 +1514,486 @@ Package: extdash 2018/06/24 v1.3 Extended Dash Package (NCC)
 ))
 Package csquotes Info: Checking for multilingual support...
 Package csquotes Info: ... found 'babel' package.
-(./Fehlerabgabe.aux
+(./Protokoll_V311.aux
 
-! LaTeX Error: Missing \begin{document}.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.28 <
-    <<<<<< HEAD
-? 
-! Emergency stop.
- ...                                              
-                                                  
-l.28 <
-    <<<<<< HEAD
-You're in trouble here.  Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
+LaTeX Warning: Label `img:vd' multiply defined.
 
 
+LaTeX Warning: Label `img:vd' multiply defined.
+
+
+LaTeX Warning: Label `tab:messMag' multiply defined.
+
+)
+\openout1 = Protokoll_V311.aux
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `normal'
+(Font)                  TU/LatinModernMath(1)/m/n --> TU/lmr/m/n on input line 1
+1.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
+(Font)                  OT1/cmr/m/it --> TU/lmr/m/it on input line 11.
+LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
+(Font)                  OT1/cmr/bx/n --> TU/lmr/bx/n on input line 11.
+LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
+(Font)                  OT1/cmss/m/n --> TU/lmss/m/n on input line 11.
+LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
+(Font)                  OT1/cmss/bx/n --> TU/lmss/bx/n on input line 11.
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
+(Font)                  OT1/cmtt/m/n --> TU/lmtt/m/n on input line 11.
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
+(Font)                  OT1/cmtt/m/n --> TU/lmtt/bx/n on input line 11.
+
+(/home/niklas/.local/texlive/2020/texmf-dist/tex/latex/siunitx/siunitx-abbrevia
+tions.cfg
+File: siunitx-abbreviations.cfg 2017/11/26 v2.7k siunitx: Abbreviated units
+)
+(/home/niklas/.local/texlive/2020/texmf-dist/tex/latex/translator/translator-ba
+sic-dictionary-English.dict
+Dictionary: translator-basic-dictionary, Language: English 
+)
+
+Package chemgreek Info: Activating mapping `fontspec' on line 11.
+
+
+(/home/niklas/.local/texlive/2020/texmf-dist/tex/context/base/mkii/supp-pdf.mki
+i
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count454
+\scratchdimen=\dimen269
+\scratchbox=\box66
+\nofMPsegments=\count455
+\nofMParguments=\count456
+\everyMPshowfont=\toks27
+\MPscratchCnt=\count457
+\MPscratchDim=\dimen270
+\MPnumerator=\count458
+\makeMPintoPDFobject=\count459
+\everyMPtoPDFconversion=\toks28
+)
+(/home/niklas/.local/texlive/2020/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-ba
+se.sty
+Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+ (/home/niklas/.local/texlive/2020/texmf-dist/tex/latex/grfext/grfext.sty
+Package: grfext 2019/12/03 v1.3 Manage graphics extensions (HO)
+)
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 48
+5.
+Package grfext Info: Graphics extension search list:
+(grfext)             [.pdf,.png,.jpg,.mps,.jpeg,.jbig2,.jb2,.PDF,.PNG,.JPG,.JPEG
+,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 504.
+
+(/home/niklas/.local/texlive/2020/texmf-dist/tex/latex/latexconfig/epstopdf-sys
+.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
+
+))
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: hyperref package is loaded.
+Package caption Info: End \AtBeginDocument code.
+LaTeX Info: Redefining \microtypecontext on input line 11.
+Package microtype Info: Generating PDF output.
+Package microtype Info: Character protrusion enabled (level 2).
+Package microtype Info: Using default protrusion set `alltext'.
+Package microtype Info: Automatic font expansion enabled (level 2),
+(microtype)             stretch: 20, shrink: 20, step: 1, non-selected.
+Package microtype Info: Using default expansion set `basictext'.
+LaTeX Info: Redefining \showhyphens on input line 11.
+Package microtype Info: No adjustment of tracking.
+Package microtype Info: No adjustment of spacing.
+Package microtype Info: No adjustment of kerning.
+
+(/home/niklas/.local/texlive/2020/texmf-dist/tex/latex/microtype/mt-LatinModern
+Roman.cfg
+File: mt-LatinModernRoman.cfg 2013/03/13 v1.0 microtype config. file: Latin Mode
+rn Roman (RS)
+)
+Package biblatex Info: Trying to load language 'ngerman'...
+Package biblatex Info: ... file 'ngerman.lbx' found.
+
+(/home/niklas/.local/texlive/2020/texmf-dist/tex/latex/biblatex/lbx/ngerman.lbx
+File: ngerman.lbx 2020/08/23 v3.15a biblatex localization (PK/MW)
+Package biblatex Info: Trying to load language 'german'...
+Package biblatex Info: ... file 'german.lbx' found.
+(/home/niklas/.local/texlive/2020/texmf-dist/tex/latex/biblatex/lbx/german.lbx
+File: german.lbx 2020/08/23 v3.15a biblatex localization (PK/MW)
+)
+Package biblatex Info: Trying to load language 'german'...
+Package biblatex Info: ... file 'german.lbx' found.
+(/home/niklas/.local/texlive/2020/texmf-dist/tex/latex/biblatex/lbx/german.lbx
+File: german.lbx 2020/08/23 v3.15a biblatex localization (PK/MW)
+))
+Package biblatex Info: LuaTeX detected.
+(biblatex)             Assuming input encoding 'utf8'.
+Package biblatex Info: Automatic encoding selection.
+(biblatex)             Assuming data encoding 'utf8'.
+
+\openout3 = Protokoll_V311.bcf
+Package biblatex Info: Trying to load bibliographic data...
+Package biblatex Info: ... file 'Protokoll_V311.bbl' not found.
+
+No file Protokoll_V311.bbl.
+Package biblatex Info: Reference section=0 on input line 11.
+Package biblatex Info: Reference segment=0 on input line 11.
+Package hyperref Info: Link coloring OFF on input line 11.
+(/home/niklas/.local/texlive/2020/texmf-dist/tex/latex/hyperref/nameref.sty
+Package: nameref 2019/09/16 v2.46 Cross-referencing by name of section
+
+(/home/niklas/.local/texlive/2020/texmf-dist/tex/latex/refcount/refcount.sty
+Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
+)
+(/home/niklas/.local/texlive/2020/texmf-dist/tex/generic/gettitlestring/gettitl
+estring.sty
+Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
+)
+\c@section@level=\count460
+)
+LaTeX Info: Redefining \ref on input line 11.
+LaTeX Info: Redefining \pageref on input line 11.
+LaTeX Info: Redefining \nameref on input line 11.
+Package microtype Info: Loading generic protrusion settings for font family
+(microtype)             `LatinModernMath' (encoding: TU).
+(microtype)             For optimal results, create family-specific settings.
+(microtype)             See the microtype manual for details.
+
+(/home/niklas/.local/texlive/2020/texmf-dist/tex/latex/microtype/mt-msa.cfg
+File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
+)
+(/home/niklas/.local/texlive/2020/texmf-dist/tex/latex/microtype/mt-msb.cfg
+File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
+)
+Package microtype Info: Loading generic protrusion settings for font family
+(microtype)             `XITSMath' (encoding: TU).
+(microtype)             For optimal results, create family-specific settings.
+(microtype)             See the microtype manual for details.
+Package microtype Info: Loading generic protrusion settings for font family
+(microtype)             `lmss' (encoding: TU).
+(microtype)             For optimal results, create family-specific settings.
+(microtype)             See the microtype manual for details.
+Package microtype Info: Loading generic protrusion settings for font family
+(microtype)             `lmtt' (encoding: TU).
+(microtype)             For optimal results, create family-specific settings.
+(microtype)             See the microtype manual for details.
+LaTeX Font Info:    Font shape `TU/LatinModernMath(2)/m/n' will be
+(Font)              scaled to size 14.40152pt on input line 14.
+LaTeX Font Info:    Font shape `TU/LatinModernMath(2)/m/n' will be
+(Font)              scaled to size 10.00107pt on input line 14.
+LaTeX Font Info:    Font shape `TU/LatinModernMath(2)/m/n' will be
+(Font)              scaled to size 7.00075pt on input line 14.
+LaTeX Font Info:    Font shape `TU/LatinModernMath(3)/m/n' will be
+(Font)              scaled to size 14.39845pt on input line 14.
+LaTeX Font Info:    Font shape `TU/LatinModernMath(3)/m/n' will be
+(Font)              scaled to size 9.99893pt on input line 14.
+LaTeX Font Info:    Font shape `TU/LatinModernMath(3)/m/n' will be
+(Font)              scaled to size 6.99925pt on input line 14.
+
+[1
+
+{/home/niklas/.local/texlive/2020/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] (./latex/auswertung.tex
+Overfull \hbox (7.29997pt too wide) detected at line 16
+ 
+ []
+
+<build/Magnetfeld.pdf, id=17, 462.528pt x 346.896pt>
+File: build/Magnetfeld.pdf Graphic file (type pdf)
+<use build/Magnetfeld.pdf>
+Package luatex.def Info: build/Magnetfeld.pdf  used on input line 58.
+(luatex.def)             Requested size: 292.7776pt x 219.59367pt.
+[2
+
+]
+<build/Hall.pdf, id=39, 462.528pt x 346.896pt>
+File: build/Hall.pdf Graphic file (type pdf)
+<use build/Hall.pdf>
+Package luatex.def Info: build/Hall.pdf  used on input line 77.
+(luatex.def)             Requested size: 460.08365pt x 345.07956pt.
+
+Overfull \hbox (41.8281pt too wide) in paragraph at lines 77--78
+ [][] 
+ []
+
+[3<./build/Magnetfeld.pdf>]
+File: build/Magnetfeld.pdf Graphic file (type pdf)
+<use build/Magnetfeld.pdf>
+Package luatex.def Info: build/Magnetfeld.pdf  used on input line 90.
+(luatex.def)             Requested size: 292.7776pt x 219.59367pt.
+ [4<./build/Hall.pdf>]
+
+LaTeX Warning: Reference `eqn:uhall' on page 5 undefined on input line 105.
+
+<build/N.pdf, id=158, 462.528pt x 346.896pt>
+File: build/N.pdf Graphic file (type pdf)
+<use build/N.pdf>
+Package luatex.def Info: build/N.pdf  used on input line 115.
+(luatex.def)             Requested size: 460.08365pt x 345.07956pt.
+
+Overfull \hbox (41.8281pt too wide) in paragraph at lines 115--116
+ [][] 
+ []
+
+[5]
+Overfull \hbox (5.475pt too wide) detected at line 143
+ 
+ []
+
+
+Overfull \hbox (5.475pt too wide) detected at line 144
+ 
+ []
+
+[6<./build/N.pdf>]
+<build/Z.pdf, id=229, 462.528pt x 346.896pt>
+File: build/Z.pdf Graphic file (type pdf)
+<use build/Z.pdf>
+Package luatex.def Info: build/Z.pdf  used on input line 154.
+(luatex.def)             Requested size: 460.08365pt x 345.07956pt.
+
+Overfull \hbox (41.8281pt too wide) in paragraph at lines 154--155
+ [][] 
+ []
+
+
+LaTeX Warning: Reference `eqn:rho' on page 7 undefined on input line 164.
+
+[7<./build/Z.pdf>]
+<build/tau.pdf, id=282, 462.528pt x 346.896pt>
+File: build/tau.pdf Graphic file (type pdf)
+<use build/tau.pdf>
+Package luatex.def Info: build/tau.pdf  used on input line 173.
+(luatex.def)             Requested size: 460.08365pt x 345.07956pt.
+
+Overfull \hbox (41.8281pt too wide) in paragraph at lines 173--174
+ [][] 
+ []
+
+<build/Driftgeschwindigkeit.pdf, id=283, 462.528pt x 346.896pt>
+File: build/Driftgeschwindigkeit.pdf Graphic file (type pdf)
+<use build/Driftgeschwindigkeit.pdf>
+Package luatex.def Info: build/Driftgeschwindigkeit.pdf  used on input line 191.
+
+(luatex.def)             Requested size: 460.08365pt x 345.07956pt.
+
+Overfull \hbox (41.8281pt too wide) in paragraph at lines 191--192
+ [][] 
+ []
+
+[8<./build/tau.pdf>]
+File: build/tau.pdf Graphic file (type pdf)
+<use build/tau.pdf>
+Package luatex.def Info: build/tau.pdf  used on input line 209.
+(luatex.def)             Requested size: 460.08365pt x 345.07956pt.
+
+Overfull \hbox (41.8281pt too wide) in paragraph at lines 209--210
+ [][] 
+ []
+
+[9<./build/Driftgeschwindigkeit.pdf>]
+<build/Fermi.pdf, id=400, 462.528pt x 346.896pt>
+File: build/Fermi.pdf Graphic file (type pdf)
+<use build/Fermi.pdf>
+Package luatex.def Info: build/Fermi.pdf  used on input line 227.
+(luatex.def)             Requested size: 460.08365pt x 345.07956pt.
+
+Overfull \hbox (41.8281pt too wide) in paragraph at lines 227--228
+ [][] 
+ []
+
+[10]
+<build/Totalgeschwindigkeit.pdf, id=408, 462.528pt x 346.896pt>
+File: build/Totalgeschwindigkeit.pdf Graphic file (type pdf)
+<use build/Totalgeschwindigkeit.pdf>
+Package luatex.def Info: build/Totalgeschwindigkeit.pdf  used on input line 242.
+
+(luatex.def)             Requested size: 460.08365pt x 345.07956pt.
+
+Overfull \hbox (41.8281pt too wide) in paragraph at lines 242--243
+ [][] 
+ []
+
+[11<./build/Fermi.pdf>]
+warning  (pdf backend): ignoring duplicate destination with the name 'equation.1
+.18'
+
+warning  (pdf backend): ignoring duplicate destination with the name 'equation.1
+.18'
+
+warning  (pdf backend): ignoring duplicate destination with the name 'equation.1
+.18'
+
+warning  (pdf backend): ignoring duplicate destination with the name 'equation.1
+.18'
+<build/mittlere_Weglänge.pdf, id=464, 462.528pt x 346.896pt>
+File: build/mittlere_Weglänge.pdf Graphic file (type pdf)
+<use build/mittlere_Weglänge.pdf>
+Package luatex.def Info: build/mittlere_Weglänge.pdf  used on input line 259.
+(luatex.def)             Requested size: 460.08365pt x 345.07956pt.
+
+Overfull \hbox (41.8281pt too wide) in paragraph at lines 259--260
+ [][] 
+ []
+
+[12<./build/Totalgeschwindigkeit.pdf>]
+Overfull \hbox (5.475pt too wide) detected at line 307
+ 
+ []
+
+[13<./build/mittlere_Weglänge.pdf>]
+Overfull \hbox (23.72499pt too wide) detected at line 322
+ 
+ []
+
+
+Overfull \hbox (7.29997pt too wide) detected at line 322
+ 
+ []
+
+
+Overfull \hbox (23.72499pt too wide) detected at line 323
+ 
+ []
+
+
+Overfull \hbox (7.29997pt too wide) detected at line 323
+ 
+ []
+
+
+Overfull \hbox (23.72499pt too wide) detected at line 324
+ 
+ []
+
+
+Overfull \hbox (7.29997pt too wide) detected at line 324
+ 
+ []
+
+
+Overfull \hbox (23.72499pt too wide) detected at line 325
+ 
+ []
+
+
+Overfull \hbox (7.29997pt too wide) detected at line 325
+ 
+ []
+
+
+Overfull \hbox (23.72499pt too wide) detected at line 326
+ 
+ []
+
+
+Overfull \hbox (7.29997pt too wide) detected at line 326
+ 
+ []
+
+
+Overfull \hbox (23.72499pt too wide) detected at line 327
+ 
+ []
+
+
+Overfull \hbox (7.29997pt too wide) detected at line 327
+ 
+ []
+
+
+Overfull \hbox (23.72499pt too wide) detected at line 328
+ 
+ []
+
+
+Overfull \hbox (7.29997pt too wide) detected at line 328
+ 
+ []
+
+
+Overfull \hbox (23.72499pt too wide) detected at line 329
+ 
+ []
+
+
+Overfull \hbox (7.29997pt too wide) detected at line 329
+ 
+ []
+
+
+Overfull \hbox (23.72499pt too wide) detected at line 330
+ 
+ []
+
+
+Overfull \hbox (7.29997pt too wide) detected at line 330
+ 
+ []
+
+[14]) [15] (./Protokoll_V311.aux)
+
+Package rerunfilecheck Warning: File `Protokoll_V311.aux' has changed. Rerun.
+
+Package rerunfilecheck Info: Checksums for `Protokoll_V311.aux':
+(rerunfilecheck)             Before: 8337EFE73EFD194852643171728B283B;9229
+(rerunfilecheck)             After:  8E7336C39810B50AE4440FEB1B4407A9;11486.
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: There were multiply-defined labels.
+
+Package logreq Info: Writing requests to 'Protokoll_V311.run.xml'.
+
+\openout1 = Protokoll_V311.run.xml
+)
 
 Here is how much of LuaTeX's memory you used:
- 32788 strings out of 479058
- 100000,1648299 words of node,token memory allocated 645 words of node memory still in use:
-   7 hlist, 1 vlist, 2 rule, 1 local_par, 1 dir, 4 glue, 4 kern, 1 glyph, 7 attr
-ibute, 78 glue_spec, 7 attribute_list, 1 temp, 1 write nodes
-   avail lists: 1:1,2:22,3:3,4:3,5:1,7:25,9:3,11:4
- 51300 multiletter control sequences out of 65536+600000
- 60 fonts using 22092995 bytes
- 98i,1n,114p,10638b,2933s stack positions out of 5000i,500n,10000p,200000b,200000s
-!  ==> Fatal error occurred, no output PDF file produced!
+ 35689 strings out of 479058
+ 100000,1977958 words of node,token memory allocated
+ 782 words of node memory still in use:
+   7 hlist, 2 vlist, 2 rule, 5 dir, 2 glue, 4 kern, 1 glyph, 55 attribute, 76 gl
+ue_spec, 29 attribute_list, 1 write nodes
+   avail lists: 1:3,2:4355,3:391,4:54,5:1526,6:37,7:3830,8:50,9:1684,10:9,11:305
+
+ 53898 multiletter control sequences out of 65536+600000
+ 282 fonts using 106325931 bytes
+ 98i,23n,114p,10646b,2933s stack positions out of 5000i,500n,10000p,200000b,200000s
+
+warning  (pdf backend): unreferenced destination with name 'table.caption.11'
+
+warning  (pdf backend): unreferenced destination with name 'table.caption.9'
+</home/niklas/.local/texlive/2020/texmf-dist/fonts/opentype/public/lm-math/latin
+modern-math.otf></home/niklas/.local/texlive/2020/texmf-dist/fonts/opentype/publ
+ic/lm/lmroman8-regular.otf></home/niklas/.local/texlive/2020/texmf-dist/fonts/op
+entype/public/lm/lmroman10-bold.otf></home/niklas/.local/texlive/2020/texmf-dist
+/fonts/opentype/public/lm-math/latinmodern-math.otf></home/niklas/.local/texlive
+/2020/texmf-dist/fonts/opentype/public/lm/lmroman10-regular.otf></home/niklas/.l
+ocal/texlive/2020/texmf-dist/fonts/opentype/public/lm/lmroman12-regular.otf></ho
+me/niklas/.local/texlive/2020/texmf-dist/fonts/opentype/public/lm/lmsans10-bold.
+otf></home/niklas/.local/texlive/2020/texmf-dist/fonts/opentype/public/lm/lmroma
+n12-bold.otf>
+Output written on Protokoll_V311.pdf (15 pages, 185765 bytes).
+
+PDF statistics: 684 PDF objects out of 1000 (max. 8388607)
+ 265 compressed objects within 3 object streams
+ 65 named destinations out of 1000 (max. 131072)
+ 97 words of extra memory for PDF output out of 10000 (max. 100000000)
+

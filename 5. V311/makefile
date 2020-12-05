@@ -3,10 +3,14 @@ all: build/Protokoll_V311.pdf
 
 
 #hier Python-Skripte
+python/variables/B_abfallend.npy:
+	python python/einlesen.py
 
+python/variables/FE_pKupfer.npy:
+	python python/einlesen.py
 
-#build/plot1.pdf:	|build
-#	python python/c).py
+build/plot1.pdf: python/variables/B_abfallend.npy	|build
+	python python/plotten.py
 
 
 
@@ -30,7 +34,8 @@ auxv:
 	rm -rf python/variables
 
 auxt:
-	rm -rf build/Tabellen	
+	rm -rf build/Tabellen
+
 FORCE:
 
 .PHONY: all clean

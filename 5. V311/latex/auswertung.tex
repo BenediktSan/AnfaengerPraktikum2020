@@ -16,19 +16,19 @@
             \text{Kupfer} & 0.04406  & 0.0253 & 0.000018 &  0.0001052 & 1.73\\
             \bottomrule
         \end{tabular}
-    \caption{Eine Tabelle zu den Dimensionen der Metall Proben}
+    \caption{Eine Tabelle zu den Dimensionen der Metall-Proben in $\si{\centi\metre}$.}
     \label{tab:Dimensionen}
     \end{table}
     \noindent Die Messwerte zur Höhe, Breite und Dicke beziehen sich hier auf die Metallplatte, die Messwerte zum Durchmesser und zur Länge
     beschreiben das jeweilige Kabel zur Berechnung des Widerstandes. Hier gehen wir jeweils von einer Ungenauigkeit von einem Prozent 
     des jeweiligen Messwertes aus.\\
-    \noindent Der Widerstand eines Metalls berechnet sich Mittels 
+    \noindent Der Widerstand eines Metalls berechnet sich mittels: 
     
     \begin{equation}
-        U = R * I
+        U = R \cdot I
     \end{equation}
-
-    Die Berechnung des Widerstandes gibt eine Reihe an Widerstaenden \ref{tab:ErgWider}, der Mittelwert dieser Reihen ergibt dann einen Widerstand 
+    \noindent
+    Die Berechnung des Widerstandes gibt eine Reihe an Widerständen \ref{tab:ErgWider}, der Mittelwert dieser Reihen ergibt dann einen Widerstand 
     fuer Zink und Kupfer:
 
     \begin{align}
@@ -41,9 +41,9 @@
     \begin{equation}
         \rho = \frac{RA}{l}
     \end{equation}
-
-    mit $R$ dem Widerstand, $A$ der Querschnittsflaeche und $l$ der Laenge des Kabels.
-    Somit ergibt sich mit denn Werten aus \ref{tab:Dimensionen} und den berechneten Widerstaenden der spezifische Widerstand:
+    \noindent
+    mit $R$ dem Widerstand, $A$ der Querschnittsfläche und $l$ der Länge des Kabels.
+    Somit ergibt sich mit denn Werten aus \ref{tab:Dimensionen} und den berechneten Widerständen der spezifische Widerstand:
 
     \begin{align}
         \rho &= \SI{1.72+-0.05}{\nano\ohm\meter}\\
@@ -51,16 +51,16 @@
     \end{align}
 
     \subsection{Hall-Effekt}
-    Zur Berechnung der Hall Spannung wird zunaechst das Magnetfeld der Spule in abhaengigkeit von der Stromstaerke bestimmt.
+    Zur Berechnung der Hall-Spannung wird zunächst das Magnetfeld der Spule in abhängigkeit von der Stromstärke bestimmt.
 
     \begin{figure}[H]
         \centering
         \includegraphics[width=0.7\textwidth]{build/Magnetfeld.pdf}
-        \caption{Ein Plot der Magnetfeldstaerke gegen die Stromstaerke.}
+        \caption{Ein Plot der Magnetfeldstärke gegen die Stromstärke.}
         \label{img:Magnetfeld}
     \end{figure}
-
-    In diesem Plot sind die Magnetfelder bei steigender und abfallender Stromstaerke \ref{tab:messMag} und der jeweilige lineare Fit zu den 
+    \noindent
+    In diesem Plot sind die Magnetfelder, bei steigender und abfallender Stromstärke \ref{tab:messMag}, und der jeweilige lineare Fit zu den 
     Messwerten eingezeichnet.
     Die Ausgleichsgerade der Form $\text{a}\cdot x = \text{b}$ hat dann die Werte:
     \begin{align}
@@ -68,8 +68,8 @@
         \text{b} & = \num{36.750(16)e-3}
     \end{align}
     Und gibt nun in allen folgenden Rechnungen einen Wert für das Magnetfeld wenn nur ein Wert für den Spulenstrom bekannt ist.
-
-    In den folgenden Plots ist sind die Messergebnisse der Hallspannung aufgetragen mit denen die weiteren Rechnungen ausgeführt werden.
+    \noindent
+    In den folgenden Plots ist sind die Messergebnisse der Hallspannung, mit denen die weiteren Rechnungen ausgeführt werden, aufgetragen.
     Die Zahlenwerte sind hier ?ref? zu finden.
 
     \begin{figure}[H]

@@ -50,12 +50,12 @@
     \subsection{Hall-Effekt}
     Zur Analyse der Hall Spannung wird zunaechst das Magnetfeld der Spule in abhaengigkeit von der Stromstaerke bestimmt.
 
-    \begin{figure}[H]
-        \centering
-        \includegraphics[width=0.7\textwidth]{build/Magnetfeld.pdf}
-        \caption{Ein Plot der Magnetfeldstaerke gegen die Stromstaerke.}
-        \label{img:Magnetfeld}
-    \end{figure}
+    %\begin{figure}[H]
+    %    \centering
+    %    \includegraphics[width=0.7\textwidth]{build/Magnetfeld.pdf}
+    %    \caption{Ein Plot der Magnetfeldstaerke gegen die Stromstaerke.}
+    %    \label{img:Magnetfeld}
+    %\end{figure}
 
     In diesem Plot sind die Magnetfelder bei steigender und abfallender Stromstaerke \ref{tab:messMag} und der jeweilige lineare Fit zu den 
     Messwerten eingezeichnet.
@@ -68,21 +68,108 @@
 
     In den folgenden Plots ist sind die Messergebnisse der Hallspannung aufgetragen mit denen die weiteren Rechnungen ausgeführt werden.
     Die Messergebnisse sind hier zu finden.
-    \begin{figure}[H]
-        \centering
-        \includegraphics[width=1.1\textwidth]{build/Hall.pdf}
-        \caption{Ein Plot der Hall Spannungen gegen die Stromstaerke.}
-        \label{img:messHall}
-    \end{figure}
+    %\begin{figure}[H]
+    %    \centering
+    %    \includegraphics[width=1.1\textwidth]{build/Hall.pdf}
+    %    \caption{Ein Plot der Hall Spannungen gegen die Stromstaerke.}
+    %    \label{img:messHall}
+    %\end{figure}
     
     \subsection{Ladungsträger pro Volumen}
-
-    Aus der Formel ?ref? lässt sich nun eine Formel für die Ladungsträger pro Volumen herleiten:
-    \begin{equation}
-        n = \frac{-B \cdot I}{Ud\cdot\text{e_0}}
-    \end{equation}
-    mit $B$ der magnetischen Feldstärke, $I$ der Stromstärke, $U$ der Hall-Spannung, $d$ der Dicke der jeweiligen Proben und $\text{e_0}$ der 
+    
+    Aus der Formel \ref{eqn:uhall} lässt sich nun eine Formel für die Ladungsträger pro Volumen herleiten:
+    \begin{align}
+        n &= \frac{-BI}{Ud\cdot\text{e}_0}
+    \end{align}
+    mit $B$ der magnetischen Feldstärke, $I$ der Stromstärke, $U$ der Hall-Spannung, $d$ der Dicke der jeweiligen Proben und $\text{e}_0$ der 
     elementar Ladung eines Elektron.
+
+    Mit den angegeben Messwerten berechnen sich nun folgende Messwert:
+    %\begin{figure}[H]
+    %    \centering
+    %    \includegraphics[width=1.1\textwidth]{build/N.pdf}
+    %    \caption{Ein Plot der Elektronendichte gegen die Stromstaerke.}
+    %    \label{img:elekdichte}
+    %\end{figure}
+    Die durch die Plots veranschaulichten Werte sind auch in der Tabelle ?ref? zu finden.
+
+    \subsection{Ladungsträger pro Atom}
+    Die Anzahl der Atome pro Volumen berechnet sich mittels der Formel:
+    \begin{equation}
+        \frac{\text{Atome}}{\text{V}} = \frac{\rho \cdot \symup{N_A}}{\symup{m_{mol}}}
+    \end{equation}
+    Mit $\rho$ der Dichte des Metalls, $\symup{N_A}=\SI{6.02214076e23}{\per\mole}$ der Avogrado-Konstante und $\symup{m_mol}$ der 
+    molaren Masse des Metalls.
+    Aus dieser Formel ergibt sich direkt die Formel für Z die Anzahl der Ladungsträger pro Atom:
+    \begin{equation}
+        Z=\frac{n \cdot \symup{m_{mol}}}{\rho \cdot \symup{N_A}}
+    \end{equation}
+    Mit den stoffspezifischen Größen:
+    \begin{table}[H]
+        \centering
+        %\caption{Die Messwerte}
+        \begin{tabular}{ S  S [table-format=1.5] S [table-format=1.4] }
+            \toprule
+            {Metall} & {$\rho [\si{\gram\per\mole}]$}& {$\symup{m_{mol}}[\si{\gram\per\mole}]$}\\
+            \midrule
+            \text{Zink} &  7.14 & 65.38 \\
+            \text{Kupfer} & 8.92 & 63.55 \\
+            \bottomrule
+        \end{tabular}
+    \caption{Eine Tabelle mit stoffspezifischen Größen der Metalle}
+    \label{tab:spez}
+    \end{table}
+
+    lässt sich nun Z berechnen. In den folgenden Plots ist Z für die unterschiedlichen Messreihen angegeben.
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=1.1\textwidth]{build/Z.pdf}
+        \caption{Ein Plot der Elektronendichte gegen die Stromstaerke.}
+        \label{img:elekZahl}
+    \end{figure}
+    Die zugehörigen sind auch wieder in der Tabelle ?ref? zu finden.
+
+    \subsection{mittlere Flugzeit}
+    Die Formel \ref{eqn:rho} wir so umgestellt, dass wir folgende Formel erhalten:
+    \begin{equation}
+        \overline{\tau} =\frac{2}{n}\frac{\symup{m_0}}{\symup{e_0}^2 \cdot \rho}
+    \end{equation}
+    In dieser Formel rechnen wir wieder mit dem reziproken spezifischen Widerstand $\rho$ und der Elektronenmasse
+    $\symup{m_0} = \SI{9.109e-31}{\kilogram}$. Das einsetzten der Werte für $n$ und $\rho$ ergibt dann folgende Werte ?ref?:
+
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=1.1\textwidth]{build/tau.pdf}
+        \caption{Ein Plot der mittleren Flugzeit gegen die Stromstaerke.}
+        \label{img:tau}
+    \end{figure}
+
+    \subsection{mittlere Driftgeschwindigkeit}
+    Die mittlere Driftgeschwindigkeit $\overline{v_d}$ berechnet sich aus:
+    \begin{equation}
+        \overline{v_d} = \frac{-n \cdot \symup{e_0}}{\symup{j}}
+    \end{equation}
+    mit der Stromdichte j = $\SI$
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     \section{Tabellen}
 
     \begin{table}[H]

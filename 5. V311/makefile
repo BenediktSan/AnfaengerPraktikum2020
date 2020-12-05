@@ -9,13 +9,20 @@ python/variables/B_abfallend.npy:
 python/variables/FE_pKupfer.npy:
 	python python/einlesen.py
 
-build/plot1.pdf: python/variables/B_abfallend.npy	|build
+python/variables/param1.npy:
+	python python/calculate.py
+
+build/Tabellen/U_Hall_konst_Probe_Zink.txt:
+	python python/Tabellen.py
+
+
+build/plot1.pdf: python/variables/B_abfallend.npy python/variables/param1.npy	|build
 	python python/plotten.py
 
 
 
 # hier weitere Abhängigkeiten für build/main.pdf deklarieren:
-build/Protokoll_V311.pdf:  latex/auswertung.tex latex/theorie.tex latex/durchf.tex latex/diskussion.tex| build
+build/Protokoll_V311.pdf:  latex/auswertung.tex latex/theorie.tex latex/durchf.tex latex/diskussion.tex build/plot1.pdf build/Tabellen/U_Hall_konst_Probe_Zink.txt| build
 	lualatex --output-directory=build --interaction=batchmode --halt-on-error latex/Protokoll_V311.tex
 	biber build/Protokoll_V203.bcf
 	lualatex --output-directory=build --interaction=batchmode --halt-on-error latex/Protokoll_V311.tex

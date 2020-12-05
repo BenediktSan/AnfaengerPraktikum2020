@@ -367,3 +367,42 @@ plt.ylabel("mittlere Weglänge [m]")
 plt.legend()
 plt.tight_layout()
 plt.savefig("build/mittlere_Weglänge.pdf")
+
+FE_sZink= np.load('python/variables/FE_sZink.npy', allow_pickle=True)
+FE_sKupfer = np.load('python/variables/FE_sKupfer.npy', allow_pickle=True)
+
+FE_pZink = np.load('python/variables/FE_pZink.npy', allow_pickle=True)
+FE_pKupfer = np.load('python/variables/FE_pKupfer.npy', allow_pickle=True)
+
+e0=-1.602e-19
+
+plt.figure()
+plt.subplot(2,2,1)
+plt.plot(I_s_Zink,unumpy.nominal_values(FE_sZink)/-e0,".",label="FE_sZink")
+#plt.plot(I_s_Zink,(I_s_Zink*param3[0]+param3[1])*1e3,label="Fit")
+plt.xlabel("Stromstärke [A]")
+plt.ylabel("Fermi Energie [eV]")
+plt.legend()
+
+plt.subplot(2,2,2)
+plt.plot(I_s_Kupfer ,unumpy.nominal_values(FE_sKupfer)/-e0,".",label="FE_sKupfer")
+#plt.plot(I_s_Kupfer,(I_s_Kupfer*param4[0]+param4[1])*1e3,label="Fit")
+plt.xlabel("Stromstärke [A]")
+plt.ylabel("Fermi Energie [eV]")
+plt.legend()
+
+plt.subplot(2,2,3)
+plt.plot(I_p_Zink,unumpy.nominal_values(FE_pZink)/-e0,".",label="FE_pZink")
+#plt.plot(I_p_Zink,(I_p_Zink*param5[0]+param5[1])*1e3,label="Fit") 
+plt.xlabel("Stromstärke [A]")
+plt.ylabel("Fermi Energie [eV]")
+plt.legend()
+
+plt.subplot(2,2,4)
+plt.plot(I_p_Kupfer ,unumpy.nominal_values(FE_pKupfer)/-e0,".",label="FE_pKupfer")
+#plt.plot(I_p_Kupfer,(I_p_Kupfer*param6[0]+param6[1])*1e3,label="Fit") 
+plt.xlabel("Stromstärke [A]")
+plt.ylabel("Fermi Energie [eV]")
+plt.legend()
+plt.tight_layout()
+plt.savefig("build/Fermi.pdf")

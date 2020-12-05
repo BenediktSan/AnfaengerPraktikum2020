@@ -1,6 +1,9 @@
 \section{Auswertung}
 
+
     \subsection{Widerstand}
+
+
     Das Außmessen der Proben ergibt:
     \begin{table}[H]
         \centering
@@ -48,14 +51,14 @@
     \end{align}
 
     \subsection{Hall-Effekt}
-    Zur Analyse der Hall Spannung wird zunaechst das Magnetfeld der Spule in abhaengigkeit von der Stromstaerke bestimmt.
+    Zur Berechnung der Hall Spannung wird zunaechst das Magnetfeld der Spule in abhaengigkeit von der Stromstaerke bestimmt.
 
-    %\begin{figure}[H]
-    %    \centering
-    %    \includegraphics[width=0.7\textwidth]{build/Magnetfeld.pdf}
-    %    \caption{Ein Plot der Magnetfeldstaerke gegen die Stromstaerke.}
-    %    \label{img:Magnetfeld}
-    %\end{figure}
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.7\textwidth]{build/Magnetfeld.pdf}
+        \caption{Ein Plot der Magnetfeldstaerke gegen die Stromstaerke.}
+        \label{img:Magnetfeld}
+    \end{figure}
 
     In diesem Plot sind die Magnetfelder bei steigender und abfallender Stromstaerke \ref{tab:messMag} und der jeweilige lineare Fit zu den 
     Messwerten eingezeichnet.
@@ -67,16 +70,38 @@
     Und gibt nun in allen folgenden Rechnungen einen Wert für das Magnetfeld wenn nur ein Wert für den Spulenstrom bekannt ist.
 
     In den folgenden Plots ist sind die Messergebnisse der Hallspannung aufgetragen mit denen die weiteren Rechnungen ausgeführt werden.
-    Die Messergebnisse sind hier zu finden.
-    %\begin{figure}[H]
-    %    \centering
-    %    \includegraphics[width=1.1\textwidth]{build/Hall.pdf}
-    %    \caption{Ein Plot der Hall Spannungen gegen die Stromstaerke.}
-    %    \label{img:messHall}
-    %\end{figure}
+    Die Zahlenwerte sind hier ?ref? zu finden.
+
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=1.1\textwidth]{build/Hall.pdf}
+        \caption{Ein Plot der Hall Spannungen gegen die Stromstaerke.}
+        \label{img:messHall}
+    \end{figure}
     
+     
     \subsection{Ladungsträger pro Volumen}
     
+
+    Zur Berechnung der Hall Spannung wird zunaechst das Magnetfeld der Spule in abhaengigkeit von der Stromstaerke bestimmt.
+
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.7\textwidth]{build/Magnetfeld.pdf}
+        \caption{Ein Plot der Magnetfeldstaerke gegen die Stromstaerke.}
+        \label{img:Magnetfeld}
+    \end{figure}
+
+    In diesem Plot sind die Magnetfelder bei steigender und abfallender Stromstaerke \ref{tab:messMag} und der jeweilige lineare Fit zu den 
+    Messwerten eingezeichnet.
+    Die Ausgleichsgerade der Form $\text{a}\cdot x = \text{b}$ hat dann die Werte:
+    \begin{align}
+        \text{a} & = \num{254(5)e-3}\\
+        \text{b} & = \num{36.750(16)e-3}
+    \end{align}
+    Und gibt nun in allen folgenden Rechnungen einen Wert für das Magnetfeld wenn nur ein Wert für den Spulenstrom bekannt ist
+
+
     Aus der Formel \ref{eqn:uhall} lässt sich nun eine Formel für die Ladungsträger pro Volumen herleiten:
     \begin{align}
         n &= \frac{-BI}{Ud\cdot\text{e}_0}
@@ -85,15 +110,18 @@
     elementar Ladung eines Elektron.
 
     Mit den angegeben Messwerten berechnen sich nun folgende Messwert:
-    %\begin{figure}[H]
-    %    \centering
-    %    \includegraphics[width=1.1\textwidth]{build/N.pdf}
-    %    \caption{Ein Plot der Elektronendichte gegen die Stromstaerke.}
-    %    \label{img:elekdichte}
-    %\end{figure}
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=1.1\textwidth]{build/N.pdf}
+        \caption{Ein Plot der Elektronendichte gegen die Stromstaerke.}
+        \label{img:elekdichte}
+    \end{figure}
     Die durch die Plots veranschaulichten Werte sind auch in der Tabelle ?ref? zu finden.
 
+
     \subsection{Ladungsträger pro Atom}
+
+
     Die Anzahl der Atome pro Volumen berechnet sich mittels der Formel:
     \begin{equation}
         \frac{\text{Atome}}{\text{V}} = \frac{\rho \cdot \symup{N_A}}{\symup{m_{mol}}}
@@ -129,7 +157,10 @@
     \end{figure}
     Die zugehörigen sind auch wieder in der Tabelle ?ref? zu finden.
 
+
     \subsection{mittlere Flugzeit}
+
+    
     Die Formel \ref{eqn:rho} wir so umgestellt, dass wir folgende Formel erhalten:
     \begin{equation}
         \overline{\tau} =\frac{2}{n}\frac{\symup{m_0}}{\symup{e_0}^2 \cdot \rho}
@@ -144,12 +175,97 @@
         \label{img:tau}
     \end{figure}
 
+
     \subsection{mittlere Driftgeschwindigkeit}
+
+
     Die mittlere Driftgeschwindigkeit $\overline{v_d}$ berechnet sich aus:
     \begin{equation}
         \overline{v_d} = \frac{-n \cdot \symup{e_0}}{\symup{j}}
     \end{equation}
-    mit der Stromdichte j = $\SI$
+    mit der Stromdichte j = $\SI{1}{\ampere\per\milli\meter\squared}$.
+
+    Einsetzten ergibt dann ?ref?:
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=1.1\textwidth]{build/Driftgeschwindigkeit.pdf}
+        \caption{Ein Plot der Driftgeschwindigkeit gegen die Stromstaerke.}
+        \label{img:vd}
+    \end{figure}
+
+
+    \subsection{Beweglichkeit}
+
+
+    Die Formel
+    \begin{equation}
+        \mu= -\frac{1}{2}\frac{\symup{e_0}}{\symup{m_0}}\cdot   \overline{\tau}
+    \end{equation}
+    stellt eine Beziehung zwischen $\tau$ und $\mu$ auf, mit den Werten für $\tau$ ?ref? berechnen sich nun folgende Werte 
+    für $\tau$ ?ref?:
+
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=1.1\textwidth]{build/tau.pdf}
+        \caption{Ein Plot der Beweglichkeit gegen die Stromstaerke.}
+        \label{img:Beweg}
+    \end{figure}
+
+
+    \subsection{Totalgeschwindigkeit}
+
+
+    Für die Totalgeschwindigkeit wird zunaechst ein Wert für die Fermi-Energie berechnet werden, diese berechnet sich mittels der Formel:
+    \begin{equation}
+        E_F = \frac{\symup{h}^2}{2 \cdot \symup{m_0}}\sqrt{\left(\frac{3}{8\pi}\right)^2}
+    \end{equation}
+    Hier ist h das planksche Wirkungsquantum($\SI{6.626e-34}{\joule\second}$).
+    Die Fermi-Energie berechnet sich zu: ?ref?
+
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=1.1\textwidth]{build/Fermi.pdf}
+        \caption{Ein Plot der Fermi-Energie gegen die Stromstaerke.}
+        \label{img:FE}
+    \end{figure}
+
+    Mittels der Fermi-Energie lässt sich nun über 
+
+    \begin{equation}
+        |\overline{v}| \approx \sqrt{\frac{2E_F}{\symup{m_0}}} \nonumber
+    \end{equation}
+
+    die Totalgeschwindigkeit bestimmen: ?ref?
+
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=1.1\textwidth]{build/Totalgeschwindigkeit.pdf}
+        \caption{Ein Plot der Totalgeschwindigkeit gegen die Stromstaerke.}
+        \label{img:vT}
+    \end{figure}
+
+
+    \subsection{mittlere freie Weglänge}
+
+
+    Die mittlere freie Weglänge lässt sich nun mit der Totalgeschwindigkeit$|\overline{v}|$ und mittleren Flugzeit$\tau$ berechnen:
+    \begin{equation}
+        \overline{l} \approx \overline{\tau} \cdot |\overline{v}| \nonumber
+    \end{equation}
+
+    
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=1.1\textwidth]{build/mittlere_Weglänge.pdf}
+        \caption{Ein Plot der mittleren freien Weglänge gegen die Stromstaerke.}
+        \label{img:mfl}
+    \end{figure}
+    Die Zahlenwerte zu den Plots befinden sich hier ?ref?
+
+    \subsection{Elektronenleitung}
+    Da von der Tatsache ausgegangen wird, dass Kupfer ein Elektronenleiter ist und bei Kupfer und Zink unterschiedliche Vorzeichen für
+    die Hall-Spannung gemessen wurde, ist relativ Sicher, dass bei Zink die Löcherleitung überwiegt.
+
 
 
 

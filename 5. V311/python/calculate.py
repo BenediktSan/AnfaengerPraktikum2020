@@ -191,7 +191,7 @@ np.save('python/variables/tau_pKupfer.npy', tau_pKupfer, allow_pickle=True)
 # mittlere Driftgeschwindigkeit vd
 
 def mitDrift(n):
-    return -1/(e0*n)
+    return -1e-6/(e0*n)
 
 vd_sZink = mitDrift(n_sZink)
 vd_sKupfer = mitDrift(n_sKupfer)

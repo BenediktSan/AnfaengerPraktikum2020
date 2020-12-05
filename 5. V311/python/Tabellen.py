@@ -1,7 +1,11 @@
 import numpy as np
+import matplotlib.pyplot as plt
 import uncertainties as unc
 import uncertainties.unumpy as unp
 from uncertainties import ufloat
+from uncertainties import unumpy
+from scipy.optimize import curve_fit
+import scipy.constants as const
 import sympy
 import os
 
@@ -93,7 +97,7 @@ np.savetxt(
 np.savetxt(
     'build/Tabellen/U_Hall_konst_Spule_Zink.txt',
     np.column_stack([I_p_Zink, Zink_Ip_U_H_1, Zink_Ip_U_H_2]),
-    fmt=['%.3f','%.3f','%.3f',],       
+    fmt=['%.2f','%.6f','%.6f',],       
     delimiter=' & ',
     header='I_s_Zink, Zink_Is_U_H_1, Zink_Is_U_H_2',
 )
@@ -101,7 +105,7 @@ np.savetxt(
 np.savetxt(
     'build/Tabellen/U_Hall_konst_Spule_Kupfer.txt',
     np.column_stack([I_p_Kupfer, Kupfer_Ip_U_H_1, Kupfer_Ip_U_H_2]),
-    fmt="%-4s",       
+    fmt=['%.2f','%.6f','%.6f',],       
     delimiter=' & ',
     header='I_s_Kupfer, Kupfer_Is_U_H_1, Kupfer_Is_U_H_2',
 )
@@ -116,3 +120,18 @@ np.savetxt(
     delimiter=' & ',
     header='R_Zink_array, R_Kupfer_array',
 )
+n_sZink=np.load('python/variables/n_sZink.npy', allow_pickle=True)
+n_sKupfer=np.load('python/variables/n_sKupfer.npy', allow_pickle=True)
+n_sKupfer = np.append(n_sKupfer,[0,0,0],axis=0)
+print(n_sKupfer)
+n_pZink=np.load('python/variables/n_pZink.npy', allow_pickle=True)
+n_pKupfer=np.load('python/variables/n_pKupfer.npy', allow_pickle=True)
+
+#np.savetxt(
+#    'build/Tabellen/nwerte.txt',
+#    np.column_stack([unumpy.nominal_values(n_sZink)/1e23,
+#     unumpy.std_devs(n_sZink)/1e23,unumpy.nominal_values(n_sKupfer)/1e23, unumpy.std_devs(n_sKupfer)/1e23]),
+#    fmt=['%.1f','%.1f'],       
+#    delimiter=' & ',
+#    header='n_sZinkvalue, n_sZinkerror'
+#)

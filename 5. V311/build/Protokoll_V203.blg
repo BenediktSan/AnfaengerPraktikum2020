@@ -1,5 +1,0 @@
-[0] Config.pm:312> INFO - This is Biber 2.15
-[1] Config.pm:315> INFO - Logfile is 'build/Protokoll_V203.blg'
-[83] biber:330> INFO - === Sat Dec  5, 2020, 15:12:19
-[267] Utils.pm:411> ERROR - Cannot find 'build/Protokoll_V203.bcf'!
-[268] Biber.pm:132> INFO - ERRORS: 1

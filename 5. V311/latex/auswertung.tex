@@ -48,13 +48,13 @@
 
     \begin{align}
         \rho_{Zink} &= \SI{1.72+-0.05}{\nano\ohm\meter}\\
-        \rho_{Kupfer} &= \SI{0.16+-03.1}{\nano\ohm\meter}
+        \rho_{Kupfer} &= \SI{0.16+-0.31}{\nano\ohm\meter}
     \end{align}
 
 
     \subsection{Hall-Effekt}
 
-    %Lesezeichen
+    
 
     In den folgenden Plots ist sind die Messergebnisse der Hallspannung, mit denen die weiteren Rechnungen ausgeführt werden, 
     aufgetragen. Die Zahlenwerte sind hier \ref{tab:messHall1},\ref{tab:messHall2},\ref{tab:messHall3},\ref{tab:messHall4} zu finden.
@@ -94,7 +94,7 @@
     \begin{align}
         n &= \frac{-BI}{Ud\cdot\text{e}_0}
     \end{align}
-    mit $B$ der magnetischen Feldstärke, $I$ der Stromstärke, $U$ der Hall-Spannung, $d$ der Dicke der jeweiligen Proben und $\text{e}_0$ der 
+    hier ist $B$ der magnetischen Feldstärke, $I$ der Stromstärke, $U$ der Hall-Spannung, $d$ der Dicke der jeweiligen Proben und $\text{e}_0$ der 
     elementar Ladung.
     \noindent
     Mit den angegeben Messwerten lässt sich nun die Elektronendichte pro Volumen bestimmen. Dies findet man in den nachfolgenden Plots:
@@ -105,7 +105,7 @@
         \label{img:elekdichte}
     \end{figure}
     \noindent
-    Die durch die Plots veranschaulichten Werte sind auch in der Tabelle ?ref? zu finden.
+    Die durch die Plots veranschaulichten Werte sind auch in der Tabelle \ref{tab:Ergn1},\ref{tab:Ergn2} zu finden.
 
 
     \subsection{Ladungsträger pro Atom}
@@ -145,7 +145,7 @@
         \label{img:elekZahl}
     \end{figure}
     \noindent
-    Die zugehörigen Ergebnisse sind auch wieder in der Tabelle ?ref? zu finden.
+    Die zugehörigen Ergebnisse sind auch wieder in den Tabellen \ref{tab:ErgZ1},\ref{tab:ErgZ2} zu finden.
 
 
     \subsection{Mittlere Flugzeit}
@@ -156,7 +156,7 @@
         \overline{\tau} =\frac{2}{n}\frac{\symup{m_0}}{\symup{e_0}^2 \cdot \rho}
     \end{equation}
     In dieser Formel rechnen wir mit dem Reziproken des spezifischen Widerstand $\rho$ und der Elektronenmasse
-    $\symup{m_0} = \SI{9.109e-31}{\kilogram}$. Das einsetzten der Werte für $n$ und $\rho$ ergibt dann folgende Werte ?ref?.
+    $\symup{m_0} = \SI{9.109e-31}{\kilogram}$. Das einsetzten der Werte für $n$ und $\rho$ ergibt dann folgende Werte \ref{tab:Ergtau1},\ref{tab:Ergtau2}.
     Geplotet findet man sie in den nachfolgenden Abbildungen.
 
     \begin{figure}[H]
@@ -377,7 +377,7 @@
         %\caption{Die Messwerte}
         \begin{tabular}{ S [table-format=1.1] S [table-format=1.3] S [table-format=1.1] S [table-format=1.3]}
             \toprule
-            {$\text{Stromstärke+}\si{\ampere}$} & {$\text{Hallspannung}\si{\milli\volt}$} & {$\text{Hallspannung}\si{\milli\volt}$}\\
+            {$\text{Stromstärke+}[\si{\ampere}]$} & {$\text{Hallspannung}[\si{\milli\volt}]$} & {$\text{Hallspannung}[\si{\milli\volt}]$}\\
             \midrule
             0.50 & -0.340 & -0.340\\
             1.00 & -0.338 & -0.338\\
@@ -397,7 +397,7 @@
         %\caption{Die Messwerte}
         \begin{tabular}{ S [table-format=1.1] S [table-format=1.3] S [table-format=1.1] S [table-format=1.3]}
             \toprule
-            {$\text{Stromstärke+}\si{\ampere}$} & {$\text{Hallspannung}\si{\milli\volt}$} & {$\text{Hallspannung}\si{\milli\volt}$}\\
+            {$\text{Stromstärke+}[\si{\ampere}]$} & {$\text{Hallspannung}[\si{\milli\volt}]$} & {$\text{Hallspannung}[\si{\milli\volt}]$}\\
             \midrule
             0.80 & 0.045 & 0.047\\
             1.60 & 0.109 & 0.116\\
@@ -420,7 +420,7 @@
         %\caption{Die Messwerte}
         \begin{tabular}{ S [table-format=1.1] S [table-format=1.3] S [table-format=1.1] S [table-format=1.3]}
             \toprule
-            {$\text{Stromstärke+}\si{\ampere}$} & {$\text{Hallspannung}\si{\milli\volt}$} & {$\text{Hallspannung}\si{\milli\volt}$}\\
+            {$\text{Stromstärke+}[\si{\ampere}]$} & {$\text{Hallspannung}[\si{\milli\volt}]$} & {$\text{Hallspannung}[\si{\milli\volt}]$}\\
             \midrule
             1.00 & -0.338 & -0.337\\
             2.00 & -0.340 & -0.336\\
@@ -440,14 +440,14 @@
 
 
     Nun folgen die Rechenergebnisse für die mikroskopischen Leitfähigkeitsparameter. Um die Tabellen ordentlich zu gestalten werden 
-    jetzt erst die uterschiedlichen Stromstärken aufgelisten und dann in den folgenden Tabellen nicht mehr explizit erwähnt.
+    jetzt erst die uterschiedlichen Stromstärken aufgelisten und dann in den folgenden Tabellen nicht mehr explizit aufgelistet.
      
     \begin{table}[H]
         \centering
         %\caption{Die Messwerte}
         \begin{tabular}{ S [table-format=1.1] S [table-format=1.2] S [table-format=1.2] S [table-format=2.2]}
             \toprule
-            {$I_{\text{Z,Spule}}\si{\ampere}$} & {$I_{\text{K,Spule}}\si{\ampere}$} &{$I_{\text{Z,Probe}}\si{\ampere}$} &{$I_{\text{K,Probe}}\si{\ampere}$} \\
+            {$I_{\text{Z,Spule}}[\si{\ampere}]$} & {$I_{\text{K,Spule}}[\si{\ampere}]$} &{$I_{\text{Z,Probe}}[\si{\ampere}$}] &{$I_{\text{K,Probe}}[\si{\ampere}]$} \\
             \midrule
             0.50 &   0.50 &    0.80 &    1.00 \\
             1.00 &   1.00 &    1.60 &    2.00 \\
@@ -461,6 +461,186 @@
             5.00 &     /  &    8.00 &    10.00\\
             \bottomrule
         \end{tabular}
-    \caption{Stromstärken Verläufe der unterschiedlichen Messreihen}
+    \caption{Stromstärken Verläufe der unterschiedlichen Messreihen.}
     \label{tab:messHall4}
     \end{table}
+
+    %%%Einheiten !!!!!
+    \begin{table}[H]
+        \centering
+        \begin{tabular}{S[table-format=3.3] @{$\pm{}$} S [table-format=1.3]  S [table-format=3.3] @{$\pm{}$} S [table-format=2.3]  }
+            \toprule
+            \multicolumn{2}{c}{ $ \text{Elektronendichte}_\text{Z,Spule} \si{\yotta\per\meter\cubed}$ } & \multicolumn{2}{c}{ $ \text{Elektronendichte}_\text{K,Spule} \si{\yotta\per\meter\cubed}$ }  \\
+            \midrule
+            29.361 & 3.084 & 167.098 & 17.553      \\
+            51.895 & 3.223 & 298.469 & 18.536      \\
+            74.223 & 3.444 & 431.403 & 20.017      \\
+            96.347 & 3.731 & 565.929 & 21.914      \\
+            118.449 & 4.073 & 702.076 & 24.144     \\
+            140.417 & 4.454 & 839.874 & 26.640     \\
+            162.253 & 4.862 & 979.351 & 29.349     \\
+            184.235 & 5.299 & / & /                \\
+            206.150 & 5.752 & / & /                \\
+            228.000 & 6.218 & / & /                \\
+            \bottomrule      
+        \end{tabular}
+    \caption {Elektronendichte für die ersten beiden Messreihen.}
+    \label{tab:Ergn1}
+    \end{table}
+
+    \begin{table}[H]
+        \centering
+        \begin{tabular}{ S [table-format=3.3] @{$\pm{}$} S [table-format=1.3] S [table-format=3.3] @{$\pm{}$} S [table-format=2.3] }
+            \toprule
+            \multicolumn{2}{c}{ $ \text{Elektronendichte}_\text{Z,Probe} [\si{\yotta\per\meter\cubed}]$ } & \multicolumn{2}{c}{ $ \text{Elektronendichte}_\text{K,Probe} [\si{\yotta\per\meter\cubed}]$ }\\
+            \midrule
+            330.104 & 9.002 & 82.121  & 2.605       \\
+            269.951 & 7.362 & 163.999 & 5.202      \\
+            254.493 & 6.940 & 245.635 & 7.791      \\
+            250.988 & 6.845 & 327.030 & 10.373     \\
+            244.128 & 6.658 & 408.186 & 12.947     \\
+            241.667 & 6.591 & 489.103 & 15.514     \\
+            239.669 & 6.536 & 570.620 & 18.100     \\
+            237.726 & 6.483 & 650.225 & 20.625     \\
+            236.237 & 6.442 & 730.432 & 23.169     \\
+            235.058 & 6.410 & 812.781 & 25.781     \\
+            \bottomrule      
+        \end{tabular}
+    \caption {Elektronendichte für die letzten beiden Messreihen.}
+    \label{tab:Ergn2}
+    \end{table}
+
+
+    \begin{table}[H]
+        \centering
+        \begin{tabular}{S[table-format=1.5] @{$\pm{}$} S [table-format=1.5]  S [table-format=1.5] @{$\pm{}$} S [table-format=1.5]  }
+            \toprule
+            \multicolumn{2}{c}{ $ \text{Ladungsträger pro Atom}_\text{Z,Spule} $ } & \multicolumn{2}{c}{ $ \text{Ladungsträger pro Atom}_\text{K,Spule} $ }  \\
+            \midrule
+            0.00045 & 0.00005 & 0.00198 & 0.00021   \\
+            0.00079 & 0.00005 & 0.00353 & 0.00022   \\
+            0.00113 & 0.00005 & 0.00510 & 0.00024   \\
+            0.00146 & 0.00006 & 0.00670 & 0.00026   \\
+            0.00180 & 0.00006 & 0.00831 & 0.00029   \\
+            0.00214 & 0.00007 & 0.00994 & 0.00032   \\
+            0.00247 & 0.00007 & 0.01159 & 0.00035   \\
+            0.00280 & 0.00008 & / & /               \\
+            0.00313 & 0.00009 & / & /               \\
+            0.00347 & 0.00009 & / & /               \\              
+            \bottomrule      
+        \end{tabular}
+    \caption {Ladungsträger pro Atom für die ersten beiden Messreihen.}
+    \label{tab:ErgZ1}
+    \end{table}
+%
+    \begin{table}[H]
+        \centering
+        \begin{tabular}{ S [table-format=1.5] @{$\pm{}$} S [table-format=1.5] S [table-format=1.5] @{$\pm{}$} S [table-format=1.5] }
+            \toprule
+            \multicolumn{2}{c}{ $ \text{Ladungsträger pro Atom}_\text{Z,Probe} $ } & \multicolumn{2}{c}{ $ \text{Ladungsträger pro Atom}_\text{K,Probe} $ }\\
+            \midrule
+            0.00502 & 0.00014 & 0.00097 & 0.00003     \\
+            0.00410 & 0.00011 & 0.00194 & 0.00006     \\
+            0.00387 & 0.00011 & 0.00291 & 0.00009     \\
+            0.00382 & 0.00010 & 0.00387 & 0.00012     \\
+            0.00371 & 0.00010 & 0.00483 & 0.00015     \\
+            0.00367 & 0.00010 & 0.00579 & 0.00018     \\
+            0.00364 & 0.00010 & 0.00675 & 0.00021     \\
+            0.00361 & 0.00010 & 0.00769 & 0.00024     \\
+            0.00359 & 0.00010 & 0.00864 & 0.00027     \\
+            0.00357 & 0.00010 & 0.00962 & 0.00031     \\
+            \bottomrule      
+        \end{tabular}
+    \caption {Ladungsträger pro Atom für die letzten beiden Messreihen.}
+    \label{tab:ErgZ2}
+    \end{table}
+
+    \begin{table}[H]
+        \centering
+        \begin{tabular}{S[table-format=1.5] @{$\pm{}$} S [table-format=1.5]  S [table-format=1.5] @{$\pm{}$} S [table-format=1.5]  }
+            \toprule
+            \multicolumn{2}{c}{ $ \text{Mittlere Flugzeit}_\text{Z,Spule}[\si{\nano\second}] $ } & \multicolumn{2}{c}{ $ \text{Mittlere Flugzeit}_\text{K,Spule}[\si{\nano\second}] $ }  \\
+            \midrule
+            1.40748 & 0.15239 & 2.73495 & 5.47747   \\
+            0.79631 & 0.05369 & 1.53117 & 3.06383   \\
+            0.55677 & 0.02968 & 1.05935 & 2.11928   \\
+            0.42892 & 0.02006 & 0.80753 & 1.61537   \\
+            0.34888 & 0.01509 & 0.65093 & 1.30207   \\
+            0.29430 & 0.01212 & 0.54414 & 1.08842   \\
+            0.25469 & 0.01015 & 0.46664 & 0.93339   \\
+            0.22431 & 0.00873 & / & /               \\
+            0.20046 & 0.00768 & / & /               \\
+            0.18125 & 0.00686 & / & /               \\              
+            \bottomrule      
+        \end{tabular}
+    \caption {Mittlere Flugzeit für die ersten beiden Messreihen.}
+    \label{tab:Ergtau1}
+    \end{table}
+%
+    \begin{table}[H]
+        \centering
+        \begin{tabular}{ S [table-format=1.5] @{$\pm{}$} S [table-format=1.5] S [table-format=1.5] @{$\pm{}$} S [table-format=1.5] }
+            \toprule
+            \multicolumn{2}{c}{ $ \text{Mittlere Flugzeit}_\text{Z,Probe} [\si{\nano\second}]$ } & \multicolumn{2}{c}{ $ \text{Mittlere Flugzeit}_\text{K,Probe} [\si{\nano\second}]$ }\\
+            \midrule
+            0.12519 & 0.00474 & 5.56503 & 11.13152     \\
+            0.15308 & 0.00579 & 2.78664 & 5.57401     \\
+            0.16238 & 0.00615 & 1.86051 & 3.72150     \\
+            0.16465 & 0.00623 & 1.39744 & 2.79525     \\
+            0.16928 & 0.00641 & 1.11960 & 2.23950     \\
+            0.17100 & 0.00647 & 0.93438 & 1.86900     \\
+            0.17242 & 0.00653 & 0.80089 & 1.60200     \\
+            0.17383 & 0.00658 & 0.70284 & 1.40587     \\
+            0.17493 & 0.00662 & 0.62567 & 1.25149     \\
+            0.17581 & 0.00665 & 0.56227 & 1.12470     \\
+            \bottomrule      
+        \end{tabular}
+    \caption {Mittlere Flugzeit für die letzten beiden Messreihen.}
+    \label{tab:Ergtau2}
+    \end{table}
+
+    
+    \begin{table}[H]
+        \centering
+        \begin{tabular}{S[table-format=3.3] @{$\pm{}$} S [table-format=2.3]  S [table-format=2.3] @{$\pm{}$} S [table-format=1.3]  }
+            \toprule
+            \multicolumn{2}{c}{ $ \text{Driftgeschwindigkeit}_\text{Z,Spule}[\si{\femto\meter\per\second}] $ } & \multicolumn{2}{c}{ $ \text{Driftgeschwindigkeit}_\text{K,Spule}[\si{\femto\meter\per\second}] $ }  \\
+            \midrule
+            212.602 & 22.332 & 37.356 & 3.924   \\
+            120.284 & 7.470 & 20.914 & 1.299    \\
+            84.101 & 3.902 & 14.470 & 0.671     \\
+            64.789 & 2.509 & 11.030 & 0.427     \\
+            52.699 & 1.812 & 8.891 & 0.306      \\
+            44.455 & 1.410 & 7.432 & 0.236      \\
+            38.472 & 1.153 & 6.374 & 0.191      \\
+            33.882 & 0.975 & / & /              \\
+            30.280 & 0.845 & / & /              \\
+            27.378 & 0.747 & / & /              \\              
+            \bottomrule      
+        \end{tabular}
+    \caption {Driftgeschwindigkeit für die ersten beiden Messreihen.}
+    \label{tab:Ergtau1}
+    \end{table}
+%
+    \begin{table}[H]
+        \centering
+        \begin{tabular}{ S [table-format=2.3] @{$\pm{}$} S [table-format=1.3] S [table-format=2.3] @{$\pm{}$} S [table-format=1.3] }
+            \toprule
+            \multicolumn{2}{c}{ $ \text{Driftgeschwindigkeit}_\text{Z,Probe} [\si{\femto\meter\per\second}]$ } & \multicolumn{2}{c}{ $ \text{Driftgeschwindigkeit}_\text{K,Probe} [\si{\femto\meter\per\second}]$ }\\
+            \midrule
+            18.910 & 0.516 & 76.012 & 2.411    \\
+            23.123 & 0.631 & 38.062 & 1.207   \\
+            24.528 & 0.669 & 25.412 & 0.806   \\
+            24.871 & 0.678 & 19.088 & 0.605   \\
+            25.569 & 0.697 & 15.293 & 0.485   \\
+            25.830 & 0.704 & 12.763 & 0.405   \\
+            26.045 & 0.710 & 10.939 & 0.347   \\
+            26.258 & 0.716 & 9.600 & 0.305   \\
+            26.423 & 0.721 & 8.546 & 0.271   \\
+            26.556 & 0.724 & 7.680 & 0.244   \\
+            \bottomrule      
+        \end{tabular}
+    \caption {Driftgeschwindigkeit für die letzten beiden Messreihen.}
+    \label{tab:Ergvd2}
+    \end{table}
+    

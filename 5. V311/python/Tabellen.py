@@ -124,15 +124,98 @@ n_sZink=np.load('python/variables/n_sZink.npy', allow_pickle=True)
 n_sKupfer=np.load('python/variables/n_sKupfer.npy', allow_pickle=True)
 app=unumpy.uarray([0,0,0],[0,0,0])
 n_sKupfer = np.append(n_sKupfer,app,axis=0)
-print(n_sKupfer)
+
 n_pZink=np.load('python/variables/n_pZink.npy', allow_pickle=True)
 n_pKupfer=np.load('python/variables/n_pKupfer.npy', allow_pickle=True)
 
-#np.savetxt(
-#    'build/Tabellen/nwerte.txt',
-#    np.column_stack([unumpy.nominal_values(n_sZink)/1e23,
-#     unumpy.std_devs(n_sZink)/1e23,unumpy.nominal_values(n_sKupfer)/1e23, unumpy.std_devs(n_sKupfer)/1e23]),
-#    fmt=['%.1f','%.1f','%.1f','%.1f'],       
-#    delimiter=' & ',
-#    header='n_sZinkvalue, n_sZinkerror, n_sZinkerror, n_sZinkerror'
-#)
+np.savetxt(
+    'build/Tabellen/nwerte.txt',
+    np.column_stack([unumpy.nominal_values(n_sZink)/1e24,unumpy.std_devs(n_sZink)/1e24
+     ,unumpy.nominal_values(n_sKupfer)/1e24, unumpy.std_devs(n_sKupfer)/1e24
+     ,unumpy.nominal_values(n_pZink)/1e24,unumpy.std_devs(n_pZink)/1e24
+     ,unumpy.nominal_values(n_pKupfer)/1e24,unumpy.std_devs(n_pKupfer)/1e24
+     ]),
+
+    fmt=['%.3f','%.3f','%.3f','%.3f','%.3f','%.3f','%.3f','%.3f'],       
+    delimiter=' & ',
+    header='n_sZinkvalue, n_sZinkerror, n_sZinkerror, n_sZinkerror'
+)
+
+Z_sZink = np.load('python/variables/Z_sZink.npy', allow_pickle=True)
+Z_sKupfer = np.load('python/variables/Z_sKupfer.npy', allow_pickle=True)
+app=unumpy.uarray([0,0,0],[0,0,0])
+Z_sKupfer = np.append(Z_sKupfer,app,axis=0)
+Z_pZink = np.load('python/variables/Z_pZink.npy', allow_pickle=True)
+Z_pKupfer = np.load('python/variables/Z_pKupfer.npy', allow_pickle=True)
+
+np.savetxt(
+    'build/Tabellen/Z.txt',
+    np.column_stack([unumpy.nominal_values(Z_sZink),unumpy.std_devs(Z_sZink)
+     ,unumpy.nominal_values(Z_sKupfer), unumpy.std_devs(Z_sKupfer)
+     ,unumpy.nominal_values(Z_pZink),unumpy.std_devs(Z_pZink)
+     ,unumpy.nominal_values(Z_pKupfer),unumpy.std_devs(Z_pKupfer)
+     ]),
+
+    fmt=['%.5f','%.5f','%.5f','%.5f','%.5f','%.5f','%.5f','%.5f'],       
+    delimiter=' & ',
+    header='n_sZinkvalue, n_sZinkerror, n_sZinkerror, n_sZinkerror'
+)
+
+tau_sZink = np.load('python/variables/tau_sZink.npy', allow_pickle=True)
+tau_sKupfer = np.load('python/variables/tau_sKupfer.npy', allow_pickle=True)
+tau_sKupfer =np.append(tau_sKupfer,app,axis=0)
+tau_pZink = np.load('python/variables/tau_pZink.npy', allow_pickle=True)
+tau_pKupfer = np.load('python/variables/tau_pKupfer.npy', allow_pickle=True)
+
+np.savetxt(
+    'build/Tabellen/tau.txt',
+    np.column_stack([unumpy.nominal_values(tau_sZink)*1e9,unumpy.std_devs(tau_sZink)*1e9
+     ,unumpy.nominal_values(tau_sKupfer)*1e9, unumpy.std_devs(tau_sKupfer)*1e9
+     ,unumpy.nominal_values(tau_pZink)*1e9,unumpy.std_devs(tau_pZink)*1e9
+     ,unumpy.nominal_values(tau_pKupfer)*1e9,unumpy.std_devs(tau_pKupfer)*1e9
+     ]),
+
+    fmt=['%.5f','%.5f','%.5f','%.5f','%.5f','%.5f','%.5f','%.5f'],       
+    delimiter=' & ',
+    header='n_sZinkvalue, n_sZinkerror, n_sZinkerror, n_sZinkerror'
+)
+
+vd_sZink = np.load('python/variables/vd_sZink.npy', allow_pickle=True)
+vd_sKupfer = np.load('python/variables/vd_sKupfer.npy', allow_pickle=True)
+vd_sKupfer = np.append(vd_sKupfer,app,axis=0)
+
+vd_pZink = np.load('python/variables/vd_pZink.npy', allow_pickle=True)
+vd_pKupfer = np.load('python/variables/vd_pKupfer.npy', allow_pickle=True)
+
+np.savetxt(
+    'build/Tabellen/vd.txt',
+    np.column_stack([unumpy.nominal_values(vd_sZink)*1e15,unumpy.std_devs(vd_sZink)*1e15
+     ,unumpy.nominal_values(vd_sKupfer)*1e15, unumpy.std_devs(vd_sKupfer)*1e15
+     ,unumpy.nominal_values(vd_pZink)*1e15,unumpy.std_devs(vd_pZink)*1e15
+     ,unumpy.nominal_values(vd_pKupfer)*1e15,unumpy.std_devs(vd_pKupfer)*1e15
+     ]),
+
+    fmt=['%.3f','%.3f','%.3f','%.3f','%.3f','%.3f','%.3f','%.3f'],       
+    delimiter=' & ',
+    header='n_sZinkvalue, n_sZinkerror, n_sZinkerror, n_sZinkerror'
+)
+
+Beweg_sZink = np.load('python/variables/Beweg_sZink.npy', allow_pickle=True)
+Beweg_sKupfer = np.load('python/variables/Beweg_sKupfer.npy', allow_pickle=True)
+Beweg_sKupfer = np.append(Beweg_sKupfer,app,axis=0)
+
+Beweg_pZink = np.load('python/variables/Beweg_pZink.npy', allow_pickle=True)
+Beweg_pKupfer = np.load('python/variables/Beweg_pKupfer.npy', allow_pickle=True)
+
+np.savetxt(
+    'build/Tabellen/vd.txt',
+    np.column_stack([unumpy.nominal_values(vd_sZink)*1e15,unumpy.std_devs(vd_sZink)*1e15
+     ,unumpy.nominal_values(vd_sKupfer)*1e15, unumpy.std_devs(vd_sKupfer)*1e15
+     ,unumpy.nominal_values(vd_pZink)*1e15,unumpy.std_devs(vd_pZink)*1e15
+     ,unumpy.nominal_values(vd_pKupfer)*1e15,unumpy.std_devs(vd_pKupfer)*1e15
+     ]),
+
+    fmt=['%.3f','%.3f','%.3f','%.3f','%.3f','%.3f','%.3f','%.3f'],       
+    delimiter=' & ',
+    header='n_sZinkvalue, n_sZinkerror, n_sZinkerror, n_sZinkerror'
+)

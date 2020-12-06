@@ -83,15 +83,15 @@
     \subsection{Ladungsträger pro Volumen}
     
 
-    Zur Berechnung der Hall Spannung wird zunaechst das Magnetfeld der Spule in abhaengigkeit von der Stromstaerke bestimmt.
+    Zur Berechnung der Hall Spannung wird zunächst das Magnetfeld der Spule in Abhängigkeit von der Stromstärke bestimmt.
 
     \begin{figure}[H]
         \centering
         \includegraphics[width=0.7\textwidth]{build/Magnetfeld.pdf}
-        \caption{Ein Plot der Magnetfeldstaerke gegen die Stromstaerke.}
+        \caption{Ein Plot der Magnetfeldstärke gegen die Stromstaerke.}
         \label{img:Magnetfeld}
     \end{figure}
-
+    \noindent
     In diesem Plot sind die Magnetfelder bei steigender und abfallender Stromstaerke \ref{tab:messMag} und der jeweilige lineare Fit zu den 
     Messwerten eingezeichnet.
     Die Ausgleichsgerade der Form $\text{a}\cdot x = \text{b}$ hat dann die Werte:
@@ -99,23 +99,24 @@
         \text{a} & = \num{254(5)e-3}\\
         \text{b} & = \num{36.750(16)e-3}
     \end{align}
-    Und gibt nun in allen folgenden Rechnungen einen Wert für das Magnetfeld wenn nur ein Wert für den Spulenstrom bekannt ist
+    In allen folgenden Rechnungen gibt diese Funktion nun einen Wert für das Magnetfeld, wenn nur ein Wert für den Spulenstrom bekannt ist.
 
-
+    \noindent
     Aus der Formel \ref{eqn:uhall} lässt sich nun eine Formel für die Ladungsträger pro Volumen herleiten:
     \begin{align}
         n &= \frac{-BI}{Ud\cdot\text{e}_0}
     \end{align}
     mit $B$ der magnetischen Feldstärke, $I$ der Stromstärke, $U$ der Hall-Spannung, $d$ der Dicke der jeweiligen Proben und $\text{e}_0$ der 
-    elementar Ladung eines Elektron.
-
-    Mit den angegeben Messwerten berechnen sich nun folgende Messwert:
+    elementar Ladung.
+    \noindent
+    Mit den angegeben Messwerten lässt sich nun die Elektronendichte pro Volumen bestimmen. Dies findet man in den nachfolgenden Plots:
     \begin{figure}[H]
         \centering
         \includegraphics[width=1.1\textwidth]{build/N.pdf}
         \caption{Ein Plot der Elektronendichte gegen die Stromstaerke.}
         \label{img:elekdichte}
     \end{figure}
+    \noindent
     Die durch die Plots veranschaulichten Werte sind auch in der Tabelle ?ref? zu finden.
 
 
@@ -126,13 +127,13 @@
     \begin{equation}
         \frac{\text{Atome}}{\text{V}} = \frac{\rho \cdot \symup{N_A}}{\symup{m_{mol}}}
     \end{equation}
-    Mit $\rho$ der Dichte des Metalls, $\symup{N_A}=\SI{6.02214076e23}{\per\mole}$ der Avogrado-Konstante und $\symup{m_mol}$ der 
+    Mit $\rho$ der Dichte des Metalls, $\symup{N_A}=\SI{6.02214076e23}{\per\mole}$ der Avogrado-Konstante und $\symup{m_\text{mol}}$ der 
     molaren Masse des Metalls.
-    Aus dieser Formel ergibt sich direkt die Formel für Z die Anzahl der Ladungsträger pro Atom:
+    Aus dieser Formel ergibt sich direkt die Formel für Z, die Anzahl der Ladungsträger pro Atom:
     \begin{equation}
         Z=\frac{n \cdot \symup{m_{mol}}}{\rho \cdot \symup{N_A}}
     \end{equation}
-    Mit den stoffspezifischen Größen:
+    Mit den stoffspezifischen Größen
     \begin{table}[H]
         \centering
         %\caption{Die Messwerte}
@@ -144,29 +145,31 @@
             \text{Kupfer} & 8.92 & 63.55 \\
             \bottomrule
         \end{tabular}
-    \caption{Eine Tabelle mit stoffspezifischen Größen der Metalle}
+    \caption{Eine Tabelle mit stoffspezifischen Größen der Metalle.}
     \label{tab:spez}
     \end{table}
-
+    \noindent
     lässt sich nun Z berechnen. In den folgenden Plots ist Z für die unterschiedlichen Messreihen angegeben.
     \begin{figure}[H]
         \centering
         \includegraphics[width=1.1\textwidth]{build/Z.pdf}
-        \caption{Ein Plot der Elektronendichte gegen die Stromstaerke.}
+        \caption{Ein Plot der Elektronendichte gegen die Stromstärke.}
         \label{img:elekZahl}
     \end{figure}
-    Die zugehörigen sind auch wieder in der Tabelle ?ref? zu finden.
+    \noindent
+    Die zugehörigen Ergebnisse sind auch wieder in der Tabelle ?ref? zu finden.
 
 
-    \subsection{mittlere Flugzeit}
+    \subsection{Mittlere Flugzeit}
 
     
     Die Formel \ref{eqn:rho} wir so umgestellt, dass wir folgende Formel erhalten:
     \begin{equation}
         \overline{\tau} =\frac{2}{n}\frac{\symup{m_0}}{\symup{e_0}^2 \cdot \rho}
     \end{equation}
-    In dieser Formel rechnen wir wieder mit dem reziproken spezifischen Widerstand $\rho$ und der Elektronenmasse
-    $\symup{m_0} = \SI{9.109e-31}{\kilogram}$. Das einsetzten der Werte für $n$ und $\rho$ ergibt dann folgende Werte ?ref?:
+    In dieser Formel rechnen wir mit dem Reziproken des spezifischen Widerstand $\rho$ und der Elektronenmasse
+    $\symup{m_0} = \SI{9.109e-31}{\kilogram}$. Das einsetzten der Werte für $n$ und $\rho$ ergibt dann folgende Werte ?ref?.
+    Geplotet findet man sie in den nachfolgenden Abbildungen.
 
     \begin{figure}[H]
         \centering
@@ -176,7 +179,7 @@
     \end{figure}
 
 
-    \subsection{mittlere Driftgeschwindigkeit}
+    \subsection{Mittlere Driftgeschwindigkeit}
 
 
     Die mittlere Driftgeschwindigkeit $\overline{v_d}$ berechnet sich aus:
@@ -184,7 +187,7 @@
         \overline{v_d} = \frac{-n \cdot \symup{e_0}}{\symup{j}}
     \end{equation}
     mit der Stromdichte j = $\SI{1}{\ampere\per\milli\meter\squared}$.
-
+    \noindent
     Einsetzten ergibt dann ?ref?:
     \begin{figure}[H]
         \centering
@@ -201,8 +204,8 @@
     \begin{equation}
         \mu= -\frac{1}{2}\frac{\symup{e_0}}{\symup{m_0}}\cdot   \overline{\tau}
     \end{equation}
-    stellt eine Beziehung zwischen $\tau$ und $\mu$ auf, mit den Werten für $\tau$ ?ref? berechnen sich nun folgende Werte 
-    für $\tau$ ?ref?:
+    stellt eine Beziehung zwischen $\overline{\tau}$ und $\mu$ auf. Mit den Werten für $\overline{\tau}$ ?ref? berechnen sich nun folgende Werte 
+    für $\overline{\mu}$ ?ref?:
 
     \begin{figure}[H]
         \centering
@@ -215,7 +218,7 @@
     \subsection{Totalgeschwindigkeit}
 
 
-    Für die Totalgeschwindigkeit wird zunaechst ein Wert für die Fermi-Energie berechnet werden, diese berechnet sich mittels der Formel:
+    Für die Totalgeschwindigkeit wird zunächst ein Wert für die Fermi-Energie berechnet werden, diese berechnet sich mittels der Formel:
     \begin{equation}
         E_F = \frac{\symup{h}^2}{2 \cdot \symup{m_0}}\sqrt{\left(\frac{3}{8\pi}\right)^2}
     \end{equation}
@@ -235,7 +238,7 @@
         |\overline{v}| \approx \sqrt{\frac{2E_F}{\symup{m_0}}} \nonumber
     \end{equation}
 
-    die Totalgeschwindigkeit bestimmen: ?ref?
+    die Totalgeschwindigkeit bestimmen ?ref?: 
 
     \begin{figure}[H]
         \centering
@@ -245,10 +248,10 @@
     \end{figure}
 
 
-    \subsection{mittlere freie Weglänge}
+    \subsection{Mittlere freie Weglänge}
 
 
-    Die mittlere freie Weglänge lässt sich nun mit der Totalgeschwindigkeit$|\overline{v}|$ und mittleren Flugzeit$\tau$ berechnen:
+    Die mittlere freie Weglänge lässt sich nun mit der Totalgeschwindigkeit $|\overline{v}|$ und mittleren Flugzeit $\overline{\tau}$ berechnen:
     \begin{equation}
         \overline{l} \approx \overline{\tau} \cdot |\overline{v}| \nonumber
     \end{equation}
@@ -257,14 +260,15 @@
     \begin{figure}[H]
         \centering
         \includegraphics[width=1.1\textwidth]{build/mittlere_Weglänge.pdf}
-        \caption{Ein Plot der mittleren freien Weglänge gegen die Stromstaerke.}
+        \caption{Ein Plot der mittleren freien Weglänge gegen die Stromstärke.}
         \label{img:mfl}
     \end{figure}
+    \noindent
     Die Zahlenwerte zu den Plots befinden sich hier ?ref?
 
     \subsection{Elektronenleitung}
     Da von der Tatsache ausgegangen wird, dass Kupfer ein Elektronenleiter ist und bei Kupfer und Zink unterschiedliche Vorzeichen für
-    die Hall-Spannung gemessen wurde, ist relativ Sicher, dass bei Zink die Löcherleitung überwiegt.
+    die Hall-Spannung gemessen wurde, ist relativ sicher, dass bei Zink die Löcherleitung überwiegt.
 
 
 

@@ -57,11 +57,11 @@ R_Zink=ufloat(np.mean(R_Zink_array),np.std(R_Zink_array))
 R_Kupfer=ufloat(np.mean(R_Kupfer_array),np.std(R_Kupfer_array))
 
 Durch_Zink=ufloat(2.63e-4,2.63e-6)
-Durch_Kupfer=ufloat(1.052e-4,1.052e-4)
+Durch_Kupfer=ufloat(1.052e-4,1.052e-6)
 L_Zink=1.73
 L_Kupfer=1.73
-spez_R_Zink=np.pi * Durch_Zink**2 * R_Zink / L_Zink
-spez_R_Kupfer=np.pi * Durch_Kupfer**2 * R_Kupfer / L_Kupfer
+spez_R_Zink=np.pi * Durch_Zink**2 * R_Zink /(4* L_Zink)
+spez_R_Kupfer=np.pi * Durch_Kupfer**2 * R_Kupfer /(4* L_Kupfer)
 print(spez_R_Zink)
 print(spez_R_Kupfer)
 #       b)

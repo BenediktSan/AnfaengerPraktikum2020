@@ -62,7 +62,8 @@ L_Zink=1.73
 L_Kupfer=1.73
 spez_R_Zink=np.pi * Durch_Zink**2 * R_Zink / L_Zink
 spez_R_Kupfer=np.pi * Durch_Kupfer**2 * R_Kupfer / L_Kupfer
-
+print(spez_R_Zink)
+print(spez_R_Kupfer)
 #       b)
 ###         Hall-Effekt
 U_H_Zink_I_Sv =   0.5*( Zink_Is_U_H_1 +   Zink_Is_U_H_2   )

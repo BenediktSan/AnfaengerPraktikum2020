@@ -81,7 +81,7 @@ np.savetxt(
 np.savetxt(
     'build/Tabellen/U_Hall_konst_Probe_Zink.txt',
     np.column_stack([I_s_Zink, Zink_Is_U_H_1, Zink_Is_U_H_2]),
-    fmt="%-5s",       
+    fmt=['%.2f','%.6f','%.6f',],       
     delimiter=' & ',
     header='I_s_Zink, Zink_Is_U_H_1, Zink_Is_U_H_2',
 )
@@ -89,7 +89,7 @@ np.savetxt(
 np.savetxt(
     'build/Tabellen/U_Hall_konst_Probe_Kupfer.txt',
     np.column_stack([I_s_Kupfer, Kupfer_Is_U_H_1, Kupfer_Is_U_H_2]),
-    fmt="%-5s",       
+    fmt=['%.2f','%.6f','%.6f',],       
     delimiter=' & ',
     header='I_s_Kupfer, Kupfer_Is_U_H_1, Kupfer_Is_U_H_2',
 )
@@ -122,7 +122,8 @@ np.savetxt(
 )
 n_sZink=np.load('python/variables/n_sZink.npy', allow_pickle=True)
 n_sKupfer=np.load('python/variables/n_sKupfer.npy', allow_pickle=True)
-n_sKupfer = np.append(n_sKupfer,[0,0,0],axis=0)
+app=unumpy.uarray([0,0,0],[0,0,0])
+n_sKupfer = np.append(n_sKupfer,app,axis=0)
 print(n_sKupfer)
 n_pZink=np.load('python/variables/n_pZink.npy', allow_pickle=True)
 n_pKupfer=np.load('python/variables/n_pKupfer.npy', allow_pickle=True)
@@ -131,7 +132,7 @@ n_pKupfer=np.load('python/variables/n_pKupfer.npy', allow_pickle=True)
 #    'build/Tabellen/nwerte.txt',
 #    np.column_stack([unumpy.nominal_values(n_sZink)/1e23,
 #     unumpy.std_devs(n_sZink)/1e23,unumpy.nominal_values(n_sKupfer)/1e23, unumpy.std_devs(n_sKupfer)/1e23]),
-#    fmt=['%.1f','%.1f'],       
+#    fmt=['%.1f','%.1f','%.1f','%.1f'],       
 #    delimiter=' & ',
-#    header='n_sZinkvalue, n_sZinkerror'
+#    header='n_sZinkvalue, n_sZinkerror, n_sZinkerror, n_sZinkerror'
 #)

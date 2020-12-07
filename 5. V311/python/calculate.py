@@ -214,7 +214,7 @@ Beweg_sZink= Beweg(tau_sZink)
 Beweg_sKupfer = Beweg(tau_sKupfer)
 
 Beweg_pZink= Beweg(tau_pZink)
-Beweg_pKupfer = Beweg(tau_pZink)
+Beweg_pKupfer = Beweg(tau_pKupfer)
 
 np.save('python/variables/Beweg_sZink.npy', Beweg_sZink, allow_pickle=True)
 np.save('python/variables/Beweg_sKupfer.npy', Beweg_sKupfer, allow_pickle=True)

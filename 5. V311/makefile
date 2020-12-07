@@ -24,7 +24,7 @@ build/plot1.pdf: python/variables/B_abfallend.npy python/variables/param1.npy	|b
 # hier weitere Abhängigkeiten für build/main.pdf deklarieren:
 build/Protokoll_V311.pdf:  latex/auswertung.tex latex/theorie.tex latex/durchf.tex latex/diskussion.tex build/plot1.pdf build/Tabellen/U_Hall_konst_Probe_Zink.txt| build
 	lualatex --output-directory=build --interaction=batchmode --halt-on-error latex/Protokoll_V311.tex
-	biber build/Protokoll_V203.bcf
+	biber build/Protokoll_V311.bcf
 	lualatex --output-directory=build --interaction=batchmode --halt-on-error latex/Protokoll_V311.tex
 
 

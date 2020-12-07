@@ -208,11 +208,69 @@ Beweg_pZink = np.load('python/variables/Beweg_pZink.npy', allow_pickle=True)
 Beweg_pKupfer = np.load('python/variables/Beweg_pKupfer.npy', allow_pickle=True)
 
 np.savetxt(
-    'build/Tabellen/vd.txt',
-    np.column_stack([unumpy.nominal_values(vd_sZink)*1e15,unumpy.std_devs(vd_sZink)*1e15
-     ,unumpy.nominal_values(vd_sKupfer)*1e15, unumpy.std_devs(vd_sKupfer)*1e15
-     ,unumpy.nominal_values(vd_pZink)*1e15,unumpy.std_devs(vd_pZink)*1e15
-     ,unumpy.nominal_values(vd_pKupfer)*1e15,unumpy.std_devs(vd_pKupfer)*1e15
+    'build/Tabellen/Beweglichkeit.txt',
+    np.column_stack([unumpy.nominal_values(Beweg_sZink),unumpy.std_devs(Beweg_sZink)
+     ,unumpy.nominal_values(Beweg_sKupfer), unumpy.std_devs(Beweg_sKupfer)
+     ,unumpy.nominal_values(Beweg_pZink),unumpy.std_devs(Beweg_pZink)
+     ,unumpy.nominal_values(Beweg_pKupfer),unumpy.std_devs(Beweg_pKupfer)
+     ]),
+
+    fmt=['%.3f','%.3f','%.3f','%.3f','%.3f','%.3f','%.3f','%.3f'],       
+    delimiter=' & ',
+    header='n_sZinkvalue, n_sZinkerror, n_sZinkerror, n_sZinkerror'
+)
+
+FE_sZink= np.load('python/variables/FE_sZink.npy', allow_pickle=True)
+FE_sKupfer = np.load('python/variables/FE_sKupfer.npy', allow_pickle=True)
+FE_sKupfer = np.append(FE_sKupfer,app,axis=0)
+FE_pZink = np.load('python/variables/FE_pZink.npy', allow_pickle=True)
+FE_pKupfer = np.load('python/variables/FE_pKupfer.npy', allow_pickle=True)
+e0=-1.602e-19
+np.savetxt(
+    'build/Tabellen/FE.txt',
+    np.column_stack([unumpy.nominal_values(FE_sZink)/-e0,unumpy.std_devs(FE_sZink)/-e0
+     ,unumpy.nominal_values(FE_sKupfer)/-e0, unumpy.std_devs(FE_sKupfer)/-e0
+     ,unumpy.nominal_values(FE_pZink)/-e0,unumpy.std_devs(FE_pZink)/-e0
+     ,unumpy.nominal_values(FE_pKupfer)/-e0,unumpy.std_devs(FE_pKupfer)/-e0
+     ]),
+
+    fmt=['%.3f','%.3f','%.3f','%.3f','%.3f','%.3f','%.3f','%.3f'],       
+    delimiter=' & ',
+    header='n_sZinkvalue, n_sZinkerror, n_sZinkerror, n_sZinkerror'
+)
+
+vT_sZink = np.load('python/variables/vT_sZink.npy', allow_pickle=True)
+vT_sKupfer = np.load('python/variables/vT_sKupfer.npy', allow_pickle=True)
+vT_sKupfer = np.append(vT_sKupfer,app,axis=0)
+vT_pZink = np.load('python/variables/vT_pZink.npy', allow_pickle=True)
+vT_pKupfer = np.load('python/variables/vT_pKupfer.npy', allow_pickle=True)
+
+np.savetxt(
+    'build/Tabellen/vT.txt',
+    np.column_stack([unumpy.nominal_values(vT_sZink)*1e-3,unumpy.std_devs(vT_sZink)*1e-3
+     ,unumpy.nominal_values(vT_sKupfer)*1e-3, unumpy.std_devs(vT_sKupfer)*1e-3
+     ,unumpy.nominal_values(vT_pZink)*1e-3,unumpy.std_devs(vT_pZink)*1e-3
+     ,unumpy.nominal_values(vT_pKupfer)*1e-3,unumpy.std_devs(vT_pKupfer)*1e-3
+     ]),
+
+    fmt=['%.3f','%.3f','%.3f','%.3f','%.3f','%.3f','%.3f','%.3f'],       
+    delimiter=' & ',
+    header='n_sZinkvalue, n_sZinkerror, n_sZinkerror, n_sZinkerror'
+)
+
+mWeg_sZink = np.load('python/variables/mWeg_sZink.npy', allow_pickle=True)
+mWeg_sKupfer = np.load('python/variables/mWeg_sKupfer.npy', allow_pickle=True)
+mWeg_sKupfer = np.append(mWeg_sKupfer,app,axis=0)
+
+mWeg_pZink = np.load('python/variables/mWeg_pZink.npy', allow_pickle=True)
+mWeg_pKupfer = np.load('python/variables/mWeg_pKupfer.npy', allow_pickle=True)
+
+np.savetxt(
+    'build/Tabellen/mWeg.txt',
+    np.column_stack([unumpy.nominal_values(mWeg_sZink)*1e3,unumpy.std_devs(mWeg_sZink)*1e3
+     ,unumpy.nominal_values(mWeg_sKupfer)*1e3, unumpy.std_devs(mWeg_sKupfer)*1e3
+     ,unumpy.nominal_values(mWeg_pZink)*1e3,unumpy.std_devs(mWeg_pZink)*1e3
+     ,unumpy.nominal_values(mWeg_pKupfer)*1e3,unumpy.std_devs(mWeg_pKupfer)*1e3
      ]),
 
     fmt=['%.3f','%.3f','%.3f','%.3f','%.3f','%.3f','%.3f','%.3f'],       

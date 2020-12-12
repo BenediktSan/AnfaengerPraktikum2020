@@ -53,14 +53,14 @@ Reff=uparams[1]*4*np.pi*L
 Tex=1/(2*np.pi*uparams[1])
 print(f'\nReff= {Reff:.4f}ohm \nTex={Tex*10**6:.10f} *10^-6s\nReff-R1={(Reff-R1):.4f} \n')
 
-#aperdiodischer Grenzfall
+###aperdiodischer Grenzfall
 
 
 Raptheo=unp.sqrt((4*L)/(C))
 print(f'\nAperiodischer Grenzfall:\nRap= {Rap:}ohm\nRaptheo={(Raptheo):.4f}ohm \nrelative Abweichung: {((Raptheo-Rap)/Rap)*100}%\n')
 
 
-#Resonanzüberhöhung
+###Resonanzüberhöhung
 R1_=R1+50
 w0=unp.sqrt(1/(L*C))
 qexp=3.8
@@ -70,6 +70,36 @@ qtheo=1/(w0*R1_*C)
 breitetheo=R1_/L *10**-3
 print(f'\nResonanzüberhöhung\nw0= {w0} 1/s \nqexp={qexp}ohne einheit \nqtheo={(qtheo)}ohne einheit \nrelative Abweichung: {((qtheo-qexp)/qexp)*100}%\n')
 print(f'\nbreitetheo={breitetheo} kHz\n')
+
+
+#neue größen für lineare darstellung
+Unew=np.array([1.44,2.16,2.4,3,3.4,3.72,3.8,3.64,3.12,2.44,1.6,1.24]) 
+fnew=np.array([15,20,21,23,24,25,26,27,28.5,30,33,35]) *1000
+
+#plotparameter
+k=np.linspace(3.8/np.sqrt(2),3.8/np.sqrt(2),25)
+x=np.linspace(14,36,25)*1000
+x2=np.linspace(20,32,50)*1000
+
+#halbwertbreite plotparameter
+h=unp.nominal_values(6.9)*10**3
+halb1=np.linspace(26000+h/2,26000+h/2,25)
+halb2=np.linspace(26000-h/2,26000-h/2,25)
+höhe=np.linspace(1.35,4,25)
+
+
+#fit für schnittpunkt mit halbwertsbreite
+Unew2=np.array([3,3.4,3.72,3.8,3.64,3.12,2.44]) 
+fnew2=np.array([23,24,25,26,27,28.5,30]) *1000
+
+def square(f,A,B,C):
+    return (B*(f-A)**2+C)
+
+params2, _2= curve_fit(square,fnew2,Unew2,p0=(25000,1,4))
+err2 = np.sqrt(np.diag(_2))
+uparams2=unp.uarray(params2,err2)
+print(f'\nFit2:\nFunktionswerte= {uparams2}\n')
+
 
 
 
@@ -86,24 +116,14 @@ plt.tight_layout()
 plt.legend()
 plt.savefig("build/plots/plot1.pdf")
 
-#neue größe für lineare darstellung
-Unew=np.array([1.44,2.16,2.4,3,3.4,3.72,3.8,3.64,3.12,2.44,1.6,1.24]) 
-fnew=np.array([15,20,21,23,24,25,26,27,28.5,30,33,35]) *1000
 
-k=np.linspace(3.8/np.sqrt(2),3.8/np.sqrt(2),25)
-x=np.linspace(14,36,25)*1000
-
-
-h=unp.nominal_values(6.9)*10**3
-halb1=np.linspace(26000+h/2,26000+h/2,25)
-halb2=np.linspace(26000-h/2,26000-h/2,25)
-höhe=np.linspace(1.35,4,25)
 
 plt.figure()
 plt.plot(fnew,Unew,"x",label="Messwerte")
 plt.plot(x,k,"g--",linewidth=0.6,label=r"$\frac{U_{max}}{\sqrt{2}}$")
 plt.plot(halb1,höhe,"g--",linewidth=0.6,label=r"Halbwertsbreite")
 plt.plot(halb2,höhe,"g--",linewidth=0.6,label=r"Halbwertsbreite")
+plt.plot(x2,square(x2,*params2))
 plt.xlabel("f [Hz]")
 plt.ylabel("Uc/U [V]")
 plt.tight_layout()

@@ -6,4 +6,159 @@
 
 \section{Theoretische Grundlagen}
 
-    \subsection{}
+    \subsection{Herleitung gedämpfter Schwingkreis}
+
+    \begin{equation}
+    U_{\symup{R}} + U_{\symup{C}} + U_{\symup{L}} +  = 0     
+    \end{equation}
+
+    \begin{align}
+        U_{\symup{R}} & = RI \\
+        U_{\symup{C}} & = \frac{Q}{C}\\
+        U_{\symup{L}} & = L \cdot \symup{\frac{d}{dt}}I
+    \end{align}
+
+    \begin{align}
+        L  \symup{\frac{d}{dt}}I + RI + \frac{Q}{C} & = 0\\
+        \symup{\frac{d^2}{dt^2}}I + \frac{R}{L} \symup{\frac{d}{dt}}I + \frac{1}{LC}I & = 0
+    \end{align}
+    
+    \begin{equation}
+        I(t) = Z \cdot \symup{e}^{j \tilde{w} t}
+    \end{equation}
+
+    \begin{equation}
+        \tilde{w}^2 - j \frac{R}{L}\tilde{w} - \frac{1}{LC} = 0
+    \end{equation}
+
+    \begin{equation}
+        \tilde{w}_{1,2} = j \frac{R}{2L} \pm \sqrt{\frac{1}{LC}-\frac{R^2}{4L}}
+    \end{equation}
+    
+    \begin{equation}
+        I(t) = Z_1 \cdot \symup{e}^{j \tilde{w}_1t} + Z_2 \cdot \symup{e}^{j\tilde{w}_2 t}
+    \end{equation}
+    mit 
+    \begin{align}
+        2 \pi \mu & \coloneq \frac{R}{2L} \\ 
+        2 \pi \tilde{\nu} & \coloneq \sqrt{\frac{1}{LC} - \frac{R^2}{4L^2}}
+    \end{align}
+
+    \begin{equation}
+        I(t) = \symup{e}^{- 2 \pi \mu t} \cdot  (Z_1 \symup{e}^{j 2\pi \tilde{v}t} + Z_2 \symup{e}^{-j 2\pi \tilde{v} t})
+    \end{equation}
+
+    \subsection{Fallunterscheidung}
+
+        \subsubsection{1.Fall}
+
+        \begin{equation}
+            \frac{1}{LC} > \frac{R^2}{4L^2} 
+        \end{equation}
+        
+        $v \in \mathds{R}$
+       
+        für $Z_1 = \overline{Z_2}$ ist $I(t) \in \mathds{R}$
+
+        \begin{align}
+            Z_1 & = \frac{1}{2} A_0 \symup{e}^{j \eta }\\
+            Z_2 & = \frac{1}{2} A_0 \symup{e}^{-j \eta}
+        \end{align}
+
+        aus
+
+        \begin{equation}
+            \frac{\symup{e}^{j \phi} + \symup{e}^{-j \phi}}{2} = cos(\phi)
+        \end{equation}
+
+        ergibt sich:
+
+        \begin{equation}
+            I(t) = A_0 \symup{e}^{- 2 \pi \mu t} \cdot cos(2\pi \nu t + \eta)
+        \end{equation}
+
+        \begin{equation}
+            T = \frac{1}{\nu} = \frac{2 \pi}{\sqrt{\frac{1}{LC}-\frac{R^2}{4L^2}}}
+        \end{equation}
+
+        mit 
+        \begin{equation}
+            \frac{1}{LC} > \frac{R^2}{4L^2}
+        \end{equation}
+
+        ist
+        \begin{equation}
+            T_0 = \frac{2\pi}{\omega_0} = 2\pi \sqrt{LC}
+        \end{equation}
+
+        \begin{equation}
+            T_{\text{exp}} = \frac{1}{2 \pi \mu } = \frac{2L}{R}
+        \end{equation}
+
+        \subsubsection{2. Fall}
+
+        \begin{equation}
+            \frac{1}{LC} < \frac{R^2}{4L^2}
+        \end{equation}
+        $\tilde{v} \in \mathds{C}$
+
+        \begin{equation}
+            I \sim e^{- \left( \frac{R}{2L} - \sqrt{\frac{R^2}{4L^2} - \frac{1}{LC}}\right) t}
+        \end{equation}
+
+        Spefzialfall für:
+        \begin{equation}
+            \frac{1}{LC} = \frac{R^2_{\text{ap}}}{4L^2}
+        \end{equation}
+
+        $\nu = 0$
+
+        \begin{equation}
+            I(t) = A \symup{e}^{-\frac{R}{2L}t} = A \symup{e}^{-\frac{t}{LC}}
+        \end{equation}
+
+        \subsection{vergleich Mechanik}
+
+        \begin{equation}
+            m \ddot{x} + s \dot{x} + Dx = 0
+        \end{equation}
+
+        \begin{align}
+            m \Leftrightarrow L \\
+            s \Leftrightarrow R \\
+            D \Leftrightarrow \frac{1}{C}
+        \end{align}
+
+    \subsection{erzwungene Schwingungen}
+
+    \begin{equation}
+        u(t)= \symup{U_0} \symup{e}^{j \omega t}
+    \end{equation}
+
+    \begin{equation}
+        L \dot{I} + R I + \frac{Q(t)}{C} = \symup{U_0} \symup{e}^{j \omega t}
+    \end{equation}
+
+    oder mit:
+    \begin{equation}
+        V_{\symup{C}} (t) = \frac{Q(t)}{C}
+    \end{equation}
+
+    ergibt sich:
+    \begin{equation}
+        LC \ddot{V}_{\symup{C}} + RC \dot{V}_{\symup{C}} + V_{\symup{C}} = \symup{U_0} \symup{e}^{j \omega t}
+    \end{equation}
+
+    mit $A \in  \mathds{C}$ der Amplitude der Kodensatorspannung:
+    \begin{equation}
+        u_{\symup{C}} (t) = A(\omega) \symup{e}^{j \omega t}
+    \end{equation}
+
+    \begin{equation}
+        -LC \omega^2 A + j\omega RC A +A = \symup{U_0}
+    \end{equation}
+
+    \begin{equation}
+        A= \frac{\symup{U_0}}{1 - LC \omega^2 + j \omega RC} = \frac{ \symup{U_0}(1 -LC \omega^2 - j\omega RC)}{\left( 1- LC \omega^2 \right)^2}
+    \end{equation}
+    

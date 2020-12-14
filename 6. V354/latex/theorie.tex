@@ -10,64 +10,71 @@
 
     Das 2. Kirchhoffsche Gesetz führt direkt zu seiner Beziehung der abfallenden Spannungen:
     \begin{equation}
-    U_{\symup{R}} + U_{\symup{C}} + U_{\symup{L}} +  = 0     \nonumber
+    U_{\symup{R}} + U_{\symup{C}} + U_{\symup{L}} +  = 0     
+    \label{eq:Uabfall}
     \end{equation}
 
-    
+    \noindent In die Formel \ref{eq:Uabfall} lassen sich nun die Schaltelement spezifischen Formeln  einsetzten
     \begin{align}
         U_{\symup{R}} & = RI \nonumber\\
         U_{\symup{C}} & = \frac{Q}{C}\nonumber\\
         U_{\symup{L}} & = L \cdot \symup{\frac{d}{dt}}I \nonumber
     \end{align}
 
+    \noindent Dies führt zu einer Differentialgleichung der Form:
     \begin{align}
         L  \symup{\frac{d}{dt}}I + RI + \frac{Q}{C} & = 0 \nonumber\\
-        \symup{\frac{d^2}{dt^2}}I + \frac{R}{L} \symup{\frac{d}{dt}}I + \frac{1}{LC}I & = 0 \nonumber
+        \symup{\frac{d^2}{dt^2}}I + \frac{R}{L} \symup{\frac{d}{dt}}I + \frac{1}{LC}I & = 0 
+        \label{eq:DGL1}
     \end{align}
     
+    \noindent Diese Differetialgleichung wird über den Ansatz einer komplexen e Funktion gelöst.
     \begin{equation}
-        I(t) = Z \cdot \symup{e}^{j \tilde{w} t} \nonumber
+        I(t) = Z \cdot \symup{e}^{j \tilde{w} t}
+        \label{eq:eAn}
     \end{equation}
 
+    \noindent Einsetzen von \ref{eq:eAn} in die DGL\ref{eq:DGL1} ergibt:
     \begin{equation}
-        \tilde{w}^2 - j \frac{R}{L}\tilde{w} - \frac{1}{LC} = 0 \nonumber
+        \tilde{\omega}^2 - j \frac{R}{L}\tilde{\omega} - \frac{1}{LC} = 0 \nonumber
     \end{equation}
 
+    \noindent Umstellen nach $\tilde{\omega}$ ergibt:
     \begin{equation}
-        \tilde{w}_{1,2} = j \frac{R}{2L} \pm \sqrt{\frac{1}{LC}-\frac{R^2}{4L}} \nonumber
+        \tilde{\omega}_{1,2} = j \frac{R}{2L} \pm \sqrt{\frac{1}{LC}-\frac{R^2}{4L}} \nonumber
     \end{equation}
     
+    \noindent $I(t)$ lässt sich nun also durch folgende Gleichung ausdrücken:
     \begin{equation}
         I(t) = Z_1 \cdot \symup{e}^{j \tilde{w}_1t} + Z_2 \cdot \symup{e}^{j\tilde{w}_2 t} \nonumber
     \end{equation}
-    mit 
+    
+    \noindent Die Definitionen für $\mu$ und $\nu$ bieten sich an um die Formel übersichtlicher zu gestalten.
     \begin{align}
         2 \pi \mu & \coloneq \frac{R}{2L} \nonumber\\ 
         2 \pi \tilde{\nu} & \coloneq \sqrt{\frac{1}{LC} - \frac{R^2}{4L^2}} \nonumber
     \end{align}
 
+    \noindent $I(t)$ lässt sich dann als:
     \begin{equation}
         I(t) = \symup{e}^{- 2 \pi \mu t} \cdot  (Z_1 \symup{e}^{j 2\pi \tilde{v}t} + Z_2 \symup{e}^{-j 2\pi \tilde{v} t}) \nonumber
     \end{equation}
-
+    \noindent schreiben. Um $I(t)$ weiter zu unterschen muss eine Fallunterscheidung gemacht werden. Hier wird unterschieden ob der 
+    Inhalt der Wurzel positiv oder negativ definiert ist und somit der Exponent reel oder imaginär ist. 
     \subsection{Fallunterscheidung}
 
         \subsubsection{1.Fall}
-
+        Zu erst wird der Fall
         \begin{equation}
             \frac{1}{LC} > \frac{R^2}{4L^2}  \nonumber
         \end{equation}
-        
-        $v \in \mathds{R}$
-       
-        für $Z_1 = \overline{Z_2}$ ist $I(t) \in \mathds{R}$ 
-
+        untersucht. Hier ist $v \in \mathds{R}$. Damit die Lösungsfunktion $I(t) \in \mathds{R}$ ist muss
+        $Z_1 = \overline{Z_2}$ sein. Dies lässt sich durh den Ansatz
         \begin{align}
             Z_1 & = \frac{1}{2} A_0 \symup{e}^{j \eta } \nonumber\\
             Z_2 & = \frac{1}{2} A_0 \symup{e}^{-j \eta} \nonumber
         \end{align}
-
-        aus
+        erreichen.
 
         \begin{equation}
             \frac{\symup{e}^{j \phi} + \symup{e}^{-j \phi}}{2} = cos(\phi) \nonumber
@@ -104,7 +111,7 @@
         $\tilde{v} \in \mathds{C}$
 
         \begin{equation}
-            I \sim e^{- \left( \frac{R}{2L} - \sqrt{\frac{R^2}{4L^2} - \frac{1}{LC}}\right) t} \nonumber
+            I \sim \symup{e}^{- \left( \frac{R}{2L} - \sqrt{\frac{R^2}{4L^2} - \frac{1}{LC}}\right) t} \nonumber
         \end{equation}
 
         Spefzialfall für:

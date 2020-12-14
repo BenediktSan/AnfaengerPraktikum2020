@@ -8,44 +8,46 @@
 
     \subsection{Herleitung gedämpfter Schwingkreis}
 
+    Das 2. Kirchhoffsche Gesetz führt direkt zu seiner Beziehung der abfallenden Spannungen:
     \begin{equation}
-    U_{\symup{R}} + U_{\symup{C}} + U_{\symup{L}} +  = 0     
+    U_{\symup{R}} + U_{\symup{C}} + U_{\symup{L}} +  = 0     \nonumber
     \end{equation}
 
+    
     \begin{align}
-        U_{\symup{R}} & = RI \\
-        U_{\symup{C}} & = \frac{Q}{C}\\
-        U_{\symup{L}} & = L \cdot \symup{\frac{d}{dt}}I
+        U_{\symup{R}} & = RI \nonumber\\
+        U_{\symup{C}} & = \frac{Q}{C}\nonumber\\
+        U_{\symup{L}} & = L \cdot \symup{\frac{d}{dt}}I \nonumber
     \end{align}
 
     \begin{align}
-        L  \symup{\frac{d}{dt}}I + RI + \frac{Q}{C} & = 0\\
-        \symup{\frac{d^2}{dt^2}}I + \frac{R}{L} \symup{\frac{d}{dt}}I + \frac{1}{LC}I & = 0
+        L  \symup{\frac{d}{dt}}I + RI + \frac{Q}{C} & = 0 \nonumber\\
+        \symup{\frac{d^2}{dt^2}}I + \frac{R}{L} \symup{\frac{d}{dt}}I + \frac{1}{LC}I & = 0 \nonumber
     \end{align}
     
     \begin{equation}
-        I(t) = Z \cdot \symup{e}^{j \tilde{w} t}
+        I(t) = Z \cdot \symup{e}^{j \tilde{w} t} \nonumber
     \end{equation}
 
     \begin{equation}
-        \tilde{w}^2 - j \frac{R}{L}\tilde{w} - \frac{1}{LC} = 0
+        \tilde{w}^2 - j \frac{R}{L}\tilde{w} - \frac{1}{LC} = 0 \nonumber
     \end{equation}
 
     \begin{equation}
-        \tilde{w}_{1,2} = j \frac{R}{2L} \pm \sqrt{\frac{1}{LC}-\frac{R^2}{4L}}
+        \tilde{w}_{1,2} = j \frac{R}{2L} \pm \sqrt{\frac{1}{LC}-\frac{R^2}{4L}} \nonumber
     \end{equation}
     
     \begin{equation}
-        I(t) = Z_1 \cdot \symup{e}^{j \tilde{w}_1t} + Z_2 \cdot \symup{e}^{j\tilde{w}_2 t}
+        I(t) = Z_1 \cdot \symup{e}^{j \tilde{w}_1t} + Z_2 \cdot \symup{e}^{j\tilde{w}_2 t} \nonumber
     \end{equation}
     mit 
     \begin{align}
-        2 \pi \mu & \coloneq \frac{R}{2L} \\ 
-        2 \pi \tilde{\nu} & \coloneq \sqrt{\frac{1}{LC} - \frac{R^2}{4L^2}}
+        2 \pi \mu & \coloneq \frac{R}{2L} \nonumber\\ 
+        2 \pi \tilde{\nu} & \coloneq \sqrt{\frac{1}{LC} - \frac{R^2}{4L^2}} \nonumber
     \end{align}
 
     \begin{equation}
-        I(t) = \symup{e}^{- 2 \pi \mu t} \cdot  (Z_1 \symup{e}^{j 2\pi \tilde{v}t} + Z_2 \symup{e}^{-j 2\pi \tilde{v} t})
+        I(t) = \symup{e}^{- 2 \pi \mu t} \cdot  (Z_1 \symup{e}^{j 2\pi \tilde{v}t} + Z_2 \symup{e}^{-j 2\pi \tilde{v} t}) \nonumber
     \end{equation}
 
     \subsection{Fallunterscheidung}
@@ -53,202 +55,202 @@
         \subsubsection{1.Fall}
 
         \begin{equation}
-            \frac{1}{LC} > \frac{R^2}{4L^2} 
+            \frac{1}{LC} > \frac{R^2}{4L^2}  \nonumber
         \end{equation}
         
         $v \in \mathds{R}$
        
-        für $Z_1 = \overline{Z_2}$ ist $I(t) \in \mathds{R}$
+        für $Z_1 = \overline{Z_2}$ ist $I(t) \in \mathds{R}$ 
 
         \begin{align}
-            Z_1 & = \frac{1}{2} A_0 \symup{e}^{j \eta }\\
-            Z_2 & = \frac{1}{2} A_0 \symup{e}^{-j \eta}
+            Z_1 & = \frac{1}{2} A_0 \symup{e}^{j \eta } \nonumber\\
+            Z_2 & = \frac{1}{2} A_0 \symup{e}^{-j \eta} \nonumber
         \end{align}
 
         aus
 
         \begin{equation}
-            \frac{\symup{e}^{j \phi} + \symup{e}^{-j \phi}}{2} = cos(\phi)
+            \frac{\symup{e}^{j \phi} + \symup{e}^{-j \phi}}{2} = cos(\phi) \nonumber
         \end{equation}
 
         ergibt sich:
         \begin{equation}
-            I(t) = A_0 \symup{e}^{- 2 \pi \mu t} \cdot cos(2\pi \nu t + \eta)
+            I(t) = A_0 \symup{e}^{- 2 \pi \mu t} \cdot cos(2\pi \nu t + \eta) \nonumber
         \end{equation}
 
         \begin{equation}
-            T = \frac{1}{\nu} = \frac{2 \pi}{\sqrt{\frac{1}{LC}-\frac{R^2}{4L^2}}}
+            T = \frac{1}{\nu} = \frac{2 \pi}{\sqrt{\frac{1}{LC}-\frac{R^2}{4L^2}}} \nonumber
         \end{equation}
 
         mit 
         \begin{equation}
-            \frac{1}{LC} > \frac{R^2}{4L^2}
+            \frac{1}{LC} > \frac{R^2}{4L^2} \nonumber
         \end{equation}
 
         ist
         \begin{equation}
-            T_0 = \frac{2\pi}{\omega_0} = 2\pi \sqrt{LC}
+            T_0 = \frac{2\pi}{\omega_0} = 2\pi \sqrt{LC} \nonumber
         \end{equation}
 
         \begin{equation}
-            T_{\text{exp}} = \frac{1}{2 \pi \mu } = \frac{2L}{R}
+            T_{\text{exp}} = \frac{1}{2 \pi \mu } = \frac{2L}{R} \nonumber
         \end{equation}
 
         \subsubsection{2. Fall}
 
         \begin{equation}
-            \frac{1}{LC} < \frac{R^2}{4L^2}
+            \frac{1}{LC} < \frac{R^2}{4L^2} \nonumber
         \end{equation}
         $\tilde{v} \in \mathds{C}$
 
         \begin{equation}
-            I \sim e^{- \left( \frac{R}{2L} - \sqrt{\frac{R^2}{4L^2} - \frac{1}{LC}}\right) t}
+            I \sim e^{- \left( \frac{R}{2L} - \sqrt{\frac{R^2}{4L^2} - \frac{1}{LC}}\right) t} \nonumber
         \end{equation}
 
         Spefzialfall für:
         \begin{equation}
-            \frac{1}{LC} = \frac{R^2_{\text{ap}}}{4L^2}
+            \frac{1}{LC} = \frac{R^2_{\text{ap}}}{4L^2} \nonumber
         \end{equation}
 
         $\nu = 0$
 
         \begin{equation}
-            I(t) = A \symup{e}^{-\frac{R}{2L}t} = A \symup{e}^{-\frac{t}{LC}}
+            I(t) = A \symup{e}^{-\frac{R}{2L}t} = A \symup{e}^{-\frac{t}{LC}} \nonumber
         \end{equation}
 
         \subsection{vergleich Mechanik}
 
         \begin{equation}
-            m \ddot{x} + s \dot{x} + Dx = 0
+            m \ddot{x} + s \dot{x} + Dx = 0 \nonumber
         \end{equation}
 
         \begin{align}
-            m \Leftrightarrow L \\
-            s \Leftrightarrow R \\
-            D \Leftrightarrow \frac{1}{C}
+            m \Leftrightarrow L  \nonumber\\
+            s \Leftrightarrow R  \nonumber\\
+            D \Leftrightarrow \frac{1}{C} \nonumber
         \end{align}
 
     \subsection{erzwungene Schwingungen}
 
     \begin{equation}
-        u(t)= \symup{U_0} \symup{e}^{j \omega t}
+        u(t)= \symup{U_0} \symup{e}^{j \omega t} \nonumber
     \end{equation}
 
     \begin{equation}
-        L \dot{I} + R I + \frac{Q(t)}{C} = \symup{U_0} \symup{e}^{j \omega t}
+        L \dot{I} + R I + \frac{Q(t)}{C} = \symup{U_0} \symup{e}^{j \omega t} \nonumber
     \end{equation}
 
     oder mit:
     \begin{equation}
-        V_{\symup{C}} (t) = \frac{Q(t)}{C}
+        V_{\symup{C}} (t) = \frac{Q(t)}{C} \nonumber
     \end{equation}
 
     ergibt sich:
     \begin{equation}
-        LC \ddot{V}_{\symup{C}} + RC \dot{V}_{\symup{C}} + V_{\symup{C}} = \symup{U_0} \symup{e}^{j \omega t}
+        LC \ddot{V}_{\symup{C}} + RC \dot{V}_{\symup{C}} + V_{\symup{C}} = \symup{U_0} \symup{e}^{j \omega t} \nonumber
     \end{equation}
 
     mit $A \in  \mathds{C}$ der Amplitude der Kodensatorspannung:
     \begin{equation}
-        u_{\symup{C}} (t) = A(\omega) \symup{e}^{j \omega t}
+        u_{\symup{C}} (t) = A(\omega) \symup{e}^{j \omega t} \nonumber
     \end{equation}
 
     \begin{equation}
-        -LC \omega^2 A + j\omega RC A +A = \symup{U_0}
+        -LC \omega^2 A + j\omega RC A +A = \symup{U_0} \nonumber
     \end{equation}
 
     \begin{equation}
-        A= \frac{\symup{U_0}}{1 - LC \omega^2 + j \omega RC} = \frac{ \symup{U_0}(1 -LC \omega^2 - j\omega RC)}{\left( 1- LC \omega^2 \right)^2}
+        A= \frac{\symup{U_0}}{1 - LC \omega^2 + j \omega RC} = \frac{ \symup{U_0}(1 -LC \omega^2 - j\omega RC)}{\left( 1- LC \omega^2 \right)^2} \nonumber
     \end{equation}
     
     \begin{equation}
-        |A|= \symup{U_0} \sqrt{\frac{\left(1-LC\omega^2\right)^2 + \omega^2 R^2C^2}{\left( \left(1 -LC \omega^2\right)^2 +w^2R^2C^2 \right)^2}}
+        |A|= \symup{U_0} \sqrt{\frac{\left(1-LC\omega^2\right)^2 + \omega^2 R^2C^2}{\left( \left(1 -LC \omega^2\right)^2 +w^2R^2C^2 \right)^2}} \nonumber
     \end{equation}
 
     \begin{equation}
-        \text{tan}(\phi (\omega)) = \frac{\text{Im}(A)}{\text{Re}(A)} = \frac{\omega RC}{1 - LC\omega^2}
+        \text{tan}(\phi (\omega)) = \frac{\text{Im}(A)}{\text{Re}(A)} = \frac{\omega RC}{1 - LC\omega^2} \nonumber
     \end{equation}
 
     \begin{equation}
-        \phi (\omega) = \text{arctan}\left(\frac{\omega RC}{1 - LC\omega^2} \right)
+        \phi (\omega) = \text{arctan}\left(\frac{\omega RC}{1 - LC\omega^2} \right) \nonumber
     \end{equation}
 
     \begin{equation}
-        U_{\symup{C}}(\omega) = \frac{U_0}{\sqrt{\left(1-LC\omega^2)\right)^2 + \omega^2 R^2 C^2}}
+        U_{\symup{C}}(\omega) = \frac{U_0}{\sqrt{\left(1-LC\omega^2)\right)^2 + \omega^2 R^2 C^2}} \nonumber
     \end{equation}
 
     \begin{equation}
-        \omega_{\text{res}} = \sqrt{\frac{1}{LC}-\frac{R^2}{2L^2}}
+        \omega_{\text{res}} = \sqrt{\frac{1}{LC}-\frac{R^2}{2L^2}} \nonumber
     \end{equation}
 
     für: 
     \begin{equation}
-        \frac{R^2}{2L^2} \ll \frac{1}{LC}
+        \frac{R^2}{2L^2} \ll \frac{1}{LC} \nonumber
     \end{equation}
 
     \begin{equation}
-        U_{\text{C,max}} = \frac{1}{\omega_0 RC} = \frac{1}{R} \sqrt{\frac{L}{C}} U_0
+        U_{\text{C,max}} = \frac{1}{\omega_0 RC} = \frac{1}{R} \sqrt{\frac{L}{C}} U_0 \nonumber
     \end{equation}
 
     \begin{equation}
-        \frac{U_0}{\sqrt{2}} \frac{1}{\omega_0 RC} = \frac{U_0}{C \sqrt{\omega^2_{\pm} R^2 + \left( \omega^2_{\pm}L - \frac{1}{C} \right) }}
+        \frac{U_0}{\sqrt{2}} \frac{1}{\omega_0 RC} = \frac{U_0}{C \sqrt{\omega^2_{\pm} R^2 + \left( \omega^2_{\pm}L - \frac{1}{C} \right) }} \nonumber
     \end{equation}
 
     \begin{equation}
-        \omega_+ - \omega_- \approx \frac{R}{L}
+        \omega_+ - \omega_- \approx \frac{R}{L} \nonumber
     \end{equation}
 
     \begin{equation}
-        q = \frac{\omega_0}{\omega_+ - \omega_-}
+        q = \frac{\omega_0}{\omega_+ - \omega_-} \nonumber
     \end{equation}
 
     \begin{equation}
-        \frac{R^2}{2L^2} \gg \frac{1}{LC}
+        \frac{R^2}{2L^2} \gg \frac{1}{LC} \nonumber
     \end{equation}
 
     \begin{equation}
-        \omega^2_0 = \frac{1}{LC}
+        \omega^2_0 = \frac{1}{LC} \nonumber
     \end{equation}
 
     \begin{equation}
-        \omega_{1,2} = \pm  \frac{R}{2L} + \sqrt{\frac{R^2}{4L^2}+ \frac{1}{LC}}
+        \omega_{1,2} = \pm  \frac{R}{2L} + \sqrt{\frac{R^2}{4L^2}+ \frac{1}{LC}} \nonumber
     \end{equation}
 
     \begin{equation}
-        \omega_1 - \omega_2 = \frac{R}{L}
+        \omega_1 - \omega_2 = \frac{R}{L} \nonumber
     \end{equation}
 
     \begin{equation}
-        r = X + jY
+        r = X + jY \nonumber
     \end{equation}
 
     \begin{equation}
-        |r| = \sqrt{X^2 + Y^2}
-    \end{equation}
-
-    \begin{align}
-        r_{\symup{C}} = -j\frac{1}{\omega C} \\
-        r_{\symup{L}} = j\omega L \\
-        r_{\symup{R}} = R_{\symup{s}}
-    \end{align}
-
-    \begin{equation}
-        r_{\symup{S}} = R_{\symup{S}} + j \left(    \omega L - \frac{1}{\omega C} \right)
+        |r| = \sqrt{X^2 + Y^2} \nonumber
     \end{equation}
 
     \begin{align}
-        X_{\symup{S}} = R_{\symup{S}} \\ 
-        Y_{\symup{S}} = j \omega L - \frac{1}{\omega C}
+        r_{\symup{C}} = -j\frac{1}{\omega C} \nonumber\\
+        r_{\symup{L}} = j\omega L  \nonumber\\
+        r_{\symup{R}} = R_{\symup{s}} \nonumber
     \end{align}
 
     \begin{equation}
-        |r_{\symup{S}}| = \sqrt{R^2_{\symup{S}} + \left( \omega L - \frac{1}{\omega C} \right)^2}
+        r_{\symup{S}} = R_{\symup{S}} + j \left(    \omega L - \frac{1}{\omega C} \right) \nonumber
+    \end{equation}
+
+    \begin{align}
+        X_{\symup{S}} = R_{\symup{S}}  \nonumber\\ 
+        Y_{\symup{S}} = j \omega L - \frac{1}{\omega C} \nonumber
+    \end{align}
+
+    \begin{equation}
+        |r_{\symup{S}}| = \sqrt{R^2_{\symup{S}} + \left( \omega L - \frac{1}{\omega C} \right)^2} \nonumber
     \end{equation}
 
     \begin{equation}
-        r_{\symup{p}} = \frac{\frac{1}{R_{\symup{p}}+j \left( \frac{1}{\omega L} - \omega C \right)}{\frac{1}{R^2_{\symup{p}}}+ \left( \frac{1}{\omega L} - \omega C \right)^2}
+        r_{\symup{p}} = \frac{\frac{1}{R_{\symup{p}}}+j \left( \frac{1}{\omega L} - \omega C \right)}{\frac{1}{R^2_{\symup{p}}}+ \left( \frac{1}{\omega L} - \omega C \right)^2} \nonumber
     \end{equation}
 
     \begin{equation}
-        |r_{\symup{p}}|=  \frac{1}{\sqrt{\frac{1}{R^2_{\symup{p}} \left( \frac{1}{\omega L} - \omega C \right)^2}}
+        |r_{\symup{p}}|=  \frac{1}{\sqrt{\frac{1}{R^2_{\symup{p}}} \left( \frac{1}{\omega L} - \omega C \right)^2}} \nonumber
     \end{equation}

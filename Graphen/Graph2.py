@@ -1,8 +1,16 @@
 import numpy as np
+import matplotlib
+matplotlib.rcParams['text.usetex'] = True
 import matplotlib.pyplot as plt
+from matplotlib import rc
+rc('font',**{'family':'sans-serif','sans-serif':['Helvetica']})
+rc('text', usetex=True)
+matplotlib.rcParams['text.usetex'] = True
 import uncertainties as unc
 import uncertainties.unumpy as unp
 from uncertainties import ufloat
+from matplotlib import rc
+
 
 g=np.array([60,80,100,110,120,125])
 #g*=1e-3
@@ -29,7 +37,7 @@ def stabwf(f,n):
 def fehlermittel(f,n):
     return np.sqrt(1/(n*(n-1))*np.sum((mittelf(f,n)-f)**2))
 
-print(f'\nMittelwert:{mittelf(f,n):.4f}\nStandardabweichung:{stabwf(f,n):.4f}\nFehler des Mittelwerts:{fehlermittel(f,n):.4f}\n')
+#print(f'\nMittelwert:{mittelf(f,n):.4f}\nStandardabweichung:{stabwf(f,n):.4f}\nFehler des Mittelwerts:{fehlermittel(f,n):.4f}\n')
 
 
 
@@ -46,13 +54,13 @@ print(f'\nMittelwert:{mittelf(f,n):.4f}\nStandardabweichung:{stabwf(f,n):.4f}\nF
 
 #numpy
 
-params , _ = np.polyfit(B,G, deg=1, cov=True)
+params , _ = np.polyfit(G,B, deg=1, cov=True)
 err = np.sqrt( np.diag( _ ) )
 
-m=params[0]
+m=ufloat(params[0],err[1])
 a=ufloat(params[1],err[1])
 
-#print(" f =",1/a)
+print(m,a)
 
 #print(f'\nm:{m}\na:{a}\nabwm^2:{abwm}\nabwm:{np.sqrt(abwm)}\nabwa^2:{abwa}\nabwa:{np.sqrt(abwa)}\n')
 #print(f" m={params[0]:.4f},\n a={params[1]:.4f},\n err_m={err[0]:.4f},\n err_a={err[1]:.4f}")
@@ -65,14 +73,12 @@ a=ufloat(params[1],err[1])
 #plt.plot(B,f,'.',label=r'f')
 #plt.plot(B,f,'.',label=r'f')
 
-plt.plot(B,G,'.',label=r'Messwerte')
-plt.plot(B,(m*B+a.n),label=r'lineare Regression')
+plt.plot(G,B,'.',label=r'Messwerte')
+plt.plot(G,(m.n*G+a.n),label=r'lineare Regression')
 plt.legend()
 plt.legend(loc='best')
-
-with plt.xkcd():
-   plt.xlabel('$1/b / mm^-1$')
-   plt.ylabel('$1/g / mm^-1$')
+plt.xlabel(r'$\frac{1}{b}$ / $\frac{1}{mm}$' )
+plt.ylabel(r'$\frac{1}{g}$ / $\frac{1}{mm}$' )
 
 plt.savefig('build/Graph2.pdf')
 

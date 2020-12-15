@@ -88,7 +88,7 @@ Mit den selben Werten für $b$ und $g$ aus a) erhalten wir folgende Werte für d
 \begin{figure}  
     \centering
     \includegraphics{build/Graph2.pdf}
-    \caption{ Diagramm}
+    \caption{Brennweite}
     \label{fig:plt2}
 \end{figure}
 Aus a=$\SI{0,0193 +- 0,0011}{\per\milli\meter}$ ergibt sich f= $\SI{51.7+-2.8}{\milli\meter}$
@@ -101,8 +101,37 @@ Methode aus Teilaufgabe a) müssen die einzelnen Ergebnisse noch auf Statistisch
  
 
 \section{Absorptionsgesetz}
-    
+    In dieser Aufgabe wird das Absortsionsegetz mittels einer einer e - Funktion untersucht. Dazu wird ein Fit für die Messwerte:
+    \begin{table}
+        \centering
+        \begin{tabular}{S[table-format=1.1] S [table-format=4]}
+            \toprule
+            {d[cm]} & {N [1/60s]}  \\
+            \midrule
+            0.1 &7565   \\
+            0.2 &6907   \\
+            0.3 &6214   \\
+            0.4 &5531   \\
+            0.5 &4942   \\
+            1.0 &2652   \\
+            1.2 &2166   \\
+            1.5 &1466   \\
+            2.0 &970    \\
+            3.0 &333    \\
+            4.0 &127    \\
+            5.0 &48     \\
+            \bottomrule  
+        \end{tabular}   
+    \end{table}
+    berechnet. Der Fit wird durch $7565 * \symup{e}^{- \mu d}$ beschrieben. Hier beschreibt 7565 $N_0$, $d$ die Dicke der Platte und 
+    $\mu$ ist der Absorptionskoeffizient. Mit den angegebenen Messweten berechnet sich $\mu$ zu : $\num{0.94+-0.06}$
 
+    \begin{figure}
+        \centering
+        \includegraphics{build/Graph3.pdf}
+        \caption{Absorption}
+        \label{fig:plt3}
+\end{figure}
 \printbibliography{}
 
 \end{document}

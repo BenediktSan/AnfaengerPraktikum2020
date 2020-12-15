@@ -205,6 +205,7 @@ np.save('python/variables/vd_sKupfer.npy', vd_sKupfer, allow_pickle=True)
 
 np.save('python/variables/vd_pZink.npy', vd_pZink, allow_pickle=True)
 np.save('python/variables/vd_pKupfer.npy', vd_pKupfer, allow_pickle=True)
+
 #Beweglichkeit mue:
 
 def Beweg(tau):

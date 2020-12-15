@@ -54,10 +54,10 @@ def fehlermittel(f,n):
 
 #numpy
 
-params , _ = np.polyfit(G,B, deg=1, cov=True)
+params , _ = np.polyfit(B,G, deg=1, cov=True)
 err = np.sqrt( np.diag( _ ) )
 
-m=ufloat(params[0],err[1])
+m=ufloat(params[0],err[0])
 a=ufloat(params[1],err[1])
 
 print(m,a)
@@ -73,12 +73,13 @@ print(m,a)
 #plt.plot(B,f,'.',label=r'f')
 #plt.plot(B,f,'.',label=r'f')
 
-plt.plot(G,B,'.',label=r'Messwerte')
-plt.plot(G,(m.n*G+a.n),label=r'lineare Regression')
+plt.plot(B,G,'.',label=r'Messwerte')
+plt.plot(B,(m.n*B+a.n),label=r'lineare Regression')
 plt.legend()
 plt.legend(loc='best')
 plt.xlabel(r'$\frac{1}{b}$ / $\frac{1}{mm}$' )
 plt.ylabel(r'$\frac{1}{g}$ / $\frac{1}{mm}$' )
+#plt.show()
 
 plt.savefig('build/Graph2.pdf')
 

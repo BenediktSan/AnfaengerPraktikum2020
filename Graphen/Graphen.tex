@@ -12,15 +12,15 @@
 \newpage
 
 \section{Federkonstante}
-    Durch mathematisches Fitten der der Werte für die Masse und die korrelierenden Auslenkungen können wir eine Ausgleichsgerade
+\noindent Durch mathematisches Fitten der der Werte für die Masse und die korrelierenden Auslenkungen können wir eine Ausgleichsgerade
     der Form 
     \begin{equation}
-        x = \symup{a} \cdot m + \symup{b}
+        x = \symup{a} \cdot m + \symup{b} \nonumber
     \end{equation} 
-    bestimmen. Das a beschreibt in diesem Fall a=$\frac{g}{k}$ mit der Schwerenbeschleunigung g=$\SI{9,81}{meter\per\second\squared}$ 
+    \noindent bestimmen. Das a beschreibt in diesem Fall a=$\frac{g}{k}$ mit der Schwerenbeschleunigung g=$\SI{9,81}{meter\per\second\squared}$ 
     und der zu bestimmenden Federkonstente k.
     Durch Auswerten der Ausgleichsgerade erhalten wir eine Federkonstante k=$\SI{17,518}{\kilogram\per\second\squared}$
-    \begin{figure}
+    \begin{figure}[H] 
             \centering
             \includegraphics{build/Graph1.pdf}
             \caption{ Diagramm}
@@ -31,9 +31,9 @@
 \newpage
 
 \section{Brennweite}
-In dieser Aufgabe wird die Brennweite einer Linse ausgerechnet, hier Vergleichen wir das direkte Ausrechnen über eine Formel und
+\noindent In dieser Aufgabe wird die Brennweite einer Linse ausgerechnet, hier Vergleichen wir das direkte Ausrechnen über eine Formel und
 das approximieren über eine Ausgleichsgerade. Folgende Werte werden zum Berechnen der Werte genutzt:
-\begin{table}
+\begin{table}[H] 
     \centering
     \begin{tabular}{S[table-format=3.0] S [table-format=3.0]}
         \toprule
@@ -50,12 +50,12 @@ das approximieren über eine Ausgleichsgerade. Folgende Werte werden zum Berechn
 \end{table}
 
 \subsection{a}
-In Teilaufgabe a) wird die Brennweite direkt f über die Formel 
+\noindent In Teilaufgabe a) wird die Brennweite direkt f über die Formel 
 \begin{equation}
-\frac{1}{f} = \frac{1}{b} + \frac{1}{g}
+\frac{1}{f} = \frac{1}{b} + \frac{1}{g} \nonumber
 \end{equation}
-berechnet. Die berechneten Brennweiten und weitere Statistische Untersuchungen ergeben dann:\\
-\begin{table}
+\noindent berechnet. Die berechneten Brennweiten und weitere Statistische Untersuchungen ergeben dann:\\
+\begin{table}[H] 
     \centering
     \begin{tabular}{S[table-format=1] S [table-format=2.3]}
         \toprule
@@ -71,29 +71,29 @@ berechnet. Die berechneten Brennweiten und weitere Statistische Untersuchungen e
     \end{tabular}   
 \end{table}
 \begin{align}
-\text{Mittelwert}&= \num{50.369}\\
-\text{Standardabweichung}&= \num{2.027}\\
-\text{Fehler des Mittelwerts}&= \num{0.827}
+\text{Mittelwert}&= \num{50.369}  \nonumber\\
+\text{Standardabweichung}&= \num{2.027} \nonumber  \\
+\text{Fehler des Mittelwerts}&= \num{0.827} \nonumber
 \end{align}
 
 \subsection{b}  
-In Teilaufgabe b) wird mittels einer durch Linearen Regression ausgerechten Ausgleichsgerade der Form
+\noindent In Teilaufgabe b) wird mittels einer durch Linearen Regression ausgerechten Ausgleichsgerade der Form
 \begin{equation}
-    \frac{1}{g} = \frac{1}{b} \cdot m + \symup{a},
+    \frac{1}{g} = \frac{1}{b} \cdot m + \symup{a} \nonumber
    % \eqref{eqn:ausg}
 \end{equation} 
-die Brenweite der Linse ausgerechnet. Es folgt $f=\frac{1}{a}$.
-
+\noindent die Brenweite der Linse ausgerechnet.
 Mit den selben Werten für $b$ und $g$ aus a) erhalten wir folgende Werte für die Ausgleichsgerade:
-\begin{figure}  
+\begin{figure}[H]  
     \centering
     \includegraphics{build/Graph2.pdf}
     \caption{Brennweite}
     \label{fig:plt2}
 \end{figure}
-Aus a=$\SI{0,0193 +- 0,0011}{\per\milli\meter}$ ergibt sich f= $\SI{51.7+-2.8}{\milli\meter}$
+\noindent Hier ist $m = \num{-0.94+-0.11}$ und $a = \num{0.0193+-0.0011}$, da $m \approx -1$ ist, folgt $f=\frac{1}{a}$.
+Aus a=$\SI{0,0193 +- 0,0011}{\per\milli\meter}$ ergibt sich somit f= $\SI{51.7+-2.8}{\milli\meter}$
 \subsection{c}
-Wir erhalten in Teilaufgabe a und b leicht unterschiedliche Werte für die Brennweite f, jedoch würde ich die beiden Auswertungsmethoden
+\noindent Wir erhalten in Teilaufgabe a und b leicht unterschiedliche Werte für die Brennweite f, jedoch würde ich die beiden Auswertungsmethoden
 gleichwertig behandeln, denn die Methode mittels der Linearen Regression behinhaltet bereits die einzelnen Messunsicherheiten, mit der 
 Methode aus Teilaufgabe a) müssen die einzelnen Ergebnisse noch auf Statistische Unsicherheiten untersucht werden.
 \newpage
@@ -102,7 +102,7 @@ Methode aus Teilaufgabe a) müssen die einzelnen Ergebnisse noch auf Statistisch
 
 \section{Absorptionsgesetz}
     In dieser Aufgabe wird das Absortsionsegetz mittels einer einer e - Funktion untersucht. Dazu wird ein Fit für die Messwerte:
-    \begin{table}
+    \begin{table}[H] 
         \centering
         \begin{tabular}{S[table-format=1.1] S [table-format=4]}
             \toprule
@@ -123,15 +123,22 @@ Methode aus Teilaufgabe a) müssen die einzelnen Ergebnisse noch auf Statistisch
             \bottomrule  
         \end{tabular}   
     \end{table}
-    berechnet. Der Fit wird durch $7565 * \symup{e}^{- \mu d}$ beschrieben. Hier beschreibt 7565 $N_0$, $d$ die Dicke der Platte und 
-    $\mu$ ist der Absorptionskoeffizient. Mit den angegebenen Messweten berechnet sich $\mu$ zu : $\num{0.94+-0.06}$
+    \noindent berechnet. Der Fit wird durch $N_0 * \symup{e}^{- \mu d}$ beschrieben. Hier beschreibt $N_0$ die Anzahl der Gamma Quanten ohne 
+    Abschirmung, $d$ die Dicke der Platte und $\mu$ ist der Absorptionskoeffizient. Mit den angegebenen Messweten berechnet sich  
+    $\mu$ zu : $\num{0.94+-0.06}$ und $N_0$ zu $\num{8640+-80}$.
 
-    \begin{figure}
+    \begin{figure}[H] 
         \centering
         \includegraphics{build/Graph3.pdf}
         \caption{Absorption}
         \label{fig:plt3}
-\end{figure}
-\printbibliography{}
+    \end{figure}
+    \noindent Hier sind jeweils die Messdaten und der ausgerechnete Fit eingezeichnet. Die Messfehler sind bereits an die Messwerte eingezeichnet     
+    und mit einem Faktor 5 vergoessert. Dies dient der besseren Anschaulichkeit, zusätzlich sind die Messfehler auch noch einmal einzeln 
+    eingefügt.
 
-\end{document}
+
+    \printbibliography{}
+    
+    \end{document}
+    

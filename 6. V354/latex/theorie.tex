@@ -69,7 +69,7 @@
             \frac{1}{LC} > \frac{R^2}{4L^2}  \nonumber
         \end{equation}
         untersucht. Hier ist $v \in \mathds{R}$. Damit die Lösungsfunktion $I(t) \in \mathds{R}$ ist muss
-        $Z_1 = \overline{Z_2}$ sein. Dies lässt sich durh den Ansatz
+        $Z_1 = \overline{Z_2}$ sein. Dies lässt sich durch den Ansatz
         \begin{align}
             Z_1 & = \frac{1}{2} A_0 \symup{e}^{j \eta } \nonumber\\
             Z_2 & = \frac{1}{2} A_0 \symup{e}^{-j \eta} \nonumber
@@ -109,44 +109,50 @@
 
         \subsubsection{2. Fall}
 
+        Der zweite Fall beschreibt:
         \begin{equation}
             \frac{1}{LC} < \frac{R^2}{4L^2} \nonumber
         \end{equation}
-        $\tilde{v} \in \mathds{C}$
-
-        \begin{equation}
+        Hier ist dann $\tilde{v} \in \mathds{C}$.
+        Für große Zeiten ergibt sich die Proportionalität:
+        \begin{equation}   
             I \sim \symup{e}^{- \left( \frac{R}{2L} - \sqrt{\frac{R^2}{4L^2} - \frac{1}{LC}}\right) t} \nonumber
         \end{equation}
 
-        Spefzialfall für:
+        Ein Spefzialfall für diesen Fall ist:
         \begin{equation}
             \frac{1}{LC} = \frac{R^2_{\text{ap}}}{4L^2} \nonumber
         \end{equation}
-
-        $\nu = 0$
-
+        
+        Dadurch ist dann $\nu = 0$ und somit
         \begin{equation}
             I(t) = A \symup{e}^{-\frac{R}{2L}t} = A \symup{e}^{-\frac{t}{LC}} \nonumber
         \end{equation}
 
-        \subsection{vergleich Mechanik}
+        \subsection{Vergleich Mechanik}
 
-        \begin{equation}
-            m \ddot{x} + s \dot{x} + Dx = 0 \nonumber
-        \end{equation}
-
-        \begin{align}
-            m \Leftrightarrow L  \nonumber\\
-            s \Leftrightarrow R  \nonumber\\
-            D \Leftrightarrow \frac{1}{C} \nonumber
-        \end{align}
+       % Hier bietet sich nun ein Vergleich mit einer rein mechanischen Schwingung an.
+       % 
+       % \begin{equation}
+       %     m \ddot{x} + s \dot{x} + Dx = 0 \nonumber
+       % \end{equation}
+       %
+       % \begin{align}
+       %     m \Leftrightarrow L  \nonumber\\
+       %     s \Leftrightarrow R  \nonumber\\
+       %     D \Leftrightarrow \frac{1}{C} \nonumber
+       % \end{align}
 
     \subsection{erzwungene Schwingungen}
-
+    
+    In diesem Abschnitt werden LRC-Schwingkreise untersucht die von außen angeregt sind. Dazu wird eine Spannungsquelle an den Stromkreis 
+    angeschlossen die eine Sinusfoermige Spannung liefert.
     \begin{equation}
         u(t)= \symup{U_0} \symup{e}^{j \omega t} \nonumber
     \end{equation}
+    $u(t)$ ist hier die anregende Spannung.
 
+    Die Differentialgleichung erhält nun also die folgende Form:
     \begin{equation}
         L \dot{I} + R I + \frac{Q(t)}{C} = \symup{U_0} \symup{e}^{j \omega t} \nonumber
     \end{equation}
@@ -158,38 +164,55 @@
 
     ergibt sich:
     \begin{equation}
-        LC \ddot{V}_{\symup{C}} + RC \dot{V}_{\symup{C}} + V_{\symup{C}} = \symup{U_0} \symup{e}^{j \omega t} \nonumber
+        LC \ddot{V}_{\symup{C}} + RC \dot{V}_{\symup{C}} + V_{\symup{C}} = \symup{U_0} \symup{e}^{j \omega t} 
+        \label{eq:angDGL}
     \end{equation}
 
     mit $A \in  \mathds{C}$ der Amplitude der Kodensatorspannung:
     \begin{equation}
-        u_{\symup{C}} (t) = A(\omega) \symup{e}^{j \omega t} \nonumber
+        u_{\symup{C}} (t) = A(\omega) \symup{e}^{j \omega t} 
+        \label{eq:uteAn}
     \end{equation}
 
+    Einsetzen von \ref{eq:uteAn} in \ref{eq:angDGL} liefert:
     \begin{equation}
         -LC \omega^2 A + j\omega RC A +A = \symup{U_0} \nonumber
     \end{equation}
 
+    Die Formal nach $A$ umgestellt ergibt:
     \begin{equation}
         A= \frac{\symup{U_0}}{1 - LC \omega^2 + j \omega RC} = \frac{ \symup{U_0}(1 -LC \omega^2 - j\omega RC)}{\left( 1- LC \omega^2 \right)^2} \nonumber
     \end{equation}
     
+    oder
     \begin{equation}
-        |A|= \symup{U_0} \sqrt{\frac{\left(1-LC\omega^2\right)^2 + \omega^2 R^2C^2}{\left( \left(1 -LC \omega^2\right)^2 +w^2R^2C^2 \right)^2}} \nonumber
+        |A|= \symup{U_0} \sqrt{\frac{\left(1-LC\omega^2\right)^2 + \omega^2 R^2C^2}{\left( \left(1 -LC \omega^2\right)^2 +w^2R^2C^2 \right)^2}}
+        \label{eq:betA}
     \end{equation}
 
+    Die Phase berechnet sich zu:
     \begin{equation}
         \text{tan}(\phi (\omega)) = \frac{\text{Im}(A)}{\text{Re}(A)} = \frac{\omega RC}{1 - LC\omega^2} \nonumber
     \end{equation}
 
+    bzw.
     \begin{equation}
-        \phi (\omega) = \text{arctan}\left(\frac{\omega RC}{1 - LC\omega^2} \right) \nonumber
+        \phi (\omega) = \text{arctan}\left(\frac{\omega RC}{1 - LC\omega^2} \right)
+        \label{eq:phi}
     \end{equation}
 
+    Da der Betrag der gesuchten Lösungsfunktion $u_{\symup{c}}(t)$ nach \ref{eq:uteAn} gleich dem Betrag von A ist, entsteht aus 
+    \ref{eq:betA} das Ergebnis:
     \begin{equation}
-        U_{\symup{C}}(\omega) = \frac{U_0}{\sqrt{\left(1-LC\omega^2)\right)^2 + \omega^2 R^2 C^2}} \nonumber
+        U_{\symup{C}}(\omega) = \frac{U_0}{\sqrt{\left(1-LC\omega^2)\right)^2 + \omega^2 R^2 C^2}} 
+        \label{eq:Ucw}
     \end{equation}
 
+    Somit ist die gesucht Funktion für $U_{\symup{C}}$ in Abhängigkeit von $\omega$, der Frequenz der Erregerspannung gefunden. Durch 
+    weiters Untersuchen von \ref{eq:Ucw} ergibt sich, dass $U_{\symup{C}}$ für $\omega \to \infty $ gegen 0 und für $\omega \to 0$ gegen 
+    das $U_0$ der Erregerspanung geht. Jedoch gibt es auch ein $\omega$ bei dem das $U_{\symup{C}}$ innerhalb eines Maximums die 
+    Erregerspannung übertrifft. Dies Phänomen wird als Resonanz bezeichnet und tritt bei der Resonanzfrequenz $\omega_{\text{res}}$. 
+    Eine Rechnung ergibt eine Formel für $\omega_{\text{res}}$:
     \begin{equation}
         \omega_{\text{res}} = \sqrt{\frac{1}{LC}-\frac{R^2}{2L^2}} \nonumber
     \end{equation}
@@ -199,45 +222,76 @@
         \frac{R^2}{2L^2} \ll \frac{1}{LC} \nonumber
     \end{equation}
 
+    ergibt sich ein Fall von besonderer Bedeutung in der sich $\omega_{\text{res}}$ an $\omega_0$ der Frequenz einer ungedämpften 
+    Schwingung annähert. In diesem Fall übertrifft $U_{\symup{C}}$ die Erregerspannung.
     \begin{equation}
         U_{\text{C,max}} = \frac{1}{\omega_0 RC} = \frac{1}{R} \sqrt{\frac{L}{C}} U_0 \nonumber
     \end{equation}
 
+    Somit kann $U_{\symup{C},\text{max}} \to \infty$ für $R \to 0$ gehen, dies wird als "Resonanzkatastrophe" bezeichnet. Der Faktor
+    $\frac{1}{\omega_0 RC}$ wird auch als als Resonanzüberhöhung oder Güte q des Schwingkreises bezeichnet. Die Schärfe der Resonanz 
+    der Resonanzkurve wird durch die Schnittpunkte $\omega_{\pm}$ die jeweils den Ort an dem $U_{\symup{C}}$ auf einen Faktor $\frac{1}{\sqrt{2}}$ 
+    absinken. Somit werden $\omega_+$ und $\omega_-$ durch 
     \begin{equation}
         \frac{U_0}{\sqrt{2}} \frac{1}{\omega_0 RC} = \frac{U_0}{C \sqrt{\omega^2_{\pm} R^2 + \left( \omega^2_{\pm}L - \frac{1}{C} \right) }} \nonumber
     \end{equation}
+    beschrieben.
 
+    Für $\frac{R^2}{L^2} \ll {\omega}^2_0$ folgt ebenfalls für die Breite der Resonanzkurve
     \begin{equation}
-        \omega_+ - \omega_- \approx \frac{R}{L} \nonumber
+        \omega_+ - \omega_- \approx \frac{R}{L} 
+        \label{eq:v1}
     \end{equation}
 
+    Somit besteht auch folgende Beziehung zwischen der Güte und der Breite:
     \begin{equation}
         q = \frac{\omega_0}{\omega_+ - \omega_-} \nonumber
     \end{equation}
 
+    Im Gegensatz dazu ist im Falle der Starken Dämpfung:
     \begin{equation}
         \frac{R^2}{2L^2} \gg \frac{1}{LC} \nonumber
     \end{equation}
 
+    Hier fällt jetzt die Spannung $U_{\symup{C}}$ ausgehend von $U_0$ mit steigender Frequez $\omega$ gegen 0. Bei hohen Frequenzen fällt
+    die Spannung proportional zu $\frac{1}{\omega^2}$. Unter diesen Umständen kann der RLC-Kreis auch als Tiefpass benutzt werden.
     \begin{equation}
         \omega^2_0 = \frac{1}{LC} \nonumber
     \end{equation}
 
+    Als nächstes wird die Frequenzabhängigkeit der Phase untersucht. Aus \ref{eq:phi} ist zu erkennen, dass für kleine $\omega$ die 
+    Kondensatorspannung und sie Erregerspannung fast in Phase sind jedoch bei hohen Frequenzen $U_{\symup{C}}$ etwa eine um $\pi$ 
+    kleinere Phase als $U$ hat. $\phi$ ist = $\frac{-\pi}{2}$ an der Stelle $\omega^2_0 = \frac{1}{LC}$.
+    Aus \ref{eq:phi} folgt ebenfalls, dass $\omega_{1,2}$ bei denen $\phi= \frac{\pi}{4} \text{oder} \frac{3\pi}{4}$ ist die Beziehung:
     \begin{equation}
         \omega_{1,2} = \pm  \frac{R}{2L} + \sqrt{\frac{R^2}{4L^2}+ \frac{1}{LC}} \nonumber
     \end{equation}
 
+    Und daraus auch:
     \begin{equation}
-        \omega_1 - \omega_2 = \frac{R}{L} \nonumber
+        \omega_1 - \omega_2 = \frac{R}{L} 
+        \label{eq:v2}
     \end{equation}
 
+    Somit ist im Vergleich von \ref{eq:v1} und \ref{eq:v2} zu sehen, dass im Falle schwacher Dämpfung $\omega_1$ und $\omega_2$ 
+    $\omega_+ - \omega_-$ zusammenfällt.
+
+    \section{Impedanz des Schwingkreises}
+
+    Ein Schwingkreis lässt sich auch wie in Abbildung ?ref? als Zweipol beschreiben. An seinen Enden kann nun ein frequenzabhängiger 
+    Widerstand r, dieser wird als Impedanz bezeichnet. Aufgrund der Phasenverschiebung zwischen der Spannung und dem Strom muss r als 
+    komplexe Zehl definiert werden :
     \begin{equation}
         r = X + jY \nonumber
     \end{equation}
 
+    Hier sind $X$ und $Y$ reele Widerstände, $X$ ist  der Wirkwiderstand und $Y$ ist der Blindwiderstand oder die Reaktanz. Der Betrag
     \begin{equation}
         |r| = \sqrt{X^2 + Y^2} \nonumber
     \end{equation}
+    wird als Scheinwiderstand bezeichnet. In der komplexen Zahlenebene wird der Verlauf der Größe r($\omega$) als Ortskurve bezeichnet. 
+    r ist dort nun ein Pfeil vom Ursprung dessen Länge der Scheinwiderstand und der Winkel zur reelen Achse die Phasenverschiebung 
+    beschreibt.
 
     \begin{align}
         r_{\symup{C}} = -j\frac{1}{\omega C} \nonumber\\

@@ -17,6 +17,7 @@ N=np.array([7565,6907,6214,5531,4942,2652,2116,1466,970,333,127,48])
 #print(f'')
 def exp(x,n,m):
     return n*np.exp(- x * m)
+    
 params, covariance_matrix = curve_fit(exp,d,N)
 
 uncertainties = np.sqrt(np.diag(covariance_matrix))
@@ -25,6 +26,7 @@ n=ufloat(params[0],uncertainties[0])
 m=ufloat(params[1],uncertainties[1])
 print(m)
 print(n)
+
 fig, (ax1,ax2)=plt.subplots(2,1)
 
 ax1.set_title(r"Nicht Logarithmisch")
@@ -43,9 +45,9 @@ ax2.set_title(r"$Logarithmisch$")
 #ax2.plot(d,N,'.',label=r'Messwerte')
 #ax2.plot(d,N+np.sqrt(N),'.',label=r'Messwerteplus')
 #ax2.plot(d,N-np.sqrt(N),'.',label=r'Messwerteminus')
-ax2.errorbar(d, N, yerr=np.sqrt(N)*5, fmt='.',label=r'Messwerte')
-ax2.plot(d,exp(d,n.n,m.n),label=r'Fit')
 ax2.plot(d,np.sqrt(N),'.',label=r'Messunsicherheit')
+ax2.plot(d,exp(d,n.n,m.n),label=r'Fit')
+ax2.errorbar(d, N, yerr=np.sqrt(N)*5, fmt='.',label=r'Messwerte')
 ax2.set_yscale('log')
 ax2.legend()
 ax2.legend(loc='best')
@@ -55,6 +57,6 @@ ax2.set_ylabel('$N/60s^-1$')
 
 
 fig.tight_layout()
-plt.savefig('build/Graph3.pdf')
+#plt.savefig('build/Graph3.pdf')
 
 plt.show()

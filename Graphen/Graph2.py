@@ -26,8 +26,8 @@ f=1/(B+G)
 n=6
 
 
-#for i in range(0,6):
-#    print(f"Brennwerte für Messpaar {i+1} ={f[i]:.3f}")
+for i in range(0,6):
+    print(f"Brennwerte für Messpaar {i+1} ={f[i]:.3f}")
 
 
 def mittelf(f,n):
@@ -37,7 +37,7 @@ def stabwf(f,n):
 def fehlermittel(f,n):
     return np.sqrt(1/(n*(n-1))*np.sum((mittelf(f,n)-f)**2))
 
-#print(f'\nMittelwert:{mittelf(f,n):.4f}\nStandardabweichung:{stabwf(f,n):.4f}\nFehler des Mittelwerts:{fehlermittel(f,n):.4f}\n')
+print(f'\nMittelwert:{mittelf(f,n):.4f}\nStandardabweichung:{stabwf(f,n):.4f}\nFehler des Mittelwerts:{fehlermittel(f,n):.4f}\n')
 
 
 
@@ -61,7 +61,7 @@ m=ufloat(params[0],err[0])
 a=ufloat(params[1],err[1])
 
 print(m,a)
-
+print(1/a)
 #print(f'\nm:{m}\na:{a}\nabwm^2:{abwm}\nabwm:{np.sqrt(abwm)}\nabwa^2:{abwa}\nabwa:{np.sqrt(abwa)}\n')
 #print(f" m={params[0]:.4f},\n a={params[1]:.4f},\n err_m={err[0]:.4f},\n err_a={err[1]:.4f}")
 

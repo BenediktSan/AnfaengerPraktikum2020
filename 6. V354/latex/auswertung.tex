@@ -1,3 +1,49 @@
+\newpage
+\section{Auswertung}
+Die Werte der Bauteile des Schwingkreises sind:
+\begin{align*}
+    L&=\SI{16.78(09)}{\micro\henry}\\
+    C&=\SI{2.066(006)}{\nano\farad}\\
+    R_1&=\SI{67.2(2)}{\ohm}\\
+    R_2&=\SI{682(1)}{\ohm}\\
+\end{align*}
+\subsection{Schwingungskurve}
+\noindent
+Aus der Schwingungskurve lässt sich mit Hilfe der Messwerte in der Tabelle \ref{tab:Uamp} eine einhüllende Funktion bestimmen. 
+Dafür wird eine Fit-Funktion $U(t)$ bestimmt. Sie hat die Form:
+\begin{equation}
+    U(t)=A_0 \symup{e}^{-\mu t} \nonumber
+\end{equation}
+Über eine Ausgleichsrechnung mit den Beträgen der Werte von $U_\text{Amp}$, da die Kurve zur x-Achse symmetrisch ist,
+bestimmen sich die Konstanten zu:
+\begin{align*}
+    A_0&=\SI{13.9205(2535)}{\V} & \mu&=(\num{1846.24473 \pm 58.380141 }) \mathrm{\frac{1}{s}} 
+\end{align*}
+Die Messwerte und der Fit ist in Abbildung \ref{img:huell} abgebildet.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\textwidth]{build/plots/plot0.pdf}
+    \caption{Die Messwerte der gedämppften Schwingung mit der einhüllenden Fit-Funktion.}
+    \label{img:huell}
+\end{figure}
+\noindent
+Mit diesen Werten lässt sich dann der der effektive Widerstand und die Abklingzeit des Schwingkreises bestimmen. 
+Dafür werden die folgenden Gleichungen genutzt:
+\begin{align*}
+    R_\text{eff}&=\mu \cdot 4\pi L\\
+    R_\text{eff}&= \SI{389.3060(124861)}{\ohm}  \\\\
+    T_\text{ex}&=\frac{1}{2\pi\mu}\\
+    T_\text{ex}&=\SI{86.2046838617(27258800232)}{\micro\second}
+\end{align*}
+Die Abweichung des genutzten Widerstandes von $R_\text{eff}$ beträgt:
+\begin{equation}
+    R_\text{eff}-R_1=\SI{322.1060(124877)}{\ohm}
+\end{equation}
+Eine Abweichung von $\SI{50}{\ohm}$ wäre zu erwarten gewesen, da dies der Innenwiderstands des Generators ist.
+Die tatsächliche Abweichung von $\approx \SI{300}{\ohm}$ könnte sich über ein Problem mit dem Generator erklären, welches bei späteren Messungen 
+aufgefallen ist. Da diese Messung noch mit dem \enquote*{defekten} Nadelimpulsgenerator durchgeführt wurde könnte er für die Abweichung verantwortlich sein.\\
+Die nachfolgenden Rechnungen werden deshalb mit einem Widerstand von $R_1+\SI{50}{\ohm}$ durchgeführt.
+
 \begin{table}[H]
     \centering
     \begin{tabular}{S [table-format=2.1] S [table-format=3.1]}
@@ -22,6 +68,83 @@
 \caption{Die Messwerte der Amplitudenspannung mit ihren korrespondierenden Zeiten.}
 \label{tab:Uamp}
 \end{table}
+
+
+
+
+
+\subsection{Aperiodischer Grenzfall}
+\noindent
+Die Messung zur Bestimmung des Widerstandes, bei dem der aperiodische Grenzfall eintritt, hat einen Wert von:
+\begin{equation}
+    R_\text{ap}=\SI[]{1925}[]{\ohm} \nonumber
+\end{equation}
+Der theoretische Wert und die relative Abweichung von ihm, im Bezug auf den Theoriewert, berechnet sich dann zu:
+\begin{align*}
+    R_\text{ap theo}&= \sqrt{\frac{4L}{C}}=\SI{5699.8157(923168)}{\ohm}\\
+    \frac{R_\text{ap theo}-R_\text{ap}}{R_\text{ap theo}}&=\SI{66.22698(54700)}{\percent}
+\end{align*}
+Die Abweichung der Werte lässt sich durch die in der Rechnung nicht beachteten Widerstände der anderen Bauteile erklären. 
+Allerdings kann damit keine Abweichung dieser Größe erklärt werden. Dafür kann also wieder der Generator verantwortlich gehalten werden.
+
+
+\subsection{Resonanzüberhöhung}
+Anschließend wird die Resonanzüberhöhumng untersucht. 
+Die Messwerte der mit der angelegten Spannung normierten Kondensatorspannung und ihrerkorrespondierenden Frequenzen finden sich in Tabelle \ref{tab:Uu0}.
+Aus diesen Messwerten lässt sich der theoretische Faktor für die Resonanzüberhöhung $q_\text{theo}$ bestimmen.
+Die experimentelle Resonanzüberhöhung lässt sich durch ablesen des Maximums aus den Messwerten bestimmen. \\
+Dies entspricht dem Wert $q_\text{exp}=3.8$.
+$q_\text{theo}$ berechnet sich über die folgenden Gleichungen, wobei $R$ dem Gesamtdämpfungswiderstand entspricht.
+\begin{align*}
+    q_\text{theo}&= \frac{1}{\omega_0RC}& \omega_0&=\sqrt{\frac{1}{LC}}\\
+    \implies q_\text{theo}&=\sqrt{\frac{L}{R^2C}}=\SI{24.3(4)}{}
+\end{align*}
+Dies führt zu einer relativen Abweichung des experimentellen vom theoretischen Wert von $\SI{84.37(25)}{\percent}$.
+In der folgenden Abbildung sind die Messwerte halblogarithmisch aufgetragen.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\textwidth]{build/plots/plot1.pdf}
+    \caption{Die Messwerte zur Resonanzüberhöhung halblogarithmisch dargestellt.}
+    \label{img:Uu0}
+\end{figure}
+\noindent
+Für die Bestimmung der experimentellen Halbwertsbreite werden die Messwerte um den Peak mit einer quadratischen Funktion angenähert und der Schnittpunkt
+mit ihr bei den Spannungswerten $\frac{U_\text{max}}{\sqrt{2}}$ bestimmt. Dies wird in der Abbildung \ref{img:Uu0halb} noch einmal veranschaulicht.
+Dort sind die Messwerte des relevanten Wertebereiches linear dargestellt.
+Außerdem sind die Schnittgerade bei $\frac{U_\text{max}}{\sqrt{2}}$ und die quadratische Fit-Funktion eingezeichnet.\\
+Der Fit besitzt dabei die Form:
+\begin{equation*}
+    f(x)= A*x**2 +B*x+ C
+\end{equation*}
+mit 
+\begin{table}[H]
+    \centering
+    \sisetup{table-format=1.3}
+    \begin{tabular}{ S | S [table-format=2.5] @{$ \pm{}$} S [table-format=4.5]  }
+        \toprule
+        {Parameter} & \multicolumn{2}{c}{ Bestimmte Werte} \\
+        \midrule
+        \text{A}	& \num{-8.3}\SI{1e-8}{}& \num{0.5}\SI{1e-8}{} \\
+        \text{B}	&\num{0.00432}  & \num{0.00028}  \\
+        \text{C}	&\num{-52}  & \num{4}  \\
+        \bottomrule
+    \end{tabular}
+\caption {Berechnete Werte für die quadratische Fit-Funktion gerundet auf die fünfte Nachkommastelle.}
+\label{tab:signum}
+\end{table}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 \begin{table}[H]
@@ -83,21 +206,7 @@
 \label{tab:phi}
 \end{table}
 
-\begin{table}[H]
-    \centering
-    \sisetup{table-format=1.3}
-    \begin{tabular}{ S | S [table-format=2.5] @{$ \pm{}$} S [table-format=4.5]  }
-        \toprule
-        {Parameter} & \multicolumn{2}{c}{ Bestimmte Werte} \\
-        \midrule
-        \text{A}	& \num{-8.3}\SI{1e-8}{}& \num{0.5}\SI{1e-8}{} \\
-        \text{B}	&\num{0.00432}  & \num{0.00028}  \\
-        \text{C}	&\num{-52}  & \num{4}  \\
-        \bottomrule
-    \end{tabular}
-\caption {Berechnete Werte für die quadratische Fit-Funktion gerundet auf die fünfte Nachkommastelle.}
-\label{tab:signum}
-\end{table}
+
 
 
 

@@ -47,17 +47,17 @@ Uamppos=np.sqrt(Uamp**2)
 params, _1 =curve_fit(huell,tamp,Uamppos,p0=(15,400))
 err =np.sqrt(np.diag(_1))
 uparams=unp.uarray(params,err)
-print(f'\nFit:\nA0= {uparams[0]:.4f}V \nmu={uparams[1]:.5f}1/s\n')
+#print(f'\nFit:\nA0= {uparams[0]:.4f}V \nmu={uparams[1]:.5f}1/s\n')
 
 Reff=uparams[1]*4*np.pi*L
 Tex=1/(2*np.pi*uparams[1])
-print(f'\nReff= {Reff:.4f}ohm \nTex={Tex*10**6:.10f} *10^-6s\nReff-R1={(Reff-R1):.4f} \n')
+#print(f'\nReff= {Reff:.4f}ohm \nTex={Tex*10**6:.10f} *10^-6s\nReff-R1={(Reff-R1):.4f} \n')
 
 ###aperdiodischer Grenzfall
 
 
 Raptheo=unp.sqrt((4*L)/(C))
-print(f'\nAperiodischer Grenzfall:\nRap= {Rap:}ohm\nRaptheo={(Raptheo):.4f}ohm \nrelative Abweichung: {((Raptheo-Rap)/Rap)*100}%\n')
+#print(f'\nAperiodischer Grenzfall:\nRap= {Rap:}ohm\nRaptheo={(Raptheo):.4f}ohm \nrelative Abweichung: {((Raptheo-Rap)/Raptheo)*100}%\n')
 
 
 ###Resonanzüberhöhung
@@ -147,9 +147,9 @@ w1theo=(R1new/(2*L))+unp.sqrt((R1new**2/(4*L**2))+(1/(L*C)))
 w2theo=-1*(R1new/(2*L))+unp.sqrt((R1new/(2*L))**2+(1/(L*C)))
 wrestheo=unp.sqrt((1/(L*C))-(R1new**2/(2*L**2)))
 
-print(f'\nPhasenverschiebung:\nwrestheo= {wrestheo} 1/s \twresexp= {wresexp} 1/s \trelative Abweichung: {((wrestheo-wresexp)/wrestheo)*100}%')
-print(f'w1theo= {w1theo} 1/s \tw1exp= {w1exp} \trelative Abweichung: {((w1theo-w1exp)/w1theo)*100}%')
-print(f'w2theo= {w2theo} 1/s \tw2exp= {w2exp} 1/s\trelative Abweichung: {((w2theo-w2exp)/w2theo)*100}%')
+#print(f'\nPhasenverschiebung:\nwrestheo= {wrestheo} 1/s \twresexp= {wresexp} 1/s \trelative Abweichung: {((wrestheo-wresexp)/wrestheo)*100}%')
+#print(f'w1theo= {w1theo} 1/s \tw1exp= {w1exp} \trelative Abweichung: {((w1theo-w1exp)/w1theo)*100}%')
+#print(f'w2theo= {w2theo} 1/s \tw2exp= {w2exp} 1/s\trelative Abweichung: {((w2theo-w2exp)/w2theo)*100}%')
 
 #plotparameter hierfür
 
@@ -172,10 +172,21 @@ wres=np.linspace(unp.nominal_values(wresexp),unp.nominal_values(wresexp),25)
 #halbwertsbreite plotparameter
 
 höhe=np.linspace(1.35,4,25)
-
+plot0=np.linspace(tamp[0],tamp[-1])
 
 
 #plots
+plt.figure()
+plt.plot(tamp,Uamp,"x",label="Messwerte")
+plt.plot(plot0,huell(plot0,*params),"g",label="Einhüllende Funktion")
+plt.plot(plot0,-huell(plot0,*params),"g")
+plt.xlabel("t [s]")
+plt.ylabel("U [V]")
+plt.tight_layout()
+plt.legend()
+plt.savefig("build/plots/plot0.pdf")
+
+
 plt.figure()
 plt.plot(fc,Uu0,"x",label="Messwerte")
 plt.xscale('log')

@@ -68,7 +68,7 @@ qtheo=unp.sqrt((L)/(R1new**2*C))
 
 
 
-print(f'\nResonanzüberhöhung\nw0= {w0} 1/s \nqexp={qexp} ohne einheit \nqtheo={(qtheo)} ohne einheit \nrelative Abweichung: {((qtheo-qexp)/qtheo)*100}%\n')
+#print(f'\nResonanzüberhöhung\nw0= {w0} 1/s \nqexp={qexp} ohne einheit \nqtheo={(qtheo)} ohne einheit \nrelative Abweichung: {((qtheo-qexp)/qtheo)*100}%\n')
 
 
 
@@ -94,7 +94,7 @@ def square(f,A,B,C):
 params2, _2= curve_fit(square,fnew2,Unew2,p0=(25000,1,4))
 err2 = np.sqrt(np.diag(_2))
 uparams2=unp.uarray(params2,err2)
-print(f'\nFit2:\nFunktionswerte= {uparams2[0]} & {uparams2[1]} & {uparams2[2]}\n')
+#print(f'\nFit2:\nFunktionswerte= {uparams2[0]} & {uparams2[1]} & {uparams2[2]}\n')
 
 
 
@@ -104,11 +104,11 @@ print(f'\nFit2:\nFunktionswerte= {uparams2[0]} & {uparams2[1]} & {uparams2[2]}\n
 #weinen und wolfram alpha wert nehmen
 wolf1=np.linspace(22395.6,22395.6,25)
 wolf2=np.linspace(29532,29532,25)
-print("\nwolf1: ",wolf1[0],"\nwolf2: ",wolf2[1])
+
 
 breitetheo=R1new/L *10**-3
-
-print(f'\nbreitetheo={breitetheo} kHz\nbreiteexp={((wolf2[1]-wolf1[1])/1000)} kHz\nAbweichung={(-breitetheo+((wolf2[1]-wolf1[1])/1000))/(breitetheo)}\n')
+#print("\nwolf1: ",wolf1[0],"\nwolf2: ",wolf2[1])
+#print(f'\nbreitetheo={breitetheo} kHz\nbreiteexp={((wolf2[1]-wolf1[1])/1000)} kHz\nAbweichung={(-breitetheo+((wolf2[1]-wolf1[1])/1000))/(breitetheo)*100}\n')
 
 
 
@@ -132,7 +132,7 @@ params3, _3= curve_fit(sigmoid,fdnew,phi2,p0=(2,38000,1,200) )
 err3 = np.sqrt(np.diag(_3))
 uparams3=unp.uarray(params3,err3)
 plot1=np.linspace(20,45,50)*1000
-print(f'Fit 3:\n{uparams3}')
+#print(f'Fit 3:\n{uparams3}')
 
 
 def schnittsig(a,b,c,d,s):
@@ -201,11 +201,11 @@ plt.savefig("build/plots/plot1.pdf")
 
 plt.figure()
 plt.plot(fnew,Unew,"x",label="Messwerte")
-plt.plot(x,k,"g--",linewidth=0.6,label=r"$\frac{U_{max}}{\sqrt{2}}$")
+plt.plot(x,k,"b--",linewidth=0.6,label=r"$\frac{{\frac{U}{U_0}}_{max}}{\sqrt{2}}$")
 #plt.plot(halb1,höhe,"g--",linewidth=0.6,label=r"Halbwertsbreite")
 #plt.plot(halb2,höhe,"g--",linewidth=0.6,label=r"Halbwertsbreite")
 plt.plot(wolf1,höhe,"g--",linewidth=0.6,label=r"Halbwertsbreite")
-plt.plot(wolf2,höhe,"g--",linewidth=0.6,label=r"Halbwertsbreite")
+plt.plot(wolf2,höhe,"g--",linewidth=0.6,)
 plt.plot(xplot2,square(xplot2,*params2))
 plt.xlabel("f [Hz]")
 plt.ylabel("Uc/U [V]")

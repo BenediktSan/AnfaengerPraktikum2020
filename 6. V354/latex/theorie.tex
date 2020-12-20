@@ -278,6 +278,8 @@
 
     \section{Impedanz des Schwingkreises}
 
+        \subsection{Serienschwingkreis}
+
     Ein Schwingkreis lässt sich auch wie in Abbildung ?ref? als Zweipol beschreiben. An seinen Enden kann nun ein frequenzabhängiger 
     Widerstand r, dieser wird als Impedanz bezeichnet. Aufgrund der Phasenverschiebung zwischen der Spannung und dem Strom muss r als 
     komplexe Zehl definiert werden :
@@ -293,29 +295,44 @@
     r ist dort nun ein Pfeil vom Ursprung dessen Länge der Scheinwiderstand und der Winkel zur reelen Achse die Phasenverschiebung 
     beschreibt.
 
+    Da die Elemente der Schwingkreises in Reihe geschalten sind wird dieser als Serienschwingkreis bezeichnet. Die gesamt Impedanz $r$ berechnet 
+    sich durch die Impedanzen der einezlnen Bauteile:
     \begin{align}
         r_{\symup{C}} = -j\frac{1}{\omega C} \nonumber\\
         r_{\symup{L}} = j\omega L  \nonumber\\
         r_{\symup{R}} = R_{\symup{s}} \nonumber
     \end{align}
 
+    Die gesamt Impedanz $r_{\symup{S}}$ berechnet sich also zu:
     \begin{equation}
         r_{\symup{S}} = R_{\symup{S}} + j \left(    \omega L - \frac{1}{\omega C} \right) \nonumber
     \end{equation}
 
+    Aufteilung in real und imaginär Teil ergibt:
     \begin{align}
         X_{\symup{S}} = R_{\symup{S}}  \nonumber\\ 
         Y_{\symup{S}} = j \omega L - \frac{1}{\omega C} \nonumber
     \end{align}
 
+    Damit ist
     \begin{equation}
-        |r_{\symup{S}}| = \sqrt{R^2_{\symup{S}} + \left( \omega L - \frac{1}{\omega C} \right)^2} \nonumber
+        |r_{\symup{S}}| = \sqrt{R^2_{\symup{S}} + \left( \omega L - \frac{1}{\omega C} \right)^2} . \nonumber
     \end{equation}
 
+    Da $X_{\symup{S}}$ nicht von $\omega$ abhängig ist schneidet die Ortskurve die x-Achse an der Stelle $R_{\symup{S}}$. Der Scheinwiderstand 
+    selber ist bei $\omega = \omega_0 = \frac{1}{\sqrt{LC}}$ am geringsten, wächst jedoch bei $\omega \to 0$ und bei $\omega \to \infty$ 
+    gegen $\infty$.
+
+        \subsection{Parallelschwingkreis}
+        Die Impedanz $r_{\symup{p}}$ Parallelschwingkreises berechnet sich zu:
+        
     \begin{equation}
         r_{\symup{p}} = \frac{\frac{1}{R_{\symup{p}}}+j \left( \frac{1}{\omega L} - \omega C \right)}{\frac{1}{R^2_{\symup{p}}}+ \left( \frac{1}{\omega L} - \omega C \right)^2} \nonumber
     \end{equation}
 
+    und somit der Scheinwiderstand zu:
     \begin{equation}
         |r_{\symup{p}}|=  \frac{1}{\sqrt{\frac{1}{R^2_{\symup{p}}} \left( \frac{1}{\omega L} - \omega C \right)^2}} \nonumber
     \end{equation}
+
+    

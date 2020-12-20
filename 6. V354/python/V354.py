@@ -108,7 +108,7 @@ wolf2=np.linspace(29532,29532,25)
 
 breitetheo=R1new/L *10**-3
 #print("\nwolf1: ",wolf1[0],"\nwolf2: ",wolf2[1])
-#print(f'\nbreitetheo={breitetheo} kHz\nbreiteexp={((wolf2[1]-wolf1[1])/1000)} kHz\nAbweichung={(-breitetheo+((wolf2[1]-wolf1[1])/1000))/(breitetheo)}\n')
+#print(f'\nbreitetheo={breitetheo} kHz\nbreiteexp={((wolf2[1]-wolf1[1])/1000)} kHz\nAbweichung={(-breitetheo+((wolf2[1]-wolf1[1])/1000))/(breitetheo)*100}\n')
 
 
 

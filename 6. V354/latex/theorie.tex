@@ -11,13 +11,31 @@
     \subsection{RLC-Kreis}
 
 
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.2\textwidth]{images/unged.PNG}
+        \caption{Ein ungedämpfter Schwingkreis.}
+        \label{img:unged}
+    \end{figure}
 
-
-
+    \noindent In Abbildung \ref{img:unged} ist ein Schaltkreis aus einer Spule und einem Kondensator aufgezeichnet. Dies ist ein Schwingkreis 
+    in dem der Strom ungedämpft zwischen den beiden Schaltelementen hin und her fließt. Wird in diesen Schwingreis noch ein Widerstand eingebaut, 
+    entsteht ein gedämpfter Schwingkreis wie in Abbildung \ref{gedKr}. In diesem Schwingkreis fällt die Amplitude konstant monoton.
+    
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.3\textwidth]{images/gedKr.PNG}
+        \caption{Ein ungedämpfter Schwingkreis.}
+        \label{img:gedKr}
+    \end{figure}
+    
+    
     \subsection{Herleitung gedämpfter Schwingkreis}
 
+    
+    \noindent Zunächst wird nun eine Formel hergeleitet die gedämpfte Schwingkreise unterschiedlicher Formen beschreiben kann.
+    Das 2. Kirchhoffsche Gesetz führt direkt zu seiner Beziehung der abfallenden Spannungen:
 
-    \noindent Das 2. Kirchhoffsche Gesetz führt direkt zu seiner Beziehung der abfallenden Spannungen:
     \begin{equation}
     U_{\symup{R}} + U_{\symup{C}} + U_{\symup{L}} +  = 0     
     \label{eq:Uabfall}
@@ -177,8 +195,17 @@
 
     \subsection{erzwungene Schwingungen}
     
-    \noindent In diesem Abschnitt werden LRC-Schwingkreise untersucht die von außen angeregt sind. Dazu wird eine Spannungsquelle an den Stromkreis 
-    angeschlossen die eine Sinusfoermige Spannung liefert.
+
+    \noindent In diesem Abschnitt werden LRC-Schwingkreise untersucht die von außen angeregt sind. Dazu wird wie in Abbildung \ref{img:erz} 
+    eine Spannungsquelle an den Stromkreis angeschlossen die eine Sinusförmige Spannung liefert.
+    
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.7\textwidth]{images/Erzwungene.PNG}
+        \caption{Schaltzeichnung einer erzwungenen Schwingung.}
+        \label{img:erz}
+    \end{figure}
+
     \begin{equation}
         u(t)= \symup{U_0} \symup{e}^{j \omega t} \nonumber
     \end{equation}
@@ -308,12 +335,22 @@
     \noindent Somit ist im Vergleich von \ref{eq:v1} und \ref{eq:v2} zu sehen, dass im Falle schwacher Dämpfung $\omega_1$ und $\omega_2$ 
     $\omega_+ - \omega_-$ zusammenfällt.
 
+
     \section{Impedanz des Schwingkreises}
+
 
         \subsection{Serienschwingkreis}
 
-    \noindent Ein Schwingkreis lässt sich auch wie in Abbildung ?ref? als Zweipol beschreiben. An seinen Enden kann nun ein frequenzabhängiger 
-    Widerstand r, dieser wird als Impedanz bezeichnet. Aufgrund der Phasenverschiebung zwischen der Spannung und dem Strom muss r als 
+        
+        \begin{figure}[H]
+            \centering
+            \includegraphics[width=0.7\textwidth]{images/Zweipol.PNG}
+            \caption{Der Serienschwingkreis als Zweipol, hier wird die Impedanz als $r$ definiert.}
+            \label{img:zweip}
+        \end{figure}
+
+    \noindent Ein Schwingkreis lässt sich auch wie in Abbildung \ref{img:zweip} als Zweipol beschreiben. An seinen Enden kann nun ein frequenzabhängiger 
+    Widerstand r gemessen werden, dieser wird als Impedanz bezeichnet. Aufgrund der Phasenverschiebung zwischen der Spannung und dem Strom muss r als 
     komplexe Zehl definiert werden :
     \begin{equation}
         r = X + jY \nonumber
@@ -326,6 +363,13 @@
     \noindent wird als Scheinwiderstand bezeichnet. In der komplexen Zahlenebene wird der Verlauf der Größe r($\omega$) als Ortskurve bezeichnet. 
     r ist dort nun ein Pfeil vom Ursprung dessen Länge der Scheinwiderstand und der Winkel zur reelen Achse die Phasenverschiebung 
     beschreibt.
+
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.4\textwidth]{images/Imaginaer.PNG}
+        \caption{Ein Plot mit unterschiedlich abfallenden Funktionen.}
+        \label{img:imag}
+    \end{figure}
 
     \noindent Da die Elemente der Schwingkreises in Reihe geschalten sind wird dieser als Serienschwingkreis bezeichnet. Die gesamt Impedanz $r$ berechnet 
     sich durch die Impedanzen der einezlnen Bauteile:
@@ -359,7 +403,14 @@
         \subsection{Parallelschwingkreis}
     
     
-        \noindent Die Impedanz $r_{\symup{p}}$ Parallelschwingkreises berechnet sich zu:
+        \begin{figure}[H]
+            \centering
+            \includegraphics[width=0.3\textwidth]{images/Parallelschaltung.PNG}
+            \caption{Schaltzeichnung eines Parallelschwingkreises, Impedanz wird hier als $r_{\symup{P}}$ bezeichnet.}
+            \label{img:para}
+        \end{figure}
+
+        \noindent Die Impedanz $r_{\symup{p}}$ des Parallelschwingkreises wie in Abbildung \ref{img:para} berechnet sich zu:
         
     \begin{equation}
         r_{\symup{p}} = \frac{\frac{1}{R_{\symup{p}}}+j \left( \frac{1}{\omega L} - \omega C \right)}{\frac{1}{R^2_{\symup{p}}}+ \left( \frac{1}{\omega L} - \omega C \right)^2}
@@ -371,7 +422,22 @@
         |r_{\symup{p}}|=  \frac{1}{\sqrt{\frac{1}{R^2_{\symup{p}}} \left( \frac{1}{\omega L} - \omega C \right)^2}} \nonumber
     \end{equation}
 
-    Hier ist zu sehen, dass bei der Resonanzfrequenz $\omega_0 = \frac{1}{\sqrt{LC}}$ der Scheinwiderstand im Gegensatz zum 
-    Serienschwingkreis am größten wird, mit dem Widerstand $R_{\symup{P}}$. Jedoch bei $\omega \to 0$ und bei $\omega \to \infty$ 
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.7\textwidth]{images/Scheinwiderstand.PNG}
+        \caption{Der Scheinwiderstandes in Abhängigkeit von der Frequenz in einem Diagramm aufgezeichnet.}
+        \label{img:scheinw}
+    \end{figure}
+
+    \noindent Hier ist zu sehen, dass bei der Resonanzfrequenz $\omega_0 = \frac{1}{\sqrt{LC}}$ der Scheinwiderstand im Gegensatz zum 
+    Serienschwingkreis am größten wird, mit dem Widerstand $R_{\symup{P}}$ \ref{img:scheinw}. Jedoch bei $\omega \to 0$ und bei $\omega \to \infty$ 
     vernachlässigbar wird. Gleichung \ref{eq:Kreis} ergibt ebenfalls, dass die Ortskurve des Parallelresonanzkreis die Form eines Kreises 
     mit dem Radius $\frac{R_{\symup{P}}}{2}$ und dem Mittelpunkt $\left( \text{0 , } \frac{R_{\symup{P}}}{2} \right)$ hat.
+
+    
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.7\textwidth]{images/Ortskurve.PNG}
+        \caption{Ortskurve eines Parallelresonanzkreises.}
+        \label{img:orts}
+    \end{figure}

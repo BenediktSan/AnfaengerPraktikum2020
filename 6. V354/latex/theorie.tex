@@ -34,14 +34,14 @@
 
     
     \noindent Zunächst wird nun eine Formel hergeleitet die gedämpfte Schwingkreise unterschiedlicher Formen beschreiben kann.
-    Das 2. Kirchhoffsche Gesetz führt direkt zu seiner Beziehung der abfallenden Spannungen:
+    Das 2. Kirchhoffsche Gesetz führt direkt zu einer Beziehung der abfallenden Spannungen:
 
     \begin{equation}
     U_{\symup{R}} + U_{\symup{C}} + U_{\symup{L}} +  = 0     
     \label{eq:Uabfall}
     \end{equation}
 
-    \noindent In die Formel \ref{eq:Uabfall} lassen sich nun die Schaltelement spezifischen Formeln  einsetzten
+    \noindent In die Formel \ref{eq:Uabfall} lassen sich nun die Schaltelement spezifischen Formeln einsetzten
     \begin{align}
         U_{\symup{R}} & = RI \nonumber\\
         U_{\symup{C}} & = \frac{Q}{C}\nonumber\\
@@ -55,7 +55,7 @@
         \label{eq:DGL1}
     \end{align}
     
-    \noindent Diese Differetialgleichung wird über den Ansatz einer komplexen e Funktion gelöst.
+    \noindent Diese Differetialgleichung wird über den Ansatz einer komplexen e-Funktion gelöst.
     \begin{equation}
         I(t) = Z \cdot \symup{e}^{j \tilde{w} t}
         \label{eq:eAn}
@@ -87,7 +87,7 @@
         I(t) = \symup{e}^{- 2 \pi \mu t} \cdot  (Z_1 \symup{e}^{j 2\pi \tilde{v}t} + Z_2 \symup{e}^{-j 2\pi \tilde{v} t}) \nonumber
     \end{equation}
     \noindent schreiben. Um $I(t)$ weiter zu unterschen muss eine Fallunterscheidung gemacht werden. Hier wird unterschieden ob der 
-    Inhalt der Wurzel positiv oder negativ definiert ist und somit der Exponent reel oder imaginär ist. 
+    Inhalt der Wurzel positiv oder negativ definiert ist und somit die Wurzel reel oder imaginär ist. 
     \subsection{Fallunterscheidung}
 
         \subsubsection{1.Fall}
@@ -95,7 +95,7 @@
         \begin{equation}
             \frac{1}{LC} > \frac{R^2}{4L^2}  \nonumber
         \end{equation}
-        \noindent untersucht. Hier ist $v \in \mathds{R}$. Damit die Lösungsfunktion $I(t) \in \mathds{R}$ ist muss
+        \noindent untersucht. Hier ist $v \in \mathds{R}$. Damit die Lösungsfunktion $I(t) \in \mathds{R}$ ist, muss
         $Z_1 = \overline{Z_2}$ sein. Dies lässt sich durch den Ansatz
         \begin{align}
             Z_1 & = \frac{1}{2} A_0 \symup{e}^{j \eta } \nonumber\\
@@ -121,10 +121,10 @@
 
         \noindent mit der Näherung
         \begin{equation}
-            \frac{1}{LC} > \frac{R^2}{4L^2} \nonumber
+            \frac{1}{LC} \gg \frac{R^2}{4L^2} \nonumber
         \end{equation}
 
-        \noindent entsteht die Thomsonsche Schwingungsformel
+        \noindent entsteht hier ebenfalls die Thomsonsche Schwingungsformel
         \begin{equation}
             T_0 = \frac{2\pi}{\omega_0} = 2\pi \sqrt{LC} \nonumber
         \end{equation}
@@ -143,6 +143,7 @@
 
         \noindent In dem exeplarischen Plot einer gedämpften Schwingung aus Abbildung \ref{img:gedSch} wird die rote Einhüllende durch den 
         exponential Term $A_0 \symup{e}^{- 2 \pi \mu t}$ und die Schwingung durch den cosinus Term $cos(2\pi \nu t + \eta)$ beschrieben.
+
 
         \subsubsection{2. Fall}
 
@@ -216,7 +217,7 @@
         L \dot{I} + R I + \frac{Q(t)}{C} = \symup{U_0} \symup{e}^{j \omega t} \nonumber
     \end{equation}
 
-    \noindent oder mit:
+    \noindent oder mit
     \begin{equation}
         V_{\symup{C}} (t) = \frac{Q(t)}{C} \nonumber
     \end{equation}
@@ -268,9 +269,9 @@
     \end{equation}
 
     \noindent Somit ist die gesucht Funktion für $U_{\symup{C}}$ in Abhängigkeit von $\omega$, der Frequenz der Erregerspannung gefunden. Durch 
-    weiters Untersuchen von \ref{eq:Ucw} ergibt sich, dass $U_{\symup{C}}$ für $\omega \to \infty $ gegen 0 und für $\omega \to 0$ gegen 
+    weiteres Untersuchen von \ref{eq:Ucw} ergibt sich, dass $U_{\symup{C}}$ für $\omega \to \infty $ gegen 0 und für $\omega \to 0$ gegen 
     das $U_0$ der Erregerspanung geht. Jedoch gibt es auch ein $\omega$ bei dem das $U_{\symup{C}}$ innerhalb eines Maximums die 
-    Erregerspannung übertrifft. Dies Phänomen wird als Resonanz bezeichnet und tritt bei der Resonanzfrequenz $\omega_{\text{res}}$. 
+    Erregerspannung übertrifft. Dieses Phänomen wird als Resonanz bezeichnet und tritt bei der Resonanzfrequenz $\omega_{\text{res}}$ ein. 
     Eine Rechnung ergibt eine Formel für $\omega_{\text{res}}$:
     \begin{equation}
         \omega_{\text{res}} = \sqrt{\frac{1}{LC}-\frac{R^2}{2L^2}} \nonumber
@@ -290,7 +291,7 @@
     \noindent Somit kann $U_{\symup{C},\text{max}} \to \infty$ für $R \to 0$ gehen, dies wird als "Resonanzkatastrophe" bezeichnet. Der Faktor
     $\frac{1}{\omega_0 RC}$ wird auch als als Resonanzüberhöhung oder Güte q des Schwingkreises bezeichnet. Die Schärfe der Resonanz 
     der Resonanzkurve wird durch die Schnittpunkte $\omega_{\pm}$ die jeweils den Ort an dem $U_{\symup{C}}$ auf einen Faktor $\frac{1}{\sqrt{2}}$ 
-    absinken. Somit werden $\omega_+$ und $\omega_-$ durch 
+    absinkt beschreiben. Somit werden $\omega_+$ und $\omega_-$ durch 
     \begin{equation}
         \frac{U_0}{\sqrt{2}} \frac{1}{\omega_0 RC} = \frac{U_0}{C \sqrt{\omega^2_{\pm} R^2 + \left( \omega^2_{\pm}L - \frac{1}{C} \right) }} \nonumber
     \end{equation}
@@ -314,12 +315,12 @@
 
     \noindent Hier fällt jetzt die Spannung $U_{\symup{C}}$ ausgehend von $U_0$ mit steigender Frequez $\omega$ gegen 0. Bei hohen Frequenzen fällt
     die Spannung proportional zu $\frac{1}{\omega^2}$. Unter diesen Umständen kann der RLC-Kreis auch als Tiefpass benutzt werden.
-    \begin{equation}
-        \omega^2_0 = \frac{1}{LC} \nonumber
-    \end{equation}
-
+    %\begin{equation}
+    %    \omega^2_0 = \frac{1}{LC} \nonumber
+    %\end{equation}
+    \\
     \noindent Als nächstes wird die Frequenzabhängigkeit der Phase untersucht. Aus \ref{eq:phi} ist zu erkennen, dass für kleine $\omega$ die 
-    Kondensatorspannung und sie Erregerspannung fast in Phase sind jedoch bei hohen Frequenzen $U_{\symup{C}}$ etwa eine um $\pi$ 
+    Kondensatorspannung und die Erregerspannung fast in Phase sind, jedoch bei hohen Frequenzen $U_{\symup{C}}$ etwa eine um $\pi$ 
     kleinere Phase als $U$ hat. $\phi$ ist = $\frac{-\pi}{2}$ an der Stelle $\omega^2_0 = \frac{1}{LC}$.
     Aus \ref{eq:phi} folgt ebenfalls, dass $\omega_{1,2}$ bei denen $\phi= \frac{\pi}{4} \text{oder} \frac{3\pi}{4}$ ist die Beziehung:
     \begin{equation}
@@ -349,9 +350,9 @@
             \label{img:zweip}
         \end{figure}
 
-    \noindent Ein Schwingkreis lässt sich auch wie in Abbildung \ref{img:zweip} als Zweipol beschreiben. An seinen Enden kann nun ein frequenzabhängiger 
-    Widerstand r gemessen werden, dieser wird als Impedanz bezeichnet. Aufgrund der Phasenverschiebung zwischen der Spannung und dem Strom muss r als 
-    komplexe Zehl definiert werden :
+    \noindent Ein Schwingkreis lässt sich auch wie in Abbildung \ref{img:zweip} als Zweipol beschreiben. An seinen Enden kann nun ein 
+    frequenzabhängiger Widerstand $r$ gemessen werden, dieser wird als Impedanz bezeichnet. Aufgrund der Phasenverschiebung zwischen der Spannung 
+    und dem Strom muss $r$ als komplexe Zahl definiert werden :
     \begin{equation}
         r = X + jY \nonumber
     \end{equation}
@@ -361,7 +362,7 @@
         |r| = \sqrt{X^2 + Y^2} \nonumber
     \end{equation}
     \noindent wird als Scheinwiderstand bezeichnet. In der komplexen Zahlenebene wird der Verlauf der Größe r($\omega$) als Ortskurve bezeichnet. 
-    r ist dort nun ein Pfeil vom Ursprung dessen Länge der Scheinwiderstand und der Winkel zur reelen Achse die Phasenverschiebung 
+    $r$ ist dort nun ein Pfeil vom Ursprung dessen Länge der Scheinwiderstand und der Winkel zur reelen Achse die Phasenverschiebung 
     beschreibt.
 
     \begin{figure}[H]
@@ -371,7 +372,7 @@
         \label{img:imag}
     \end{figure}
 
-    \noindent Da die Elemente der Schwingkreises in Reihe geschalten sind wird dieser als Serienschwingkreis bezeichnet. Die gesamt Impedanz $r$ berechnet 
+    \noindent Da die Elemente des Schwingkreises in Reihe geschalten sind wird dieser als Serienschwingkreis bezeichnet. Die gesamt Impedanz $r$ berechnet 
     sich durch die Impedanzen der einezlnen Bauteile:
     \begin{align}
         r_{\symup{C}} = -j\frac{1}{\omega C} \nonumber\\

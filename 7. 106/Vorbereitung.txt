@@ -1,0 +1,14 @@
+Harmonische Schwingung:
+
+    Die Projektion einer gleichfoermigen KReisbewegung ist immer eine harmonische Schwingung sie laesst sich als Sinus oder Cosinus 
+    Funktion beschreiben
+
+Kleinwinkelnaeherung l=70 cm
+
+    sin(a)= g/h 
+    sin(a) * h = g 
+    g ist hier die Auslenkung nach recht/links ;
+
+    a= 5 deg Fehler: 0,13% ; g= sin(5) * 70 cm = 6,100 cm         Fehler: = 0,0793 mm
+    a= 7,5 deg Fehler : 0,3% ; g= sin(7,5) * 70 cm = 9,137 cm     Fehler: = 0,270 mm
+    a= 10 deg Fehler : 0,5% ; g = sin(10) * 70 cm = 12,155 cm     Fehler: = 0,607 mm

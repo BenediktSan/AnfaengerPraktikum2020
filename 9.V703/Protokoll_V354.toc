@@ -1,0 +1,4 @@
+\boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
+\babel@toc {ngerman}{}
+\contentsline {section}{\numberline {1}Auswertung}{3}{section.1}%
+\providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 

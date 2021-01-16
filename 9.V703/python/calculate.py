@@ -45,6 +45,7 @@ plt.savefig("build/plots/a")
 
 N_1 = 96041
 
+
 N_2 = 76518
 
 N_3 = 158479

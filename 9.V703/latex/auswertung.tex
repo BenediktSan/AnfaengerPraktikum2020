@@ -34,7 +34,7 @@
 \label{tab:Mess_Ch}
 \end{table}
 
-Die Daten werden in ein Diagramm eingezeichnet und mit einem Fehlerbalken versehen. Der Fehler entspricht der Wurzel der Anzahl der Impulse.
+\noindent Die Daten werden in ein Diagramm eingezeichnet und mit einem Fehlerbalken versehen. Der Fehler entspricht der Wurzel der Anzahl der Impulse.
 Durch das Plateau wird eine Ausgleichsgerade der Form $y = mx + b$ gelegt. Die Werte für die Ausgleichsgerade ergeben sich zu:
 \begin{align}
     m&= \num{1.138 \pm 0.24} \nonumber \\
@@ -50,11 +50,11 @@ Durch das Plateau wird eine Ausgleichsgerade der Form $y = mx + b$ gelegt. Die W
 
 \subsection{Totzeit}
 
-Die Totzeit des Zählrohrs wird näherungsweise mit der Formel:
+\noindent Die Totzeit des Zählrohrs wird näherungsweise mit der Formel:
 \begin{equation}
     T \approx \frac{N_1 + N_2 - N_{1+2}}{2N_1N_2}
 \end{equation}
-berechnet.Mit folgenden Werten für die Anzahl der Impulse pro 120 Sekunden:
+\noindent berechnet.Mit folgenden Werten für die Anzahl der Impulse pro 120 Sekunden:
 
 \begin{align} 
     N_1 &= 96041\\
@@ -62,11 +62,11 @@ berechnet.Mit folgenden Werten für die Anzahl der Impulse pro 120 Sekunden:
     N_{1+2} &= 58479\\
 \end{align}
 
-wird die Totzeit $T$ zu $\SI{22.52}{\micro\second}$ berechnet.
+\noindent wird die Totzeit $T$ zu $\SI{22.52}{\micro\second}$ berechnet.
 
 \subsection{freigesetzte Ladung}
 
-Zur Berechnung der Freigesetzten Ladungen pro einfallendem Teilchen werden folgende Werte benutzt:
+\noindent Zur Berechnung der Freigesetzten Ladungen pro einfallendem Teilchen werden folgende Werte benutzt:
 
 \begin{table}[H]
     \centering
@@ -89,23 +89,23 @@ Zur Berechnung der Freigesetzten Ladungen pro einfallendem Teilchen werden folge
 \label{tab:Mess_q}
 \end{table}
 
-Mittels der Formel:
+\noindent Mittels der Formel:
 \begin{equation}
     Z=\frac{I}{e_0N}
 \end{equation}
-ergibt sich folgende Graphik:
+\noindent ergibt sich folgende Graphik:
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.85\textwidth]{build/plots/d.png}
     \caption{Ein Plot der freigesetzten Ladungen pro Teilchen gegen die anliegende Spannung.}
     \label{img:plot1}
 \end{figure}
-mit den Werten:
+\noindent mit den Werten:
 \begin{table}[H]
     \centering
     \begin{tabular}{S [table-format=3.0] S [table-format=3.2] @{$\pm{}$} S [table-format=2.2]}
         \toprule
-        {$U \mathbin{\scalebox{1.5} / }\si{\volt}$} & {$Z \text{Werte} * 10^6$} & {$Z \text{Unsicherheit} 10^{6}$}\\
+        {$U \mathbin{\scalebox{1.5} / }\si{\volt}$} & {$Z_{\text{Werte}} * 10^6$} & {$Z_{\text{Unsicherheit}} 10^{6}$}\\
         \midrule
         350 & 190.36 & 31.78 \\
         400 & 249.81 & 31.32 \\

@@ -45,13 +45,13 @@ plt.savefig("build/plots/a")
 
 N_1 = 96041
 
-N_2 = 158479
+N_2 = 76518
 
-N_3 = 76518
+N_3 = 158479
 
 T = (N_1 + N_2 + N_3)/(2*N_1*N_2)
 
-#print(T)
+print(T)
 
 
 
@@ -72,13 +72,14 @@ Z_q = I/(e*N2)
 #print(Z_q)
 
 plt.figure()
-plt.errorbar(U2,unp.nominal_values(Z_q),yerr=unp.std_devs(Z_q),fmt=".")
+plt.errorbar(U2,unp.nominal_values(Z_q),yerr=unp.std_devs(Z_q),fmt=".",label="freigesetzte Ladungen")
+plt.legend()
 plt.savefig("build/plots/d")
 
 np.savetxt(
     'build/Strom.txt',
-    np.column_stack([U2,unp.nominal_values(I)]),
-    fmt=['%.4f', '%.4f'],       
+    np.column_stack([U2,unp.nominal_values(N2),unp.nominal_values(I)*1e6]),
+    fmt=['%.4f','%.1f', '%.2f'],       
     delimiter=' & ',
     header='Spannung,Stromstärke',
 )

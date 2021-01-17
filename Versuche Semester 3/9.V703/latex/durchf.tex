@@ -1,0 +1,40 @@
+\newpage
+\section{Durchführung}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.6\textwidth]{images/schaltplan.PNG}
+    \caption{Schaltpskizze der Messapparatur \protect \cite{V703}.}
+    \label{img:schalt}
+\end{figure}
+Die obige Abbildung \ref{img:schalt} zeigt den genauen Aufbau des Geiger-Müller-Zählrohrs. Dabei fließt die Ladung aus dem Zählrohr über den Widerstand $R$ ab, 
+wird anschließend vom Kondensator $C$ entkoppelt umd dann vom vorm zählen durch den Zähler noch verstärkt zu werden. Alternativ kann das ganze auch auf einem Oszilloskop dargestellt werden.\\\\
+
+\subsection{Aufnahme der Charakteristik des Zählrohres}
+
+\noindent
+In diesem Versuchsabschnitt wird eine $\beta$-Strahlungsquelle vor dem Fenster des Zählrohrs platziert.\\
+Nun wird für verschiedene Spannungen die Zählrate gemessen.\\
+Dabei müssen mehrere Sachen beachtet werden.\\
+Zum einen sollte nicht wesentlich mehr Impulse als $\SI{100}{\per\second}$ gemessen werden, da sonst aufgrund von zu hohen Totzeiten Korrekturen vorgenommen werden müssten.
+Besonders sollte hier auch auf die Genauigkeit der Messungen geachtet werden, da das Plateau, dessen Steigung gemessen wird, nur einen schwachen Anstieg besitzt.
+Des Weiteren sollte das Messintervall $\approx\SI{120}{\second}$ betragen, damit der Fehler der Messpunkte, aufgrund des $\sqrt{n}$-Gesetzes, $<\SI{1}{\percent}$ beträgt.\\
+Zuletzt sollte die angelegte Spannung $<\SI{700}{\volt}$ ist, damit die Selbstentladung vermieden wird.\\\\
+
+\subsection{Sichtbarmachung von Nachentladungen}
+
+\noindent
+Anschließend sollen, mit Hilfe des Oszilloskops, die Nachentladungen qualitativ nachgewiesen werden.\\
+Dafür wird die Intensität der $\beta$-Strahlungsquelle so weit heruntergeregelt, dass man auf dem Oszillioskop, bei einer Ablenkgeschwindigkeit von $\SI{50}{\micro\second\per\centi\metre}$, 
+nur noch einen einzigen Impuls misst. \\
+Die angelegte Spannung sollte dabei etwa $\SI{350}{\volt}$ betragen, da dort Nachentladungen vernachlässigbar sind.\\
+Nun wird die Spannung schlagartig auf $\SI{700}{\volt}$ hochgeregelt und die Beobachtung notiert, so wie der zeitliche Abstand zwischen Primär- und Nachentladung gemessen.
+
+\subsection{Oszillographische Messung der Totzeit}
+
+Für das folgende wird die Intensität der Quelle wieder erhöht.
+Nun wird zur Messung der Totzeit mit Hilfe des Oszilloskops auf den Anstieg des Impulses getriggert.
+Nun lässt sich die Totzeit durch den Vergleich mit Abb. \ref{img:tot} einfach die Zeit ablesen. Die Erholungszeit lässt sich hingegen nur abschätzen.
+
+\subsection{Bestimmung der Totzeit mit der Zwei-Quellen-Methode}
+

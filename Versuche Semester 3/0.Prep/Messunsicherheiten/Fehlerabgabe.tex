@@ -1,0 +1,146 @@
+\input{../Vorlagen//header.tex}
+
+
+
+\begin{document}
+\section{Aufgabe }
+\subsection{Was bezeichnet der Mittelwert?}
+Der Mitelwert ist eine Art \enquote{Durchschnittswert} von Messwerten.\\
+Mit seiner Hilfe lassen sich die Messwerte mitteln um bei einer genügend großen Datenmenge genauere Werte zu erhalten.
+Dadurch, dass man die Werte mittelt werden die Einflüsse der Fehler verkleinert.
+Er lässt sich durch die Formel
+\begin{equation*}
+    \overline{x}=\frac{1}{n}\sum_{\text{i=1}}^n x_i
+\end{equation*}
+beschreiben.
+
+\subsection{Welche Bedeutung hat die Standardabweichung?}
+Die Standardabweichung ist ein Maß für die Streubreite des Mittelwerts.\\
+Das bedeutet sie zeigt den Durchschnittlichen Abstand aller Werte zum Mittelwert an. Mit ihr ist ein Maß der Genauigkeit des Mittelwerts abschätzen.
+Je kleiner die Standardabweichung ist, desto kleiner ist die Streuung des Mittelwerts.
+
+\subsection{Worin unterscheidet sich die Streuung der Messwerte und der Fehler des Mittelwertes?}
+Die Standardabweichung gibt nur an wie sehr die Messwerte um den Mittelwert streuen, in dem die mittlere Abweichung der Werte angegeben wird.\\
+Der Fehler des Mittelwerts aber stellt allerdings den Fehler einer Standardabweichungim Bezug auf die Grundgesamtheit dar. Also im Bezug auf die gesamte Messwertmenge, 
+die real existiert oder auch nur fiktiv sein kann. Sie zeigt also die Abweichung eines Mittelwerts, von dem Mittelwert an, der es bei der gesamten Menge oder einfach der es wirklich seien sollte.
+
+\section{Aufgabe: Standardabweichung}
+\begin{equation}
+    \sigma = \sqrt{ \frac{1}{(n-1)} \sum_{k=1}^n (x_k -\overline{x})^2 } \nonumber
+\end{equation}
+\noindent
+Um den Fehler zu Berechnen wird $\symup{C}$ so beliebig gewählt, so dass man für den Fehler 10 $\symup{n_0}$ als 2 (kleinstmögliches $n$) setzen kann. 
+Dies ist $\symup{C}=100$. Am Ende werden dann $\symup{n_0}-\symup{n}$ zusätliche Schritte benötigt.
+\begin{equation}
+   \symup{C}=\sum_{k=1}^n (x_k -\overline{x})^2 \\ \nonumber
+\end{equation}
+
+\begin{align*}  
+    \symup{C}&=100\si{\metre} & \sigma_u &= 10 \si{\metre\per\second} \nonumber \\
+    \implies \sigma_u &= \sqrt{ \frac{1}{(\symup{n_0}-1)} \cdot \symup{C}}\\ \nonumber
+    \iff n_0 &= \frac{\symup{C}}{( \sigma_u)^2}+1\\ \nonumber
+    \implies n_0 &= 2 \nonumber
+\end{align*}
+\newline
+\newline 
+Für $ \sigma =\SI{3}{\metre\per\second} $
+\begin{align*}
+    \sigma &= \SI{3}{\metre\per\second}\\ \nonumber
+    \implies  n &= 12.11111111 \nonumber
+\end{align*}
+Es werden für eine Unsicherheit von  $\pm 3 \si{\metre\per\second}$ also $\symup{n_0}-n $ und damit $\approx 11$ weitere Messungen benötigt.
+ \\
+ \\
+Für  $\sigma = \SI{0.5}{\metre\per\second}$ \nonumber
+
+\begin{align}
+    \sigma &= \SI{0.5}{\metre\per\second}\\ \nonumber
+    \implies n &= 401 \quad \quad \; \; \; \; \nonumber
+\end{align}
+
+Es werden für eine Unsicherheit von $\pm 0.5\si{\metre\per\second}$ also $\symup{n_0}-\symup{n}$ und damit $\approx 309$ weitere Messungen benötigt.
+
+\section{Aufgabe: Hohlzylinders}
+\begin{align}
+    R_\text{außen}&= \SI{15(1)}{\centi\metre} & R_\text{innen}&=\SI{10(1)}{\centi\metre} & h&=\SI{20(1)}{\centi\metre} \nonumber
+\end{align}
+
+\begin{align}
+    V &=\pi \cdot ((R_\text{außen})^2 - (R_\text{innen})^2) \cdot h \\ \nonumber
+    \implies V &= \SI{7853.98163397448}{\cubic\centi\metre} \nonumber
+\end{align}
+\\
+Fehlerformel und Fehlerwert:
+\begin{align}
+    \increment V &= \sqrt{
+        \left(\frac{\partial V}{\partial R_\text{außen} }\right)^2 \cdot \left(\increment R_\text{außen} \right)^2 +
+        \left(\frac{\partial V}{\partial R_\text{innen} }\right)^2 \cdot \left(\increment R_\text{innen} \right)^2 +
+        \left(\frac{\partial V}{\partial h }\right)^2 \cdot \left(\increment h \right)^2
+        }\\ \nonumber
+\increment V&=
+\sqrt{
+\begin{aligned}
+        & \left(
+        2 \pi \cdot R_\text{außen} \cdot h \right) ^2 \cdot (\increment R_\text{außen} )^2
+        + \left( -2 \pi \cdot R_\text{innen} \cdot h \right) ^2 \cdot (\increment R_\text{innen} )^2 \\
+        &+ \left( \pi \cdot ((R_\text{außen})^2 - (R_\text{innen})^2) \right) ^2 \cdot (\increment h )^2
+\end{aligned} \nonumber
+}\\
+\implies \increment V &= \SI{229.921874934367}{\cubic\centi\metre} \nonumber \nonumber
+\end{align}
+            
+Das Volumen des Hohlzylinders beträgt also $\approx7853.9816\pm 229.9219\; \si{\cubic\centi\metre}$.
+
+\section{Aufgabe: Projektil}
+
+\begin{align}
+    m&=\SI{50(1)e-4}{\kilo\gram} & v&=\SI{20(1)e1}{\metre\per\second} & t&=\SI{6}{\second} \nonumber
+\end{align}
+
+\subsection{Streckenberechnung}
+
+\begin{align*}
+    s(t)&=v\cdot t \\
+    s(6)&= 1200 \si{\metre\per\second}
+\end{align*}
+
+Fehlerformel und Fehlerwert:
+
+\begin{align*}
+    \increment s &= \sqrt{\left(\frac{\partial s}{\partial v }\right)^2 \cdot \left(\increment v \right)^2 }\\
+    \increment s &= \sqrt{\left(t\right)^2 \cdot \left(\increment v \right)^2 }\\
+    \increment s &= 60 \si{\metre\per\second}
+\end{align*}
+
+Die Strecke bestimmt sich also zu $\SI{1200(60)}{\metre\per\second}$.
+
+\subsection{Energieberechnung}
+
+Die Energie lässt sich mit Hilfe der Formel
+\begin{equation*}
+    E_\text{kin}=\frac{m}{2}v^2
+\end{equation*}
+berechnen.
+Daraus ergibt sich dann als Wert:
+\begin{equation*}
+    E_\text{kin}=100 \si{\joule}
+\end{equation*}
+\newline
+Der Fehler lässt sich dann mit folgender Formel bestimmen:
+\begin{align*}
+    \increment E_\text{kin} &=\sqrt{
+        \left(\frac{\partial E_\text{kin}}{\partial v }\right)^2 \cdot \left(\increment v \right)^2 +
+        \left(\frac{\partial E_\text{kin}}{\partial m }\right)^2 \cdot \left(\increment m \right)^2 
+        }\\
+    \increment E_\text{kin} &=\sqrt{
+        \left( mv \right)^2 \cdot \left(\increment v \right)^2 +
+        \left(\frac{v^2}{2}\right)^2 \cdot \left(\increment m \right)^2 
+        }\\
+    \increment E_\text{kin} &= 10.1980390271856 \si{\joule}
+\end{align*}
+Die kinetische Energie des Projektils ist also $100 \pm 10.1980\si{\joule}$.
+
+
+
+
+\end{document}

@@ -12,7 +12,7 @@ build/d.png:	|build
 
 
 # hier weitere Abhängigkeiten für build/main.pdf deklarieren:
-build/Protokoll_V354.pdf:  latex/auswertung.tex latex/theorie.tex latex/durchf.tex latex/diskussion.tex| build
+build/Protokoll_V703.pdf:  latex/auswertung.tex latex/theorie.tex latex/durchf.tex latex/diskussion.tex build/a.png| build
 	lualatex --output-directory=build --interaction=batchmode --halt-on-error latex/Protokoll_V703.tex
 	biber build/Protokoll_V703.bcf
 	lualatex --output-directory=build --interaction=batchmode --halt-on-error latex/Protokoll_V703.tex

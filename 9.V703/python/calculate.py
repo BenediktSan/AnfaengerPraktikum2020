@@ -25,8 +25,8 @@ N1=N[5:32]
 
 var , _1 = np.polyfit(U1,N1,deg=1, cov=True)
 err1=np.sqrt(np.diag(_1))
-print(var)
-print(err1)
+#print(var)
+#print(err1)
 m=var[0]
 b=var[1]
 
@@ -43,17 +43,15 @@ plt.savefig("build/plots/a")
 
 ## c)
 
-N_1 = 96041
+N_1 =ufloat(96041,np.sqrt(96041))
 
+N_2 = ufloat(76518,np.sqrt(76518))
 
-N_2 = 76518
-
-N_3 = 158479
+N_3 = ufloat(158479,np.sqrt(158479))
 
 T = (N_1 + N_2 + N_3)/(2*N_1*N_2)
 
-print(T)
-
+print("N_1",N_1.s)
 
 
 ## d)

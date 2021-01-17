@@ -1,4 +1,4 @@
-all: build/Protokoll_V354.pdf
+all: build/Protokoll_V702.pdf
 
 
 
@@ -11,7 +11,7 @@ all: build/Protokoll_V354.pdf
 
 
 # hier weitere Abhängigkeiten für build/main.pdf deklarieren:
-build/Protokoll_V354.pdf:  latex/auswertung.tex latex/theorie.tex latex/durchf.tex latex/diskussion.tex| build
+build/Protokoll_V702.pdf:  latex/auswertung.tex latex/theorie.tex latex/durchf.tex latex/diskussion.tex| build
 	lualatex --output-directory=build --interaction=batchmode --halt-on-error latex/Protokoll_V354.tex
 	biber build/Protokoll_V354.bcf
 	lualatex --output-directory=build --interaction=batchmode --halt-on-error latex/Protokoll_V354.tex
@@ -26,7 +26,7 @@ clean:
 
 #Zusätzliche Ordner/Dateien löschen
 aux2:
-	rm -rf Protokoll_V354.aux Protokoll_V354.bcf Protokoll_V354.log Protokoll_V354.pdf Protokoll_V354.run.xml Protokoll_V354.toc
+	rm -rf Protokoll_V702.aux Protokoll_V702.bcf Protokoll_V702.log Protokoll_V702.pdf Protokoll_V702.run.xml Protokoll_V702.toc
 
 auxv:
 	rm -rf python/variables

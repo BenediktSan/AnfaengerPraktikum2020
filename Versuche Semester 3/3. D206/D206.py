@@ -5,6 +5,10 @@ import uncertainties.unumpy as unp
 from uncertainties import ufloat
 from scipy.optimize import curve_fit
 import sympy
+import os
+
+if os.path.exists("build") == False:
+    os.mkdir("build")
 
         #Daten auslesen
 Data=np.genfromtxt("Daten.txt")

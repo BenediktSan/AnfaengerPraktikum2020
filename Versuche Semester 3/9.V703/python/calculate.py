@@ -22,17 +22,23 @@ U , N = np.genfromtxt("Versuchsdateien/Kennlinie.dat", unpack=True)
 ##  a)
 U1=U[5:32]
 N1=N[5:32]
-
+print(U1)
 var , _1 = np.polyfit(U1,N1,deg=1, cov=True)
 err1=np.sqrt(np.diag(_1))
-#print(var)
-#print(err1)
+print(var)
+print(err1)
 m=var[0]
 b=var[1]
 
+stei= (m*100 +b)/b
+
+print("Steigung",N[5]+ stei*200)
+print("Wert",N[25])
+print("stei", stei)
 plt.figure()
 plt.errorbar(U,N,yerr=np.sqrt(N),fmt="+",label="Daten")
 plt.plot(U1,U1*m+b,label="fit")
+plt.plot(U1,b + U1*stei, label="prozent")
 plt.legend()
 plt.savefig("build/plots/a")
 
@@ -44,14 +50,14 @@ plt.savefig("build/plots/a")
 ## c)
 
 N_1 =ufloat(96041,np.sqrt(96041))
-
+#print(N_1)
 N_2 = ufloat(76518,np.sqrt(76518))
-
+#print(N_2)
 N_3 = ufloat(158479,np.sqrt(158479))
+#print(N_3.s)
+T = (N_1 + N_2 - N_3)/(2*N_1*N_2)
 
-T = (N_1 + N_2 + N_3)/(2*N_1*N_2)
-
-print("N_1",N_1.s)
+print("T",T)
 
 
 ## d)

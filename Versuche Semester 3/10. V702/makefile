@@ -12,9 +12,9 @@ all: build/Protokoll_V702.pdf
 
 # hier weitere Abhängigkeiten für build/main.pdf deklarieren:
 build/Protokoll_V702.pdf:  latex/auswertung.tex latex/theorie.tex latex/durchf.tex latex/diskussion.tex| build
-	lualatex --output-directory=build --interaction=batchmode --halt-on-error latex/Protokoll_V354.tex
-	biber build/Protokoll_V354.bcf
-	lualatex --output-directory=build --interaction=batchmode --halt-on-error latex/Protokoll_V354.tex
+	lualatex --output-directory=build --interaction=batchmode --halt-on-error latex/Protokoll_V702.tex
+	biber build/Protokoll_V702.bcf
+	lualatex --output-directory=build --interaction=batchmode --halt-on-error latex/Protokoll_V702.tex
 
 
 build:

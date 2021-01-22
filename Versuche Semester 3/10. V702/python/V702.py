@@ -30,11 +30,10 @@ NU =NU/10 #auf 30s
 #VANADIUM
 print('\nVANADIUM')
 NU_V=np.array(np.mean(NU))
-print(f'\nNullrate VA pro 30s:\nNU_V= {NU_V:.4f} \n')
+#print(f'\nNullrate VA pro 30s:\nNU_V= {NU_V:.4f} \n')
 
 Nv_=unp.uarray(Nv-NU_V,np.sqrt(Nv-NU_V))
-#print(f'\nangepasste messwerte:\nNv_= {Nv_} \n')
-#print(f'\nangepasste messwerte:\nNv_= {unp.log(Nv_)} \n')
+
 
 
 #fit
@@ -44,23 +43,23 @@ def huell(t,mu,A0):
 params1, _1 =curve_fit(huell,tv,unp.nominal_values(Nv_),p0=(0.0035,205))
 err1 =np.sqrt(np.diag(_1))
 uparams1=unp.uarray(params1,err1)
-print(f'\nFit1:\nmu= {uparams1[0]:.5f} 1/s \nA0={uparams1[1]:.5f}\n')
+#print(f'\nFit1:\nmu= {uparams1[0]:.5f} 1/s \nA0={uparams1[1]:.5f}\n')
 
 #Haltbwertszeit
 
 TV=(np.log(2))/uparams1[0]
 theoV=224.58
-print(f'\nHalbwertszeit Vanadium= {TV:.5f} s\tTheoriewert: {(theoV)} s  \t relative Abweichung: {((theoV-TV)/theoV)*100} % \n')
+#print(f'\nHalbwertszeit Vanadium= {TV:.5f} s\tTheoriewert: {(theoV)} s  \t relative Abweichung: {((theoV-TV)/theoV)*100} % \n')
 
 #Halbwertszeit genauer
 
 params1_, _1_ =curve_fit(huell,tv[0:14],unp.nominal_values(Nv_[0:14]),p0=(0.0035,205))
 err1_ =np.sqrt(np.diag(_1_))
 uparams1_=unp.uarray(params1_,err1_)
-print(f'\nFit1 genauer:\nmu= {uparams1_[0]:.5f} 1/s \nA0={uparams1_[1]:.5f}\n')
+#print(f'\nFit1 genauer:\nmu= {uparams1_[0]:.5f} 1/s \nA0={uparams1_[1]:.5f}\n')
 
 TV_=(np.log(2))/uparams1_[0]
-print(f'\nHalbwertszeit Vanadium genauer= {TV_:.5f} s \tTheoriewert: {(theoV)} s  \t relative Abweichung: {((theoV-TV_)/theoV)*100} % \n')
+#print(f'\nHalbwertszeit Vanadium genauer= {TV_:.5f} s \tTheoriewert: {(theoV)} s  \t relative Abweichung: {((theoV-TV_)/theoV)*100} % \n')
 
 
 
@@ -82,7 +81,7 @@ print(f'\nFit2:\nmu= {uparams2[0]:.5f} 1/s \nA0={uparams2[1]:.5f}\n')
 
 TR=(np.log(2))/uparams2[0]
 theoR=4.34*60
-print(f'\nHalbwertszeit Rhodium 104= {TR:.5f} s \tTheoriewert: {(theoR)} s  \trelative Abweichung: {((theoR-TR)/theoR)*100} %  \n')
+print(f'\nHalbwertszeit Rhodium 104i= {TR:.5f} s \tTheoriewert: {(theoR)} s  \trelative Abweichung: {((theoR-TR)/theoR)*100} %  \n')
 
 #kurzlebiges Isotop
 x=9    #parameter zum rumprobieren(weite des schätzabschnittes)
@@ -98,7 +97,7 @@ print(f'\nFit3:\nmu= {uparams3[0]:.5f} 1/s \nA0={uparams3[1]:.5f}\n')
 
 TR2=(np.log(2))/uparams3[0]
 theoR2=42.3
-print(f'\nHalbwertszeit Rhodium 104i= {TR2:.5f} s\tTheoriewert: {(theoR2)} s  \trelative Abweichung: {((theoR2-TR2)/theoR2)*100} % \n')
+print(f'\nHalbwertszeit Rhodium 104= {TR2:.5f} s\tTheoriewert: {(theoR2)} s  \trelative Abweichung: {((theoR2-TR2)/theoR2)*100} % \n')
 
 #PLOTTEN
 
@@ -119,7 +118,7 @@ plt.plot(tv,np.log(huell(tv,*params1)),label="Fit-Funktion")
 plt.plot(tv,np.log(huell(tv,*params1_)),label="Fit-Funktion mit doppelter Halbwertszeit")
 #plt.yticks([0,np.pi/4,np.pi/2,(3*np.pi)/4,np.pi],[r"$0$", r"$\frac{\pi}{4}$", r"$\frac{\pi}{2}$", r"$\frac{3\pi}{4}$",r"$\pi$"])
 plt.ylabel(r"$ln(N_V-N_0)$")
-plt.xlabel(r"$t/[s]$")
+plt.xlabel(r"$t/[1/30s]$")
 plt.tight_layout()
 plt.legend()
 plt.savefig("build/plots/plot1.pdf")
@@ -134,7 +133,7 @@ plt.plot(tr[0:(x+y)],np.log(huell(tr[0:(x+y)],*params3)),'m',label=r"Fit-Funktio
 plt.plot(tr,np.log(huell(tr,*params3)+huell(tr,*params2)),label=r"Kombination beider Fits")
 plt.plot(tcut,höhe,"g--",linewidth=0.6,label=r"t'")
 plt.ylabel(r"$ln(N_V-N_0)$")
-plt.xlabel(r"$t/[s]$")
+plt.xlabel(r"$t/[1/15s]$")
 plt.tight_layout()
 plt.legend()
 plt.savefig("build/plots/plot2.pdf")

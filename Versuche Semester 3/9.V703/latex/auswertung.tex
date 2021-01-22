@@ -37,11 +37,11 @@
 \noindent Die Daten werden in ein Diagramm eingezeichnet und mit einem Fehlerbalken versehen. Der Fehler entspricht der Wurzel der Anzahl der Impulse.
 Durch das Plateau wird eine Ausgleichsgerade der Form $y = mx + b$ gelegt. Die Werte für die Ausgleichsgerade ergeben sich zu:
 \begin{align}
-    m&= \num{1.138 \pm 0.24} \nonumber \\
+    m&= \num{1.138 \pm 0.24} \si{\per\volt} \nonumber \\
     b&= \num{959 \pm 121}    \nonumber
 \end{align}
 
-\noindent Mit diesen Werten Berechnet sich die Plateau Steigung zu $\num{1.15 \pm 0.24}$ \% pro 100 $\si{\volt}$.
+\noindent Mit diesen Werten berechnet sich die Plateau-Steigung zu $\num{1.15 \pm 0.24}$ \% pro 100 $\si{\volt}$.
 
 \begin{figure}[H]
     \centering
@@ -49,28 +49,28 @@ Durch das Plateau wird eine Ausgleichsgerade der Form $y = mx + b$ gelegt. Die W
     \caption{Die Charasteristik des Zählrohrs mit linearem fit auf dem Plateau.}
     \label{img:plot1}
 \end{figure}
-
-Eine geeignete Betriebsspannung lässt sich somit zu \approx 500$\si{\volt}$ angeben
+\noindent
+Eine geeignete Betriebsspannung lässt sich somit mit \approx$500\si{\volt}$ angeben.
 
 \subsection{Totzeit}
 
 \noindent Die Totzeit des Zählrohrs wird näherungsweise mit der Formel:
 \begin{equation}
-    T \approx \frac{N_1 + N_2 - N_{1+2}}{2N_1N_2}
+    T \approx \frac{N_1 + N_2 - N_{1+2}}{2N_1N_2} \nonumber
 \end{equation}
-\noindent berechnet.Mit folgenden Werten für die Anzahl der Impulse pro 120 Sekunden:
+\noindent berechnet. Dafür werden folgende Werte für die Anzahl der Impulse, pro 120 Sekunden genutzt:
 
-\begin{align} 
+\begin{align*} 
     N_1 &= 96041 \pm 310\\
     N_2 &= 76518 \pm 280\\
     N_{1+2} &= 158479 \pm 398\\
-\end{align}
+\end{align*}
 
-\noindent wird die Totzeit $T$ zu $\SI{22.52 +- 0.09}{\micro\second}$ berechnet.
+\noindent Die Totzeit $T$ ergibt sich damit zu $\SI{22.52 +- 0.09}{\micro\second}$.
 
-\subsection{freigesetzte Ladung}
+\subsection{Freigesetzte Ladung}
 
-\noindent Zur Berechnung der Freigesetzten Ladungen pro einfallendem Teilchen werden folgende Werte benutzt:
+\noindent Zur Berechnung der freigesetzten Ladungen pro einfallendem Teilchen werden folgende Werte benutzt:
 
 \begin{table}[H]
     \centering
@@ -95,9 +95,9 @@ Eine geeignete Betriebsspannung lässt sich somit zu \approx 500$\si{\volt}$ ang
 
 \noindent Mittels der Formel:
 \begin{equation}
-    Z=\frac{I}{e_0N}
+    Z=\frac{I}{e_0N} \nonumber
 \end{equation}
-\noindent ergibt sich folgende Graphik:
+\noindent ergibt sich folgende Grafik:
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.85\textwidth]{build/plots/d.png}
@@ -109,7 +109,7 @@ Eine geeignete Betriebsspannung lässt sich somit zu \approx 500$\si{\volt}$ ang
     \centering
     \begin{tabular}{S [table-format=3.0] S [table-format=3.2] @{$\pm{}$} S [table-format=2.2]}
         \toprule
-        {$U \mathbin{\scalebox{1.5} / }\si{\volt}$} & {$Z_{\text{Werte}} * 10^6$} & {$Z_{\text{Unsicherheit}} 10^{6}$}\\
+        {$U \mathbin{\scalebox{1.5} / }\si{\volt}$} & {$Z_{\text{Werte}} \cdot 10^6$} & {$Z_{\text{Unsicherheit}} \cdot 10^{6}$}\\
         \midrule
         350 & 190.36 & 31.78 \\
         400 & 249.81 & 31.32 \\

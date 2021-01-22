@@ -50,6 +50,8 @@ plt.errorbar(U,N,yerr=np.sqrt(N),fmt="+",label="Daten")
 plt.plot(U1,U1*m+b,label="fit")
 #plt.plot(U1,b + U1*d.n, label="prozent")
 plt.legend()
+plt.xlabel("U [V]")
+plt.ylabel("N [1/60s]")
 plt.savefig("build/plots/a")
 
 
@@ -89,6 +91,8 @@ Z_q = I/(e*N2)
 plt.figure()
 plt.errorbar(U2,unp.nominal_values(Z_q),yerr=unp.std_devs(Z_q),fmt=".",label="freigesetzte Ladungen")
 plt.legend()
+plt.xlabel("U [V]")
+plt.ylabel("Z")
 plt.savefig("build/plots/d")
 
 np.savetxt(

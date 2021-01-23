@@ -10,11 +10,12 @@ Dabei wurden, ohne jegliche zusätzliche Anregung des Zählrohrs folgende Werte 
 \end{equation*}
 Gemittelt und auf $\increment=30\si{\second}$ normiert ergibt sich eine Zählrate von $N_0= 13.9286\si{\second}$, mit der auch im Folgenden gerechnet wird.\\
 
-\newpage
+
 \subsection{Vanadium}
 
-\begin{table}[H]
+\begin{table}[!htbp]
     \centering
+    \small
     \begin{tabular}{S [table-format=3.1] S [table-format=3.1] S [table-format=3.4] S [table-format=3.4]}
         \toprule
         {$t \mathbin{\scalebox{1.5} / }\si{\second}$} & {$N_V $} & {$N_V - N_0 $} & {$\sqrt{N_V - N_0 }$}\\
@@ -122,8 +123,10 @@ Als Fit der selben Form, wie in Gl.\ref{eqn:fit}, ergeben sich dann folgende wic
 Die Funktion ist auch in der Abb.\ref{img:V} zu sehen.\\\\
 \noindent
 Im folgenden ist die Tabelle mit den, für Abb.\ref{img:V}, genutzten logarithmierten Messwerten zu finden. 
+\newpage
 \begin{table}[H]
     \centering
+    \small
     \begin{tabular}{S [table-format=3.1] S [table-format=1.4] S [table-format=1.4]}
         \toprule
         {$t \mathbin{\scalebox{1.5} / }\si{\second}$} &  {$\ln{N_V - N_0} $} & {$\ln{\sqrt{N_V - N_0 }}$}\\
@@ -177,21 +180,15 @@ Im folgenden ist die Tabelle mit den, für Abb.\ref{img:V}, genutzten logarithmi
 \caption{Die Messwerte, die in \ref{img:V} zum Ploten des halblogarithmischen Diagramms genutzt wurden.}
 \label{tab:logV}
 \end{table}
-\noindent
-
-
-
 
 
 \subsection{Rhodium}
-
-
-
-\begin{table}[H]
+\begin{table}[!htbp]
     \centering
+    \small
     \begin{tabular}{S [table-format=3.1] S [table-format=3.1] S [table-format=3.4] S [table-format=3.4]}
         \toprule
-        {$t \mathbin{\scalebox{1.5} / }\si{\second}$} & {$N_V $} & {$N_R - \frac{1}{2}N_0 $} & {$\sqrt{N_V - \frac{1}{2}N_0 }$}\\
+        {$t \mathbin{\scalebox{1.5} / }\si{\second}$} & {$N_{Rh} $} & {$N_R - \frac{1}{2}N_0 $} & {$\sqrt{N_{Rh} - \frac{1}{2}N_0 }$}\\
         \midrule
         15.0                 & 667.0                & 6.4922   & 0.0389 \\
         30.0                 & 585.0                & 6.3596   & 0.0415 \\
@@ -242,7 +239,7 @@ Im folgenden ist die Tabelle mit den, für Abb.\ref{img:V}, genutzten logarithmi
 \caption{Die Messwerte der Zerfallraten für Rhodium mit ihren korrespondierenden Zeiten. Zusätzlich auch noch ihr $\sqrt{N}$ Fehler und die Raten abzüglich Nullraten.}
 \label{tab:Rh}
 \end{table}
-\noindent
+
 
 
 Für die obige Messwerttabelle von $\ce{^{104}_{}Rh}$ und $\ce{^{104i}_{}Rh}$ wurde von den Zählraten die Hälfte des oben berechnetetn Wertes der Nullrate genutzt, 
@@ -253,11 +250,17 @@ die des kurzlebigeren Isotops zu untersuchen.\\\\
 Für die Untersuchung wird grafisch abgeschätzt ab welchem Punkt der Zerfall des kurzlebigeren Isotops $\ce{^{104}_{}Rh}$ an Bedeutung verliert. 
 Dafür wurde ein Wert von $t' =\SI{250}{\second} $ abgeschätzt. Im folgenden wurde aber sicherheitshalber erst, zur Bestimmung der Halbwertszeit von $\ce{^{104i}_{}Rh}$, Werte ab  $t' =\SI{300}{\second} $, genutzt.\\
 Die Messwerte und die Aufteilung in zwei Intervalle sind in der folgenden Abbildung, Abb.\ref{img:Rh1} noch einmal grafisch veranschaulicht.
-Dort sind auch die Fit-Funktionen der beiden Halbwertszeiten, sowie ihre Kombination aufgetragen.
+Dort sind auch die Fit-Funktionen der beiden Halbwertszeiten, sowie ihre Kombination aufgetragen.\\
+Die Kombinationsfunktion hat dabei folgende Form, wobei die Parameter erst noch bestimmt werden müssen:
+\begin{equation*}
+    f_\text{Kombi}(t)= A_{Rh1} \symup{e}^{-\mu_{Rh1} t} + A_{Rh2} \symup{e}^{-\mu_{Rh2} t} 
+\end{equation*}
+
+
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.75\textwidth]{build/plots/plot2.pdf}
+    \includegraphics[width=0.70\textwidth]{build/plots/plot2.pdf}
     \caption{Die Messwerte zur für den Zerfall von $\ce{^{104}_{}Rh}$ und $\ce{^{104i}_{}Rh}$ halblogarithmisch dargestellt. Zusätzlich auch noch die Fit-Funktionen für beide Isotope einzeln und kombiniert. Außerdem auch noch der Punkt ab dem ein abflachen des ersten Zerfalls zu beobachten ist.}
     \label{img:Rh1}
 \end{figure}
@@ -269,7 +272,7 @@ Für die Erstellung dieser Grafik wurden die logarithmierten Messwerte, die in d
     \centering
     \begin{tabular}{S [table-format=3.1] S [table-format=1.4] S [table-format=1.4]}
         \toprule
-        {$t \mathbin{\scalebox{1.5} / }\si{\second}$} &  {$\ln{N_V - N_0} $} & {$\ln{\sqrt{N_V - N_0 }}$}\\
+        {$t \mathbin{\scalebox{1.5} / }\si{\second}$} &  {$\ln{N_{Rh} - N_0} $} & {$\ln{\sqrt{N_{Rh} - N_0 }}$}\\
         \midrule
         15.0                 & 6.4922  & 0.0389  \\
         30.0                 & 6.3596  & 0.0415  \\
@@ -322,7 +325,7 @@ Für die Erstellung dieser Grafik wurden die logarithmierten Messwerte, die in d
 \end{table}
 \noindent
 
-\subsubsection{Halbwertszeit von $\ce{^{104i}_{}Rh}$}
+\subsubsection{Halbwertszeit von $\ce{^{\text{104i}}_{}\text{Rh}}$}
 
 \noindent
 Nun wird für das zuvor beschriebene Intervall ein Fit auf die Messwerte bestimmt. 
@@ -339,4 +342,54 @@ Hieraus lassen sich die Werte für die Halbwertszeit, mit Gl.\ref{eqn:halb}, und
     \frac{T_{\frac{1}{2}\ce{^{104i}_{}Rh} \text{ theo}} - T_{\frac{1}{2}\ce{^{104i}_{}Rh}}}{T_{\frac{1}{2}\ce{^{104i}_{}Rh}\text{ theo}}}&=\SI{-01(19)}{\percent}
 \end{align*}
 
-\subsubsection{Halbwertszeit von $\ce{^{104}_{}Rh}$}
+\subsubsection{Halbwertszeit von $\ce{^{\text{104}}_{}\text{Rh}}$}
+
+In diesem Abschnitt wird für das Zeitintervall kleiner als $t'$ eine Bestimmung der Halbwertszeit von $\ce{^{104}_{}Rh}$ vorgenommen.\\
+Dafür wird ein Zeitintervall gewählt, in dem die Einflüsse des langlebigeren Zerfalls kleiner sind als die des kurzlebigeren.
+Für dieses Intervall werden dann mit Hilfe des Fits extrapolierte Zählraten errechnet, die dann von den tatsächlich gemessenen Raten abgezogen werden.\\
+Diese Werte, inklusiver der Werte, die zum zeichnen eines Plots genutzt wurden, findet man in der folgenden Tabelle \ref{tab:Rh2}.\\
+Mit diesen Werten wird asnchließend auch der Fit erstellt.\\
+
+\begin{table}[H]
+    \centering
+    \begin{tabular}{S [table-format=3.3] S [table-format=3.3] S [table-format=2.3] S [table-format=1.3] S [table-format=1.3]}
+        \toprule
+        {$t \mathbin{\scalebox{1.5} / }\si{\second}$} &{$N_{Rh} - f_{Rh}(t) $} & {$\sqrt{N_{Rh2} - f_{Rh}(t) }$}&  {$\ln{N_{Rh2} - f_{Rh}(t)} $} & {$\ln{\sqrt{N_{Rh2} - f_{Rh} }}$}\\
+        \midrule
+        15.000 & 591.779 & 16.720 & 6.383 & 0.028  \\  
+        30.000 & 506.739 & 17.425 & 6.228 & 0.034  \\
+        45.000 & 392.575 & 18.181 & 5.973 & 0.046  \\
+        60.000 & 314.284 & 18.991 & 5.750 & 0.060  \\
+        75.000 & 215.860 & 19.858 & 5.375 & 0.092  \\
+        90.000 & 161.297 & 20.786 & 5.083 & 0.129  \\
+        105.000 & 117.590 & 21.780 & 4.767 & 0.185  \\
+        120.000 & 73.734 & 22.843 & 4.300 & 0.310  \\
+        135.000 & 48.721 & 23.980 & 3.886 & 0.492  \\
+        \bottomrule
+    \end{tabular}
+\caption{Die Messwerte, die in \ref{img:Rh2} zum Ploten des halblogarithmischen Diagramms genutzt wurden. Es sind die Messwerte für dieses Intervall abzüglich der Funktionswerte des ersten Fits.}
+\label{tab:Rh2}
+\end{table}
+\noindent
+Mit diesen Werten lässt sich eine Fit Funktion erstellen, die relativ unabhängig vom Zerfall von $\ce{^{104i}_{}Rh}$ ist.
+Dafür wird wieder eine $\symup{e}$-Funktion der Form der Gleichung\ref{eqn:fit} genutzt.\\
+Dies führt zu den Werten:
+\begin{align*}
+    A_{Rh2}&=(\SI{812.20494(3787690)}{})\\
+    \mu_{Rh2}&=\SI{0.01747(000107 )}{\per\second}
+\end{align*}
+Für dieses Intervall ist lässt sich dies wie folgend grafisch darstellen.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.65\textwidth]{build/plots/plot3.pdf}
+    \caption{Das Intervall, welches für die Untersuchung des kurzlebigeren Isotops genutzt wurde, inklusive Fit-Funktion.}
+    \label{img:Rh2}
+\end{figure}
+\noindent
+
+Wie zuvor lassen sich aus dem zuvor bestimmten $\mu_{Rh2}$ direkt die Werte für die Halbwertszeit und die die relative Abweichung vom Theoriewert\cite{Rhodium} bestimmen.
+\begin{align*}
+    T_{\frac{1}{2}\ce{^{104}_{}Rh}}&= \SI{39.68759(243149)}{\second}\\
+    T_{\frac{1}{2}\ce{^{104}_{}Rh}\text{ theo}}&= \SI{42.3}{\second}\\
+    \frac{T_{\frac{1}{2}\ce{^{104}_{}Rh} \text{ theo}} - T_{\frac{1}{2}\ce{^{104}_{}Rh}}}{T_{\frac{1}{2}\ce{^{104}_{}Rh}\text{ theo}}}&=\SI{6(6)}{\percent}
+\end{align*}

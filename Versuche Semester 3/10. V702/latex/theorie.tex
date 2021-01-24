@@ -1,24 +1,56 @@
+\section{Zielsetzung}
+In diesem Versuch wird eine Methode zur Bestimmung der Halbwertszeit $T$ unterschiedlicher Atome durch Aktivierung mittels Neutronen untersucht.
+
+
 \section{Theorie}
 
-\begin{equation}
-   \ce{^m_z\symup{A} + ^1_0\symup{n} -> ^{m+1}_z\symup{A}^{\ast} -> ^{m+1}_z \symup{A} + \upgamma } \nonumber
-\end{equation}
+\subsection{Kernreaktionen mit Neutronen}
 
+\noindent Kernreaktionen sind im allgemeinen Reaktionen eines Teilchens mit dem Kern eines Atoms. In diesem Verusch werden die Wechselwirkungen 
+von Neutronen mit einem Kern genauer untersucht. Absorbiert ein Kern A ein Neutronen bei solch einer Wechselwirkungen entsteht ein neuer Kern
+$\text{A}^{\ast}$, dieser wird Zwischenkern oder Compound Kern genannt. Der kern $\text{A}^{\ast}$ nimmt die kinetische und die Bindungsenergie 
+des Neutrons auf und liegt somit energetisch über dem Kern A. Diese Energie wird dann innerhalb des Kerns auf die einzelnen Nukleonen verteilt, 
+somit reicht die Energie nicht mehr aus um ein Nukleon des Kerns wieder auszustoßen. Um nun wieder in den Grundzustand zurück zu kommen gibt der 
+angere Kern Energie in Form eines $\upgamma$-Quants nach etwa $\SI{10e-16}{\second}$ ab.\\
+Es läuft folgende Reaktion ab:
+
+\begin{equation}
+   \ce{^m_z\symup{A} + ^1_0\symup{n} -> ^{m+1}_z\symup{A}^{\ast} -> ^{m+1}_z \symup{A} + \upgamma }. \nonumber
+\end{equation}
+Mit der m der Massenzahl des Kern. Der hier entstandene Kern $\ce{^{m+1}_z \text{A}}$ ist meistens instabil, da er ein Neutron mehr hat als ein 
+stabiler Kern gleicher Ordnungszahl. Aufgrund des emissierten $\upamma$-Quants ist der Kern jedoch nicht angeregt und somit relativ langlebig.
+Durch Emission eines Elektrons wird der Kern wieder stabil.
 \begin{equation}
    \ce{^{m+1}_z \symup{A} -> ^{m+1}_{z+1} \symup{C} + \upbeta^- + \symup{E_{kin}} + \bar{\symup{\nu}}_{\symup{e}}} \nonumber
 \end{equation}
+
+\noindent $\bar{\symup{\nu}}_{\symup{e}}$ ist hier ein Antineutrino. Dieses Antineutrino ensteht da die Masse des Kerns $\ce{^{m+1}_z \text{A}}$ 
+groeßer als Massen der rechten Seite ist. Die restliche Masse ist nach der Beziehung
 
 \begin{equation}
    \Delta E = \Delta m c^2 \nonumber
 \end{equation}
 
+\noindent in kinetische Energie von Elektron und Antineutrino umgewandelt.\\
+Die Wahrscheinlichkeit, dass ein Kern ein Neutron einfängt wird als Wirkungsquerschnitt $\sigma$ bezeichnet. Dieser gibt ein Verhältnis der 
+Einfangwahrscheinlichkeit in Abhängigkeit von gewissen Material Eigenschaften an und hat somit die Einheit einer Fläche.
 \begin{equation}
    \sigma = \frac{u}{nKd} \nonumber
 \end{equation}
 
+\noindent Mit $u$ der Einfänge, $n$ der Neutronen pro Sekunde, $d$ der Dicke $K$ der Atomdichte der Folie. $\sigma$ wird angepasst an den 
+Kernquerschnitt in $\si{\barn} \coloneqq \SI{10e-24}{\centi\metre\squared}$  angegeben. Da der Wirkungsquerschnitt stark von der kinetischen Energie 
+der einfallenden Teilchen abhängt, wird hier zwischen schnellen und langsamen Neutronen unterschieden. Die Wellenlänge eines Neutrons 
+berechnet sich mittels der De-Broglie-Wellenlänge:
+
 \begin{equation}
-   \lambda = \frac{h}{m_{\symup{n}}v} \nonumber
+   \lambda = \frac{h}{m_{\symup{n}}v}. \nonumber
 \end{equation}
+
+\noindent Hier ist $h$ das Planksche Wirkungsquantum, $m_n$ die Neutronenmasse und $v$ die Geschwindigkeit des Neutrons. Für große Geschwindigkeiten 
+und somit kleine Wellenlänge im Verhältnis zum Kernradius R($\approx \SI{10e-12}{\centi\meter}$), lassen sich geometrische Überlegungen auf die 
+wechselwirkungs Wahrscheinlichkeit anwenden. Es besteht eine Analogie zur optischen Streuung von Wellen and Verhältnismäßig großen Objekten. ­Für 
+große Wellenlängen entstehn wieder wie in der Analogie zur Optik, Interferenzeffekte, somit sind geometrische Überlegungen unbrauchbar.
 
 \begin{equation}
    \sigma(E) = \sigma_0 \sqrt{ \frac{E_{\symup{r_i}}}{E} } \frac{\tilde{c}}{\left( E - E_{\symup{r_i}} \right)^2 + \tilde{c}} \nonumber

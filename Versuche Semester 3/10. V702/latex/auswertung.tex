@@ -3,8 +3,8 @@
 
 \subsection{Nullrate}
 
-Die Nullrate $N_0$ wurde als Mittelwert aus fünf Messungen, die je über $\increment=300\si{\second}$ durchgeführt wurden, bestimmt.\\
-Dabei wurden, ohne jegliche zusätzliche Anregung des Zählrohrs folgende Werte gemessen:
+Die Nullrate $N_0$ wird als Mittelwert aus fünf Messungen, die je über $\increment=300\si{\second}$ durchgeführt wurden, bestimmt.\\
+Bei den Messungen wurden, ohne jegliche zusätzliche Anregung des Zählrohrs, folgende Werte gemessen:
 \begin{equation*}
     N_0 = \{129, 143, 144, 136, 139, 126, 158 \}
 \end{equation*}
@@ -81,7 +81,7 @@ gefitet.\\\\
 Ein Fit dieser Form ist sinnvoll, da sich Zerfallsprozesse durch exponentielle Abnahme beschreiben lassen. 
 In den später genutzten halblogaritmischen Grafiken erscheint diese Funktion dann linear.\\
 Die Funktion wird also auf die Messwerte aus der Tabelle \ref{tab:Va} gefitet. 
-Dabei werden die Messwerte abzüglich der zuvor bestimmten normierten Nullrate genutzt.
+Dabei werden die Messwerte abzüglich der zuvor bestimmten normierten Nullrate genutzt.\\
 So ergeben sich folgende Parameter:
 \begin{align*}
     A_{V1}&=(\SI{208.91182(554195)}{})\\
@@ -89,8 +89,8 @@ So ergeben sich folgende Parameter:
 \end{align*}
 \newline
 \noindent
-Diese Funktion, inklusive der Messwerte abzüglich Nullrate und einer später bestimmten, genaueren Fit-Funktion finden sich in der folgenden Abbildung.
-Zum plotten wurden die Werte aus der Tabelle \ref{tab:logV} genutzt, in welcher die Zerfallsanzahl logarithmisch aufgetragen wurden.
+Diese Funktion, inklusive der Messwerte abzüglich Nullrate und einer später bestimmten, genaueren Fit-Funktion finden sich in der Abbildung \ref{img:V}.
+Zum plotten wurden die Werte aus der Tabelle \ref{tab:logV} genutzt, in welcher die Zerfallsanzahl logarithmisch aufgetragen wurde.
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.7\textwidth]{build/plots/plot1.pdf}
@@ -103,17 +103,17 @@ Aus dem Parameter $\mu$ lässt sich die Halbwertszeit des Isotops bestimmen. Daf
     T_{\frac{1}{2}}=\frac{\ln{2}}{\mu}
     \label{eqn:halb}
 \end{equation}
-Damit lässt sich nun ein Wert bestimmen und aus ihm auch direkt die relative Abweichung vom Theoriewert\cite{Vanadium} berechnen.
+Damit lässt sich nun ein Wert und aus ihm auch direkt die relative Abweichung vom Theoriewert\cite{Vanadium} bestimmen.
 \begin{align*}
     T_{\frac{1}{2}V_1}&= \SI{202.61626(723460)}{\second}  \\
-    T_{\frac{1}{2}\text{ theo}}&=(\SI{224.58}{\second}) \\
+    T_{\frac{1}{2}\text{ theo}}&=(224.58)\si{\second} \\
     \frac{T_{\frac{1}{2}\text{ theo}}-T_{\frac{1}{2}V_1}}{T_{\frac{1}{2}\text{ theo}}}&=\SI{9.8(32)}{\percent}
 \end{align*}
 \newline
 \noindent
-Anschließend wird noch einmal ein genauerer Fit erstellt, der nur Werte nutzt, die im Zeitintervall $2\cdot T_{\frac{1}{2}V_1}$liegen, nutzt.\\
+Anschließend wird noch einmal ein genauerer Fit erstellt, der nur Werte nutzt, die im Zeitintervall $2\cdot T_{\frac{1}{2}V_1}$liegen.\\
 Dadurch sollen die Auswirkungen der ungenauen Messungen für große $t$ minimiert werden.\\
-Als Fit der selben Form, wie in Gl.\ref{eqn:fit}, ergeben sich dann folgende wichtige Parameter:
+Als Fit der selben Form, wie in Gl.\ref{eqn:fit}, ergeben sich dann folgende Parameter:
 \begin{align*}
     A_{V2}&=(\SI{206.61800(944087)}{})\\
     \mu_{V2}&=\SI{0.00332(27)}{\per\second}\\\\
@@ -242,14 +242,16 @@ Im folgenden ist die Tabelle mit den, für Abb.\ref{img:V}, genutzten logarithmi
 
 
 
-Für die obige Messwerttabelle von $\ce{^{104}_{}Rh}$ und $\ce{^{104i}_{}Rh}$ wurde von den Zählraten die Hälfte des oben berechnetetn Wertes der Nullrate genutzt, 
-da für diesen Versuch die Messwerte in einem Intervall von $\increment t=15 \si{\second}$ aufgenommen und nicht wie zuvor$\increment t=30\si{\second}$ wurden.\\
-In diesem Auswertungsteil wird, da sich die beiden Zerfälle für kleine Zeiten überlagern, erst der mit der größeren Halbwertszeit untersucht um durch extrapolation seiner Zerfälle
+Für die Messwerttabelle \ref{tab:Rh} von $\ce{^{104}_{}Rh}$ und $\ce{^{104i}_{}Rh}$ wurde von den Zählraten die Hälfte des oben berechneten Wertes der Nullrate genutzt, 
+da für diesen Versuch die Messwerte in einem Intervall von $\increment t=15 \si{\second}$ aufgenommen wurden, und nicht wie zuvor $\increment t=30\si{\second}$.\\
+In diesem Auswertungsteil wird, da sich die beiden Zerfälle für kleine Zeiten überlagern, erst der mit der größeren Halbwertszeit untersucht um durch Extrapolation seiner Zerfälle
 die des kurzlebigeren Isotops zu untersuchen.\\\\
 \noindent
-Für die Untersuchung wird grafisch abgeschätzt ab welchem Punkt der Zerfall des kurzlebigeren Isotops $\ce{^{104}_{}Rh}$ an Bedeutung verliert. 
-Dafür wurde ein Wert von $t' =\SI{250}{\second} $ abgeschätzt. Im folgenden wurde aber sicherheitshalber erst, zur Bestimmung der Halbwertszeit von $\ce{^{104i}_{}Rh}$, Werte ab  $t' =\SI{300}{\second} $, genutzt.\\
-Die Messwerte und die Aufteilung in zwei Intervalle sind in der folgenden Abbildung, Abb.\ref{img:Rh1} noch einmal grafisch veranschaulicht.
+Die Messwerte dieses Zerfalles bestehen aus der Überlagerung zwei unterschiedlicher Zerfälle. Bei der Auswertung müssen diese also möglichst unabhängig voneinander untersucht werden.
+Für die Untersuchung wird dafür grafisch abgeschätzt ab welchem Punkt der Zerfall des kurzlebigeren Isotops $\ce{^{104}_{}Rh}$ an Bedeutung verliert. 
+Dafür wurde ein Wert von $t' =\SI{250}{\second} $ abgeschätzt.\\
+Im Folgenden wurde aber sicherheitshalber erst, zur Bestimmung der Halbwertszeit von $\ce{^{104i}_{}Rh}$, Werte ab  $t' =\SI{300}{\second} $, genutzt.\\
+Die Messwerte und die Aufteilung in zwei Intervalle sind in der folgenden Abbildung, Abb.\ref{img:Rh1}, noch einmal grafisch veranschaulicht.
 Dort sind auch die Fit-Funktionen der beiden Halbwertszeiten, sowie ihre Kombination aufgetragen.\\
 Die Kombinationsfunktion hat dabei folgende Form, wobei die Parameter erst noch bestimmt werden müssen:
 \begin{equation*}
@@ -261,12 +263,13 @@ Die Kombinationsfunktion hat dabei folgende Form, wobei die Parameter erst noch 
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.70\textwidth]{build/plots/plot2.pdf}
-    \caption{Die Messwerte zur für den Zerfall von $\ce{^{104}_{}Rh}$ und $\ce{^{104i}_{}Rh}$ halblogarithmisch dargestellt. Zusätzlich auch noch die Fit-Funktionen für beide Isotope einzeln und kombiniert. Außerdem auch noch der Punkt ab dem ein abflachen des ersten Zerfalls zu beobachten ist.}
+    \caption{Die Messwerte zur für den Zerfall von $\ce{^{104}_{}Rh}$ und $\ce{^{104i}_{}Rh}$ halblogarithmisch dargestellt. 
+    Zusätzlich auch noch die Fit-Funktionen für beide Isotope einzeln und kombiniert. Außerdem auch noch der Punkt ab dem ein Abflachen des ersten Zerfalls zu beobachten ist.}
     \label{img:Rh1}
 \end{figure}
 \noindent
-
-Für die Erstellung dieser Grafik wurden die logarithmierten Messwerte, die in der folgenden Tabelle zu finden sind, genutzt.
+\noindent
+Für die Erstellung dieser Grafik wurden die logarithmierten Messwerte, die in der Tabelle\ref{tab:logRh} zu finden sind, genutzt.
 
 \begin{table}[H]
     \centering
@@ -345,10 +348,10 @@ Hieraus lassen sich die Werte für die Halbwertszeit, mit Gl.\ref{eqn:halb}, und
 \subsubsection{Halbwertszeit von $\ce{^{\text{104}}_{}\text{Rh}}$}
 
 In diesem Abschnitt wird für das Zeitintervall kleiner als $t'$ eine Bestimmung der Halbwertszeit von $\ce{^{104}_{}Rh}$ vorgenommen.\\
-Dafür wird ein Zeitintervall gewählt, in dem die Einflüsse des langlebigeren Zerfalls kleiner sind als die des kurzlebigeren.
+Dafür wird ein nochmal kleineres Intervall gewählt, in dem die Einflüsse des langlebigeren Zerfalls wesentlich kleiner sind als die des kurzlebigeren.
 Für dieses Intervall werden dann mit Hilfe des Fits extrapolierte Zählraten errechnet, die dann von den tatsächlich gemessenen Raten abgezogen werden.\\
-Diese Werte, inklusiver der Werte, die zum zeichnen eines Plots genutzt wurden, findet man in der folgenden Tabelle \ref{tab:Rh2}.\\
-Mit diesen Werten wird asnchließend auch der Fit erstellt.\\
+Diese neu errechneten Werte, inklusiver der Werte, die zum Zeichnen des Plots genutzt wurden, findet man in der folgenden Tabelle \ref{tab:Rh2}.\\
+Mit diesen Werten wird anschließend auch der Fit erstellt.\\
 
 \begin{table}[H]
     \centering
@@ -371,8 +374,8 @@ Mit diesen Werten wird asnchließend auch der Fit erstellt.\\
 \label{tab:Rh2}
 \end{table}
 \noindent
-Mit diesen Werten lässt sich eine Fit Funktion erstellen, die relativ unabhängig vom Zerfall von $\ce{^{104i}_{}Rh}$ ist.
-Dafür wird wieder eine $\symup{e}$-Funktion der Form der Gleichung\ref{eqn:fit} genutzt.\\
+Hiermit lässt sich eine Fit Funktion erstellen, die relativ unabhängig vom Zerfall von $\ce{^{104i}_{}Rh}$ ist.
+Dafür wird wieder eine $\symup{e}$-Funktion der Form der Gleichung \ref{eqn:fit} genutzt.\\
 Dies führt zu den Werten:
 \begin{align*}
     A_{Rh2}&=(\SI{812.20494(3787690)}{})\\
@@ -385,8 +388,8 @@ Für dieses Intervall ist lässt sich dies wie folgend grafisch darstellen.
     \caption{Das Intervall, welches für die Untersuchung des kurzlebigeren Isotops genutzt wurde, inklusive Fit-Funktion.}
     \label{img:Rh2}
 \end{figure}
-\noindent
 
+\noindent
 Wie zuvor lassen sich aus dem zuvor bestimmten $\mu_{Rh2}$ direkt die Werte für die Halbwertszeit und die die relative Abweichung vom Theoriewert\cite{Rhodium} bestimmen.
 \begin{align*}
     T_{\frac{1}{2}\ce{^{104}_{}Rh}}&= \SI{39.68759(243149)}{\second}\\

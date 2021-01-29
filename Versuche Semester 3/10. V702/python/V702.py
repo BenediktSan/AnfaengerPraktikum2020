@@ -87,7 +87,7 @@ print(f'\nHalbwertszeit Rhodium 104i= {TR:.5f} s \tTheoriewert: {(theoR)} s  \tr
 x=9    #parameter zum rumprobieren(weite des schätzabschnittes)
 y=13
 
-Nr_kurz=Nr[0:x]-uparams2[1]*unp.exp(uparams2[0]*tr[0:x])
+Nr_kurz=Nr[0:x]-uparams2[1]*unp.exp(uparams2[0]*tr[0:x]) #FEHLER FEHLER
 
 params3, _3 =curve_fit(huell,tr[0:x],unp.nominal_values(Nr_kurz),p0=(0.0016,800))
 err3 =np.sqrt(np.diag(_3))

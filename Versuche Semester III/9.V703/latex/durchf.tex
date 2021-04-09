@@ -1,0 +1,90 @@
+\newpage
+\section{Durchführung}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.6\textwidth]{images/schaltplan.PNG}
+    \caption{Schaltpskizze der Messapparatur \protect \cite{V703}.}
+    \label{img:schalt}
+\end{figure}
+Die obige Abbildung \ref{img:schalt} zeigt den genauen Aufbau des Geiger-Müller-Zählrohrs. Dabei fließt die Ladung aus dem Zählrohr über den Widerstand $R$ ab, 
+wird anschließend vom Kondensator $C$ entkoppelt um dann vom vor dem Zählen durch den Zähler noch verstärkt zu werden. Alternativ kann das ganze auch auf einem Oszilloskop dargestellt werden.\\\\
+
+\subsection{Aufnahme der Charakteristik des Zählrohres}
+
+
+\noindent
+In diesem Versuchsabschnitt wird eine $\beta$-Strahlungsquelle vor dem Fenster des Zählrohrs platziert.\\
+Nun wird für verschiedene Spannungen die Zählrate gemessen.\\
+Dabei müssen mehrere Sachen beachtet werden.\\
+Zum einen sollte nicht wesentlich mehr Impulse als $\SI{100}{\per\second}$ gemessen werden, da sonst aufgrund von zu hohen Totzeiten Korrekturen vorgenommen werden müssten.
+Besonders sollte hier auch auf die Genauigkeit der Messungen geachtet werden, da das Plateau, dessen Steigung bestimmt werden soll, nur einen schwachen Anstieg besitzt.
+Des Weiteren sollte das Messintervall $\approx\SI{120}{\second}$ betragen, damit der Fehler der Messpunkte, aufgrund des $\sqrt{n}$-Gesetzes, $<\SI{1}{\percent}$ ist.\\
+Zuletzt sollte die angelegte Spannung $<\SI{700}{\volt}$ ist, damit Selbstentladung vermieden wird.\\\\
+
+\subsection{Sichtbarmachung von Nachentladungen}
+
+
+\noindent
+Anschließend sollen, mit Hilfe des Oszilloskops, die Nachentladungen qualitativ nachgewiesen werden.\\
+Dafür wird die Intensität der $\beta$-Strahlungsquelle so weit heruntergeregelt, dass auf dem Oszillioskop, bei einer Ablenkgeschwindigkeit von $\SI{50}{\micro\second\per\centi\metre}$, 
+nur noch ein einziger Impuls gemessen wird. \\
+Die angelegte Spannung sollte dabei etwa $\SI{350}{\volt}$ betragen, da für diese Spannung Nachentladungen vernachlässigbar sind.\\
+Nun wird die Spannung schlagartig auf $\SI{700}{\volt}$ hochgeregelt und die Beobachtung notiert, so wie der zeitliche Abstand zwischen Primär- und Nachentladung gemessen.
+
+\subsection{Oszillographische Messung der Totzeit}
+
+
+\noindent
+Für das folgende wird die Intensität der Quelle wieder erhöht.
+Nun wird zur Messung der Totzeit mit Hilfe des Oszilloskops auf den Anstieg des Impulses getriggert.
+Anschließend lässt sich die Totzeit durch den Vergleich mit Abb. \ref{img:tot} einfach ablesen. Die Erholungszeit lässt sich hingegen nur abschätzen.
+
+\subsection{Bestimmung der Totzeit mit der Zwei-Quellen-Methode}
+
+
+\noindent
+Die Messmethode der Totzeit mittels des Oszillioskops ist ungenau, weswegen diese Methode eine Alternative bietet.\\\\
+Die Totzeit führt dazu, dass die regristrierte Impulsrate $N_r$ immer kleiner ist als die der tatsächlich absorbierten Teilchen $N_w$.
+Da das Zählrohr für den Bruchteil $T\cdot N_r $ unempfindlich ist lässt sich die tatsächliche Impulsrate der tatsächlich absorbierten Teilchen mit der folgenden Gleichung bestimmen:
+\begin{equation}
+    N_w=\frac{\text{Impulsrate}}{\text{Messzeit}}=\frac{N_r t}{(1-T \cdot N_r)t}=\frac{N_r }{(1-T \cdot N_r)}
+    \label{eqn:imp}
+\end{equation}
+Wenn nun erst die Zählrate $N_1$ eines Präparats, dann die Zählrate $N_1$ und die eines zusätzlichen anderen zweiten Präparat $N_2$ und zuletzt nur $N_2$, gemessen werden, lässt sich damit die Totzeit berechnen.\\
+Dabei wird genau diese Reihenfolge gewählt um unnötiges Bewegen  der Präparate zu vermeiden.\\\\
+Aufgrund der Totzeit gilt die Formel
+\begin{equation*}
+    N_\text{1+2}<N_1 +N_2
+\end{equation*}
+und nicht
+\begin{equation*}
+    N_\text{1+2}=N_1 +N_2
+\end{equation*}
+Nun ergibt sich aus der Formel \refeq{eqn:imp} für die drei unterschiedlichen Messaufbauten die drei folgenden Zusammenhänge:
+\begin{align*}
+    N_{w_1} &=\frac{N_1 }{(1-T \cdot N_1)}\\
+    N_{w_2} &=\frac{N_2 }{(1-T \cdot N_2)}\\
+    N_{w_{1+2}} &=\frac{N_{1+2} }{(1-T \cdot N_{1+2})}
+\end{align*}
+Hieraus lässt sich nun für $T^2\cdot N^2 \ll 1$ mit $i=(1,2,1+2)$ und mit $N_\text{1+2}=N_1 +N_2$ die folgende Gleichung für $T$ aufstellen:
+\begin{equation*}
+    T\approx \frac{N_1 +N_2 -N_{{1+2}} }{2 N_1 N_2}
+\end{equation*}
+
+\subsection{Messung der pro Teilchen vom Zählrohr freigesetzten Ladungsmenge}
+
+
+\noindent
+Der mittlere Zählstrom kann, wie in Abb. \ref{img:schalt}, mit einem empfindlichen Amperemeter, bei hohen Zählraten, gemessen werden.\\
+Die dazugehörige Gleichung ist folgende:
+\begin{equation*}
+    \overline{\symup{I}} \coloneq \frac{1}{\tau} \int_0^\tau \frac{U(t)}{R} dt
+\end{equation*}
+Dabei gilt $\tau \gg T$.\\
+mit HIlfe von $ \overline{\symup{I}} $ lässt sich bei bekannter Impulszahl pro Zeit und bei bekannter eindringender Teilchenmenge die freigesetzte Ladung bestimmen.
+Daraus lässt sich widerum die folgende Formel aufstellen, wobei $Z$ die Anzahl der Teilchen pro $\increment t$ ist:
+\begin{equation*}
+    \overline{\symup{I}} =\frac{\increment Q}{\increment t} \cdot Z
+\end{equation*}
+Dabei hängt $\increment Q$ auch noch von der Spannung ab, weswegen es in der Abhängigkeit von ihr untersucht werden sollte.

@@ -1,0 +1,45 @@
+1.
+    Als erstes muessen die Schwingungsdauern der einzelnen Pendel gemessen Werden und so angepasst werden, dass die bis auf einen kleinen Fehler 
+    die gleiche Schwingungsdauer haben.
+
+        Bei dieser Versuchsreihe wird die Kopplungsfeder zwischen den beiden Pendeln entfernt.
+        Die beiden Pendel werden dazu schaetzungsweise auf die gleiche Laenge eingestellt. Dann werden die Schwingungsdauern gemessen. Passen die 
+        beiden SChwingungsdauern nicht ueberein wird das geicht an einem der Pendel so lange leicht veraendert bis die Schwingungsdauern 
+        uebereinstimmen.
+
+        Jetzt werden zu beiden Pendeln jeweils 10 Messreihen durchgefuehrt. Bei jeder Messreihe werden 5 Schwingungsdauern gemessen
+
+
+2.
+    Hier wird die gleichphasige und die gegenphasige Schwingung untersucht.
+
+        Die Pendel aus 1. werden jetzt mit der Kopplungsfeder wieder verbunden.
+
+        Fuer die gleichphasige Schwingung werden die Pendel um den gleichen Winkel in die gleiche Richtung ausgelekt und dann losgelassen.
+        Hier werden die Schwingungsdauern (5-10) mal gemessen. Dazu werden 5 Messreihen durchgefuehrt
+
+        Fuer die gegenphasige Schwingung werden die Pendel um den gleichen Winkel in gegensaetzliche Richtungen ausgelekt und dann losgelassen.
+        Hier werden die Schwingungsdauern (5-10) mal gemessen. Dazu werden 5 Messreihen durchgefuehrt
+
+
+3.  
+    Als drittes wird die gekoppelte Schwingung untersucht.
+
+        Hier wird das gekoppelte Pendel aus 2. benutzt
+
+        Das eine Pendel wird dazu um einen Winkel alpha ausgelenkt und losgelassen. Das andere Pendel soll in vor dem Loslassen des anderen 
+        Pendels in Ruhe und nicht ausgelenkt sein.
+
+        Jetzt wird die Schwingungsauer und die Schwebungdauer vermessen(5-10)Mal. Diese Messreihe wird auch 5 mal wiederholt.
+
+
+4.
+    Die Messreihen 1-3 werden jetzt noch einmal mit einer andern Pendellaenge wiederholt.
+
+
+5. 
+    Aus den Messreihen 2. und 3. (x2) werden nun die Schwingungsfrequenzen berechnet.
+
+    Aus dem Differentialgleichungsset sollen nun die Schwingunsfrequenzen berechnet werden.
+
+    Vergleiche die aus der Messung und aus der Formel berechneten Schwingungsfrequenzen.

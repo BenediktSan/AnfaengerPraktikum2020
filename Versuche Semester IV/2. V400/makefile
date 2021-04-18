@@ -24,6 +24,9 @@ clean:
 	rm -rf build
 
 
+txt:
+	python python/einlesen.py
+
 #Zusätzliche Ordner/Dateien löschen
 aux2:
 	rm -rf Protokoll_V354.aux Protokoll_V354.bcf Protokoll_V354.log Protokoll_V354.pdf Protokoll_V354.run.xml Protokoll_V354.toc

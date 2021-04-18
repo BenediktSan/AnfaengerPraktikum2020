@@ -1,44 +1,187 @@
 \newpage
 \section{Auswertung}
+    \subsection{a)}
+Die Messungen tragen den Photostrom gegen die Gegenspannung auf, aufgrund der $\sqrt{I} \propto  U$ Relation wird $\sqrt{I} $ gegen $  U$
+aufgetragen. Durch diese Werte lässt sich dann eine Ausgleichgerade ziehen, der Schnittpunkt dieser Gerade mit der x-Achse beschreibt dann die 
+Grenzspannung $U_{\symup{g}}$ bei der gerade keine Elektronen mehr die Anode erreichen. 
+Wenn die Ausgleichsgerade durch $y = a \cdot x +b$ beschrieben wird, dann berechnet sich die Grenzspannung mittels: 
 
 \begin{equation}
-    U_{\symup{g}} = -  \frac{a}{b}
+    U_{\symup{g}} = -  \frac{a}{b}.
 \end{equation}
 
-Verhätnis $\frach{\symup{h}{\symup{e_0}}}$ Austrittsarbeit $\symup{A_k}$
+\begin{align}
+    \text{gelb:  }   \quad     &a = (-\num{11.3}\pm \num{0.8})*10^{-5} \si{\ampere^{\frac{1}{2}}\per\volt}\\
+                    &b = (\num{1.06}\pm \num{0.34})*10^{-5} \si{\ampere}\\
+                    & \rightarrow U_{\symup{g}} = \SI{0.63 \pm 0.05}{\volt}
+\end{align}         
 
-\begin{equation}    
-    \nu =   \frac{\text{c}{\lambda}}
-\end{equation}
+\begin{align}
+    \text{grün:  }   \quad     &a = (-\num{16.2}\pm \num{0.5})*10^{-5} \si{\ampere^{\frac{1}{2}}\per\volt}\\
+                        &b = (\num{8.75}\pm \num{0.19})*10^{-5} \si{\ampere}\\
+                        & \rightarrow U_{\symup{g}} = \SI{0.54 \pm 0.021}{\volt}
+\end{align}
 
-%test
+\begin{align}
+    \text{violett:  }  \quad      &a = (-\num{11.63}\pm \num{0.2})*10^{-5} \si{\ampere^{\frac{1}{2}}\per\volt}\\
+                           &b = (\num{13.09}\pm \num{0.15})*10^{-5} \si{\ampere}\\
+                           & \rightarrow U_{\symup{g}} = \SI{1.126 \pm 0.023}{\volt}
+\end{align}
+
+Werden die Daten /ref{} geplottet ergeben sich dann folgenede Plots:
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.85\textwidth]{build/plots/sqrtgelb.pdf}
+    \caption{Die Wurzel des Photostrom gegen die Spannung mit Ausgleichgerade bei gelbem Licht}
+    \label{img:sqrtgelb}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.85\textwidth]{build/plots/sqrtgreen.pdf}
+    \caption{Die Wurzel des Photostrom gegen die Spannung mit Ausgleichgerade bei grünem Licht.}
+    \label{img:sqrtgruen}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.85\textwidth]{build/plots/sqrtviolett.pdf}
+    \caption{Die Wurzel des Photostrom gegen die Spannung mit Ausgleichgerade bei violettem Licht.}
+    \label{img:sqrtviolett}
+\end{figure}
+
+    \subsection{b)}
+
+Werden die Daten der Grenzspannungen gegen ihre Frequenzen geplottet und eine Ausgleichsgerade gezogen, ergibt sich folgender Plot:
 
 
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.85\textwidth]{build/plots/Grenz.pdf}
+    \caption{Die Grenzspannung gegen die Frequenz des jeweiligen Lichts aufgetragen}
+    \label{img:gegen}
+\end{figure}
 
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.04\textwidth]{latex/images/meme.PNG}
+\end{figure}
+\noindent
+Die Ausgleichsgerade wird somit durch die Steigung a = $\SI{3.3 (11)e-15}{\volt\per\ampere}$ und den y-Achsenabschnitt 
+b = $\SI{-3.5 (19)e8}{\volt\per\coulomb}$ beschrieben.
+Nach Gleichung \ref{eqn:vmax} berechnet sich Verhätnis $\frac{\symup{h}}{\symup{e_0}}$ somit zu $\SI{2.1(7)e4}{\electronvolt}$ und die 
+Austrittsarbeit zu $\SI{2.2(12)e27}{\electronvolt}$
 
-%Latex Formalismen
+    \subsection{c)}
 
-%\begin{table}[H]
-%    \centering
-%    \begin{tabular}{S [table-format=2.1] S [table-format=3.1]}
-%        \toprule
-%        {$U_\text{Amp} \mathbin{\scalebox{1.5} / }\si{\volt}$} & {$t_\text{Amp} \mathbin{\scalebox{1.5} / }\si{\micro\second}$}\\
-%        \midrule
-%        14.0 & 0.0 \\
-%        -11.5 & 14.0\\
-%        10.5 & 27.6\\
-%        -8.3 & 42.0\\
-%        7.8 & 54.00\\
-%        -6.0 & 68.0\\
-%        5.8 & 82.0\\
-%        -4.2 & 95.0\\
-%        4.1 & 108.0\\
-%        -3.0 & 122.0\\
-%        3.1 & 136.0\\
-%        -2.2 & 150.0\\
-%        2.5 & 163.0\\
-%        \bottomrule
-%    \end{tabular}
-%\caption{Die Messwerte der Amplitudenspannung mit ihren korrespondierenden Zeiten.}
-%\label{tab:Uamp}
-%\end{table}
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.85\textwidth]{build/plots/gelb.pdf}
+        \caption{Die Messreihe bei \lambda = 578nm}
+        \label{img:gelb}
+    \end{figure}
+
+    Das Diagramm beschreibt wie sich bei hohen beschleuniger Spannungen der Photostrom asymptotisch gegen einen Grenzwert annähert, im mittleren 
+    Spannungsbereich ungefähr linear abfällt und nocht nicht vollständig bei der Grenzspannung $U_{\symup{g}}$ versiegt.
+    Der nur asymptotisch angenäherter Photostrom ist dadurch zu erklären, dass nur begrenzt viele Elektronen bei konstanter Licht Intensität 
+    durch den Photoeffekt entstehen. Diese werden in alle möglichen Richtungen verstreut, um nun alle diese Elektronen aufzufangen, auch die die sehr 
+    stark aus dem Elektrischen Feld gestreut werden, wird ein sehr starkes Feld benötigt. Es werden bei hohen Spannungen auch nur noch vereinzelt
+    mehr Elektronen auf die Anode geleitet, dies führt zu der asymptotischen annäherung an den Grenzwert. Somit wird der Grenzwert durch die 
+    Intensität des Lichts bestimmt, um den Grenzwert bereits bei endlichen endlichen Spannungen zu erreichen müsste die Anode eine größere Fläche 
+    um die Kathode am besten eine Kugelförmige Umschließung erreichen.
+    Der Effekt, dass bei Erreichen der Grenzspannung kein Photostrom mehr zu sehen ist liegt hier nicht vor, da die Elektronen in der Kathode 
+    bereits eine durch die Fermi-Dirac-Statistik beschriebene Energie aufweisen. Die Elektronen mit zusätzlicher Energie in Richtung der Anode 
+    können somit das Gegenfeld noch überwinden und einen Photostrom erzeugen.
+    Da die Photokathode bereits bei 20 Grad Celsius verdampft und somit Elektronen frei werden kann hier bereits bei kleinen Spann
+
+\begin{table}[H]
+    \centering
+    \begin{tabular}{S [table-format=2.2] S [table-format=3.2]}
+        \toprule
+        {$U \mathbin{\scalebox{1.5} / }\si{\volt}$} & {$I \mathbin{\scalebox{1.5} / }\si{\ampere}$}\\
+        \midrule
+         19.02 & 0.00\\
+         15.00 & 0.00\\
+         10.00 & 0.00\\
+         5.00  & 0.00\\
+         2.51  & 0.00\\
+         0.49  & 0.02\\
+         0.25  & 0.82\\
+         0.15  & 1.90\\
+         0.05  & 4.10\\
+         0.01  & 5.20\\
+        -0.05  & 6.40\\
+        -0.15  & 9.50\\
+        -0.25  & 12.00\\
+        -0.35  & 14.50\\
+        -0.50  & 16.30\\
+        -0.75  & 24.00\\
+        -1.00  & 29.00\\
+        -1.52  & 36.00\\
+        -2.50  & 51.00\\
+        -5.01  & 74.00\\
+        -10.01 & 94.00\\
+        -15.02 & 102.00\\
+        -19.12 & 105.00\\
+        \bottomrule
+    \end{tabular}
+\caption{Die Messwerte der Messreihe vom gelben Licht.}
+\label{tab:gelb}
+\end{table}
+
+\begin{table}[H]
+    \centering
+    \begin{tabular}{S [table-format=1.2] S [table-format=1.2]}
+        \toprule
+        {$U \mathbin{\scalebox{1.5} / }\si{\volt}$} & {$I \mathbin{\scalebox{1.5} / }\si{\ampere}$}\\
+        \midrule
+        0.55 & 0.01\\
+        0.53 & 0.04\\
+        0.50 & 0.08\\
+        0.47 & 0.12\\
+        0.45 & 0.18\\
+        0.43 & 0.26\\
+        0.40 & 0.35\\
+        0.35 & 0.70\\
+        0.30 & 1.10\\
+        0.25 & 2.00\\
+        0.20 & 3.05\\
+        0.15 & 4.15\\
+        0.10 & 5.80\\
+        0.01 & 7.00\\
+        0.00 & 8.50\\
+        \bottomrule
+    \end{tabular}
+\caption{Die Messwerte der Messreihe vom grünen Licht}
+\label{tab:green}
+\end{table}
+
+\begin{table}[H]
+    \centering
+    \begin{tabular}{S [table-format=1.2] S [table-format=1.2]}
+        \toprule
+        {$U \mathbin{\scalebox{1.5} / }\si{\volt}$} & {$I \mathbin{\scalebox{1.5} / }\si{\ampere}$}\\
+        \midrule
+        1.15 & 0.001\\
+        1.10 & 0.080\\
+        1.05 & 0.100\\
+        1.00 & 0.200\\
+        0.95 & 0.400\\
+        0.90 & 0.550\\
+        0.85 & 0.800\\
+        0.80 & 1.200\\
+        0.75 & 1.600\\
+        0.70 & 2.200\\
+        0.60 & 3.600\\
+        0.50 & 5.400\\
+        0.40 & 7.400\\
+        0.30 & 9.600\\
+        0.20 & 12.00\\
+        0.10 & 14.00\\
+        0.00 & 17.40\\
+        \bottomrule
+    \end{tabular}
+\caption{Die Messwerte der Messreihe vom grünen Licht}
+\label{tab:violett}
+\end{table}

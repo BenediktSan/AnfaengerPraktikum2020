@@ -27,9 +27,18 @@ k=const.k
 #Avogadro-Konstante:
 NA=const.Avogadro
 
-c=const.chemie
+c=const.c
 
+###basic formeln
 
+def gamma(v):
+    return 1/np.sqrt(1-(v**2/c**2))
+
+def einstein(m,v):
+    return gamma(v)*m*c**2
+
+def p(m,v):
+    return gamma(v)*m*v
 
 ##Rechnung:
 

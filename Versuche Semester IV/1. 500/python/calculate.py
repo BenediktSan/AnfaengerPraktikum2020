@@ -126,7 +126,7 @@ c = 299792458
 params_Ug , ma_Ug = np.polyfit(c/lam ,Ugs , deg =1, cov = True)
 errors_Ug = np.sqrt(np.diag(ma_Ug))
 frac = ufloat(params_Ug[0], errors_Ug[0])
-Ak = ufloat(params_Ug[1], errors_Ug[1]) * c / e
+Ak = ufloat(params_Ug[1], errors_Ug[1]) * c *e
 print("berechnetes h/e0", (frac/e).n, (frac/e).s )
 print("Theorie Wert", (6.62607015e-34/(-1.602176634e-19))/e)
 print("prozentuale Abweichung", 1 + frac/(6.62607015e-34/(-1.602176634e-19)))

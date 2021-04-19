@@ -11,7 +11,7 @@ build/gelb.pdf:	|build
 
 
 # hier weitere Abhängigkeiten für build/main.pdf deklarieren:
-build/Protokoll_500.pdf:  latex/auswertung.tex latex/theorie.tex latex/durchf.tex latex/diskussion.tex latex/auswertung.tex| build
+build/Protokoll_500.pdf:  latex/auswertung.tex latex/theorie.tex latex/durchf.tex latex/diskussion.tex latex/auswertung.tex build/gelb.pdf| build
 	lualatex --output-directory=build --interaction=batchmode --halt-on-error latex/Protokoll_500.tex
 	biber build/Protokoll_500.bcf
 	lualatex --output-directory=build --interaction=batchmode --halt-on-error latex/Protokoll_500.tex

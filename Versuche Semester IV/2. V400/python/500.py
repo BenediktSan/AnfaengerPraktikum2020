@@ -37,7 +37,7 @@ nluft=1.000292          #https://www.chemie.de/lexikon/Brechzahl.html
 nwasser=1.33
 nkron=1.46 #bis 1.65
 nplexi=1.49
-ndia=2-42
+ndia=2.42
 
 
 

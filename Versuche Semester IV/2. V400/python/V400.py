@@ -29,6 +29,8 @@ if os.path.exists("build/plots") == False:
 err=1
 d=5.85 e-3 #meter
 gam=60 #grad
+lamg=532*10-9 #meter
+lamr=635*10-9 #meter
 
 
 ###Brechungsindices
@@ -42,6 +44,14 @@ ndia=2.42
 
 
 ###Reflexion
+def lin(x,a,b):
+    return (a*x+b)
+
+params, _1 =curve_fit(lin,refl1,refl2,p0=(1,0))
+err =np.sqrt(np.diag(_1))
+uparams=unp.uarray(params,err)
+
+print(f'\nA:\n= {uparams[0]:.4f}  \n B= {uparams[1]:.4f} \n')
 
 
 ###Brechung

@@ -6,7 +6,7 @@ all: build/Protokoll_V400.pdf
 
 
 build/plot1.pdf:	|build
-	python python/V400..py
+	python python/V400.py
 
 
 

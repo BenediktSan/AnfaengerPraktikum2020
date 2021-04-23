@@ -39,11 +39,12 @@ print("b_ge", b_ge)
 #Fit gruenes Licht
 params_gr , ma_gr = np.polyfit(U_gr,np.sqrt(I_gr), deg =1, cov = True)
 errors_gr = np.sqrt(np.diag(ma_gr))
-
 a_gr = ufloat(params_gr[0], errors_gr[0])
 print("a_gr", a_gr*1e5)
 b_gr = ufloat(params_gr[1], errors_gr[1])
 print("b_gr", b_gr)
+
+
 #Fit violettes Licht 
 params_vi , ma_vi = np.polyfit(U_vi,np.sqrt(I_vi), deg =1, cov = True)
 errors_vi = np.sqrt(np.diag(ma_vi))
@@ -52,6 +53,8 @@ a_vi = ufloat(params_vi[0], errors_vi[0])
 print("a_vi",a_vi*1e5)
 b_vi = ufloat(params_vi[1], errors_vi[1])
 print("b_vi", b_vi*1e5)
+
+
 #Grenzspannungen
 Ug_ge=-b_ge/a_ge
 Ug_gr=-b_gr/a_gr
@@ -134,6 +137,7 @@ print("Austrittsarbeit ", Ak)
 print("a", frac)
 print("b", Ak)
 
+
 x4=np.linspace(5e14,7e14)
 
 
@@ -146,6 +150,7 @@ plt.legend()
 plt.savefig("build/plots/Grenz.pdf")
 
 #print(I_gr)
+
 np.savetxt(
     'python/tabellen/gelb.txt',
     np.column_stack([U_ge,I_ge*1e9]),

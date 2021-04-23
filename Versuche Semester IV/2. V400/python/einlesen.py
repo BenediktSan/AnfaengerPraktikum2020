@@ -12,16 +12,16 @@ if os.path.exists("build") == False:
     os.mkdir("build")
 #Reflexion
 
-refl1=np.array([1,2,3,4,5,6,7]) #in grad
-refl2=np.array([1,2,3,4,5,6,7])
-err=1
+refl1=np.array([0,20,30,40,50,60,70]) #in grad
+refl2=np.array([0,20,30,40,51,61,70])
+err=0.5
 
 #FOTOS!!!!!!!!!!!!!
 
 
 #Brechung
-brech1=np.array([1,2,3,4,5,6,7]) #in grad
-brech2=np.array([1,2,3,4,5,6,7])
+brech1=np.array([10,20,30,40,50,60,70]) #in grad
+brech2=np.array([7,14,20,26,31,36,39.5])
 
 
 
@@ -29,28 +29,22 @@ brech2=np.array([1,2,3,4,5,6,7])
 d=5.85e-3
 
 
-platt1=np.array([1,2,3,4,5]) 
-platt2=np.array([1,2,3,4,5]) 
-
 
 
 #Prisma
 gam=60 #grad
 
-green1=np.array([1,2,3,4,5]) 
-green2=np.array([1,2,3,4,5]) 
+green1=np.array([30,35,40,50,60]) 
+green2=np.array([76.5,66.5,58.5,47,38]) 
 
-red1=green1
-red2=green2=np.array([1,2,3,4,5]) 
-
-
+red2=green2=np.array([75,75.5,57.8,46,37.5]) 
 
 #Beugung am Gitter
 
-maxgreen=np.array([1,2,3,4,5]) 
-maxred=np.array([1,2,3,4,5]) 
 
-
+max1=np.array([-23.5,0,23.5]) 
+max2=np.array([-35,-22.5,-11,0,35,22.5,11]) 
+max3=np.array([-32,-27.2,-23,-19,-15,-11.3,-7.5,-4,0,3.8,7.2,11,15,19,23,27.2,32]) 
 #np.save('python/variables/refl1.npy', refl1, allow_pickle=False)
 #np.save('python/variables/refl2.npy', refl2, allow_pickle=False)
 
@@ -96,9 +90,9 @@ np.savetxt(
 )
 
 np.savetxt(
-    'build/prisma.txt',
-    np.column_stack([maxgreen, maxred]),
-    fmt=['%.3f', '%.3f'],       
+    'build/gitter.txt',
+    np.column_stack([max1, max2,max3]),
+    fmt=['%.3f', '%.3f','%.3f'],       
     delimiter=' & ',
-    header='maxima grün, max rot',
+    header='maxima 600promm, maxima 300promm,maxima 100promm',
 )

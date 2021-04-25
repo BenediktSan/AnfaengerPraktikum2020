@@ -37,13 +37,13 @@ gam=60 #grad
 green1=np.array([30,35,40,50,60]) 
 green2=np.array([76.5,66.5,58.5,47,38]) 
 
-red2=green2=np.array([75,75.5,57.8,46,37.5]) 
+red2=np.array([75,75.5,57.8,46,37.5]) 
 
 #Beugung am Gitter
 
 
-max1=np.array([-23.5,0,23.5]) 
-max2=np.array([-35,-22.5,-11,0,35,22.5,11]) 
+max1=np.array([0,0,0,0,0,0,0,-23.5,0,23.50,0,0,0,0,0,0,0]) 
+max2=np.array([0,0,0,0,0,-35,-22.5,-11,0,35,22.5,11,0,0,0,0,0]) 
 max3=np.array([-32,-27.2,-23,-19,-15,-11.3,-7.5,-4,0,3.8,7.2,11,15,19,23,27.2,32]) 
 #np.save('python/variables/refl1.npy', refl1, allow_pickle=False)
 #np.save('python/variables/refl2.npy', refl2, allow_pickle=False)
@@ -73,13 +73,7 @@ np.savetxt(
     header='einf,ausf',
 )
 
-np.savetxt(
-    'build/platten.txt',
-    np.column_stack([platt1, platt2]),
-    fmt=['%.3f', '%.3f'],       
-    delimiter=' & ',
-    header='einf,ausf',
-)
+
 
 np.savetxt(
     'build/prisma.txt',
@@ -91,8 +85,8 @@ np.savetxt(
 
 np.savetxt(
     'build/gitter.txt',
-    np.column_stack([max1, max2,max3]),
+    np.column_stack([max1, max2, max3]),
     fmt=['%.3f', '%.3f','%.3f'],       
     delimiter=' & ',
-    header='maxima 600promm, maxima 300promm,maxima 100promm',
+    header='maxima 600promm, maxima 300promm, maxima 100promm',
 )

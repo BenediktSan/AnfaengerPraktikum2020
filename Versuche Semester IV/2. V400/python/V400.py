@@ -85,7 +85,7 @@ n=unp.sin(brech1*const.pi/180.0)/unp.sin(brech2*const.pi/180.0)
 
 un=unp.uarray(n.mean(),np.std(n, ddof=1) / np.sqrt(len(n)))
 cplexi=const.c/nplexi
-print(f'\nPlexi:= {un:.4f}  \nc= {const.c/un:.4f}\nctheo= {cplexi:.4f} \nrelative Abweichung: {((cplexi-(const.c/un))/cplexi)*100}%\n')
+print(f'\nPlexi:= {un:.4f}\nrelative Abweichung: {((nplexi-(un))/nplexi)*100}%  \nc= {const.c/un:.4f}\nctheo= {cplexi:.4f} \nrelative Abweichung: {((cplexi-(const.c/un))/cplexi)*100}%\n')
 
 
 

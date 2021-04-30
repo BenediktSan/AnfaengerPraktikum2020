@@ -88,29 +88,59 @@ theta_A , N_A_ = np.genfromtxt("ComptonAl.txt", unpack =True)
 
 tau = 90e-6
 
-#N_0_err = np.sqrt(N_0_)
-#N_A_err = np.sqrt(N_A_)
-#
-#N_0 = ufloat(N_0_ , N_0_err)
-#N_A = ufloat(N_A_ , N_A_err)
-#
-## Korrektur der Totzeit
-#
-#N0 = N_0 / (1 - tau*N_0)
-#NA = N_A / (1 - tau*N_A)
-#T = NA / N0
-#
+N_0_err = np.sqrt(N_0_)
+N_A_err = np.sqrt(N_A_)
+
+N_0 = unp.uarray(N_0_ , N_0_err)
+N_A = unp.uarray(N_A_ , N_A_err)
 
 
-#plt.figure()
-#plt.plot(theta_0, N_0 , "k.", label = "Daten Ohne")
-#plt.legend()
-#plt.savefig("build/plots/Compton_ohne.pdf")
-#
-#plt.figure()
-#plt.plot(theta_A, N_A , "k.", label = "Daten Al")
-#plt.legend()
-#plt.savefig("build/plots/Compton_Al.pdf")
+lam = 2 * d_LiF * np.sin(theta_0 * np.pi / 180)
+
+# Korrektur der Totzeit
+
+N0 = N_0 / (1 - tau*N_0)
+NA = N_A / (1 - tau*N_A)
+T = NA / N0
+
+params, cov = np.polyfit(lam, unp.nominal_values(T), deg=1, cov=True)
+errs = np.sqrt(np.diag(cov))
+for name, value, error in zip('ab', params, errs):
+    print(f'{name} = {value:.3f} +- {error:.3f}')
+
+l_start = 2* d_LiF * np.sin(7 * np.pi /180)
+l_fin = 2 * d_LiF *np.sin(10* np.pi/180)
+lam_plot = np.linspace(l_start, l_fin)
+
+plt.figure()
+plt.plot(lam,unp.nominal_values(T), 'b.', label="Messwerte")
+plt.plot(lam_plot, params[0]*lam_plot + params[1], '-', label='Lineare Regression')
+plt.errorbar(lam, unp.nominal_values(T), yerr=unp.std_devs(T), fmt='r_')
+plt.legend()
+plt.xlabel(r'Wellenlänge $\lambda$')
+plt.ylabel(r'Transmission')
+plt.savefig('build/plots/transmission.pdf')
+
+I_0 = 2731.0
+I_1 = 1180.0
+I_2 = 1024.0
+
+T_1 = I_1/I_0
+T_2 = I_2/I_0
+
+print(f'T_1 = {T_1:.3f}, T_2 = {T_2:.3f}')
+
+
+a = unp.uarray(params[0], errs[0])
+b = unp.uarray(params[1], errs[1])
+lam_1 = (T_1 - b)/a
+lam_2 = (T_2 - b)/a
+
+lam_c = lam_2 - lam_1
+
+print(f'Lambda 1 = {lam_1}')
+print(f'Lambda 2 = {lam_2}')
+print(f'Compton = {lam_c}')
 
 
 #Diskussion
@@ -121,6 +151,6 @@ E_b_t = 8906.9
 ab_a = (E_a_t - E_a) * 100 / E_a_t
 ab_b = (E_b_t - E_b) * 100 / E_b_t
 
-print(f'Abweichung der Abweichung ')
+#print(f'Abweichung der Abweichung ')
 
 

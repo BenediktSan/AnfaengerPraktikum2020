@@ -1,0 +1,63 @@
+\section{Auswertung}
+
+    \subsection{Aufnahme eines Emissionsspektrum einer Kupfer Röhre}
+
+        \noindent Werden die Daten \ref{tab:W1} der Impulse pro Sekunde und der Winkel wie in Abbildung \ref{img:Spekt} geplottet lassen sich die 2 
+        cherakteristischen Winkel und nach der Beziehung \ref{eqn:bragg} auch die Wellenlänge bzw. Energien berechnen.
+
+            \begin{figure}
+                \centering
+                \includegraphics[width=0.5\textwidth]{builds/plots/Emissionsspektrum.pdf}
+                \caption{Ein Plot der Impulsrate gegen den Winkel.}
+                \label{img:Spekt}
+            \end{figure}
+
+        \noindent Aus dem Plot lässt sich ein Winkel von $\SI{22.7 \pm 0.2}{\degree}$ für die $\aplha$-Linie und ein Winkel von $\SI{20.4 \pm 0.2}{\degree}$
+        ablesen. Daraus berechnet sich nach Formel \ref{eqn:bragg} eine Energie von $\SI{7979 \pm 66}{\electronvolt}$ für die $\text{K}_{\aplha}$ und
+        $\SI{8830 \pm 82}{\electronvolt}$ für die $\text{K}_{\beta}$ Linie. 
+
+    \subsection{Bestimmung der Transmisson als Funktion der Wellenlänge}
+
+        \noindent Die Daten der Impulsrate als Funktion des Winkel werden zunächst mittels $\text{N}_{\text{err}}=\sqrt{N}$ mit einem Fehler versehen.
+        Zusätzlich wird die Totzeit des Geiger-Müller Zählrohrs mittels der Formel 
+        
+            \begin{equation}
+                I = \frac{N}{1 - \tau \cdot N}
+            \end{equation}
+        
+        \noindent angepasst, hier ist $\tau$ $\SI{90}{\micro\second}$ die Totzeit des Zählrohrs. Werden diese Daten geplottet und durch eine 
+        Ausgleichsgerade approximiert ergibt sich Abbildung \ref{img:Trans}. Die Steigung der Geraden berechnet sich zu 
+        a = $\SI{-15e9\pm239e6}{\per\meter}$ und der Y-Achsenabschnitt zu b = $\num{1.225 \ pm 0.014}$.
+
+            \begin{figure}
+                \centering
+                \includegraphics[width=0.5\textwidth]{builds/plots/transmisson.pdf}
+                \caption{Ein Plot des Transmissionsverhältnises in Abhängigkeit der Wellenlänge.}
+                \label{img:Trans}
+            \end{figure}
+
+    \subsection{Bestimmung der Compton-Wellenlänge $\lambda_{\text{c}}$}
+
+        \noindent Über einen Zeitraum von t = 300s wurden die Impuszahlen $\I_0$ = 2731, $\I_1$ = 1180 und $I_2$ = 1024 gemessen.
+        $\I_0$ entstand bei der Messung ohne Absorber, für die Messung von $\I_1$ wurde ein Al-Absorber zwischen Röntgenröhre und 
+        Streuer platziert, dieser wurde dann für die Messung von $\I_2$ zwischen den Streuer und das Geiger-Müller-Zählrohr verschoben.
+        Die Transmissionen berechen sich nun mittels
+
+            \begin{align}
+                T_1 = \frac{I_1}{I_0} = 0.432   \nonumber\\
+                T_2 = \frac{I_2}{I_0} = 0.375   \nonumber
+            \end{align}
+
+        \noindent Mittels der Ausgleichsgerade aus Abbildung \ref{img:Tans} lässt sich aus der Tansmissionszahl nun über 
+            
+            \begin{equation*}
+                \lam = \frac{T - b}{a}
+            \end{equation*}
+
+        \noindent die Wellenlänge berechnen. 
+            
+
+    
+
+
+    

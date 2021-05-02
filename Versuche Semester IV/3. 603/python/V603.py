@@ -24,7 +24,10 @@ h = 6.62607015e-34
 c = 299792458
 d_LiF = 201.4e-12
 e0 = 1.602176634e-19
+me = 9.109e-31
 
+lam_ct = h /(me*c)
+print("lam_c =", lam_ct)
 ## Kupfer Emissionsspektrum
 
 k_a = ufloat(22.7 , 0.2)
@@ -152,5 +155,7 @@ ab_b = (E_b_t - E_be) * 100 / E_b_t
 
 print(f'Abweichung der alpha Linie ', ab_a)
 print(f'Abweichung der beta Linie ', ab_b)
+
+print((lam_ct-lam_c)/lam_ct)
 
 

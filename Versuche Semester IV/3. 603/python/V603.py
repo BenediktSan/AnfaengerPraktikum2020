@@ -54,21 +54,6 @@ print("Energie K beta:", E_be.n , "pm" , E_be.s)
 # 1. Aufnahme eines Emissionssepktrums der Kupfer Röntgenröhre
 
 theta_C , N_C = np.genfromtxt("EmissionCu.dat", unpack = True)
-#print(theta_C)
-#print(N_C)
-
-#Emission = zip(theta_C, N_C)
-#for s in len(N_C):
-#    N_C[s] = int(N_C[s])
-#list = []
-#for i in range(len(theta_C)):
-#    for n in range(N_C[i]):
-#        list.append(theta_C[i])
-#print(list)
-#E_l= list(Emission)
-#print(len(E_l))
-#plt.hist(E_l, bins = 40)
-#print(Emission.theta_C)
 
 plt.figure()
 plt.plot(theta_C, N_C , "y.", label = "Daten Cu")
@@ -76,6 +61,21 @@ plt.legend()
 plt.xlabel("Einfallswinkel in °")
 plt.ylabel("Anzahl Impulse pro s")
 plt.tight_layout()
+plt.scatter([11.1], [420.0], s=20, marker='o', color='red')
+plt.annotate(r'Bremsberg', 
+            xy = (11.1, 420.0), xycoords='data', xytext=(-10, 20),
+            textcoords='offset points', fontsize=12, 
+            arrowprops=dict(arrowstyle="->", connectionstyle="arc3, rad=.2"))
+plt.scatter([k_b.n], [1599.0], s=20, marker='o', color='red')
+plt.annotate(r'$K_{\beta}$',
+            xy = (k_b.n, 1599.0), xycoords='data', xytext=(-50, -25),
+            textcoords='offset points', fontsize=12,
+            arrowprops=dict(arrowstyle="->", connectionstyle="arc3, rad=.2"))
+plt.scatter([k_a.n], [5050.0], s=20, marker='o', color='red')
+plt.annotate(r'$K_{\alpha}$',
+            xy = (k_a.n, 5050.0), xycoords='data', xytext=(+10, -2),
+            textcoords='offset points', fontsize=12,
+            arrowprops=dict(arrowstyle="->", connectionstyle="arc3, rad=.2"))
 plt.savefig("build/plots/Emissionsspektrum.pdf")
 
 
@@ -124,6 +124,10 @@ print("I_0",(I_0-(I_0 / (1 - tau*(I_0/300)))/I_0))
 I_1 = 1180.0
 I_2 = 1024.0
 
+I_0 = I_0 / (1 - tau*(I_0/300))
+I_1 = I_1 / (1 - tau*(I_1/300))
+I_2 = I_2 / (1 - tau*(I_2/300))
+
 T_1 = I_1/I_0
 T_2 = I_2/I_0
 
@@ -157,5 +161,4 @@ print(f'Abweichung der alpha Linie ', ab_a)
 print(f'Abweichung der beta Linie ', ab_b)
 
 print((lam_ct-lam_c)/lam_ct)
-
 

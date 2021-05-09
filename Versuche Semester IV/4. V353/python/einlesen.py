@@ -37,7 +37,7 @@ phi=a*f2*np.pi*2
 
 np.save('python/variables/U1.npy', U1, allow_pickle=False)
 np.save('python/variables/t.npy', t, allow_pickle=False)
-np.save('python/variables/u2.npy', U2/U2[0], allow_pickle=False)
+np.save('python/variables/u2.npy', U2, allow_pickle=False)
 np.save('python/variables/f1.npy', f1, allow_pickle=False)
 np.save('python/variables/phi.npy', phi, allow_pickle=False)
 np.save('python/variables/f2.npy', f2, allow_pickle=False)
@@ -60,8 +60,8 @@ np.savetxt(
 
 np.savetxt(
     'build/phi.txt',
-    np.column_stack([phi, f2]),
-    fmt=['%.3f', '%.3f'],       
+    np.column_stack([a*10**3,phi, f2]),
+    fmt=['%.3f','%.3f', '%.3f'],       
     delimiter=' & ',
-    header='phi in rad,f2',
+    header='a,phi in rad,f2',
 )

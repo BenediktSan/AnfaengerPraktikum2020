@@ -24,6 +24,8 @@ f2=np.array([1])
 
 
 
+
+
 ###  Vorgegebene Daten einlesen und einspeichern
 
 

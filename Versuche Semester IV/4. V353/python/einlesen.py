@@ -30,6 +30,8 @@ phi=a*f2*np.pi*2
 
 
 
+
+
 ###  Vorgegebene Daten einlesen und einspeichern
 
 

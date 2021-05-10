@@ -1,6 +1,6 @@
 \newpage
 \section{Auswertung}
-Für den ersten Teil der Auswertung wurde Entladevorgang eines Kondensators untersucht.\\
+Für den ersten Teil der Auswertung wurde der Entladevorgang eines Kondensators untersucht.\\
 Dabei wurde die Kondensatorspannung und die Zeit seit Beginn des Entladevorgangs gemessen.
 Diese Messwerte finden sich in der Tabelle \ref{tab:1} und grafisch dargestellt in Abbildung \ref{img:1}.\\
 In der Abbildung wurde der Logarithmus der Kondensatorspannung geteilt durch die angelegte Spannung gegen die Zeit aufgetragen.\\
@@ -19,6 +19,7 @@ Wobei $RC_1= \SI{0.0082(4)}{\second}$ und $\SI{-0.16694(14582)}{}$ gilt. Dabei i
 
 \begin{table}[h]
     \centering
+    \small
     \begin{tabular}{S [table-format=2.3] S [table-format=2.3] S [table-format=2.3]}
         \toprule
         {$U_C \mathbin{\scalebox{1.5} / }\si{\volt}$} & {$\log{\frac{U_C}{U_0}} $} & {$t \mathbin{\scalebox{1.5} / }\si{\second}$}\\
@@ -68,6 +69,7 @@ Die Ausgleichfunktion hat dabei folgende Form und die Rechnung führt zu folgend
 \end{figure}
 \begin{table}[h]
     \centering
+    \small
     \begin{tabular}{S [table-format=2.3]  S [table-format=5.3]}
         \toprule
         {$U_C \mathbin{\scalebox{1.5} / }\si{\volt}$}  & {$\nu \mathbin{\scalebox{1.5} / }\si{\hertz}$}\\
@@ -97,8 +99,8 @@ Die Ausgleichfunktion hat dabei folgende Form und die Rechnung führt zu folgend
 
 \noindent Die letzte Methode zur Bestimmung der Zeitkonstante ist die über die Phasenverschiebung.\\ 
 Dabei wird die Phasenverschiebung der Kondensatorspannung von der angelegten Spannung, in Abhängigkeit von der Erzeugerfrequenz gemessen.
-Da die Phasenverschiebung hier nicht direkt gemessen werden kann wird der Laufzeitunterschied $a$ gemessen und darauß die Verschiebung bestimmt.
-Dafür wird die Gleichung $\phi= a\cdot\nu\cdot\pi$ genutzt.\\
+Da die Phasenverschiebung hier nicht direkt gemessen werden kann wird der Laufzeitunterschied $a$ gemessen und daraus die Verschiebung bestimmt.
+Dafür wird die Gleichung $\phi= a\cdot\nu\cdot 2\pi$ genutzt.\\
 Diese Werte der Phasenverschiebung und des Laufzeitunterschieds sind in Tabelle \ref{tab:3} dargestellt.\\\\
 \noindent Um nun aus der Phasenverschiebung die Zeitkonstante zu bestimmen muss eine Ausgleichsrechnung mit einem Arkustangens durchggeführt werden.\\
 Diese Rechnung führt zu folgendem:
@@ -107,7 +109,7 @@ Diese Rechnung führt zu folgendem:
     B&=\SI{0.9253(128)}{}\\
     m&=\SI{0.00704(61)}{\second}
 \end{align*}
-Diese 
+Zu finden ist dies in Abbildung \ref{img:3}.
 
 \begin{figure}[H]
     \centering
@@ -118,6 +120,7 @@ Diese
 
 \begin{table}[h]
     \centering
+    \small
     \begin{tabular}{S [table-format=1.3] S [table-format=1.3] S [table-format=5.3]}
         \toprule
         {$a \mathbin{\scalebox{1.5} / }\si{\micro\second}$} & {$\phi \mathbin{\scalebox{1.5} / }\si{\radian}$} & {$f \mathbin{\scalebox{1.5} / }\si{\hertz}$}\\
@@ -143,7 +146,7 @@ Diese
 \label{tab:3}
 \end{table}
 
-\noindent Wenn nun die Messwerte Spannungen in Abhängigkeit von der Frequenz und die damit in der dritten Messreihe korrespondierenden Phasenverschiebungen herausgesucht werden, finden sich die in Tabelle \ref{tab:4} dargestellten Messwertpaare.
+\noindent Wenn nun die Messwerte Spannungen in Abhängigkeit von der Frequenz und die damit in der dritten Messreihe korrespondierenden Phasenverschiebungen herausgesucht werden, lassen sich die in Tabelle \ref{tab:4} dargestellten Messwertpaare finden.
 Dabei wurden nur Werte genutzt für die identische Frequenzen in beiden Messreihen existieren.\\
 
 
@@ -154,12 +157,13 @@ Dabei wird auch noch die Funktion \ref{eqn:12} mit $RC_1$ eingezeichnet.
     \centering
     \includegraphics[width=0.6\textwidth]{build/plots/plot3.pdf}
     \caption{Ein Polardiagramm der Messwerte.}
-    \label{img:3}
+    \label{img:4}
 \end{figure}
 
 \begin{table}[h]
     \centering
-    \begin{tabular}{S [table-format=1.3] S [table-format=1.3] }
+    \small
+    \begin{tabular}{S [table-format=1.5] S [table-format=1.6] }
         \toprule
         {$U \mathbin{\scalebox{1.5} / }\si{\volt}$} & {$\phi \mathbin{\scalebox{1.5} / }\si{\radian}$} \\
         \midrule

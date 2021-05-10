@@ -2,12 +2,12 @@
 
     \subsection{Zielsetzung}
 
-        \noindent In diesem Versuch werden allgemeine Relaxionsverhalten und vor allem am RC-Kreis untersucht.
+        \noindent In diesem Versuch werden allgemein. Relaxionsverhalten untersucht. Allerdings liegt dabei der Fokus auf dem RC-Kreis.
 
     \subsection{Allgemeine Relaxionsgleichung}
 
         \noindent Eine Relaxion beschreibt das Verhalten wenn ein System angeregt wird und dann wieder nicht-oszillatorisch in seinen 
-        Ausgangszustand zurückkehrt. Die Geschwindigkeit mit dem dies passiert ist die Ableitung der Physikalischen Größe $A$ ist zumeist 
+        Ausgangszustand zurückkehrt.\\ Die Geschwindigkeit mit dem dies passiert ist die Ableitung der physikalischen Größe $A$. Diese ist meist 
         proportional zur aktuellen Auslenkung vom Ausgangszustand der wieder bei $A(\infty)$ erreicht wird:
 
         \begin{equation}
@@ -70,7 +70,7 @@
             \label{eqn:5}
         \end{equation}
 
-        \noindent Über die Gleichungen (\ref{eqn:3}), (\ref{eqn:4}) und (\ref{eqn:5}) lässt sich nun eine Differential Gleichung für die 
+        \noindent Über die Gleichungen (\ref{eqn:3}), (\ref{eqn:4}) und (\ref{eqn:5}) lässt sich nun eine Differentialgleichung für die 
         Ladung auf dem Kondensator aufstellen:
 
         \begin{equation}
@@ -78,8 +78,8 @@
             \label{eqn:DGL}
         \end{equation}
 
-        \noindent Da die Ladung auf dem Kondensator für große Zeit gegen 0 konvergiert hat die DGL()\ref{eqn:DGL}) die Form der 
-        Gleichung(\ref{eqn:1}). Nach Gleichung(\ref{eqn:2}) ergibt die Integration
+        \noindent Da die Ladung auf dem Kondensator für große Zeit gegen 0 konvergiert hat die DGL\ref{eqn:DGL} die Form der 
+        Gleichung(\ref{eqn:1}).\\ Nach Gleichung(\ref{eqn:2}) ergibt die Integration:
 
         \begin{equation*}
             Q(t) = Q(0) \text{exp}(-t/RC).
@@ -111,7 +111,7 @@
 
     \subsection{Relaxationsphänomene unter Einfluss einer periodischen Auslenkung}
 
-        \noindent Ein Mechanisches System unter Einfluss einer Kraft mit sinusförmiger Zeitabhängigkeit lässt sich analog zu einem RC-Kreis mit 
+        \noindent Ein mechanisches System unter Einfluss einer Kraft mit sinusförmiger Zeitabhängigkeit lässt sich analog zu einem RC-Kreis mit 
         einer Sinusspannung beschreiben. Daher wird hier als repräsentatives Beispiel weiter ein RC-Kreis auf Relaxationsphänomene untersucht.\\
         Wird die Wechselspannung $U(t)$ durch
 
@@ -119,7 +119,7 @@
             U(t) = U_0 \text{cos}( \omega t)
         \end{equation*}
 
-        \noindent beschrieben, so ist bei kleiner Kresfequenz $\omega \ll 1/RC$, die Spannung am Kondensator ungefähr gleich der Wechselspannung.
+        \noindent beschrieben, so ist bei kleiner Kreisfequenz $\omega \ll 1/RC$, die Spannung am Kondensator ungefähr gleich der Wechselspannung.
         Nimmt die Kreisfrequenz jedoch zu, entsteht eine Phasenverschiebung $\varphi$ zwischen den beiden Spannungen und die 
         Kondensatorspannung verliert an Amplitude. Im Folgenden wird nun diese Frequenzabhängigkeit weiter untersucht.
 
@@ -159,20 +159,20 @@
             \label{eqn:9}
         \end{equation}
 
-        \noindent Insgesamt ergibt sich nun folgende Beziehung:
+        \noindent Insgesamt ergibt sich nun also folgende Beziehung:
 
         \begin{equation}
             U_0 \text{cos}(\omega t) = -A(\omega) R C \text{sin}(\omega t + \varphi) + A(\omega) \text{cos}(\omega t + \varphi) .
             \label{eqn:10}
         \end{equation}
 
-        \noindent Aus Gleichung(\ref{eqn:10}) lässt sich für $\omega t = \frac{\pi}{2}$ 
+        \noindent Aus Gleichung(\ref{eqn:10}) lässt sich mit $\omega t = \frac{\pi}{2}$ 
 
         \begin{equation*}
             0 = -\omega R C \text{sin} \left( \frac{\pi}{2} + \varphi \right) + \text{cos} \left( \frac{\pi}{2} + \varphi \right)
         \end{equation*}
 
-        \noindent aufstellen, daraus folgt mit $\text{sin}(\varphi + \pi /2 = \text{cos}(\varphi))$ und $\text{cos}(\varphi + \pi/2 = - \text{sin}
+        \noindent aufstellen. Daraus folgt mit $\text{sin}(\varphi + \pi /2 = \text{cos}(\varphi))$ und $\text{cos}(\varphi + \pi/2 = - \text{sin}
         (\varphi))$:
 
         \begin{equation*}
@@ -214,30 +214,30 @@
             A(\omega) = \frac{U_0}{\sqrt{1 + \omega^2 R^2 C^2}} .
         \end{equation*}
 
-        \noindent Somit wurde nun eine Beziehung zwischen der Kondensatorspannung under der KReisfrequenz der Wechselspannung aufgestellt. Auch 
+        \noindent Somit wurde nun eine Beziehung zwischen der Kondensatorspannung under der Kreisfrequenz der Wechselspannung aufgestellt. Auch 
         hier ist wieder abzulesen, dass für $\omega \rightarrow 0$ die Amplitude der Kondensatorspannung gleich der Amplitude der Wechselspannung ist.
-        Ebenso ist abzulesen, dass die Amplitude der KOndensatorspannung für große $\omega verschwindet$ und $A(1/RC) = U_0 / \sqrt{2}$ ist. 
-        Aus diesem Verhalten ist zu sehen, dass der RC-Kreis gut als Tiefpass verwendet werden kann.
+        Ebenso ist abzulesen, dass die Amplitude der Kondensatorspannung für große $\omega$ verschwindet und $A(1/RC) = U_0 / \sqrt{2}$ ist. \\
+        Aus diesem Verhalten lässt sich ableiten, dass der RC-Kreis gut als Tiefpass verwendet werden kann.
 
     \subsection{Der RC-Kreis als Integrator}
 
         \noindent Für den Fall, dass die Frequenz $\omega \gg 1/RC$ lässt sich zeigen, dass die Kondensatorspannung $U_{\text{C}}$ proportional 
         zu $\int U(t) \text{d}t$ ist. Somit ist der RC-Kreis in der Lage eine Spannung $U(t)$ zu integrieren.\\
-        Ausgehend von Gleichung(\ref{eqn:7a})
+        Ausgehend von Gleichung(\ref{eqn:7a}) gilt:
 
         \begin{equation*}
             U(t) = U_{\text{R}}(t) + U_{\text{C}}(t) = I(t) \cdot R + U_{\text{C}}(t)
         \end{equation*}
 
-        \noindent in das noch das $I(t)$ aus Gleichung(\ref{eqn:9}) eingesetzt wird.
+        \noindent  Hier wird dann noch $I(t)$ aus Gleichung(\ref{eqn:9}) eingesetzt.
 
         \begin{equation}
             U(t) = RC \frac{\text{d}U_{\text{C}}}{\text{d}t} + U_{\text{C}}(t)
             \label{eqn:bums}
         \end{equation}
 
-        \noindent Aus der Vorraussetzung, dass $\omega \gg 1/RC $ ist, egibt sich nun, dass $|U_{\text{c}}| \ll | U_{\text{R}}|$ und 
-        $|U_{\text{C}}| \ll |U|$ sind. Somit lässt sich Gleichung(\ref{eqn:bums}) zu folgender Näherung annähern:
+        \noindent Aus der Vorraussetzung, dass $\omega \gg 1/RC $ ist, ergibt sich nun, dass $|U_{\text{c}}| \ll | U_{\text{R}}|$ und 
+        $|U_{\text{C}}| \ll |U|$ sind. Somit lässt sich Gleichung(\ref{eqn:bums}) wie folgend annähern:
 
         \begin{equation*}
             U(t) = RC \frac{\text{d}U_{\text{C}}}{\text{d}t} ,

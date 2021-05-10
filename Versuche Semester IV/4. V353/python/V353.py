@@ -54,14 +54,14 @@ print(f'\nFit:\nRC= {uparams1[0]:.4f}s \nb={uparams1[1]:.5f}\n')
 ###methode über frequenz
 
 
-def freq(f,R):
-    return 1/np.sqrt(1+f**2*R**2)
+def freq(f,R,A):
+    return A/np.sqrt(1+f**2*R**2)
 
-params2, _2 =curve_fit(freq,f1,U2,p0=(-0.01))
+params2, _2 =curve_fit(freq,f1,U2,p0=(0.0066,0.3))
 err2 =np.sqrt(np.diag(_2))
 uparams2=unp.uarray(params2,err2)
 
-print(f'\nFit:\nRC= {uparams2[0]:.4f} ')
+print(f'\nFit:\nRC= {uparams2[0]:.4f} \nA= {uparams2[1]:.4f}')
 print(f'RC={uparams2[0]*10**3} *10^-3 s')
 
 
@@ -135,7 +135,7 @@ y = 1/(np.sqrt(1+x**2*(RC)**2))
 
 
 
-plt.polar(phineu, Uneu,'xr', label=r'${Messwerte} \; \phi $')
+plt.polar(phineu, Uneu/U2[0],'xr', label=r'${Messwerte} \; \phi $')
 plt.polar(phi,y,'b-', label=r'$Messwerte  \; U_C \ /\  U_0$')
 plt.xticks([0, np.pi/4, np.pi/2,  3*np.pi/4, np.pi, 5*np.pi/4, 3*np.pi/2, 7*np.pi/4],[r"$0$", r"$\frac{\pi}{4}$", r"$\frac{\pi}{2}$",  r"$\frac{3\pi}{4}$", r"$\pi$", r"$\frac{5\pi}{4}$", r"$\frac{3\pi}{2}$", r"$\frac{7\pi}{4}$"])
 plt.xlabel(r"U")

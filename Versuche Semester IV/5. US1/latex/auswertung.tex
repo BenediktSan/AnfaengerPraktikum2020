@@ -6,7 +6,7 @@
         unterschiedliche Störstellen in einem Acrylblock vermessen. Die Daten dieser Messungen sind in Tabelle(\ref{tab:mess1}) zu finden, werden 
         diese geplotted und durch eine Ausgleichsgerade der Form $y = m \cdot x + b$ gefittet, ergibt sich Plot(\ref{tab:py_sch}).
 
-        \begin{figure}[h]
+        \begin{figure}[ht]
             \centering
             \includegraphics[width=0.7\textwidth]{build/plots/Schallgeschwindigkeit.pdf}
             \caption{Die Messwerte geplottet und duch eine Ausgleichsgerade engenähert.}
@@ -39,7 +39,8 @@
 
         \noindent gefittet. Dies ergibt dann insgesamt den Plot(\ref{img:py_daem})
 
-        \begin{figure}[h]
+        \begin{figure}[ht]
+            \centering
             \includegraphics[width=0.7\textwidth]{build/plots/Daempfung.pdf}
             \caption{Die Messwerte geplottet und duch eine Exponetialfunktion gefittet.}
             \label{img:py_daem}
@@ -50,10 +51,10 @@
         $B = \SI{-23(3)}{\per\metre}$
         
         \noindent Somit wurde der Absorptionskoeffizient $\alpha$ zu:\\
-        $\alpha = B = \SI{-23(3)}{\per\metre} $
+        $\alpha = -B = \SI{23(3)}{\per\metre} $
         berechnet.
 
-        \begin{table}
+        \begin{table}[H]
             \centering
             \small
             \begin{tabular}{S [table-format=2.0] S [table-format=2.1] S [table-format=2.2]S [table-format=1.4]}
@@ -92,6 +93,19 @@
         \end{table}
 
 
-    \subection{Aufenmodell}
+    \subsection{Augenmodell}
 
-        \noindent
+        \noindent Aus dem Bild(\ref{img:Auge_dat}) lassen sich 3 Peaks ablesen, diese sind bei $t_1 = \SI{17.4}{\micro \second}$, 
+        $t_2 = \SI{18.2}{\micro \second}$ und bei $t_3 = \SI{23.1}{\micro \second}$. Der erste Peak entsteht hier durch die Reflektion an der Iris, 
+        der zweite an der Linse und der dritte hinten an der Retina. Über diese Zeiten lassen sich nun mittels der spezifischen 
+        Schallgeschwinidigkeiten in der Linse $c_{\text{L}} = \SI{2500}{\meter\per\second}$ und in der Glaskörperflüssigkeit 
+        $c_{\text{GK}} = \SI{1410}{\meter\per\second}$, die Abmaße des Augenmodells bestimmen. 
+
+        \begin{align*}
+             s_{\text{I}} & = \frac{1}{2} t_1 c_{\text{GK}}                      &= \SI{12.267}{\milli\metre}   \\
+             s_{\text{L}} & = s_{\text{I}} + \frac{1}{2} (t_2-t_1) c_{\text{L}}  &= \SI{13.267}{\milli\metre}  \\
+             s_{\text{R}} & = s_{\text{L}} + \frac{1}{2} (t_3-t_2) c_{\text{GK}} &= \SI{22.362}{\milli\metre} 
+        \end{align*}
+
+        \noindent Hier ist $s_{\text{I}}$ der Abstand bis zur Iris, $s_{\text{L}}$ der Abstand bis zur Linse und $s_{\text{R}}$ der Abstand 
+        bis zur Retina.

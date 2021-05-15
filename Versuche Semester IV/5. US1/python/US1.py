@@ -58,6 +58,8 @@ plt.tight_layout()
 plt.savefig("build/plots/Schallgeschwindigkeit.pdf")
 
 
+#Bestimmung des Absorptionskoeffizient
+
 s2 = c * t
 
 #print(s2)
@@ -83,4 +85,26 @@ plt.xlabel( r'$s \quad / \quad m $')
 plt.ylabel( r'$U \quad / \quad V $' )
 plt.legend()
 plt.savefig("build/plots/Daempfung.pdf")
+
+# Bestimmung der Abstände im Auge
+
+C_L = 2500
+C_GK = 1410
+
+t1 = 17.4e-6
+t2 = 18.2e-6
+t3 = 31.1e-6
+
+S_I = t1 * C_GK * 0.5
+print(S_I*1e3)
+
+S_L = S_I + (t2-t1)* C_L *0.5
+print(S_L*1e3)
+
+S_R = S_L + (t3-t2)* C_GK *0.5
+
+print(S_R *1e3)
+
+
+# Diskussion
 

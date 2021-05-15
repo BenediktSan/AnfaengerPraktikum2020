@@ -106,5 +106,5 @@ S_R = S_L + (t3-t2)* C_GK *0.5
 print(S_R *1e3)
 
 
-# Diskussion
 
+print(1 - 2730/c)

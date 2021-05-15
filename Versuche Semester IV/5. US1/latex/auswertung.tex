@@ -30,7 +30,8 @@
 
         \noindent zu bestimmen werden die Schallamplituden gegen die Strecke geplottet. Die Amplituden sind auch in der 
         Tabelle(\ref{tab:mess1}) zu finden, um Systematische Fehler zu verhindern wurden für die Strecke nicht die per Schieblehre vermessenen 
-        Werte benutzt sondern erneut aus $s = c_{\text{Scall}}\cdot t$ berechnet. Diese Messwerte wurden nun per scypy.curvefit an eine Funktion
+        Werte benutzt sondern erneut aus $s = c_{\text{Scall}}\cdot t$ berechnet. Diese Messwerte wurden nun per scypy.curvefit \cite{scipy}
+        an eine Funktion
 
         \begin{equation*}
             I(x) = A * \text{e}^{B x}
@@ -99,7 +100,7 @@
         $t_2 = \SI{18.2}{\micro \second}$ und bei $t_3 = \SI{23.1}{\micro \second}$. Der erste Peak entsteht hier durch die Reflektion an der Iris, 
         der zweite an der Linse und der dritte hinten an der Retina. Über diese Zeiten lassen sich nun mittels der spezifischen 
         Schallgeschwinidigkeiten in der Linse $c_{\text{L}} = \SI{2500}{\meter\per\second}$ und in der Glaskörperflüssigkeit 
-        $c_{\text{GK}} = \SI{1410}{\meter\per\second}$, die Abmaße des Augenmodells bestimmen. 
+        $c_{\text{GK}} = \SI{1410}{\meter\per\second}$, die Abmaße des Augenmodells bestimmen \cite{US1}. 
 
         \begin{align*}
              s_{\text{I}} & = \frac{1}{2} t_1 c_{\text{GK}}                      &= \SI{12.267}{\milli\metre}   \\
@@ -109,3 +110,10 @@
 
         \noindent Hier ist $s_{\text{I}}$ der Abstand bis zur Iris, $s_{\text{L}}$ der Abstand bis zur Linse und $s_{\text{R}}$ der Abstand 
         bis zur Retina.
+
+        \begin{figure}[h]
+            \centering
+            \includegraphics[width=0.7\textwidth]{latex/images/Auge_dat.jpeg}
+            \caption{Aufnahme vom Echoskop beim vermessen des Augenmodells.}
+            \label{img:Auge_dat}
+        \end{figure}

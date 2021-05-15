@@ -18,7 +18,7 @@ Ultraschall wird genutzt weren um Werkstücke oder menschliche Körper, ohne Sch
 \noindent
 Mathematisch lässt sich Schall durch eine longitudinal Welle ausdrücken:
 \begin{equation*}
-    p(x,t)=p_0+v_0\cdot Z\cdot \cos{\omega t-kx}
+    p(x,t)=p_0+v_0\cdot Z\cdot \cos{(\omega t-kx)}
 \end{equation*}
 Der Term $Z=c\cdot \rho$ entspricht dabei der akustischen Impedanz, mit $\rho$ als Dichte des Mediums und $c$ der Schallgeschwindigkeit in dem Medium.\\
 Die Schallgeschwindigkit hängt hierbei, da es bei Schall Dichteänderungen auftreten, sehr stark vom Material ab.\\
@@ -40,7 +40,7 @@ Die Intensität der Schallwelle nimmt dabei mit der Zeit durch Absoption ab.
 Für Ultraschall gilt dies besonders stark für das Medium Luft.
 Die Intensität lässt sich durch folgende Gleichung beschreiben:
 \begin{equation*}
-  I(x)=I_0\cdot \exp{-\alpha x}  
+  I(x)=I_0\cdot \exp{(-\alpha x)}  
 \end{equation*}
 Die Anfangsintensität wird dabei durch den Term $I_0$ beschrieben und $\alpha$ ist der Absorptionskoeffizient.\\\\
 Zusätzlich muss noch beachtet werden, dass Wellen die auf eine Grenzfläche zwischen zwei Medien treffen sich in einen transmitierten und einen reflektierten Anteil aufspalten.
@@ -59,4 +59,43 @@ Für die Intensität des transmitierten Anteils $T$ gilt damit nun:
 
 \subsection{Erzeugung und Messmethoden}
 
+Eine Methode um Ultraschall zu erzeugen ist über Anwendung des piezo-elektrischen Effektes.\\
+Bei diesem wird ein piezoelektrischer Kristall, wie Quarz, in ein elektrisches Wechselfeld gebracht. 
+Dieses Feld regt den Kristall dann an zu Schwingen, wodurch er Ultraschallwellen abstrahlt. 
+Durch Treffen der Eigenfrequenzen können hohe Amplituden erzeugt werden.\\
+Zusätzlich kann der Kristall auch, durch Umkehrung des Effektes, als Empfänger genutzt werden.\\\\
 
+\noindent
+In der Praxis, in der Medizin zum Beispiel, wird Ultraschall genutzt um Körper zu durchstrahlen.\\
+Dabei wird die Laufzeit eines Schallimpulses gemessen. Aus der gemessen Intensität und der Laufzeit lassen sich dann Rückschlüsse über den Körper schließen.\\
+Dabei lassen sich zwei Messarten unterscheiden.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.4\textwidth]{latex/images/durchschall.PNG}
+    \caption{Schematische Darstellung des Durchschallungs-Verfahrens und der Messdaten\protect \cite{US1}.}
+    \label{img:durch}
+\end{figure}
+
+\noindent
+Das erste Verfahren wird Durchschallungs-Verfahrens genannt.
+Bei diesem Verfahren wird auf der einen Seite einer Probe ein Sender und auf der anderen ein Empfänger aufgebracht.
+Falls sich zwischen den beiden eine Fehlstelle befindet lässt sich eine wesentliche Abnahme in der Intensität messen.
+Eine Aussage über den genauen Ort lässt sich nicht schließen. 
+Dieser Vorgang inklusive der schematischen Messwerte sind in Abbildung \ref{img:durch} dargestellt.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.4\textwidth]{latex/images/echo.PNG}
+    \caption{Schematische Darstellung des Impuls-Echo-Verfahrens und der Messdaten\protect \cite{US1}.}
+    \label{img:durch}
+\end{figure}
+
+\noindent 
+Das zweite Verfahren ist das Impuls-Echo-Verfahren. 
+Im Gegensatz zum Durchschallungs-Verfahren wird hier nur ein Sender aufgebracht, welcher auch als Empfänger dient.
+Der ausgesendete Schallimpuls wird dabei teilweise von der Fehlstelle und vom Ende der Probe reflektiert. 
+Über die Laufzeiten und Intensitäten lassen sich dann Rückschlüsse über den Ort und die Größe der Fehlstelle schließen.
+Die Bestimmung des Ortes bei bekannter Schallgeschwindigkeit $c$ geht dabei über folgende Formel:
+\begin{equation*}
+    s=\frac{1}{2}c \cdot t
+\end{equation*}

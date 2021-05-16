@@ -2,9 +2,9 @@
 
     \subsection{Schallgeschwinidigkeit}
 
-        \noindent Im ersten Versuchsteil wird die Schallgeschwindigkeit in Ancryl berechnet, dazu wurden mit dem Impuls-echo Verfahren 
-        unterschiedliche Störstellen in einem Acrylblock vermessen. Die Daten dieser Messungen sind in Tabelle(\ref{tab:mess1}) zu finden, werden 
-        diese geplotted und durch eine Ausgleichsgerade der Form $y = m \cdot x + b$ gefittet, ergibt sich Plot(\ref{img:py_sch}).
+        \noindent Im ersten Versuchsteil wird die Schallgeschwindigkeit in Acryl berechnet. Dazu wurden mit dem Impuls-Echo-Verfahren 
+        unterschiedliche Störstellen in einem Acrylblock vermessen. Die Daten dieser Messungen sind in Tabelle(\ref{tab:mess1}) zu finden.\\
+        Werden diese geplotted und durch eine Ausgleichsgerade der Form $y = m \cdot x + b$ gefittet, ergibt sich Plot(\ref{img:py_sch}).
 
         \begin{figure}[ht]
             \centering
@@ -13,12 +13,18 @@
             \label{img:py_sch}
         \end{figure}
 
-        \noindent Die in diesem Plot dargestellte Ausgleichsgerade wird durch die Parameter: \newline
-        $m = \SI{1370.3(3)}{\metre\per\second}$ \newline
-        $b = \SI{-13.6(1)e-4}{\metre}$          \newline
-        dargestellt. Die Steigung $m$ beschreibt hier bereits eine Geschwindigkeit, diese muss jedoch noch einmal verdoppelt werden, da bei dem 
-        Impuls-Echo Verfahren die Strecke doppelt zurück gelegt wird. Somit berechnet dich die Schallgeschwindigkeit in Acryl zu : \newline
-        $c_{\text{Schall}} = 2 \cdot m = \SI{2741(7)}{\metre\per\second}$.
+        \noindent Die in diesem Plot dargestellte Ausgleichsgerade wird durch die Parameter: 
+            \begin{align*}
+                m &= \SI{1370.3(3)}{\metre\per\second}\\
+                b &= \SI{-13.6(1)e-4}{\metre}       
+            \end{align*}
+       
+        dargestellt.\\
+        Die Steigung $m$ beschreibt hier bereits eine Geschwindigkeit, diese muss jedoch noch einmal verdoppelt werden, da bei dem 
+        Impuls-Echo Verfahren die Strecke doppelt zurück gelegt wird. Somit berechnet dich die Schallgeschwindigkeit in Acryl zu : 
+        \begin{equation*}
+            c_{\text{Schall}} = 2 \cdot m = \SI{2741(7)}{\metre\per\second}
+        \end{equation*}
         
     \subsection{Dämpfung}
 
@@ -28,10 +34,12 @@
             I(x) = I_0 \cdot \text{e}^{-\alpha x}
         \end{equation*}
 
-        \noindent zu bestimmen werden die Schallamplituden gegen die Strecke geplottet. Die Amplituden sind auch in der 
-        Tabelle(\ref{tab:mess1}) zu finden, um Systematische Fehler zu verhindern wurden für die Strecke nicht die per Schieblehre vermessenen 
+        \noindent zu bestimmen werden die Schallamplituden gegen die Strecke geplottet.\\
+        Die Amplituden sind auch in der 
+        Tabelle(\ref{tab:mess1}) zu finden.\\ 
+        Um systematische Fehler zu verhindern wurden für die Strecke nicht die per Schieblehre vermessenen 
         Werte benutzt sondern erneut aus $s = c_{\text{Scall}}\cdot t$ berechnet. Diese Messwerte wurden nun per scypy.curvefit \cite{scipy}
-        an eine Funktion
+        an eine Funktion der Form
 
         \begin{equation*}
             I(x) = A * \text{e}^{B x}
@@ -47,12 +55,17 @@
             \label{img:py_daem}
         \end{figure}
 
-        \noindent Hier berechnen sich die Parameter aus Gleichung(\ref{eqn:fit}) zu: \newline
-        $A = \SI{488(65)e-3}{\volt}$ \newline
-        $B = \SI{-23(3)}{\per\metre}$
+        \noindent Hier berechnen sich die Parameter aus Gleichung(\ref{eqn:fit}) zu: 
+        \begin{align*}
+            A &= \SI{488(65)e-3}{\volt} \\
+            B &= \SI{-23(3)}{\per\metre}    
+        \end{align*}
+
         
         \noindent Somit wurde der Absorptionskoeffizient $\alpha$ zu:\\
-        $\alpha = -B = \SI{23(3)}{\per\metre} $
+        \begin{equation*}
+            \alpha = -B = \SI{23(3)}{\per\metre}
+        \end{equation*} 
         berechnet.
 
         \begin{table}[H]

@@ -17,6 +17,13 @@ build/Protokoll_V601.pdf:  latex/auswertung.tex latex/theorie.tex latex/durchf.t
 	lualatex --output-directory=build --interaction=batchmode --halt-on-error latex/Protokoll_V601.tex
 
 
+## hier weitere Abhängigkeiten für build/main.pdf deklarieren:
+#build/Protokoll_V601.pdf:  latex/auswertung.tex latex/theorie.tex latex/durchf.tex latex/diskussion.tex  | build
+#	lualatex --output-directory=build --interaction=batchmode --halt-on-error latex/Protokoll_V601.tex
+#	biber build/Protokoll_V601.bcf
+#	lualatex --output-directory=build --interaction=batchmode --halt-on-error latex/Protokoll_V601.tex
+
+
 build:
 	mkdir -p build
 

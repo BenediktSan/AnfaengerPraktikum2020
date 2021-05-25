@@ -94,9 +94,9 @@ print(f' lamda: {(const.c/((mean_*const.elementary_charge)/const.h))*10**9} nm')
 lam=(const.c/((mean_*const.elementary_charge)/const.h))
 e=mean_*const.elementary_charge
 
-theo=(const.c/(10.438*const.elementary_charge/const.h))
+theo=(const.c/(4.9*const.elementary_charge/const.h))
 print("lambda theo: ", theo*10**9)
-print(f'relabw Energy: {(10.438-mean_)/10.438}percent \n relabw lamda: {((theo-lam)/theo)}percent')
+print(f'relabw Energy: {(4.9-mean_)/4.9}percent \n relabw lamda: {((theo-lam)/theo)}percent')
 
 x=np.linspace(1,7,7)
 table1 ={ 'T':x, 'omeag':d,'del2':d_ }

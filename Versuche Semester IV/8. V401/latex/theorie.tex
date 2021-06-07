@@ -6,10 +6,10 @@
 
     \subsection{Begriff der Interferenz}
 
-        \noindent Die Ort und Zeitabhängigkeit der Feldstärke einer elktromagnetischen Welle lässt sich durch 
+        \noindent Die Ort und Zeitabhängigkeit der Feldstärke einer elektromagnetischen Welle lässt sich durch 
 
         \begin{equation}
-            \vec{E}(x,t) = \vec{E}_0 \text{cos}(kx - \omega t - \delta)
+            \vec{E}(x,t) = \vec{E}_0 \text{cos}(kx - \omega t - \delta) \nonumber
         \end{equation}
 
         \noindent beschreiben, mit der Ortskoordinate $x$, der Zeit $t$, der Wellenzahl $k = 2\pi/t$, der Kreisfrequenz $\omega$ und dem 
@@ -18,7 +18,7 @@
 
         \begin{equation}
             I_{\text{ges}} = \frac{1}{t_2 -t_1} \int_{t_1}^{t_2} |\vec{E}|^2(x,t) \text{d} t = 
-            \frac{1}{t_2 -t_1} \int_{t_1}^{t_2} \left( |\vec{E_1} + \vec{E_2}| \right) ^2(x,t) \text{d} t  .
+            \frac{1}{t_2 -t_1} \int_{t_1}^{t_2} \left( |\vec{E_1} + \vec{E_2}| \right) ^2(x,t) \text{d} t  . \nonumber
         \end{equation}
 
         \noindent Hier sollte $t_2 - t_1$ deutlich größer als die Periodendauer $T=2\pi/\omega$ sein.
@@ -27,7 +27,7 @@
 
         \begin{equation}
             I_{\text{ges}} = \frac{\vec{E}_0^2}{t_2 - t_1} \int_{t_1}^{t_2} \left( 1 + \text{e}^{i(\delta_2 -\delta_1)} +\text{e}^{-i(\delta_2 -\delta_1)}
-            +1 \right) \text{d} t = 2 \cdot \vec{E}_0^2 ( 1+ \text{cos}(\delta_2 - \delta_1)) .
+            +1 \right) \text{d} t = 2 \cdot \vec{E}_0^2 ( 1+ \text{cos}(\delta_2 - \delta_1)) . \nonumber
         \end{equation}
 
     \subsection{Interfenzfähigkeit des Lichtes}
@@ -36,7 +36,7 @@
         unterschiedliche zeitabhängige Phasenbeziehungen haben und sich die Interferenzeffekte somit im Mittel ausgleichen
 
         \begin{equation}
-            \frac{1}{t_2 - t_1} \int_{t_1}^{t_2} \text{const cos}(\delta_2(t)-\delta_1(t)) \text{d}t \approx 0 .
+            \frac{1}{t_2 - t_1} \int_{t_1}^{t_2} \text{const cos}(\delta_2(t)-\delta_1(t)) \text{d}t \approx 0 . \nonumber
         \end{equation}
         
         \noindent Dies liegt daran, dass das Licht bei diskreten Emissionsakten innerhalb des Atoms entsteht, das Licht eines dieser Akte 
@@ -44,9 +44,9 @@
         Es ist also notwendig kohärentes Licht zu erzeugen um Interferenzeffekte zu untersuchen, generell ist Licht kohärent wenn es durch 
         eine einheitliche Gleichung mit festem k, $\omega$ und $\delta$ beschreiben wird. Kohärenz ist also wie bereits erwähnt nur möglich wenn 
         das Licht aus der selber Quelle stammt, dies kann dann aber wie in Abbildung(\ref{img:konv}) geteilt werden und durch unterschiedliche optische 
-        Mechanismen erändert werden um Intefernz zu ermöglichen. Weiterhin ist zu beachten, dass die Emissionsakte nur eine endliche 
+        Mechanismen verändert werden um Intefernz zu ermöglichen. Weiterhin ist zu beachten, dass die Emissionsakte nur eine endliche 
         zeitliche Länge $\tau$ haben. Daraus folgt, dass es auch nur einen endlichen Wegunterschied $l$ geben kann bei dem das Licht noch 
-        Interferieren kann, diese wird als Kohärenzlänge bezeichnet.
+        Interferieren kann, dieser wird als Kohärenzlänge bezeichnet.
         
         \begin{figure}[ht]
             \centering
@@ -60,65 +60,65 @@
         dazu wird ein sinusförmiger Wellenzug endlicher Länge
 
         \begin{equation*}
-            E(t) = E_0 \text{e}^{-i \omega_0 t} \quad \quad \text{für} -\frac{\tau}{2} < t < \frac{\tau}{2}
+            E(t) = E_0 \text{e}^{-i \omega_0 t} \quad \quad \text{für} -\frac{\tau}{2} < t < \frac{\tau}{2} \nonumber
         \end{equation*}
 
         \noindent weiter angeschaut. Die Fouriertransformation dieser Welle ergibt
 
         \begin{equation}
             g(\omega) = E_0 \int_{-\tau / 2}^{-\tau /2} \text{e}^{i(\omega - \omega_0)} \text{d}t = E_0 
-            \frac{\text{sin}(\omega - \omega_0) \tau}{\omega - \omega_0}
+            \frac{\text{sin}(\omega - \omega_0) \tau}{\omega - \omega_0} \nonumber
         \end{equation}
 
         \noindent und somit die Intensität
 
         \begin{equation*}
             I = G(\omega) = |g(\omega)|^2 = E_0^2 
-            \frac{\text{sin}^2(\omega - \omega_0) \tau^2}{(\omega - \omega_0)^2}
+            \frac{\text{sin}^2(\omega - \omega_0) \tau^2}{(\omega - \omega_0)^2} \nonumber
         \end{equation*}
 
         \noindent Aus diesem Ausdruck ist nun ein Maximum bei $\omega = \omega_0$ und ein Minimum bei
     
         \begin{equation}
-            \omega_{\text{N}} = \omega_0 \pm 2\frac{\pi}{\tau}              
+            \omega_{\text{N}} = \omega_0 \pm 2\frac{\pi}{\tau}          \nonumber     
         \end{equation}
 
         \noindent abzulesen. Weiterhin ist zu erkennen, dass der größter Teil der Energie im Bereich 
 
         \begin{equation}
-            \omega_0 - 2\frac{\pi}{\tau} < \omega < \omega_0 + 2\frac{\pi}{\tau}
+            \omega_0 - 2\frac{\pi}{\tau} < \omega < \omega_0 + 2\frac{\pi}{\tau}    \nonumber 
         \end{equation}
 
-        \noindent liegt. Dieser Bereich bzw. dise Breite ist die Verteilungsfunktion 
+        \noindent liegt. Dieser Bereich bzw. diese Breite ist die Verteilungsfunktion 
 
         \begin{equation}
             \Delta \omega = 2 \frac{\pi}{\tau}
-            \label{eqn:vert}
+            \label{eqn:1}
         \end{equation}
 
-        \noindent Die breite der Wellenlängenverteilung kann durch die Formel 
+        \noindent Die Breite der Wellenlängenverteilung kann durch die Formel 
 
         \begin{equation}
-            \lambda_0 := \frac{2 \pi \text{c}}{\omega_0}
+            \lambda_0 := \frac{2 \pi \text{c}}{\omega_0}    \nonumber 
         \end{equation}
 
-        \noindent ausgedrückt werden. Differentieren und einstzten von Formel (\ref{eqn:vert}) ergibt dann 
+        \noindent ausgedrückt werden. Differentieren und einstzten von Formel (\ref{eqn:1}) ergibt dann 
 
         \begin{equation}
-            \Delta \lambda = \frac{\lambda_0^2}{\text{c}\tau}, 
+            \Delta \lambda = \frac{\lambda_0^2}{\text{c}\tau},     \nonumber 
         \end{equation}
 
         \noindent über die Kohärenzzeit $\tau = \frac{l}{c}$ ergibt sich 
 
         \begin{equation}
-            \Delta \lambda = \frac{\lambda_0^2}{l}.
+            \Delta \lambda = \frac{\lambda_0^2}{l}.    \nonumber 
         \end{equation}
 
         \noindent Auch die Polarisation muss noch kurz betrachtet werden, denn falls das Licht polarisiert ist, entsteht nur Interferenz 
         wenn die Lichtquellen nicht senkrecht zueinander polarisiert sind da sonst das Skalarprodukt 
      
         \begin{equation}
-            \vec{\text{E}}_1 \cdot \vec{\text{E}}_2 
+            \vec{\text{E}}_1 \cdot \vec{\text{E}}_2     \nonumber 
         \end{equation}
 
         \noindent gleich 0 ist.
@@ -129,7 +129,7 @@
             die spektrale Verteilung der Lichtquelle zu bestimmen. Nach den Fourierschen Theorem gilt 
 
             \begin{equation*}
-                 \text{G}(k) = \frac{1}{2\pi} \int_{- \infty}^{\infty} L(x) \text{e}^{ikx} \text{d}x
+                 \text{G}(k) = \frac{1}{2\pi} \int_{- \infty}^{\infty} L(x) \text{e}^{ikx} \text{d}x    \nonumber 
             \end{equation*}
 
             \noindent mit der Wellenzahl $k$ und der zugehörigen Intensität G$(k)$. Es wird also eine möglichst große Spiegelverschiebung gemessen 
@@ -161,7 +161,7 @@
         Formeln der elektrischen Feldstärke der einzelnen Wellen beschreiben. Diese sind
 
         \begin{equation}
-            \vec{E}_1(x) = \vec{E}_0 \text{e}^{ikx} \quad \quad \text{und} \quad \quad \vec{E}_2(x) = \vec{E}_0 \text{e}^{ikx + 2d +\pi} ,
+            \vec{E}_1(x) = \vec{E}_0 \text{e}^{ikx} \quad \quad \text{und} \quad \quad \vec{E}_2(x) = \vec{E}_0 \text{e}^{ikx + 2d +\pi} ,    \nonumber 
         \end{equation}
 
         \noindent und mit 
@@ -173,15 +173,15 @@
         \noindent folgt
 
         \begin{align}
-            I(d) &= \vec{E}_0^2 \left( \text{e}^{ikx} + \text{e}^{ik(x + 2d + \pi)} \right) \left( \text{e}^{-ikx} + \text{e}^{-ik(x + 2d + \pi)} \right) \\
-                 &= 2 \cdot \vec{E}_0^2  \left( 1 + \text{cos} \left( \frac{2 \pi}{\lambda} 2 d + \pi \right) \right)
+            I(d) &= \vec{E}_0^2 \left( \text{e}^{ikx} + \text{e}^{ik(x + 2d + \pi)} \right) \left( \text{e}^{-ikx} + \text{e}^{-ik(x + 2d + \pi)} \right) \\    \nonumber 
+                 &= 2 \cdot \vec{E}_0^2  \left( 1 + \text{cos} \left( \frac{2 \pi}{\lambda} 2 d + \pi \right) \right)    \nonumber 
         \end{align}
 
         \noindent Somit schwankt $I(d)$ periodisch zwischen 0 und einem Maximum wenn d verändert wird. Es lässt sich also hiermit mittels der 
         Verschiebung $\Delta d$ und der Anzahl der Maxima $z$ über 
 
         \begin{equation}
-            \Delta d = z \cdot \frac{\lambda}{2}
+            \Delta d = z \cdot \frac{\lambda}{2}    \nonumber 
         \end{equation}
 
         \noindent die Wellenlänge bestimmen.\\
@@ -200,33 +200,33 @@
         dann nach der Formel
 
         \begin{equation}
-            b \cdot \Delta n = \frac{z \lambda}{2}
+            b \cdot \Delta n = \frac{z \lambda}{2}    \nonumber 
         \end{equation}
 
         \noindent $z$ Maxima über den Sensor. Weiterhin gilt nach der klassischen Dispersionstheorie, dass sich der Brechungsindex nach 
         
         \begin{equation}
-            n = \sqrt{1 + f(\lambda) N}
+            n = \sqrt{1 + f(\lambda) N}    \nonumber 
         \end{equation}
 
         \noindent aus der Anzahl der Dipole pro Volumeneinheit die durch die Wellenlänge angeregt werden, berechnen lässt. Die hier benutzten 
         Gase werden durch die Ideale Gasgleichung 
         
         \begin{equation}
-            N(r,T) = \frac{p}{T} \frac{T_0}{p_0} N_{\text{L}}
+            N(r,T) = \frac{p}{T} \frac{T_0}{p_0} N_{\text{L}}    \nonumber 
         \end{equation}
 
         \noindent beschreiben, da im Bereich von 0 bis 1 Bar gemessen wird. Die Differenz berechnet sich somit nach 
         $\Delta n(p,p') = \frac{f}{2}(N(p,T)-N(p',T))$ und unter Normalbedingungen ist 
 
         \begin{equation}
-            n(p_0, T_0) = 1 + \Delta n(p,p') \frac{T}{T_0} \frac{p_0}{p-p'}.
+            n(p_0, T_0) = 1 + \Delta n(p,p') \frac{T}{T_0} \frac{p_0}{p-p'}.    \nonumber 
         \end{equation}
 
         \noindent Hiermit kann nun der Brechungsindex mittels 
 
         \begin{equation}
-            n = 1 + z \cdot \frac{\lambda}{2b} \cdot \frac{T}{T_0} \frac{p_0}{p - p'}
+            n = 1 + z \cdot \frac{\lambda}{2b} \cdot \frac{T}{T_0} \frac{p_0}{p - p'}    \nonumber 
         \end{equation}
 
         \noindent berechnet werden.

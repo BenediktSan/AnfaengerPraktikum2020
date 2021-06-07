@@ -3,16 +3,16 @@
 
 \subsection{Bestimmung der Wellenlänge des Laserlichts}
 
-\noindent Im ersten Teil des Versuches wurden Messwerte aufgenommen mit denen die Wellenlänge des vom Laser abgestrahlten Lichts bestimmt werden soll.\\
-Bei der Messung wurde dabei einer der Spiegel mit Hilfe eines feinen Motors um die Länge $l=\SI{5(00002)}{\milli\metre}$ verschoben.\\
-Dies gilt für alle Messungen, außer die vierte. Dort wurde um $\SI{5.05(00002)}{\milli\metre}$ verschoben, was auch bei der daraus berechneten wahren Verschiebung $d$ in den in Tabelle \ref{tab:lam}, zu sehen ist.\\
+\noindent Im ersten Teil des Versuches wurden Messwerte aufgenommen mit denen die Wellenlänge des vom Laser abgestrahlten Lichts bestimmt werden soll.\\\\
+Bei der Messung wurde dabei einer der Spiegel der Arme des Interferometers mit Hilfe eines feinen Motors um die Länge $l=\SI{5(00002)}{\milli\metre}$ verschoben.\\
+Dies gilt für alle Messungen außer die vierte. Dort wurde um $\SI{5.05(00002)}{\milli\metre}$ verschoben, was auch bei der daraus berechneten wahren Verschiebung $d$ in den in Tabelle \ref{tab:lam}, zu sehen ist.\\
 Die wahre Verschiebung $d$ wird benötigt, da das Verstellrad des Spiegels keine 1:1 Übersetzung besitzt, sondern eine 1:5,056 Übersetzung.\\
 Daraus berechnet sich $d$ mit folgender Gleichung:
 \begin{equation*}
     d=l \cdot 5.056
 \end{equation*}
 \noindent
-Die daraus berechneten Werte finden sich, inklusive der gemessenen Interferenzmaximaanzahl und den berechneten Wellenlängen, in Tabelle \ref{tab:lam}.\\
+Die daraus berechneten Werte finden sich, inklusive der gemessenen Interferenzmaximaanzahl und den berechneten Wellenlängen in Tabelle \ref{tab:lam}.\\
 Diese Wellenlängen lassen sich mit der folgenen Gleichung bestimmen:
 \begin{equation*}
     \lambda=\frac{2d}{z}
@@ -41,22 +41,24 @@ Diese Wellenlängen lassen sich mit der folgenen Gleichung bestimmen:
 \label{tab:lam}
 \end{table}
 
-\noindent Gemittelt ergibts sich hieraus eine Wert für die Wellenlänge von $\SI{680.593(26831)}{\nano\metre}$.
+\noindent Gemittelt ergibts sich hieraus eine Wert für die Wellenlänge von $\lambda=\SI{680.593(26831)}{\nano\metre}$.
 
 \subsection{Bestimmung des Brechungsindexes von Luft}
 
-\noindent 
+\noindent Im Folgenden soll nun  der Brechungsindex von Luft untersucht werden.\\
+Die beim herauspumpen und beim wieder hereinlassen der Luft der Messzelle gemessenen Anzahlen der Intensitätsmaxima sind in Tabelle \ref{tab:updown} zu finden.\\
+Der abgeschätzte Fehler dieser Werte ist wesentlich kleiner als $1$, weswegen er für die weiteren Rechungen nicht beachtet wird.\\
+
 
 
 
 
 \begin{table}[ht]
     \centering
-    \caption {Die Werte für die Anzahl der Interferenzmaxima. Der geschätzte Fehler dabei ist kleiner als $1$ und wird deswegen nicht weiter beachtet.}
-    \sisetup{table-format=1.4}
-    \begin{tabular}{ S [table-format=1.2] | S [table-format=5.0] S [table-format=3.3] @{$\; \pm{} \;$}  S [table-format=2.3]  }
+    \caption {Die Messwerte für die Anzahl der Interferenzmaxima. Der abgeschätzte Fehler dabei ist kleiner als $1$ und wird deswegen nicht weiter beachtet.}
+    \begin{tabular}{ S [table-format=2.0]  S [table-format=2.0] }
         \toprule
-        {$ \text{Interferenzmaximaanzahl für das Abpumpen}  $} &{$ \text{Interferenzmaximaanzahl für das Vakuum ablassenn}  $}\\
+        {$ \text{Interferenzmaximaanzahl für das Abpumpen}  $} &{$ \text{Interferenzmaximaanzahl für das Vakuum ablassen}  $}\\
         \midrule
         32 &50 \\
         31 &20 \\
@@ -65,5 +67,19 @@ Diese Wellenlängen lassen sich mit der folgenen Gleichung bestimmen:
         30 &26 \\
         \bottomrule
     \end{tabular}
-\label{tab:lam}
+\label{tab:updown}
 \end{table}
+
+\noindent Die Messzelle hat dabei die Länge $b=\SI{50}{\milli\metre}$. Anschließend wurde der Druck innerhalb der Zelle um $\Delta p = \SI{600}{\mmHg} = \SI{7999.32}{Pa}$ verringert.\\
+Mit diesen Werten und mit $T_0= \SI{273.15}{\kelvin}$ und dem vom Laser abgelesenen Wert für die Wellenlängen $\lambda=\SI{635}{\nano\metre}$, lässt sich dann $\increment n$ bestimmen.\\
+Zusätzlich wird aber noch $z$ benötigt, welches durch das Bestimmen des Mittelwertes aus den in Tabelle \ref{tab:updown} aufgetragenen Messwerten zu $z= \SI{32(8)}{}$ führt.\\
+Mit diesen Werten lässt sich dann im Folgenden weiter rechnen.
+\begin{equation*}
+   \increment n(p_0,T_0)=\frac{z \lambda}{2 b}=\SI{0.00020(5)}{}
+\end{equation*}
+Aus diesem Ergebnis lässt sich dann der gesuchte Brechungsindex bestimmen.
+\begin{align*}
+    n(p_0,T_0)&=1+ \increment n(p,p')\frac{T}{T_0}\frac{p_0}{\increment p}\\
+    n(p_0,T_0)&=\SI{1.00028}{7}
+\end{align*}
+Dabei gilt noch zusätzlich für $p_0=\SI{101320}{\pascal}$.

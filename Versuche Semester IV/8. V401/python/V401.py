@@ -102,4 +102,4 @@ print(f'deln = {deln} ')
 
 print(f"Brechungsindex: {n}")
 n_lit = 1.00027316
-print(f'Relativer Fehler: {((n-n_lit)/n)*100}')
+print(f'Relativer Fehler: {((n_lit-n)/n_lit)*100}')

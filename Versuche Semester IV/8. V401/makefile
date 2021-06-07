@@ -5,8 +5,8 @@ all: build/Protokoll_V401.pdf
 #hier Python-Skripte
 
 
-#build/plot1.pdf:	|build
-#	python python/V401.py
+build/plot1.pdf:	|build
+	python python/V401.py
 
 
 

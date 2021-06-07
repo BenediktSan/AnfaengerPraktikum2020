@@ -1,0 +1,69 @@
+\newpage
+\section{Auswertung}
+
+\subsection{Bestimmung der Wellenlänge des Laserlichts}
+
+\noindent Im ersten Teil des Versuches wurden Messwerte aufgenommen mit denen die Wellenlänge des vom Laser abgestrahlten Lichts bestimmt werden soll.\\
+Bei der Messung wurde dabei einer der Spiegel mit Hilfe eines feinen Motors um die Länge $l=\SI{5(00002)}{\milli\metre}$ verschoben.\\
+Dies gilt für alle Messungen, außer die vierte. Dort wurde um $\SI{5.05(00002)}{\milli\metre}$ verschoben, was auch bei der daraus berechneten wahren Verschiebung $d$ in den in Tabelle \ref{tab:lam}, zu sehen ist.\\
+Die wahre Verschiebung $d$ wird benötigt, da das Verstellrad des Spiegels keine 1:1 Übersetzung besitzt, sondern eine 1:5,056 Übersetzung.\\
+Daraus berechnet sich $d$ mit folgender Gleichung:
+\begin{equation*}
+    d=l \cdot 5.056
+\end{equation*}
+\noindent
+Die daraus berechneten Werte finden sich, inklusive der gemessenen Interferenzmaximaanzahl und den berechneten Wellenlängen, in Tabelle \ref{tab:lam}.\\
+Diese Wellenlängen lassen sich mit der folgenen Gleichung bestimmen:
+\begin{equation*}
+    \lambda=\frac{2d}{z}
+\end{equation*}
+
+
+\begin{table}[ht]
+    \centering
+    \caption {Die Werte für die Verschiebung $d$ des Spiegels, mit den dazu korrespondierenden gezählten Interferenzmaxima und daraus berechneten Wellenlängen inklusive Abweichung.\\
+    Die Verschiebung ist dabei auch mit einer Abweichung von $\SI{0.39557}{\nano\metre}$ und die Anzahl der Maxima mit einer Abweichung von $\SI{40}{}$  behaftet.}
+    \sisetup{table-format=1.4}
+    \begin{tabular}{ S [table-format=1.2] | S [table-format=5.0] S [table-format=3.3] @{$\; \pm{} \;$}  S [table-format=2.3]  }
+        \toprule
+        {$d \mathbin{\scalebox{1.5} / }\si{\milli\metre}$} & {$ \text{Interferenzmaximaanzahl} z $} &\multicolumn{2}{c}{ $\lambda \mathbin{\scalebox{1.5} / }\si{\nano\metre}$}\\
+        \midrule
+        0.99 &2957& 668.870 & 9.052 \\
+        0.99 &2950& 670.457 & 9.095 \\
+        0.99 &2966& 666.840 & 8.997 \\
+        1.00 &2943& 678.772 & 9.229 \\
+        0.99 &2634& 750.891 & 11.407 \\
+        0.99 &2936& 673.654 & 9.182 \\
+        0.99 &2964& 667.290 & 9.009 \\
+        0.99 &2961& 667.966 & 9.027 \\
+        \bottomrule
+    \end{tabular}
+\label{tab:lam}
+\end{table}
+
+\noindent Gemittelt ergibts sich hieraus eine Wert für die Wellenlänge von $\SI{680.593(26831)}{\nano\metre}$.
+
+\subsection{Bestimmung des Brechungsindexes von Luft}
+
+\noindent 
+
+
+
+
+\begin{table}[ht]
+    \centering
+    \caption {Die Werte für die Anzahl der Interferenzmaxima. Der geschätzte Fehler dabei ist kleiner als $1$ und wird deswegen nicht weiter beachtet.}
+    \sisetup{table-format=1.4}
+    \begin{tabular}{ S [table-format=1.2] | S [table-format=5.0] S [table-format=3.3] @{$\; \pm{} \;$}  S [table-format=2.3]  }
+        \toprule
+        {$ \text{Interferenzmaximaanzahl für das Abpumpen}  $} &{$ \text{Interferenzmaximaanzahl für das Vakuum ablassenn}  $}\\
+        \midrule
+        32 &50 \\
+        31 &20 \\
+        31 &39 \\
+        30 &30 \\
+        30 &26 \\
+        \bottomrule
+    \end{tabular}
+\label{tab:lam}
+\end{table}

@@ -1,10 +1,11 @@
+\newpage
 \section{Auswertung}
 
     \subsection{Überprüfung der Bragg-Bedingung}
 
-        \noindent Die Bragg-Bedingung wird überprüft indem der LiF - Kristall auf einen Festen Winkel $\theta = \SI{14}{\degree}$ gestellt und der Winkel
+        \noindent Die Bragg-Bedingung wird überprüft indem der LiF-Kristall auf einen festen Winkel $\theta = \SI{14}{\degree}$ gestellt und der Winkel
         $\alpha$ des Geiger-Müller-Zählrohrs von $\SI{26}{\degree}$ bis $\SI{30}{\degree}$ in $\increment \alpha = \SI{0.1}{\degree}$ Schritten 
-        verändert. Auf jeden dieser Schritte werden für $t = 5s$ die Anschläge gemessen, die Daten zu dieser Messung sind in Tabelle(\ref{tab:Bragg}) 
+        verändert.\\ Auf jeden dieser Schritte werden für $t = 5s$ die Anschläge gemessen. Die Daten zu dieser Messung sind in Tabelle(\ref{tab:Bragg}) 
         zu finden.
 
         \begin{table}
@@ -44,7 +45,7 @@
           \end{table}
 
           \noindent Diese Daten sind in Plot(\ref{fig:bragg}) dargestellt und der Punkt mit den meisten Anschlägen bei $\alpha = \SI{28.2}{\degree}$ markiert. 
-          Der theoretische Sollwinkel liegt nach dem Reflexionsgestz bei $\alpha = \SI{28}{\degree}$, es liegt also nur eine Abweichung von 
+          Der theoretische Sollwinkel liegt nach dem Reflexionsgestz bei $\alpha = \SI{28}{\degree}$. Es liegt also nur eine Abweichung von 
           $\SI{0.7}{\percent}$ vor.
 
           \begin{figure}
@@ -118,9 +119,10 @@
           \label{fig:emissionsspektrum}
         \end{figure}
           
-        \noindent In dem Plot(\ref{fig:emissionsspektrum}) werden die Daten aus Tabelle(\ref{tab:emissionsspektrum}) geplottet, weiterhin sind 
-        noch die Maxima der $K_{\alpha}$ und $K_{\beta}$ Peaks, so wie der Bremsberg markiert. Diese werden aus den Messwerten direkt abgelesen.
-        Der $K_{\alpha}$ Peak ist bei $\theta = \SI{22.50(20)}{\degree}$ mit einem $N = \SI{5050.0}{Imp \per\second}$ zu finden.
+        \noindent In dem Plot(\ref{fig:emissionsspektrum}) werden die Daten aus Tabelle(\ref{tab:emissionsspektrum}) grafisch dargestellt.\\
+        Des Weiteren sind 
+        noch die Maxima der $K_{\alpha}$ und $K_{\beta}$-Peaks, sowie auch der Bremsberg markiert. Diese werden aus den Messwerten direkt abgelesen.
+        Der $K_{\alpha}$-Peak ist bei $\theta = \SI{22.50(20)}{\degree}$ mit einem $N = \SI{5050.0}{Imp \per\second}$ zu finden.
         Die Halbwertsbreite(FWHM) werden durch die Punkte 
 
         \begin{align*}
@@ -128,8 +130,8 @@
             \theta_{\text{FWHM}, 2} &= \SI{22.85(20)}{\degree}  \\ 
         \end{align*}
 
-        \noindent beschrieben. Analog ergibt sich für den $K_{\beta}$ Peak ein Winkel von $\theta = \SI{20.3(20)}{\degree}$ bei einer 
-        Anschlagzahl von $N = \SI{1599}{Imp \per\second}$. 
+        \noindent beschrieben. Analog ergibt sich für den $K_{\beta}$-Peak ein Winkel von $\theta = \SI{20.3(20)}{\degree}$ bei einer 
+        Anschlagszahl von $N = \SI{1599}{Imp \per\second}$. 
         Hier wird die Halbwertsbreite durch 
 
         \begin{align*}
@@ -137,7 +139,7 @@
             \theta_{\text{FWHM}, 2} &= \SI{20.57(20)}{\degree}  \\
         \end{align*}
 
-        \noindent beschrieben. Die Zugehörigen Energien können nun durch die Bragg-Bedingung nach 
+        \noindent beschrieben. Die zugehörigen Energien können nun durch die Bragg-Bedingung nach 
 
         \begin{equation}
             E = \frac{\symup{h} \cdot \symup{c}}{\lambda} 
@@ -150,15 +152,15 @@
             E_{\text{K}, \beta} &= \SI{8872(40)}{\electronvolt}  & \increment E_{\text{FWHM}, \beta } &= \SI{180(90)}{\electronvolt}
         \end{align*}
         
-        \noindent Das Auflösungsvermögen $A = \frac{E_{\text{K}}}{\increment E_{\text{FWHM}}}$ ergibt sich somit zu:
+        \noindent Das Auflösungsvermögen $A = \frac{E_{\text{K}}}{\increment E_{\text{FWHM}}}$ ergibt sich somit zu
 
         \begin{align*}
           A&= \num{48(20)}\, \text{für } K_{\alpha}\\
-          A&= \num{48(23)}\, \text{für }  K_{\beta} 
+          A&= \num{48(23)}\, \text{für }  K_{\beta} \; \; \text{.}
         \end{align*}
 
         \noindent Die Absorptionsenergie $E_{\text{abs}} = \SI{8980.47}{\electronvolt}$ nach \cite{E_abs} wird nun mit den Energien der 
-        $K_{\alpha}$ und $K_{\beta}$ genutzt um die Absorptionskoeffizienten $\sigma_1, \sigma_2$ und $\sigma_3$ nach den Formeln
+        $K_{\alpha}$ und $K_{\beta}$-Peaks genutzt um die Absorptionskoeffizienten $\sigma_1, \sigma_2$ und $\sigma_3$ nach den Formeln
 
         \begin{align}
             \sigma_1 &= z - \sqrt{\frac{E_{K,\text{abs}}}{R_{\infty}}} \label{eq:sigma1} \\
@@ -171,21 +173,21 @@
         \begin{align*}
             \sigma_1 &= \num{3.30}\\
             \sigma_2 &= \num{12.40(60)}\\
-            \sigma_3 &= \num{20.53(170)}
+            \sigma_3 &= \num{20.53(170)}\; \; \text{.}
           \end{align*}
 
     \subsection{Analyse der Absoptionsspektren}
 
-        \noindent Es werden nun verschiedene Metalle vor das Geiger-Müller-Zählrohr platziert und genau wie in bei der Vermessung von Kupfer, 
-        nur mit Messzeiten von $t = \SI{20}{\second}$ gemessen. Für alle diese Messreihen wird ein Intensitätsmaximum $I_{\text{max}}$ und ein 
+        \noindent Es werden nun verschiedene Metalle vor das Geiger-Müller-Zählrohr platziert und genau wie bei der Messreihe mit dem Kupferabsorber
+        mit den Messzeiten $t = \SI{20}{\second}$ gemessen.\\ Für alle diese Messreihen wird ein Intensitätsmaximum $I_{\text{max}}$ und ein 
         Intensitätsminimum $I_{\text{min}}$ bestimmt. Aus diesen werden lässt sich dann nach der Formel 
 
         \begin{equation*}
             I_{\text{K}} = I_{\text{min}} + \frac{I_{\text{max}} - I_{\text{min}}}{2}
         \end{equation*}
 
-        \noindent die Intensität an der Mitte der Kante ermittelt. Der Zugehörige Winkel $\theta$ wird berechnet in dem in die 2 umliegenden 
-        Punkte eine Verbindungsgerade der Form $y = a*x + b$ gelegt wird. Dies ergibt nun also für den Winkel 
+        \noindent die Intensität an der Mitte der Kante ermittelt.\\ Der Zugehörige Winkel $\theta$ wird berechnet in dem in die 2 umliegenden 
+        Punkte eine Verbindungsgerade der Form $y = a\cdot x + b$ gelegt wird. Dies ergibt nun also für den Winkel 
 
         \begin{equation*}
             \theta_{\text{K}} = \frac{I_{\text{k}}-b}{a}
@@ -238,13 +240,13 @@
               \label{fig:zink}
             \end{figure}  
 
-            \noindent Das Maximum und Minimum welche auch in Plot(\ref{fig:zink}) eingezeichnet sind, und somit die Mitte der Kante ergeben sich 
+            \noindent Das Maximum und Minimum, welche auch in Plot(\ref{fig:zink}) eingezeichnet sind, und somit auch die Mitte der Kante, ergeben sich 
             zu
             
             \begin{align*}
                 I_{\text{min}} &= \SI{54}{Imp\per\second}\\
                 I_{\text{max}} &= \SI{102}{Imp\per\second}\\
-                I_{\text{K}} &= \SI{78}{Imp\per\second} .
+                I_{\text{K}} &= \SI{78}{Imp\per\second} \; \; \text{.}
             \end{align*}
 
             \noindent Die Verbindungsgerade wird durch die Parameter 
@@ -254,8 +256,8 @@
                 b & = \SI{-348.99}{Imp\per\second}
             \end{align*}
 
-            \noindent beschrieben und ergibt $\theta_{\text{Zn}} = \SI{18.67(5)}{\degree}$ und somit die Energie $E_{\text{Zn}} = \SI{9616(25)}{\electronvolt}$. 
-            Hierraus berechnet sich die Abschirmkonstante $\sigma_{\text{Zn}}$ zu $ \num{3.613(35)}$.
+            \noindent beschrieben und ergibt $\theta_{\text{Zn}} = \SI{18.67(5)}{\degree}$. Daraus lässt sich dann die Energie zu $E_{\text{Zn}} = \SI{9616(25)}{\electronvolt}$ berechnen. 
+            Damit ergibt sich dann die Abschirmkonstante $\sigma_{\text{Zn}}= \num{3.613(35)}$.
 
         \subsubsection{Gallium}
             
@@ -294,20 +296,20 @@
                 \end{tabular}
               \end{table}
           
-            \begin{figure}
+            \begin{figure}[ht]
               \centering
               \includegraphics[width=\textwidth]{build/plots/Gallium.pdf}
               \caption{Die Messung zum Galliumabsorber.}
               \label{fig:gal}
             \end{figure}  
 
-            \noindent Das Maximum und Minimum welche auch in Plot(\ref{fig:gal}) eingezeichnet sind, und somit die Mitte der Kante ergeben sich 
+            \noindent Das Maximum und Minimum, welche auch in Plot(\ref{fig:gal}) eingezeichnet sind, und somit die Mitte der Kante, ergeben sich 
             zu
 
             \begin{align*}
                 I_{\text{min}} &= \SI{66}{Imp\per\second}\\
                 I_{\text{max}} &= \SI{122}{Imp\per\second}\\
-                I_{\text{K}} &= \SI{94}{Imp\per\second} .
+                I_{\text{K}} &= \SI{94}{Imp\per\second} \; \; \text{.}
             \end{align*}
 
             \noindent Die Verbindungsgerade wird durch die Parameter 
@@ -317,12 +319,12 @@
                 b & = \SI{-2334.0}{Imp\per\second}
             \end{align*}
 
-            \noindent beschrieben und ergibt $\theta_{\text{Ga}} = \SI{17.34(5)}{\degree}$ und somit die Energie $E_{\text{Ga}} = \SI{10326(29)}{\electronvolt}$. 
-            Hierraus berechnet sich die Abschirmkonstante $\sigma_{\text{Ga}}$ zu $ \num{3.67(40)}$.
+            \noindent beschrieben und ergibt $\theta_{\text{Ga}} = \SI{17.34(5)}{\degree}$. Somit ist die Energie $E_{\text{Ga}} = \SI{10326(29)}{\electronvolt}$. 
+            Hieraus berechnet sich die Abschirmkonstante $\sigma_{\text{Ga}}$ zu $ \num{3.67(40)}$.
       
     \subsubsection{Bromium}
             
-          \noindent Die Daten der Messreihe von Gallium sind in Tabelle(\ref{tab:gallium}) aufgetragen und in Plot(\ref{fig:gal}) eingezeichnet.
+          \noindent Die Daten der Messreihe von Bromium sind in Tabelle(\ref{tab:brom}) aufgetragen und werden in Plot(\ref{fig:gal}) dargestellt.
           \begin{table}
             \centering
             \caption{Die Werte der Messung mit einem Bromabsorber.}
@@ -358,13 +360,13 @@
             \label{fig:brom}
           \end{figure} 
 
-          \noindent Das Maximum und Minimum welche auch in Plot(\ref{fig:gal}) eingezeichnet sind, und somit die Mitte der Kante ergeben sich 
+          \noindent Das Maximum und Minimum, welche auch in Plot(\ref{fig:brom}) eingezeichnet sind, und somit die Mitte der Kante, ergeben sich 
           zu
 
           \begin{align*}
               I_{\text{min}} &= \SI{9}{Imp\per\second}\\
               I_{\text{max}} &= \SI{27}{Imp\per\second}\\
-              I_{\text{K}} &= \SI{18}{Imp\per\second} .
+              I_{\text{K}} &= \SI{18}{Imp\per\second} \; \; \text{.}
           \end{align*}
 
           \noindent Die Verbindungsgerade wird durch die Parameter 
@@ -373,15 +375,15 @@
               a & = \SI{40.0}{Imp\per\second\degree}\\
               b & = \SI{-511.0}{Imp\per\second}
           \end{align*}
-          \noindent beschrieben und ergibt $\theta_{\text{Bro}} = \SI{13.22(5)}{\degree}$ und somit die Energie $E_{\text{Bro}} = \SI{13450(5)}{\electronvolt}$. 
-          Hierraus berechnet sich die Abschirmkonstante $\sigma_{\text{Bro}}$ zu $ \num{3.87(6)}$.
+          \noindent beschrieben und ergibt $\theta_{\text{Bro}} = \SI{13.22(5)}{\degree}$. Die hieraus bestimmte Energie ist $E_{\text{Bro}} = \SI{13450(5)}{\electronvolt}$, 
+          was zu dem Wert für die Abschirmkonstante $\sigma_{\text{Bro}}= \num{3.87(6)}$ führt.
 
         
     \subsubsection{Rubidium}
             
-          \noindent Die Daten der Messreihe von Gallium sind in Tabelle(\ref{tab:rubidium}) aufgetragen und in Plot(\ref{fig:rub}) eingezeichnet.
+          \noindent Die Messdaten, die mit dem Rubidiumabsorber aufgenommen wurden, sind in Tabelle(\ref{tab:rubidium}) aufgetragen und in Plot(\ref{fig:rub}) grafisch dargestellt.
 
-          \begin{table}
+          \begin{table}[H]
             \centering
             \caption{Die Werte der Messung mit einem Absorber aus Rubidium.}
             \label{tab:rubidium}
@@ -407,34 +409,34 @@
             \end{tabular}
           \end{table}
         
-          \begin{figure}
+          \begin{figure}[H]
             \centering
             \includegraphics[width=\textwidth]{build/plots/Rubidium.pdf}
             \caption{Die Messung zum Absorber aus Rubidium.}
             \label{fig:rub}
           \end{figure}
 
-          \noindent Das Maximum und Minimum welche auch in Plot(\ref{fig:rub}) eingezeichnet sind, und somit die Mitte der Kante ergeben sich 
+          \noindent Das Maximum und Minimum sind dort ebenfalls zu finden. Aus diesen Werten ergibt sich die Mitte der Kante 
           zu
 
           \begin{align*}
               I_{\text{min}} &= \SI{10}{Imp\per\second}\\
               I_{\text{max}} &= \SI{64}{Imp\per\second}\\
-              I_{\text{K}} &= \SI{37}{Imp\per\second} .
+              I_{\text{K}} &= \SI{37}{Imp\per\second} \; \; \text{.}
           \end{align*}
 
-          \noindent Die Verbindungsgerade wird durch die Parameter 
+          \noindent Die Verbindungsgerade zwischen diesen Werten wird durch die Parameter 
 
           \begin{align*}
               a & = \SI{70.0}{Imp\per\second\degree}\\
               b & = \SI{-787.0}{Imp\per\second}
           \end{align*}
-          \noindent beschrieben und ergibt $\theta_{\text{Rub}} = \SI{11.77(5)}{\degree}$ und somit die Energie $E_{\text{Rub}} = \SI{15090(5)}{\electronvolt}$. 
-          Hierraus berechnet sich die Abschirmkonstante $\sigma_{\text{Rub}}$ zu $ \num{4.07(6)}$.
+          \noindent beschrieben und führt zu $\theta_{\text{Rub}} = \SI{11.77(5)}{\degree}$. Die damit korrespondierende Energie ist $E_{\text{Rub}} = \SI{15090(5)}{\electronvolt}$. 
+          Daraus ergibt sich für die Abschirmkonstante $\sigma_{\text{Rub}}= \num{4.07(6)}$.
 
     \subsubsection{Strontium}
             
-          \noindent Die Daten der Messreihe von Gallium sind in Tabelle(\ref{tab:strontium}) aufgetragen und in Plot(\ref{fig:strontium}) eingezeichnet.
+          \noindent Die Messwerte der Messreihe des Strontiumabsorbers sind in Tabelle(\ref{tab:strontium}) zu finden. Grafisch dargestellt sind diese in Plot(\ref{fig:strontium}) zu finden.
 
           \begin{table}
             \centering
@@ -469,31 +471,31 @@
             \label{fig:strontium}
           \end{figure}
 
-          \noindent Das Maximum und Minimum welche auch in Plot(\ref{fig:strontium}) eingezeichnet sind, und somit die Mitte der Kante ergeben sich 
-          zu
+          \noindent Für das Maximum, Minimum und die Mitte der Kante, welche auch alle in Plot(\ref{fig:strontium}) zu finden sind,
+          sind die Werte
 
           \begin{align*}
               I_{\text{min}} &= \SI{40}{Imp\per\second}\\
               I_{\text{max}} &= \SI{196}{Imp\per\second}\\
-              I_{\text{K}} &= \SI{118}{Imp\per\second} .
+              I_{\text{K}} &= \SI{118}{Imp\per\second} \; \; \text{.}
           \end{align*}
 
-          \noindent Die Verbindungsgerade wird durch die Parameter 
+          \noindent Für die Verbindungsgerade ergeben dich die  Parameter zu 
 
           \begin{align*}
               a & = \SI{310.0}{Imp\per\second\degree}\\
-              b & = \SI{-3321.0}{Imp\per\second}
+              b & = \SI{-3321.0}{Imp\per\second} \; \; \text{.}
           \end{align*}
-          \noindent beschrieben und ergibt $\theta_{\text{Str}} = \SI{11.09(5)}{\degree}$ und somit die Energie $E_{\text{Str}} = \SI{16000(7)}{\electronvolt}$. 
-          Hierraus berechnet sich die Abschirmkonstante $\sigma_{\text{Str}}$ zu $ \num{4.11(8)}$.
+          \noindent Damit berechnet sich $\theta_{\text{Str}} = \SI{11.09(5)}{\degree}$ und weiter auch die Energie $E_{\text{Str}} = \SI{16000(7)}{\electronvolt}$. 
+          Dies ergibt dann für die Abschirmkonstante $\sigma_{\text{Str}}= \num{4.11(8)}$.
 
   \subsubsection{Zirkonium}
             
-          \noindent Die Daten der Messreihe von Gallium sind in Tabelle(\ref{tab:zirkonium}) aufgetragen und in Plot(\ref{fig:zirkonium}) eingezeichnet.
+          \noindent Die Daten der Messreihe von Zirkonium sind in Tabelle(\ref{tab:zirkonium}) aufgetragen und in Plot(\ref{fig:zirkonium}) eingezeichnet.
 
           \begin{table}
             \centering
-            \caption{Die Werte der Messung mit einem Absorber aus Zirkunium.}
+            \caption{Die Werte der Messung mit einem Absorber aus Zirkonium.}
             \label{tab:zirkonium}
             \begin{tabular}{S[table-format=2.1] S[table-format=3.1]}
               \toprule
@@ -526,13 +528,13 @@
             \label{fig:zirkonium}
           \end{figure}
 
-          \noindent Das Maximum und Minimum welche auch in Plot(\ref{fig:zirkonium}) eingezeichnet sind, und somit die Mitte der Kante ergeben sich 
-          zu
+          \noindent Für das Maximum und Minimum, welche auch in Plot(\ref{fig:zirkonium}) eingezeichnet sind, und somit die Mitte der Kante, ergibt sich 
+          
 
           \begin{align*}
               I_{\text{min}} &= \SI{112}{Imp\per\second}\\
               I_{\text{max}} &= \SI{301}{Imp\per\second}\\
-              I_{\text{K}} &= \SI{206.5}{Imp\per\second} .
+              I_{\text{K}} &= \SI{206.5}{Imp\per\second} \; \; \text{.}
           \end{align*}
 
           \noindent Die Verbindungsgerade wird durch die Parameter 
@@ -541,24 +543,24 @@
               a & = \SI{449.99}{Imp\per\second\degree}\\
               b & = \SI{-4274.0}{Imp\per\second}
           \end{align*}
-          \noindent beschrieben und ergibt $\theta_{\text{Zir}} = \SI{9.96(5)}{\degree}$ und somit die Energie $E_{\text{Zir}} = \SI{17800(9)}{\electronvolt}$. 
-          Hierraus berechnet sich die Abschirmkonstante $\sigma_{\text{Zir}}$ zu $ \num{4.30(9)}$.
+          \noindent beschrieben und ergibt $\theta_{\text{Zir}} = \SI{9.96(5)}{\degree}$. Die daraus resultierende Energie ist $E_{\text{Zir}} = \SI{17800(9)}{\electronvolt}$. 
+          Hieraus berechnet sich die Abschirmkonstante $\sigma_{\text{Zir}}$ zu $ \num{4.30(9)}$.
 
 
     \subsection{Rydbergenergie}
 
-          \noindent Die zuvor berechneten Werte werden jetzt benutzt um die Rydbergenergie zu bestimmen, dazu werden die Wurzeln der 
-          Absorptionsenergien $E_{\text{K}}$ gegen die Ordnungszahl des jeweiligen Material geplottet. Dies wurde in 
+          \noindent Die zuvor berechneten Werte werden jetzt benutzt um die Rydbergenergie zu bestimmen. Dazu werden die Wurzeln der 
+          Absorptionsenergien $E_{\text{K}}$ gegen die Ordnungszahl des jeweiligen Materials geplottet. Dies wurde in 
           Abbildung(\ref{fig:rydberg}) durchgeführt.
 
           \begin{figure}[H]
             \centering
-            \includegraphics[width=\textwidth]{build/plots/rydberg.pdf}
+            \includegraphics[width=0.9\textwidth]{build/plots/rydberg.pdf}
             \caption{Die Wurzel der ermittelten Absorptionsenergien aufgetragen gegen die Ordnungszahl $Z$.}
             \label{fig:rydberg}
           \end{figure}
 
-          \noindent Wie in Plot(\ref{fig:rydberg}) werden die Daten durch eine Ausgleichgerade der Form $y = m * x + b$ gefittet.
+          \noindent Wie in Plot(\ref{fig:rydberg}) zu sehen werden die Daten durch eine Ausgleichgerade der Form $y = m \cdot x + b$ gefittet.
           Diese Gerade wird durch die Werte
 
           \begin{align*}
@@ -566,20 +568,14 @@
             b &= \num{2.29 \pm 0.11}
           \end{align*}
 
-          \noindent Aus dem Mosley'schen Gesetz folgt nun für die Rydbergenergie 
+          \noindent beschrieben. Aus dem Mosleyschen-Gesetz folgt dann für die Rydbergenergie 
 
           \begin{equation*}
-            R \cdot h = \frac{1}{m^2}
+            R_\infty \cdot h = \frac{1}{m^2} \; \; \text{.}
           \end{equation*}
           
-          \noindent welches nun einen Wert von 
+          \noindent Dies führt nun zu einem Wert von 
 
           \begin{equation*}
-            R_{\infty} = \SI{12.53(8)}{\electronvolt}
+            R_{\infty} = \SI{12.53(8)}{\electronvolt} \; \; \text{.}
           \end{equation*}
-
-          \noindent ergibt.
-
-            
-            
-          

@@ -5,13 +5,13 @@ all: build/Protokoll_V602.pdf
 #hier Python-Skripte
 
 
-build/plot1.pdf:	|build
+build/plots/Bragg.pdf:	|build
 	python python/602.py
 
 
 
 # hier weitere Abhängigkeiten für build/main.pdf deklarieren:
-build/Protokoll_V602.pdf:  latex/auswertung.tex latex/theorie.tex latex/durchf.tex latex/diskussion.tex build/plot1.pdf| build
+build/Protokoll_V602.pdf:  latex/auswertung.tex latex/theorie.tex latex/durchf.tex latex/diskussion.tex build/plots/Bragg.pdf| build
 	lualatex --output-directory=build --interaction=batchmode --halt-on-error latex/Protokoll_V602.tex
 	biber build/Protokoll_V602.bcf
 	lualatex --output-directory=build --interaction=batchmode --halt-on-error latex/Protokoll_V602.tex

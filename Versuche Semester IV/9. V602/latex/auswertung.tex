@@ -544,7 +544,42 @@
           \noindent beschrieben und ergibt $\theta_{\text{Zir}} = \SI{9.96(5)}{\degree}$ und somit die Energie $E_{\text{Zir}} = \SI{17800(9)}{\electronvolt}$. 
           Hierraus berechnet sich die Abschirmkonstante $\sigma_{\text{Zir}}$ zu $ \num{4.30(9)}$.
 
-    
+
+    \subsection{Rydbergenergie}
+
+          \noindent Die zuvor berechneten Werte werden jetzt benutzt um die Rydbergenergie zu bestimmen, dazu werden die Wurzeln der 
+          Absorptionsenergien $E_{\text{K}}$ gegen die Ordnungszahl des jeweiligen Material geplottet. Dies wurde in 
+          Abbildung(\ref{fig:rydberg}) durchgeführt.
+
+          \begin{figure}[H]
+            \centering
+            \includegraphics[width=\textwidth]{build/plots/rydberg.pdf}
+            \caption{Die Wurzel der ermittelten Absorptionsenergien aufgetragen gegen die Ordnungszahl $Z$.}
+            \label{fig:rydberg}
+          \end{figure}
+
+          \noindent Wie in Plot(\ref{fig:rydberg}) werden die Daten durch eine Ausgleichgerade der Form $y = m * x + b$ gefittet.
+          Diese Gerade wird durch die Werte
+
+          \begin{align*}
+            m &= \SI{0.2826 \pm 0.0010}{1\per\sqrt{\electronvolt}}\\
+            b &= \num{2.29 \pm 0.11}
+          \end{align*}
+
+          \noindent Aus dem Mosley'schen Gesetz folgt nun für die Rydbergenergie 
+
+          \begin{equation*}
+            R \cdot h = \frac{1}{m^2}
+          \end{equation*}
+          
+          \noindent welches nun einen Wert von 
+
+          \begin{equation*}
+            R_{\infty} = \SI{12.53(8)}{\electronvolt}
+          \end{equation*}
+
+          \noindent ergibt.
+
             
             
             

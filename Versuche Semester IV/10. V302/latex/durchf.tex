@@ -1,0 +1,39 @@
+\section{Durchführung}
+
+    \noindent Im folgenden wird die Benutztung der unterschiedlichen Brückenschaltungen zur Vermessung der elektrischen Bauteile erklärt. Die 
+    nicht frequenzabhängigen Schaltungen werden mit einer Sinus-Spannung von $\SI{1000}{\hertz}$ betrieben, die Brückenspanungen werden mittels 
+    eines Oszilloskops gemessen.
+
+    \subsection{Wheatstonesche Brücke}
+
+        \noindent Da hier nur der Quotient $\frac{R_3}{R_4}$ benötigt wird, wird als Widerstand für $R_3$ und $R_4$ ein Potentiometer mit 
+        einem Gesamtwiderstand von $\SI{1}{\kilo\ohm}$ benutzt. An diesem ist der Widerstand von $R_3$ abzulesen und $R_4$ kann einfach 
+        aus der Differenz zu 1000 berechnet werden. Das Potentiometer wird auch in den folgenden Schaltungen als veränderlicher Widerstand 
+        benutzt. Durch variieren des Quotienten an dem Potentiometer wird nun die Brückenspannung minimiert, aus dem Minimum lässt sich dann 
+        $R_x$ berechnen. Dieser Vorgang wird noch einmal mit einem anderem Widerstand $R_2$ wiederholt.
+
+    \subsection{Kapazitätsmessbrücke}
+
+        \noindent Die Kapazitätsmessbrücke wird nach dem Schaltbild mit dem Referenz Kondensator $C_2$ aufgebaut. Der Kondensator mit der 
+        Kapazität $C_x$ und dem Innenwidestand $R_x$ werden bestimmt, indem abwechselnd die beiden Potentiometer verändert werden um die 
+        Brückenspannung zu minimieren. Diese Messreihe wird dann erneut mit einem anderen Referenz Kapazität $C_2$ durchgeführt.
+
+    \subsection{Induktivitätsmessbrücke}
+
+        \noindent Die Induktivitätsmessbrücke wird auch wieder nach dem Schaltbild aufgebaut, das Referenzbauteil ist nun die Spule mit 
+        der Induktivität $L_2$. Die restlichen Messungen werden analog zur Kapazitätsmessbrücke durchgeführt.
+
+    \subsection{Maxwell-Brücke}
+
+        \noindent Die Induktivität wird ebenfalls mit der Maxwell-Brücke vermessen, dazu wird die Schaltung nach dem Schaltbild aufgebaut und 
+        eine Messreihe analog zu der der Induktivitätsmessbrücke durchgeführt
+
+
+
+    \subsection{Wien-Robinson-Brücke}
+
+        \noindent Auch die Wien-Robinson-Brücke kann einfach nach dem Schaltbild aufgebaut werden. Nun wird jedoch nicht mehr der Wiederstand variiert, 
+        sondern die Frequenz der anliegenden Quellspannung. Die Frequenz wird hier in einem Bereich zwischen von 20-$\SI{10000}{\hertz}$ variiert. Es ist 
+        darauf zu achten, dass die die meisten Messwerte um die Resonanzfrequenz $\omega_0$ aufgenommen werden. Die wird mit den in der 
+        Schaltung verwendeten Widerständen und Kapazitäten berechnet.
+

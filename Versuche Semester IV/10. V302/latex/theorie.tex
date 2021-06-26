@@ -2,8 +2,8 @@
 
     \subsection{Zielsetzung}
 
-        \noindent In diesem Versuch werden unterschiedliche abgeglichene Brückenschaltungen als Messaperaturen betrachtet. Es lässt sich 
-        jede physikalische Größe die sich als elektrischen Widerstand darstellt werden kann, messen. 
+        \noindent In diesem Versuch werden unterschiedliche Brückenschaltungen als Messapparaturen betrachtet. Damit lässt sich 
+        jede physikalische Größe, die sich als elektrischen Widerstand darstellt werden kann, messen. 
 
     \subsection{Allgemeine Brückenschaltung}
 
@@ -14,35 +14,35 @@
             \label{img:Prinzip}
         \end{figure}
 
-        \noindent In Abbildung(\ref{img:Prinzip}) ist eine allgemeine Brückenschaltung zu sehen, mittels der Potentialdifferenz kann nun ein 
-        Verhältnis der Widerstände bestimmt werden. Dies geschiet mittels dem ersten Kirchhoffschen Gesetz, der Knotenregel welches besagt, 
-        dass der Strom der in einen Knoten fließt gleich dem Strom ist, der aus dem Knoten raus fließt. Es ist also 
+        \noindent In Abbildung(\ref{img:Prinzip}) ist eine allgemeine Brückenschaltung zu sehen. Über die Potentialdifferenz kann nun ein 
+        Verhältnis der Widerstände bestimmt werden. Dies geschieht mittels des ersten Kirchhoffschen Gesetz. Dies ist die Knotenregel, welche besagt, 
+        dass der Strom der in einen Knoten fließt gleich dem Strom ist der aus dem Knoten raus fließt. Es ist also 
 
         \begin{equation*}
             I_1 = I_2 \quad \quad \text{und} \quad \quad I_3 = I_4 ,
         \end{equation*}
 
-        \noindent aus dem zweiten Kirchhoffschen Gesetz, der Maschenregel welche besagt, dass die Summe aller Spannungen innerhalb einer Masche 
+        \noindent aus dem zweiten Kirchhoffschen Gesetz, der Maschenregel, welche besagt, dass die Summe aller Spannungen innerhalb einer Masche 
         gleich 0 ist, folgt 
 
         \begin{align*}
              U &= -R_1 I_1 + R_3 I_3 \\
-            -U &= -R_2 I_2 + R_4 I_4 .
+            -U &= -R_2 I_2 + R_4 I_4 \; \; .
         \end{align*}
 
         \noindent Einsetzten von der Speisespannung $U_{\text{S}} = I_1 (R_1 + R_2)$ und umstellen ergibt 
 
         \begin{equation*}
-            U = \frac{R_2 R_3 -R_1 R_4}{(R_3 + R_4)(R_1 + R_2)} U_{\text{S}}.
+            U = \frac{R_2 R_3 -R_1 R_4}{(R_3 + R_4)(R_1 + R_2)} U_{\text{S}} \; \; .
         \end{equation*}
 
-        \noindent Gilt also 
+        \noindent Es gilt also für  
         
         \begin{equation}
-         R_2 R_3 = R_1 R_4,
+         R_2 R_3 = R_1 R_4 \; \; ,
         \label{eq:Widerstand}
         \end{equation}
-        \noindent verschwindet die Brückenspannung unabhängig von der Speisespannung, die Brücke ist 
+        \noindent verschwindet die Brückenspannung unabhängig von der Speisespannung. Die Brücke ist 
         abgeglichen.
 
 
@@ -52,8 +52,8 @@
 
     \subsection{Spezielle BrückenschaItungen}
 
-        \noindent Brückenschaltungen können weiterhin auch zur Vermessung elektrischer Bauteile genutzt werden, einige davon 
-        sind im folgenden aufgelistet.
+        \noindent Brückenschaltungen können weiterhin auch zur Vermessung anderer elektrischer Bauteile genutzt werden. Einige davon 
+        sind im Folgenden aufgelistet.
 
         \subsubsection{Wheatstonesche Brücke (Widerstandsmessbrücke)}
 
@@ -64,7 +64,7 @@
                 \label{img:Wheat}
             \end{figure}
 
-            \noindent Die Wheatstonsche Brückenschaltung aus Abbildung(\ref{img:Wheat}) besteht genau wie die bereits angeschaute allgemeine 
+            \noindent Die Wheatstonsche Brückenschaltung aus Abbildung(\ref{img:Wheat}) besteht genau wie die bereits betrachtete allgemeine 
             Brückenschaltung(\ref{img:Prinzip}) nur aus ohmschen Widerständen und wird benutzt um den Widerstand $R_x$ zu bestimmen. 
             Nach Formel(\ref{eq:Widerstand}) ergibt sich schnell 
 
@@ -77,8 +77,8 @@
         \subsubsection{Kapazitätsmessbrücke}
 
             \noindent Kondensatoren besitzten in der Realität neben ihrer Kapazität auch immer einen Widerstand, da sie elektrische Energie 
-            in Wärme transformieren, daher werden ideale Kondensatoren in Ersatzschaltbildern noch mit einem fiktiven Widerstand versehen. 
-            Um nun den Widerstand und die Kapazität dieses realen Kondensators zu bestimmen, eignet sich die Schaltung aus 
+            in Wärme transformieren. Daher werden ideale Kondensatoren in Ersatzschaltbildern noch mit einem fiktiven Widerstand versehen. 
+            Um nun den Widerstand und die Kapazität dieses realen Kondensators zu bestimmen eignet sich die Schaltung aus 
             Abbildung(\ref{img:Kapa}).
 
             \begin{figure}[ht]
@@ -105,7 +105,7 @@
 
         \subsubsection{Induktivitätsmessbrücke}
 
-            \noindent Analog zu den Kondensatoren, haben auch reale Spulen neben der Induktivität einen Widerstand der im Ersatzschaltbild durch 
+            \noindent Analog zu den Kondensatoren haben auch reale Spulen neben der Induktivität einen Widerstand der im Ersatzschaltbild durch 
             einen fiktiven Widerstand dargestellt wird. 
 
             \begin{figure}[ht]
@@ -116,7 +116,7 @@
             \end{figure}
 
             \noindent Zur Bestimmung der Induktivität $L_x$ und des Widerstandes $R_x$ einer realen Spule kann eine Schaltung wie in 
-            Abbildung(\ref{img:Spul}) verwendet werden. Die Formeln für den Widerstand ergeben sich Analog zu denen der Kapazitätsmessbrücke zu 
+            Abbildung(\ref{img:Spul}) verwendet werden.\\ Die Formeln für den Widerstand ergeben sich analog zu denen der Kapazitätsmessbrücke zu 
 
             \begin{equation*}
                 R_x = R_2 \frac{R_3}{R_4},
@@ -128,8 +128,8 @@
                 L_x = L_2 \frac{R_3}{R_4}
             \end{equation*}
 
-            \noindent für die Induktivität. In dieser Schaltung bekommt nur die zu vermessende Spule einen fiktiven Widerstand, die Spule 
-            $L_2$ wird jedoch als ideale Spule genähert, dies ist gerade für kleine Spulen nicht realisierbar. Dieses Problem wird mit der 
+            \noindent für die Induktivität.\\ In dieser Schaltung bekommt nur die zu vermessende Spule einen fiktiven Widerstand. Die Spule 
+            $L_2$ wird jedoch als ideale Spule genähert. Dies ist gerade für kleine Spulen nicht realisierbar. Dieses Problem wird mit der 
             Maxwell-Brücke überwunden.
 
         \subsubsection{Induktivitätsmessung mittels Maxwell-Brücke}
@@ -144,7 +144,7 @@
             \end{figure}
 
             \noindent Hier sind $R_3$, $R_4$ regelbare Widerstände und $C_4$ ein möglichst verlustarmer Kondensator.
-            Hier raus ergibt sich 
+            Hieraus ergibt sich 
 
             \begin{equation*}
                 R_x = \frac{ R_2 R_3}{R_4}
@@ -153,7 +153,7 @@
             \noindent und
 
             \begin{equation*}
-                L_x = R_2 R_3 C_4.
+                L_x = R_2 R_3 C_4 \; \; .
             \end{equation*}
 
             \noindent In diesen Formeln entsteht keine Frequenzabhängigkeit, jedoch besitzt die Maxwell-Brücke einen optimalen Frequenzbereich 
@@ -162,7 +162,7 @@
         \subsubsection{Wien-Robinson-Brücke}
 
             \noindent In Abbildung(\ref{img:Wien}) ist das Schaltbild einer Wien-Robinson-Brücke aufgezeichnet. Hier werden keine 
-            Abgleichelemente benötigt da in dieser Schaltung durch die Frequenz abgeglichen wird. Somit werden nun die zum Teil 
+            Abgleichelemente benötigt da in dieser Schaltung über die Frequenz abgeglichen wird. Somit werden nun die zum Teil 
             komplexen Impedanzen der vier Zweige 
 
             \begin{align*}
@@ -187,12 +187,12 @@
                 \label{img:Wien}
             \end{figure}
 
-            \noindent Dieses Verhältnis nähert sich für $\omega_0 = \frac{1}{RC}$ Null an. Weiterhin entsteht mittels der 
+            \noindent Dieses Verhältnis nähert sich für $\omega_0 = \frac{1}{RC}$ Null an. Weiterhin entsteht mit der 
             Substitution $\Omega = \frac{\omega}{\omega_0}$ die Gleichung
 
             \begin{equation}
                 \left| \frac{U_{\text{Br}}}{U_{\text{Sp}}} \right|^2 = \frac{1}{9} \cdot 
-                \frac{\left(\Omega^2 - 1\right)^2}{\left(1 - \Omega^2\right)^2 + 9 \Omega^2}.
+                \frac{\left(\Omega^2 - 1\right)^2}{\left(1 - \Omega^2\right)^2 + 9 \Omega^2} \; \; .
             \end{equation}
 
             \noindent Nun ist schnell zu erkennen, dass die Wien-Robinson-Brücke Frequenzen um $\omega_0$ raus filtert.

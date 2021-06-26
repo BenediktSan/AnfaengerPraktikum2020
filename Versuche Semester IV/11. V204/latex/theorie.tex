@@ -1,0 +1,41 @@
+\section{Zielsetzung}
+Das Ziel dieses Versuchs ist es die Wärmeleitfähigkeit diverser Metalle zu untersuchen.\\
+Dabei wird eine statische und einde dynamische Methode angewandt
+
+\section{Theoretische Grundlagen}
+Befindet sich ein Körper nicht im Temperaturgleichgewicht entsteht ein Wärmestrom.
+Dieser transportiert er Wärme entlang des negativen Temperaturgradienten.\\
+Dies kann über Konvektion, Wärmestrahlung oder Wärmeleitung. Letzteres beinhaltet dabei den Wärmetransport über Phononen und über freie Elektronen.\\
+In diesem Versuch wird dabei von allem genannten nur der Wärmetransport über die Elektronen betrachtet.\\
+Wird nun ein Stab, dessen eines Ende wärmer ist, mit der Länge $L$, der Querschnittsfläche $A$ und der Dichte $\rho$ betrachtet, ergibt sich für die transportierte Wärmemenge  
+\begin{equation}
+    \symup{d}Q=-\kappa A \frac{\partial T}{\partial x} \symup{d} t \; \; .
+\end{equation}
+Dabei ist $kappa$ die materialabhängige Wärmeleitfähigkeit. Aus dieser Gleichung lässt sich auch die Richtung des Wärmeflusses ablesen. 
+Dieser findet, wie zuvor genannt von warm zu kalt statt.\\
+Für die Dichte des Wärmestroms $j_W$ gilt damit
+\begin{equation*}
+    j_W=- \kappa \frac{\partial T}{\partial x} \; \; .
+\end{equation*}
+Über die Kontinuitätsgleichung lässt sich hiermit dann folgende Gleichung, die eindimensionale Wärmeleitungsgleichung, herleiten
+\begin{equation*}
+    \frac{\partial T}{\partial t} = \frac{\kappa}{\rho c} \frac{\partial ^2 T}{\partial x ^2} \; \; .
+\end{equation*}
+Mit dieser Gleichung lässt sich die zeitliche und räumliche Entwicklung der Temperatur beschreiben. Dabei wird $\sigma_T= \frac{\kappa}{\rho c}$ auch Temperaturleitfähigkeit genannt.\\\\
+
+\noindent Die Lösung der Wärmeleitungsgleichung für mit der Periode $T$ wechselnden Stabendentemperaturen sind die einer gedämpften Welle.\\
+Diese besitzt die Gleichung
+\begin{equation*}
+    T(x,t)=T_{max} \symup{e}^{-\sqrt{\frac{\omega \rho c}{2 \kappa}}x} \cos\left( \omega T- \sqrt{\frac{\omega \rho c}{2 \kappa}} x \right) \; \; .
+\end{equation*}
+Die Phasengeschwindigkeit dieser eindimensionalen Welle $v$ ergibt sich zu
+\begin{equation*}
+    v= \frac{\omega}{k}= \frac{\omega}{\sqrt{\frac{\omega \rho c}{2 \kappa}}}=\sqrt{\frac{2 \kappa \omega}{\rho c}} \; \; . 
+\end{equation*}
+Für die Wärmeleitfähigkeit lässt sich dann weiter mit $\omega = \frac{2 \pi}{T}$ und der Phase $\phi=\frac{2 \pi \increment t}{T}$ der Term 
+\begin{equation*} 
+    \kappa =\frac{\rho c(\increment x)^2}{2 \increment t \ln{\left(\frac{A_{nah}}{A_{fern}}\right)}}
+\end{equation*}
+finden. Dabei lässt sich über die Amplituden in einem nahen und einem fernen Messpunkt $A_{nah}$ und $A_{fern}$ ein Dämpfungsterm bilden.
+Der Abstand zwischen diesen Messpunkten ist $\increment x$.\\
+Die Phasendifferenz der Welle zwischen den Messpunkten ist $\increment t$.

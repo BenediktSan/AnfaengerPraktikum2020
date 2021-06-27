@@ -1,0 +1,52 @@
+Abtastrate :
+
+    erste messung - 5 pro Sekunde  / 5 Volt 
+
+
+    zweite Messung - 2 pro Sekunde / 8 Volt / Perio  den Dauer 80 sekunden (40 Warm, 40 kalt)
+
+    dritte Messung - 2 pro Sekunde / 8 Volt / Perioden Dauer 200 Sekunden (100 Warm, 100 kalt)
+
+    delta x sind 3cm
+    
+
+Phasengeschwindigkeit berechnen !!
+
+abtastrate mit insgesamt zeit umrechnen
+
+bis
+
+0:40 warm 1.
+1:20 kalt
+2:00 warm 2.
+2:40 kalt
+3:20 warm 3.
+4:00 kalt
+4:40 warm 4.
+5:20 kalt
+6:00 warm 5.
+6:40 kalt
+7:20 warm 6. 
+8:00 kalt 
+8:40 warm 7.
+9:20 kalt 
+10:00 warm 8. 
+10:40 kalt 
+11:20 warm 9.
+12:00 kalt
+12:40 warm 10.
+13:20 kalt
+
+
+1:40 warm 1.
+3:20 kalt
+5:00 warm 2.
+6:40 kalt
+8:20 warm 3.
+10:00 kalt
+11:40 warm 4.
+13:20 kalt
+15:00 warm 5.
+16:40 kalt
+18:20 warm 6. 
+20:00 kalt 

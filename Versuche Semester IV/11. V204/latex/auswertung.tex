@@ -1,54 +1,90 @@
-Abtastrate :
+\section{Auswertung}
 
-    erste messung - 5 pro Sekunde  / 5 Volt 
+    \noindent Die Messung der Wärmeleitung wird in diesem Versuch mit zwei unterschiedlichen Methoden durchgeführt, die folgende Auswertung ist 
+    in zwei Teilen eingeteilt in denen dann diese Methoden ausgewertet werden. Sämtliche in diesem Versuch aufgenommene Daten können nicht im 
+    Protokoll dargestellt werden da bereits einzelne Messreihen 
+
+        \subsection{Statische Methode}
+
+        \begin{figure}[H]
+            \centering
+            \includegraphics{build/plots/stat_plot.pdf}
+            \caption{Die Temperaturen an den fernen Messpunkte der einzelnen Stäbe bei der statischen Messung. }
+            \label{fig:plot_stat}
+        \end{figure}
+
+        Im Abbildung(\raf{fig:plot_stat}) sind die Temperaturen $T1, T4, T5$ und $T8$ geplottet, diese Stellen die vom Peltier-Element ferner 
+        liegenden Messtellen dar. Edelstahl startet bei der niedrigsten Temperatur mit ca $\SI{26}{\celsius}$, die beiden Messing Stäbe starten 
+        bei ca. $\SI{29}{\celsius}$ und Aluminium startet am höchsten bei $\SI{31}{\celsius}$. Die Temperaturverläufe 
+        lassen sich nun in unterschiedliche Phasen einteilen. Zunächst ändern sich die Temperaturen kaum, die Energie des 
+        Heitzgerätes ist noch nicht an dem hinteren Messgerät angekommen. Dieser Bereich ist bei Messing und 
+        Aluminium ungefähr gleich lang, dauert jedoch bei Edelstahl ca. 3 mal so lang. Nun beginnt die Phase der 
+        höchsten Steigung, hier hat Aluminium die höchste Steigung, die beiden Messing Stäbe haben zunächst die 
+        gleiche Steigung, sie ist nur etwas kleiner als die die von Aluminium. Die Steigung von Aluminium ist 
+        deutlich kleiner als der anderen Metalle. Die Phase des hohen Temperatur anstiegs hält bei Aluminium auch am länsten,
+        bei den Messingen Stäben fällt die Steigung bei dem schmalen früher wieder ab. Die Phase der hohen Steigung 
+        hält bei Edelstahl nur sehr kurz. Zuletzt steigen alle Metalle mit einer relativ kleinen aber ähnlichen Steigung konstant 
+        weiter an.
+
+        Die Temperatur der jeweiligen Stäbe zum Zeitpunkt $t=\SI{700}{\second}$ lassen sich in den Messdaten ablesen und ergeben sich zu:
+        \begin{align*}
+          \text{für den breiten Messingstab:} \: T&= \SI{54.02}{\celsius}\\ 
+          \text{für den schmalen Messingstab:} \: T&= \SI{51.07}{\celsius}\\ 
+          \text{für den Aluminiumstab:} \: T&= \SI{56.46}{\celsius}\\ 
+          \text{für den Edelstahlstab:} \: T&= \SI{41.87}{\celsius}
+        \end{align*}
+
+        % Hier fehlt noch eine Formel und der Zusammenhang
 
 
-    zweite Messung - 2 pro Sekunde / 8 Volt / Perio  den Dauer 80 sekunden (40 Warm, 40 kalt)
+        \begin{table}
+            \centering
+            \caption{Der Wärmestrom der verschiedenen Metallstäben zu 5 verschiedenen Zeitpunkten.}
+            \label{tab:Wärmestrom}
+            \begin{tabular}{S[table-format=3.0] %Zeit
+                            S[table-format=1.3] %Messing breit
+                            S[table-format=1.3] %Messing schmal
+                            S[table-format=1.3] %ALuminium
+                            S[table-format=1.3] %Edelstahl
+                            }
+            \toprule
+            &\multicolumn{4}{c}{$\frac{\Delta Q}{\Delta t} [\si{\joule\per\second}]$}\\
+            \cmidrule(lr){2-5}
+            {$ t [\si{\second}]$}&{Messing (breit)}&{Messing (schmal)}&{Aluminium}&{Edelstahl}\\
+            \midrule
+            100 & 0.466 & 0.359 & 0.796 & 0.125 \\
+            200 & 0.710 & 0.532 & 1.440 & 0.131 \\
+            350 & 1.082 & 0.780 & 2.089 & 0.156 \\
+            450 & 1.267 & 0.906 & 2.320 & 0.177 \\
+            600 & 1.459 & 1.034 & 2.491 & 0.212 \\
+            \bottomrule
+            \end{tabular}
+        \end{table}
 
-    dritte Messung - 2 pro Sekunde / 8 Volt / Perioden Dauer 200 Sekunden (100 Warm, 100 kalt)
+        \noindent Abschließend werden die Temperaturdifferenzen zwischen den Temperaturmessstellen eines Stabes für den breiten Messingstab und den 
+        Edelstahlstab in einem $t$-$T$- Diagramm aufgetragen.
 
-    delta x sind 3cm
-    
+        \begin{figure}[H]
+          \centering
+          \includegraphics[width=\textwidth]{build/plots/plot_diff.pdf}
+          \caption{Die Temperaturdifferenzen zwischen den Messstellen auf einem Stab.}
+          \label{fig:plot_diff}
+        \end{figure}
 
-Phasengeschwindigkeit berechnen !!
+        In der Abbildung(\ref{fig:plot_diff}) fällt auf, dass bei beiden Stoffen der Temperaturunterschied tief startet und dann stark ansteigt.
+        Die Temperaturdifferenz innerhalb des breiten Messingstabes hat bei etwa $ t = \SI{50}{\second}$ seinen Hochpunkt von $\SI{8.3}{\celsius}$ erreicht.
+        Dann fällt die Kurve, flacht ab und nähert sich einem Wert um die $\SI{2}{\celsius}$ an.
+        Die Temperaturdifferenz des Edelstahlstabes steigt höher als die des breiten Messingstabes bis sie ihren Hochpunkt 
+        bei etwa $\SI{160}{\second} $ und $\SI{17}{\celsius}$ erreicht hat.
+        Die Kurve fällt daraufhin asymtotisch auf den Wert $\SI{9.5}{\celsius}$.
 
-abtastrate mit insgesamt zeit umrechnen
-
-bis
-
-0:40 warm 1.
-1:20 kalt
-2:00 warm 2.
-2:40 kalt
-3:20 warm 3.
-4:00 kalt
-4:40 warm 4.
-5:20 kalt
-6:00 warm 5.
-6:40 kalt
-7:20 warm 6. 
-8:00 kalt 
-8:40 warm 7.
-9:20 kalt 
-10:00 warm 8. 
-10:40 kalt 
-11:20 warm 9.
-12:00 kalt
-12:40 warm 10.
-13:20 kalt
+    \subsection{Dynamische Methode}
 
 
-1:40 warm 1.
-3:20 kalt
-5:00 warm 2.
-6:40 kalt
-8:20 warm 3.
-10:00 kalt
-11:40 warm 4.
-13:20 kalt
-15:00 warm 5.
-16:40 kalt
-18:20 warm 6. 
-20:00 kalt 
+
+
+
+
+
 
 

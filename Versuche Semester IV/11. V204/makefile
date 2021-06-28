@@ -5,13 +5,13 @@ all: build/Protokoll_V204.pdf
 #hier Python-Skripte
 
 
-#build/plot1.pdf:	|build
-#	python python/c).py
+build/plot1.pdf:	|build
+	python python/204.py
 
 
 
 # hier weitere Abhängigkeiten für build/main.pdf deklarieren:
-build/Protokoll_V204.pdf:  latex/auswertung.tex latex/theorie.tex latex/durchf.tex latex/diskussion.tex| build
+build/Protokoll_V204.pdf:  latex/auswertung.tex latex/theorie.tex latex/durchf.tex latex/diskussion.tex build/plot1.pdf| build
 	lualatex --output-directory=build --interaction=batchmode --halt-on-error latex/Protokoll_V204.tex
 	biber build/Protokoll_V204.bcf
 	lualatex --output-directory=build --interaction=batchmode --halt-on-error latex/Protokoll_V204.tex

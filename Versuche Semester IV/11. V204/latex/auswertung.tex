@@ -2,83 +2,299 @@
 
     \noindent Die Messung der Wärmeleitung wird in diesem Versuch mit zwei unterschiedlichen Methoden durchgeführt, die folgende Auswertung ist 
     in zwei Teilen eingeteilt in denen dann diese Methoden ausgewertet werden. Sämtliche in diesem Versuch aufgenommene Daten können nicht im 
-    Protokoll dargestellt werden da bereits einzelne Messreihen 
+    Protokoll dargestellt werden da bereits einzelne Messreihen um die 10000 Werte beinhalten, aus diesem Grund sind die Daten in den Plots auch 
+    nicht als einzelne Punkte, sondern durch eine Verbindungslinie dargestellt, dies stellt die Daten besser dar.
 
-        \subsection{Statische Methode}
+    \subsection{Statische Methode}
 
-        \begin{figure}[H]
-            \centering
-            \includegraphics{build/plots/stat_plot.pdf}
-            \caption{Die Temperaturen an den fernen Messpunkte der einzelnen Stäbe bei der statischen Messung. }
-            \label{fig:plot_stat}
+      \begin{figure}[H]
+          \centering
+          \includegraphics[width=0.4\textwidth]{build/plots/stat_plot.pdf}
+          \caption{Die Temperaturen an den fernen Messpunkte der einzelnen Stäbe bei der statischen Messung. }
+          \label{fig:plot_stat}
+      \end{figure}
+    
+      \noindent Im Abbildung(\ref{fig:plot_stat}) sind die Temperaturen $T1, T4, T5$ und $T8$ geplottet, diese stellen die vom Peltier-Element ferner 
+      liegenden Messtellen dar. Edelstahl startet bei der niedrigsten Temperatur mit ca $\SI{26}{\celsius}$, die beiden Messing Stäbe starten 
+      bei ca. $\SI{29}{\celsius}$ und Aluminium startet am höchsten bei $\SI{31}{\celsius}$. Die Temperaturverläufe 
+      lassen sich nun in unterschiedliche Phasen einteilen. Zunächst ändern sich die Temperaturen kaum, die Energie des 
+      Heitzgerätes ist noch nicht an dem hinteren Messgerät angekommen. Dieser Bereich ist bei Messing und 
+      Aluminium ungefähr gleich lang, dauert jedoch bei Edelstahl ca. 3 mal so lang. Nun beginnt die Phase der 
+      höchsten Steigung, hier hat Aluminium die höchste Steigung, die beiden Messing Stäbe haben zunächst die 
+      gleiche Steigung, sie ist nur etwas kleiner als die die von Aluminium. Die Steigung von Aluminium ist 
+      deutlich kleiner als der anderen Metalle. Die Phase des hohen Temperatur anstiegs hält bei Aluminium auch am länsten,
+      bei den Messingen Stäben fällt die Steigung bei dem schmalen früher wieder ab. Die Phase der hohen Steigung 
+      hält bei Edelstahl nur sehr kurz. Zuletzt steigen alle Metalle mit einer relativ kleinen aber ähnlichen Steigung konstant 
+      weiter an.
+      Die Temperatur der jeweiligen Stäbe zum Zeitpunkt $t=\SI{700}{\second}$ lassen sich in den Messdaten ablesen und ergeben sich zu:
+      \begin{align}
+        \text{für den breiten Messingstab:} \: T&= \SI{54.02}{\celsius}\\ \label{eqn:M1}
+        \text{für den schmalen Messingstab:} \: T&= \SI{51.07}{\celsius}\\ 
+        \text{für den Aluminiumstab:} \: T&= \SI{56.46}{\celsius}\\ 
+        \text{für den Edelstahlstab:} \: T&= \SI{41.87}{\celsius} \label{eqn:E1}
+      \end{align}
+    
+      % Hier fehlt noch eine Formel und der Zusammenhang
+      \noindent Nach der Gleichung  
+      
+      \begin{equation}\label{eqn:Wärmemenge}
+        dQ = -\kappa A \frac{\partial T}{\partial x}dt 
+      \end{equation}
+      
+      \noindent lässt sich der Wärmestrom $\frac{\Delta Q}{\Delta t}$ für die verschiedenen Metallstäbe 
+      errechnen (siehe Tabelle \ref{tab:Waermestrom}).
+      Dabei wird für $\kappa $ ein Wert aus der Literatur[\cite{leit}] entnommen:
+
+      \begin{align*}
+        \kappa_{\text{Messing}} &= \SI{120}{\watt\per\meter\per\kelvin}\\
+        \kappa_{\text{Aluminium}} &=\SI{237}{\watt\per\meter\per\kelvin}\\
+        \kappa_{\text{Edelstahl}} &=\SI{19}{\watt\per\meter\per\kelvin}
+      \end{align*}
+    
+      \begin{table}
+          \centering
+          \caption{Der Wärmestrom der verschiedenen Metallstäben zu 5 verschiedenen Zeitpunkten.}
+          \label{tab:Waermestrom}
+          \begin{tabular}{S[table-format=3.0] %Zeit
+                          S[table-format=1.3] %Messing breit
+                          S[table-format=1.3] %Messing schmal
+                          S[table-format=1.3] %ALuminium
+                          S[table-format=1.3] %Edelstahl
+                          }
+          \toprule
+          &\multicolumn{4}{c}{$\frac{\Delta Q}{\Delta t} [\si{\joule\per\second}]$}\\
+          \cmidrule(lr){2-5}
+          {$ t [\si{\second}]$}&{Messing (breit)}&{Messing (schmal)}&{Aluminium}&{Edelstahl}\\
+          \midrule
+          100 & 0.466 & 0.359 & 0.796 & 0.125 \\
+          200 & 0.710 & 0.532 & 1.440 & 0.131 \\
+          350 & 1.082 & 0.780 & 2.089 & 0.156 \\
+          450 & 1.267 & 0.906 & 2.320 & 0.177 \\
+          600 & 1.459 & 1.034 & 2.491 & 0.212 \\
+          \bottomrule
+          \end{tabular}
+      \end{table}
+    
+      \noindent Abschließend werden die Temperaturdifferenzen zwischen den Temperaturmessstellen eines Stabes für den breiten Messingstab und den 
+      Edelstahlstab in einem $t$-$T$- Diagramm aufgetragen.
+
+      \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.4\textwidth]{build/plots/plot_diff.pdf}
+        \caption{Die Temperaturdifferenzen zwischen den Messstellen auf einem Stab.}
+        \label{fig:plot_diff}
+      \end{figure}
+
+      \noindent In der Abbildung(\ref{fig:plot_diff}) fällt auf, dass bei beiden Stoffen der Temperaturunterschied tief startet und dann stark ansteigt.
+      Die Temperaturdifferenz innerhalb des breiten Messingstabes hat bei etwa $ t = \SI{50}{\second}$ seinen Hochpunkt von $\SI{8.3}{\celsius}$ erreicht.
+      Dann fällt die Kurve, flacht ab und nähert sich einem Wert um die $\SI{2}{\celsius}$ an.
+      Die Temperaturdifferenz des Edelstahlstabes steigt höher als die des breiten Messingstabes bis sie ihren Hochpunkt 
+      bei etwa $\SI{160}{\second} $ und $\SI{17}{\celsius}$ erreicht hat.
+      Die Kurve fällt daraufhin asymtotisch auf den Wert $\SI{9.5}{\celsius}$ ab.
+
+    \subsection{Dynamische Methode}
+
+      \noindent In der dynamische Methode wurden die Stäbe in periodischen Abständen gewärmt und gekühlt. 
+      Hier wird der breite Messingstab und der Aluminium stab mit einer Periodendauer von $\SI{80}{\second}$ betrieben, der Edelstahlstab wird 
+      mit einer Periode von $\SI{200}{\second}$ betreiben und ausgewertet. Bei allen Stäben werden 2 Messungen pro Sekunde an zwei Stellen mit einem 
+      Abstand von $\SI{3}{\centi\meter}$ aufgenommen. Bei der Messung mit einer Periodendauer von $\SI{80}{\second}$ werden 10 Perioden gemessen, 
+      für die Periodendauer von $\SI{200}{\second}$ werden nur 6 Perioden gemessen.
+        
+      \subsubsection{Messingstab (breit)}
+
+        \noindent Im folgenden wird zunächst der breite Messingstab betrachtet.
+
+        \begin{figure}[ht]
+          \centering
+          \includegraphics[width=0.4\textwidth]{build/plots/plot_messing.pdf}
+          \caption{Die Temperaturen an den verschiedenen Messstellen des Messingstabes in der dynamischen Methode mit einer Periode von $\SI{80}{\second}$.}
+          \label{fig:messing_dyn}
         \end{figure}
 
-        Im Abbildung(\raf{fig:plot_stat}) sind die Temperaturen $T1, T4, T5$ und $T8$ geplottet, diese Stellen die vom Peltier-Element ferner 
-        liegenden Messtellen dar. Edelstahl startet bei der niedrigsten Temperatur mit ca $\SI{26}{\celsius}$, die beiden Messing Stäbe starten 
-        bei ca. $\SI{29}{\celsius}$ und Aluminium startet am höchsten bei $\SI{31}{\celsius}$. Die Temperaturverläufe 
-        lassen sich nun in unterschiedliche Phasen einteilen. Zunächst ändern sich die Temperaturen kaum, die Energie des 
-        Heitzgerätes ist noch nicht an dem hinteren Messgerät angekommen. Dieser Bereich ist bei Messing und 
-        Aluminium ungefähr gleich lang, dauert jedoch bei Edelstahl ca. 3 mal so lang. Nun beginnt die Phase der 
-        höchsten Steigung, hier hat Aluminium die höchste Steigung, die beiden Messing Stäbe haben zunächst die 
-        gleiche Steigung, sie ist nur etwas kleiner als die die von Aluminium. Die Steigung von Aluminium ist 
-        deutlich kleiner als der anderen Metalle. Die Phase des hohen Temperatur anstiegs hält bei Aluminium auch am länsten,
-        bei den Messingen Stäben fällt die Steigung bei dem schmalen früher wieder ab. Die Phase der hohen Steigung 
-        hält bei Edelstahl nur sehr kurz. Zuletzt steigen alle Metalle mit einer relativ kleinen aber ähnlichen Steigung konstant 
-        weiter an.
-
-        Die Temperatur der jeweiligen Stäbe zum Zeitpunkt $t=\SI{700}{\second}$ lassen sich in den Messdaten ablesen und ergeben sich zu:
+        \noindent In Abbildung(\ref{fig:messing_dyn}) sind die Temperaturverläufe der beiden Messtellen von Messing gegen die Zeit geplottet, hier ist 
+        eindutig die Periodiztät der Messung zu sehen. Es fällt klar auf, dass die Amplituden der Messstelle die näher am Peltier-Element liegt 
+        deutlich höher sind, auch ein Phasenunterschied zwischen den beiden Messstelle ist zu erkennen.
+        Die Amplituden und deren Phasendifferenz sind in der Tabelle \ref{tab:messing_dyn} aufgelistet.
+        Es ergibt sich aus den Werten der Mittelwert:
         \begin{align*}
-          \text{für den breiten Messingstab:} \: T&= \SI{54.02}{\celsius}\\ 
-          \text{für den schmalen Messingstab:} \: T&= \SI{51.07}{\celsius}\\ 
-          \text{für den Aluminiumstab:} \: T&= \SI{56.46}{\celsius}\\ 
-          \text{für den Edelstahlstab:} \: T&= \SI{41.87}{\celsius}
-        \end{align*}
-
-        % Hier fehlt noch eine Formel und der Zusammenhang
-
+          \ln\left( \frac{A_{\text{nah}}}{A_{\text{fern}}}\right) &= \num{0.888 \pm 0.014}\\
+          \Delta t &= \SI{14.8 \pm 0.34}{\second}
+        \end{align*} 
 
         \begin{table}
-            \centering
-            \caption{Der Wärmestrom der verschiedenen Metallstäben zu 5 verschiedenen Zeitpunkten.}
-            \label{tab:Wärmestrom}
-            \begin{tabular}{S[table-format=3.0] %Zeit
-                            S[table-format=1.3] %Messing breit
-                            S[table-format=1.3] %Messing schmal
-                            S[table-format=1.3] %ALuminium
-                            S[table-format=1.3] %Edelstahl
-                            }
-            \toprule
-            &\multicolumn{4}{c}{$\frac{\Delta Q}{\Delta t} [\si{\joule\per\second}]$}\\
-            \cmidrule(lr){2-5}
-            {$ t [\si{\second}]$}&{Messing (breit)}&{Messing (schmal)}&{Aluminium}&{Edelstahl}\\
-            \midrule
-            100 & 0.466 & 0.359 & 0.796 & 0.125 \\
-            200 & 0.710 & 0.532 & 1.440 & 0.131 \\
-            350 & 1.082 & 0.780 & 2.089 & 0.156 \\
-            450 & 1.267 & 0.906 & 2.320 & 0.177 \\
-            600 & 1.459 & 1.034 & 2.491 & 0.212 \\
-            \bottomrule
-            \end{tabular}
+          \centering
+          \caption{Die Amplituden und Phasendifferenz des Messingstabes.}
+          \label{tab:messing_dyn}
+          \begin{tabular}{S[table-format=2.2] %A nah
+                          S[table-format=2.2] % A fern
+                          S[table-format=1.3] % ln
+                          S[table-format=2]}
+          \toprule
+          {$ A_{\text{nah}} [\si{\kelvin}] $}&
+          {$ A_{\text{fern}} [\si{\kelvin}] $}&
+          {$ \log\left(\frac{A_{\text{nah}}}{A_{\text{fern}}}\right)$} &
+          {$ \Delta t [\si{\second}]$}\\
+          \midrule
+          19.81  &10.93 & 0.595& 22\\
+          16.07  &  8.01 & 0.696& 16\\
+          15.17  &  6.77 & 0.807& 16\\
+          14.58  &  6.43 & 0.819& 20\\
+          13.55  &  5.38 & 0.924& 14\\
+          13.98  &  5.29 & 0.972& 12\\
+          13.76  &  5.11 & 0.991& 12\\
+          13.55  &  4.92 & 1.013& 12\\
+          13.46  &  4.85 & 1.021& 12\\
+          13.27  &  4.65 & 1.049& 12\\
+          \bottomrule
+          \end{tabular}
         \end{table}
 
-        \noindent Abschließend werden die Temperaturdifferenzen zwischen den Temperaturmessstellen eines Stabes für den breiten Messingstab und den 
-        Edelstahlstab in einem $t$-$T$- Diagramm aufgetragen.
+        \noindent Aus diesen Werten kann nun nach der Gleichung
+
+        \begin{equation*}
+          \kappa = \frac{\rho c (\Delta x)^2}{2\Delta t \ln \left( \frac{A_{\text{nah}}}{A_{\text{fern}}}\right)} 
+        \end{equation*}
+
+        \noindent die Wärmeleitfähigkeit 
+
+        \begin{equation*}
+          \kappa = \SI{117.264 \pm 0.937}{\watt\per\metre\per\kelvin}
+        \end{equation*}
+          
+        \noindent berechnet werden.
+
+        \noindent Für die Temperaturwellen lassen sich nach der Formel 
+
+        \begin{equation*}
+          \lambda = \frac{2\pi}{\sqrt{\frac{2 \pi \Delta t \ln\left(\frac{A_{\text{nah}}}{A_{\text{fern}}}\right)}{T^* (\Delta x)^2}}}
+        \end{equation*}
+
+        \noindent die Frequenz $f$ und die Wellenlänge $\lambda$ zu 
+
+        \begin{align*}
+          f &= \frac{1}{T} = \SI{0.0125}{\hertz}\\
+          \lambda &= \SI{0.189 \pm 0.003}{\metre}
+        \end{align*}
+
+        \noindent berechnen.
+
+      \subsubsection{Aluminiumstab}
+
+        \noindent Für den Aluminiumstab wird diese Rechnung Analog wiederholt.
+        Die Temperaturverläufe werden in Abbildung(\ref{fig:aluminium_dyn}) dargestellt.
 
         \begin{figure}[H]
           \centering
-          \includegraphics[width=\textwidth]{build/plots/plot_diff.pdf}
-          \caption{Die Temperaturdifferenzen zwischen den Messstellen auf einem Stab.}
-          \label{fig:plot_diff}
+          \includegraphics{build/plots/plot_aluminium.pdf}
+          \caption{Die Temperaturen an den einzelnen Messstellen des Aluminiumstabes bei der dynamischen Methode mit $T=\SI{80}{\second}$.}
+          \label{fig:aluminium_dyn}
         \end{figure}
 
-        In der Abbildung(\ref{fig:plot_diff}) fällt auf, dass bei beiden Stoffen der Temperaturunterschied tief startet und dann stark ansteigt.
-        Die Temperaturdifferenz innerhalb des breiten Messingstabes hat bei etwa $ t = \SI{50}{\second}$ seinen Hochpunkt von $\SI{8.3}{\celsius}$ erreicht.
-        Dann fällt die Kurve, flacht ab und nähert sich einem Wert um die $\SI{2}{\celsius}$ an.
-        Die Temperaturdifferenz des Edelstahlstabes steigt höher als die des breiten Messingstabes bis sie ihren Hochpunkt 
-        bei etwa $\SI{160}{\second} $ und $\SI{17}{\celsius}$ erreicht hat.
-        Die Kurve fällt daraufhin asymtotisch auf den Wert $\SI{9.5}{\celsius}$.
+        \noindent Hier sind bezüglich der Amplitude und der Phasenverschiebung wieder die gleichen Beobachtungen wie bei dem Messingstab 
+        festzustellen.
+        Mittels den Daten aus Tabelle(\ref{tab:aluminium_dyn})
 
-    \subsection{Dynamische Methode}
+        \begin{table}
+          \centering
+          \caption{Die Amplituden und Phasendifferenz der Temperaturmessungen am Aluminiumstab.}
+          \label{tab:aluminium_dyn}
+          \begin{tabular}{
+            S[table-format=2.2] %A nah
+            S[table-format=2.2] % A fern
+            S[table-format=1.3] % ln
+            S[table-format=2]}
+          \toprule
+          {$ A_{\text{nah}} [\si{\kelvin}] $}&
+          {$ A_{\text{fern}}[\si{\kelvin}] $}&
+          {$ \log\left(\frac{A_{\text{nah}}}{A_{\text{fern}}}\right)$} &
+          {$ \Delta t [\si{\second}]$}\\
+          \midrule
+          23.96 & 16.91  & 0.348  & 12\\
+          19.19 & 11.49  & 0.513  & 8\\
+          17.96 & 10.01  & 0.585  & 8\\
+          17.27 & 9.59  & 0.588  & 14\\
+          16.25 & 8.42  & 0.657  & 6\\
+          16.71 & 8.66  & 0.657  & 8\\
+          16.43 & 8.51  & 0.658  & 6\\
+          16.23 & 8.28  & 0.673  & 6 \\
+          16.22 & 8.23  & 0.678  & 6\\
+          16.01 & 8.08  & 0.684  & 8\\
+          \bottomrule  
+          \end{tabular}
+        \end{table}
+
+        \noindent lassen sich nun analog zum Messingstab folgende Werte berechnen:
+
+        \begin{align*}
+          \log\left( \frac{A_{\text{nah}}}{A_{\text{fern}}}\right) &= \num{0.604 \pm 0.009}\\
+          \Delta t &= \SI{8.2 \pm 0.26}{\second}\\
+          kappa &= \SI{231.646 \pm 3.763}{\watt\per\metre\per\kelvin}\\
+          f &= \SI{0.0125}{\hertz}\\
+          \lambda &= \SI{0.315 \pm 0.003}{\metre}
+        \end{align*}
+
+      \subsubsection{Edelstahlstab}
+
+        \noindent der Edelstahlstab wird in der dynamischen Methode nun mit einer Periodendauer von $\SI{200}{\second}$ ausgewertet.
+        Die Daten dieser Messreihe sind in Abbildung(\ref{fig:edelstahl_dyn}) zu finden 
+
+        \begin{figure}[ht]
+          \centering
+          \includegraphics[width=0.4\textwidth]{build/plots/plot_edelstahl.pdf}
+          \caption{Die Temperaturen der verschiedenen Messstellen des Edelstahlstabes.}
+          \label{fig:edelstahl_dyn}
+        \end{figure}
+
+        \noindent Auch hier sind die gleichen Verschiebungen der Amplitude und Phase zwischen den beiden Messstellen festzustellen.
+        Die relevanten Daten hierzu sind in Tabelle(\ref{tab:edelstahl_dyn}) dargestellt.
+
+        \begin{table}
+          \centering
+          \caption{Die Amplituden und Phasendifferenz beim Edelstahlstab.}
+          \label{tab:edelstahl_dyn}
+          \begin{tabular}{S[table-format=2.2]
+                          S[table-format=2.2]
+                          S[table-format=1.3]
+                          S[table-format=2  ]}
+          \toprule
+          {$ A_{\text{nah}} [\si{\kelvin}] $}&
+          {$ A_{\text{fern}} [\si{\kelvin}] $}&
+          {$ \log(\frac{A_{\text{nah}}}{A_{\text{fern}}})$} &
+          {$ \Delta t [\si{\second}]$}\\
+          \midrule
+          23.8  & 5.66 & 1.436 & 57.5 \\
+          20.25 & 4.1  & 1.597 & 61   \\
+          21.55 & 4.98 & 1.464 & 62   \\
+          20.82 & 4.47 & 1.538 & 58   \\
+          20.68 & 3.93 & 1.660 & 55   \\
+          19.81 & 3.52 & 1.727 & 52   \\
+          \bottomrule  
+          \end{tabular}
+        \end{table}
+
+        \noindent Die Mittelwerte diser Daten ergeben sich zu 
+
+        \begin{align*}
+          \ln\left( \frac{A_{\text{nah}}}{A_{\text{fern}}} \right) &= \num{1.570 \pm 0.017}\\
+          \Delta t &= \SI{57.58 \pm 1.82}{\second}.
+        \end{align*}
+
+        \noindent Weiterhin berechnet sich die Wärmeleitfähigkeit, die Frequenz und die Wellenlänge zu
+
+        \begin{align*}
+          \kappa &= \SI{16.0 \pm 0.129}{\watt\per\metre\per\kelvin}\\
+          f &= \SI{0.005}{\hertz}\\
+          \lambda &= \SI{7.08(28)e-2}{\metre} .
+        \end{align*}
+
+
+
+
+
+
+
+
+        
 
 
 

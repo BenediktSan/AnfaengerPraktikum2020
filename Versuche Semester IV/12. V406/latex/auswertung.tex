@@ -1,32 +1,12 @@
 \section{Auswertung}
 
-\noindent Für die Auswertung wurde zuerst der Dunkelstrom $I_{Dunkel}=\SI{5.6}{\nano\metre}$ gemessen. Dieser Wert wird im folgenden von den gemsessenen Stömen abgezogen.\\
-Zusätzlich wurde die Entfernung des Photoelements von dem Spalt zu $L=\SI{1472}{\metre}$ gemessen.
+\noindent Für die Auswertung wurde zuerst der Dunkelstrom $I_{Dunkel}=\SI{5.6}{\nano\metre}$ gemessen. Dieser Wert wird im folgenden von den aufgenommenen Strömen abgezogen.\\
+Zusätzlich wurde die Entfernung des Photoelements von dem Spalt zu $L=\SI{1.472}{\metre}$ gemessen.
 
 \subsection{Auswertung des Einzelspaltes}
 
 \noindent Für die Untersuchung der Beugungsmaxima wurde ein Spalt mit der Breite $b=\SI{0.15}{\milli\metre}$ genutzt.\\
-Die aufgenommenen Messwerte sind in Tabelle \ref{tab:1} zu finden. Über $\varphi=\frac{d}{L}$ lässt sich mit den Messwerten die Verschiebung des Photoelements in den benötigten Winkel umrechnen.
-Damit wird dann für eine Funktion der Form
-\begin{equation}
-    B(\varphi')^2 = A_0^2 \left\{ \frac{\lambda}{\pi b \text{ sin}(\varphi')} \right\}^2 \cdot \text{ sin}^2 
-    \left\{\frac{\pi b \text{ sin}(\varphi')}{\lambda} \right\}
-    \label{eqn:einzel}
-\end{equation}
-\noindent eine Ausgleichsrechnung durchgeführt. Des Weiteren gilt hier $\varphi'=\varphi-a$, da das Maximum der Messwerte nicht genau um $0$ zentriert ist und dies mit diesem Term kompensiert wird.\\
-Die Parameter der Funktion berechnen sich dann zu
-\begin{align*}
-    A_0&=\SI{5.447(0012)}{\tesla}\\
-    a_1&=\SI{-0.648(0003)e-3}{\degree}\\
-    b_1&=\SI{0.1734(00004)}{\milli\metre}\; \; .
-\end{align*}
-\noindent Zusammen mit den Messwerten finden sich diese Funktion grafisch dargestellt in Abbilfung \ref{fig:plot1}.
-\begin{figure}[ht]
-    \centering
-    \includegraphics[width=0.6\textwidth]{build/plots/plot1.pdf}
-    \caption{Die Messwerte der Intensitäten Einzelspaltes inklusive der darauf bestimmten Ausgleichsfunktion.}
-    \label{fig:plot1}
-  \end{figure}
+Die aufgenommenen Messwerte sind in Tabelle \ref{tab:1} zu finden.\\ Über $\varphi=\frac{d}{L}$ lässt sich mit den Messwerten die Verschiebung des Photoelements in den benötigten Winkel umrechnen.
 
 \begin{table}[ht]
     \centering
@@ -71,8 +51,34 @@ Die Parameter der Funktion berechnen sich dann zu
   \end{table}
 
 
+\noindent
+Damit wird dann für eine Funktion der Form
+\begin{equation}
+    B(\varphi')^2 = A_0^2 \left\{ \frac{\lambda}{\pi b \text{ sin}(\varphi')} \right\}^2 \cdot \text{ sin}^2 
+    \left\{\frac{\pi b \text{ sin}(\varphi')}{\lambda} \right\}
+    \label{eqn:einzel}
+\end{equation}
+\noindent eine Ausgleichsrechnung durchgeführt. Des Weiteren gilt hier $\varphi'=\varphi-a$, da das Maximum der Messwerte nicht genau um $0$ zentriert ist und dies mit diesem Term kompensiert wird.\\
+Die Parameter der Funktion berechnen sich dann zu
+\begin{align*}
+    A_0&=\SI{5.447(0012)}{\sqrt\ampere}\\
+    a_1&=\SI{-0.648(0003)e-3}{\degree}\\
+    b_1&=\SI{0.1734(00004)}{\milli\metre}\; \; .
+\end{align*}
+\noindent Zusammen mit den Messwerten finden sich diese Funktion grafisch dargestellt in Abbildung \ref{fig:plot1}.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.55\textwidth]{build/plots/plot1.pdf}
+    \caption{Die Messwerte der Intensitäten des Einzelspaltes inklusive der darauf bestimmten Ausgleichsfunktion.}
+    \label{fig:plot1}
+  \end{figure}
+
+
+
+\newpage
   \subsection{Auswertung des Doppelspaltes}
-  \noindent Für die Untersuchung des Doppelspaltes wurde ein Doppelspalt mit Spaltentfernung $s =\SI{1}{\milli\metre}$ und Spaltbreite $b={\SI{0.15}{\milli\metre}}$ genutzt.\\
+
+  \noindent Für die Untersuchung des Doppelspaltes wurde ein Doppelspalt mit der Spaltentfernung $s =\SI{1}{\milli\metre}$ und der Spaltbreite $b={\SI{0.15}{\milli\metre}}$ genutzt.\\
   Hier wird die Funktion 
   \begin{equation}
     B(\varphi)^2 = A_0^2 \cdot \text{cos}^2 \left( \frac{\pi s \text{ sin}(\varphi')}{\lambda} \right) \cdot 
@@ -81,19 +87,28 @@ Die Parameter der Funktion berechnen sich dann zu
   Für die Ausgleichsrechnung genutzt. Dabei wurden wieder die Werte mit $\varphi=\frac{d}{L}$ umgerechnet und es gilt auch wieder $\varphi'=\varphi-a$.\\
   Die Parameter ergeben sich dann zu
   \begin{align*}
-    A_0&=\SI{0.983(0054)e-3}{\tesla}\\
+    A_0&=\SI{0.983(0054)e-3}{\sqrt\ampere}\\
     s&=\SI{0.9954(00171)}{\milli\metre}\\
     a_2&=\SI{0.588(0016)e-3}{\degree}\\
     b_2&=\SI{0.1740(00251)}{\milli\metre}\; \; .
   \end{align*}
   \noindent Zusammen mit den Messwerten finden sich diese Funktion grafisch dargestellt in Abbildung \ref{fig:plot2}.
 
-  \begin{figure}[ht]
+  \begin{figure}[H]
     \centering
     \includegraphics[width=0.6\textwidth]{build/plots/plot2.pdf}
-    \caption{Die Messwerte der Intensitäten Doppelspaltes inklusive der darauf bestimmten Ausgleichsfunktion.}
+    \caption{Die Messwerte der Intensitäten des Doppelspaltes inklusive der darauf bestimmten Ausgleichsfunktion.}
     \label{fig:plot2}
   \end{figure}
+  \noindent Wenn nun beide Funktionen normiert und in eine Abbildung gesetzt werden sollte die Intensitätsfunktion des Einzelspaltes die Einhüllende der Doppelspaltfunktion sein.
+  Dies ist in Abbildung \ref{fig:plot3} dargestellt. Es ist zu sehen, das dies gilt und die Funktionensehr genau aufeinander liegen.
+  
+  \begin{figure}[ht]
+      \centering
+      \includegraphics[width=0.6\textwidth]{build/plots/plot3.pdf}
+      \caption{Die normierten Ausgleichsfunktion in einer Grafik aufgetragen.}
+      \label{fig:plot3}
+    \end{figure}
 
     \begin{table}[ht]
     \centering
@@ -137,12 +152,3 @@ Die Parameter der Funktion berechnen sich dann zu
     \end{tabular}
     \end{table}
 
-\noindent Wenn nun beide Funktionen normiert und in eine Abbildung gesetzt werden sollte die Intensitätsfunktion des Einzelspaltes die Einhüllende der Doppelspaltfunktion sein.
-Dies ist in Abbildung \ref{fig:plot3} dargestellt. Es ist zu sehen, das dies gilt und die Funktionensehr genau aufeinander liegen.
-
-\begin{figure}[ht]
-    \centering
-    \includegraphics[width=0.6\textwidth]{build/plots/plot3.pdf}
-    \caption{Die normierten Ausgleichsfunktion in einer Grafik aufgetragen.}
-    \label{fig:plot3}
-  \end{figure}

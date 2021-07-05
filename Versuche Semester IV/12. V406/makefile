@@ -5,13 +5,13 @@ all: build/Protokoll_V406.pdf
 #hier Python-Skripte
 
 
-build/images/plot1.pdf:	|build
+build/plots/plot1.pdf:	|build
 	python python/V406.py
 
 
 
 # hier weitere Abhängigkeiten für build/main.pdf deklarieren:
-build/Protokoll_V406.pdf:  latex/auswertung.tex latex/theorie.tex latex/durchf.tex latex/diskussion.tex| build
+build/Protokoll_V406.pdf:  latex/auswertung.tex latex/theorie.tex latex/durchf.tex latex/diskussion.tex build/plots/plot1.pdf| build
 	lualatex --output-directory=build --interaction=batchmode --halt-on-error latex/Protokoll_V406.tex
 	biber build/Protokoll_V406.bcf
 	lualatex --output-directory=build --interaction=batchmode --halt-on-error latex/Protokoll_V406.tex
